@@ -1,13 +1,14 @@
 doctype html
 html
+  
   head 
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
-    link(rel='stylesheet', type='text/css', href='../CSS/style.css')
-    title Ninja Ecommerce
+    link(rel='stylesheet', type='text/css', href='../CSS/main.css')
+    block head
+  
   body
-    
     // Header section
     div(class="container")
       img(id="logo-image", src="../pictures/logo-example.png", alt="")
@@ -15,17 +16,17 @@ html
         div(class="col-sm-12")
           ul(id="menu-nav-bar", class="nav nav-pills nav-fill")
             li(class="nav-item")
-              a(class="nav-link active" href="#") HOME
+              a(class=(menu === 'index' ? "nav-link active": "nav-link") href="/") HOME
             li(class="nav-item")
-              a(class="nav-link" href="#") PROMOTION
+              a(class=(menu === 'promotion' ? "nav-link active": "nav-link") href="/promotion") PROMOTION
             li(class="nav-item")
-              a(class="nav-link" href="#") STORE
+              a(class=(menu === 'store' ? "nav-link active": "nav-link") href="/store") STORE
             li(class="nav-item")
-              a(class="nav-link" href="#") STATUS
+              a(class=(menu === 'status' ? "nav-link active": "nav-link") href="/status") STATUS
             li(class="nav-item")
-              a(class="nav-link" href="#") SIGN UP
+              a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
             li(class="nav-item")
-              a(class="nav-link" href="#") LOG IN
+              a(class=(menu === 'login' ? "nav-link active": "nav-link") href="/login") LOG IN
     
     // Body section
     block content
