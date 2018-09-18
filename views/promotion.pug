@@ -1,4 +1,10 @@
-extends layout
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+    //- link(rel='stylesheet', type='text/css', href='../CSS/style.css')
+    link(rel='stylesheet', type='text/css', href='../CSS/promotion.css')
 
 block head
   link(rel='stylesheet', type='text/css', href='../CSS/promotion.css')
@@ -6,5 +12,103 @@ block head
   
 block content
   div(class="container")
-    h1 I am "Promotion"
-  
+      h2 Promotion
+      .row
+        //โปร1
+        .center
+          h Blend with soda
+          .col-1
+          img#fixsize(src='../pictures/promotion1.jpg')
+          br
+          // ราคา
+          h ฿ 599
+          br
+          .row
+            .col
+              input#fixsize2(type='number', name='pro3', step='1', min='1')
+            .col
+              button#fixsize2.button1
+                | Add To Cart
+                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
+        //โปร2
+        .center
+          h Blend with soda
+          .col-1
+          img#fixsize(src='../pictures/promotion1.jpg')
+          br
+          // ราคา
+          h ฿ 599
+          br
+          .row
+            .col
+              input#fixsize2(type='number', name='pro3', step='1', min='1')
+            .col
+              button#fixsize2.button1
+                | Add To Cart
+                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
+        //โปร3
+        .center
+          h Blend with soda
+          .col-1
+          img#fixsize(src='../pictures/promotion1.jpg')
+          br
+          // ราคา
+          h ฿ 599
+          br
+          .row
+            .col
+              input#fixsize2(type='number', name='pro3', step='1', min='1')
+            .col
+              button#fixsize2.button1
+                | Add To Cart
+                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
+        //โปร4
+        .center
+          h Blend with soda
+          .col-1
+          img#fixsize(src='../pictures/promotion1.jpg')
+          br
+          // ราคา
+          h ฿ 599
+          br
+          .row
+            .col
+              input#fixsize2(type='number', name='pro3', step='1', min='1')
+            .col
+              button#fixsize2.button1
+                | Add To Cart
+                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
+
+        //โปร5
+        .center
+          h Blend with soda
+          .col-1
+          // รูป + modal
+          img#fixsize(src='../pictures/promotion1.jpg', data-toggle='modal', data-target='#exampleModal')
+          br
+          // Modal
+          #exampleModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+            .modal-dialog(role='document')
+              .modal-content
+                .modal-header
+                  h5#exampleModalLabel.modal-title Include
+                  button.close(type='button' data-dismiss='modal' aria-label='Close')
+                    span(aria-hidden='true') &times;
+                .modal-body
+                  | Blend spirit(35&#xE4D;)700 ml. x2
+                  br
+                  |                       Soda singha 325 ml. x3
+                .modal-footer
+                  button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+
+          // ราคา
+          h ฿ 599
+          br
+          .row
+            .col
+              input(type='number', name='pro1', step='1', min='1')
+            .col
+              button.button1
+                | Add To Cart
+                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
+        //

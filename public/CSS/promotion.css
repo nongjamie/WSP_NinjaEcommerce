@@ -1,0 +1,54 @@
+button.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    height:40px;
+    width:230px;
+}
+#fixsize {
+  /*width: 40%;
+  height: 30%;*/
+  /*display: block;*/
+  /*margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;*/
+  /*margin-bottom: 10px;*/
+
+  height:60%;
+  width:70%;
+  /*text-align: center;*/
+}
+#fixsize2{
+  height:10%;
+  width:100%;
+  text-align: center;
+}
+#round1 {
+    border: 2px solid #3F5F90;
+    border-radius: 5px;
+
+}
+
+button.button1:hover {
+    background-color: #555555;
+    color: white;
+}
+
+
+button.button1:focus{
+  background-color: #555555;
+  color: green;
+}
+#map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+    width: 40%;
+    height: 50%;
+    border: 3px solid #99999C;
+    padding: 10px;
+}
