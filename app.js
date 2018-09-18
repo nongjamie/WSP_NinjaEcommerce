@@ -11,26 +11,48 @@ app.use(express.static('public'))
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
-// Home route
-// app.get("/", function(req, res) {
-//   res.render("index", {
-//     title: "Ninja Home"
-//   });
-// });
 app.get("/", function(req, res) {
-  res.render("promotion", {
+  res.render("index", {
     title: "Ninja Home"
   });
 });
 
-// Add Route
-app.get("/articels/add", function(req, res) {
-  res.render("add_article", {
-    title: "Add articles"
+// Promotion route
+app.get("/promotion", function(req, res) {
+  res.render("promotion", {
+    menu: 'promotion'
   });
 });
 
-// Start server
+// Store route
+app.get("/store", function(req, res) {
+  res.render("store", {
+    menu: 'store'
+  });
+});
+
+// Status route
+app.get("/status", function(req, res) {
+  res.render("status", {
+    menu: 'status'
+  });
+});
+
+// Sign up route
+app.get("/signup", function(req, res) {
+  res.render("signup", {
+    menu: 'signup'
+  });
+});
+
+// Log in route
+app.get("/login", function(req, res) {
+  res.render("login", {
+    menu: 'login'
+  });
+});
+
+// Log in server
 app.listen(3000, function() {
   console.log("server started on port 3000...");
 });
