@@ -1,0 +1,56 @@
+/* * {
+  border: 2px;
+  border-style: dashed;
+  border-color: green;
+} */
+
+/* Body section */
+
+#body-section {
+  margin: 10px;
+}
+
+.history-section {
+  margin: 20px;
+  border: 1px;
+  border-style: solid;
+  border-color: lightblue;
+}
+
+.promotion-section {
+  margin: 20px;
+  border: 1px;
+  border-style: solid;
+  border-color: lightblue;
+}
+
+.bestseller-section {
+  margin: 20px;
+  border: 1px;
+  border-style: solid;
+  border-color: lightblue;
+}
+
+.history-section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 50%;
+}
+
+.promotion-section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 50%;
+}
+
+.bestseller-section img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 50%;
+}
