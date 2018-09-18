@@ -10,11 +10,19 @@
   margin: 10px;
 }
 
-.history-section {
+#history-section {
   margin: 20px;
   border: 1px;
   border-style: solid;
   border-color: lightblue;
+}
+
+#history-pic-1 {
+  width: 70%;
+  height: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .promotion-section {
