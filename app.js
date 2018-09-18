@@ -12,8 +12,13 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 // Home route
+// app.get("/", function(req, res) {
+//   res.render("index", {
+//     title: "Ninja Home"
+//   });
+// });
 app.get("/", function(req, res) {
-  res.render("index", {
+  res.render("promotion", {
     title: "Ninja Home"
   });
 });
