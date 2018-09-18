@@ -1,5 +1,8 @@
 const express = require("express");
 const path = require("path");
+const bodyParser = require('body-parser')
+const port = process.env.PORT || 3000
+
 
 // Init app
 const app = express();
@@ -50,10 +53,11 @@ app.get("/signup", function(req, res) {
 app.get("/login", function(req, res) {
   res.render("login", {
     menu: 'login'
-  });
-});
+  })
+})
+
 
 // Log in server
-app.listen(3000, function() {
-  console.log("server started on port 3000...");
+app.listen(port, function() {
+  console.log("server started on port " + port);
 });
