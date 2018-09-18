@@ -6,5 +6,48 @@ block head
 
 block content
   div(class="container")
-    h1 I am "Sign up Page"
+    .row.my-5
+        .col-sm-6.text-right
+            label.my-2 Name:
+            br
+            label.my-2 Email:
+            br
+            label.my-2 Username:
+            br
+            label.my-2 Password:
+            br
+            label.my-2 Confirm password:
+            br
+        .col-sm-6
+            input.my-2.register_name(style={height : '24px'}, type='text')
+            br
+            input.my-2.register_email(style={height : '24px'}, type='text')
+            br
+            input.my-2.register_username(style={height : '24px'}, type='text')
+            br
+            input.my-2.register_password(style={height : '24px'}, type='password')
+            br
+            input.my-2.register_confirmpassword(style={height : '24px'}, type='password')
+            br
+
+    
+            //-     label Name: 
+                
+            //- #form-group
+            //-     label Email: 
+            //-     input.form-control(name='email', type='text')
+            //- br    
+            //- #form-group
+            //-     label Username: 
+            //-     input.form-control(name='username', type='text')
+            //- br
+            //- #form-group
+            //-     label Password: 
+            //-     input.form-control(name='password', type='password')
+            //- br
+            //- #form-group
+            //-     label Confirm: 
+            //-     input.form-control(name='password2', type='password')
+            //- br   
+            //- input.btn.btn-primary(type='submit', value='Submit')
   
