@@ -37,5 +37,5 @@ button.button1:focus{
     padding-bottom: 30px;
     padding-top: 30px;
     margin-bottom: 30px;
-
+    border-radius:10px;
 }
