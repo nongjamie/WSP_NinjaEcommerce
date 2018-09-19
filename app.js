@@ -32,6 +32,13 @@ app.get("/store", function(req, res) {
   });
 });
 
+// Store route
+app.get("/whisky", function(req, res) {
+  res.render("whisky", {
+    menu: 'whisky'
+  });
+});
+
 // Status route
 app.get("/status", function(req, res) {
   res.render("status", {
