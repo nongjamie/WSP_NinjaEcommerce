@@ -23,7 +23,7 @@ router.post('/addAccount', async(req, res) => {
 router.post('/login', async(req, res) => {
     console.log('logging in')
     const result = await account.login({username: req.body.username, password: req.body.password})
-    console.log(result)
+    console.log(result.data)
 
     res.redirect('/')
     // const result = await axios.post('https://us-central1-ninjadrink-25671.cloudfunctions.net/login',{},{
