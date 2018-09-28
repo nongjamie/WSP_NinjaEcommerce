@@ -16,15 +16,23 @@ class Account {
     }
     async add(account) {
         try {
-            const response = await axios.post(this.URL + 'addAccount',{
-                username: account.username,
-                password: account.password,
-                id: account.id
+            console.log('=====add method======')
+            const accountList = await this.getList()
+            let id = accountList.data.accounts.length + 1
+            console.log(account.username)
+            console.log(account.password)
+            console.log(id.toString())
+            const response = await axios.post(this.URL + 'addAccount',{},{
+                headers:{
+                    username: account.username,
+                    password: account.password,
+                    customerID: id
+                }
             })
-            return response
+            return response.data
         } catch (error) {
             console.log('Post account to database error')
-            return error
+            return error.data
         }
     }
     async login(account) {
@@ -37,11 +45,11 @@ class Account {
                     'password': account.password
                 }
             })
-            return response
+            return response.data
         } catch (error) {
             console.log('Login error')
-            console.log(error)
-            return error
+            console.log(error.data)
+            return error.data
         }
     }
 }
