@@ -1,11 +1,14 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require('body-parser')
-const port = process.env.PORT || 3000
 
+const port = process.env.PORT || 3000
 
 // Init app
 const app = express();
+
+app.use(bodyParser.urlencoded({extended:false}))
+app.use(bodyParser.json())
 
 // Public folder
 app.use(express.static('public'))
@@ -63,12 +66,21 @@ app.get("/signup", function(req, res) {
   });
 });
 
+app.post('/signup', (req, res) => {
+  console.log(req.body)
+
+})
+
 // Log in route
 app.get("/login", function(req, res) {
   res.render("login", {
     menu: 'login'
   })
 })
+
+
+
+app.use('/accounts', require('./routes/accounts'))
 
 
 // Log in server

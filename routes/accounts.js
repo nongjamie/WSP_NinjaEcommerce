@@ -1,50 +1,39 @@
-const express=require('express');
-const router=express.Router();
-const axios=require('axios');
+const express = require('express')
+const router = express.Router()
+const Account = require('./accountToDataBase')
+const axios = require('axios')
 
-router.get('/signup',async function(req,res){
-    res.render('signup');
-});
-router.get('/login',async function(req,res){
-    res.render('login');
-});
+const account = new Account()
 
-router.post('/login',async function(req,res){
-   const result=await axios.post('https://us-central1-ninjadrink-25671.cloudfunctions.net/getAccountList',{},{
-      headers:{ 
-       usaername:req.body.usaername,
-       password:req.body.password}
-   });
-    if(result.return_code=='200'){
-        res.redirect('/index');
-    }
-    else{
-        res.send('incorrect username and password');
-    }
-});
+router.get('/getList', async(req, res) => {
+    console.log('get list')
+    const result = await account.getList()
+    // console.log(result.data)
+    res.send(result.data)
+})
 
-router.post('/signin',async function(req,res){
-    const name= req.body.name;
-    const email= req.body.email;
-    const username= req.body.username;
-    const password= req.body.password;
-    const password2= req.body.password2;
-    const result=await axios.post('https://us-central1-ninjadrink-25671.cloudfunctions.net/getAccountList',{},{
-        headers:{ 
-         name:name,
-         email:email,
-         usaername:username,
-         password:password,
-         password2:password2
-        }
-     });
-     if(result.return_code='200'){
-         res.redirect('/login');
-     }else{
-         res.send('Can not sign up');
-     }
+router.post('/addAccount', async(req, res) => {
+    console.log('add account')
+    console.log(req.body)
+    const result = await account.add({username: req.body.username, password: req.body.password})
+    console.log(result)
+    // console.log('add account complete')
+    // res.send(result.data)
+})
+
+router.post('/login', async(req, res) => {
+    console.log('logging in')
+    const result = await account.login({username: req.body.username, password: req.body.password})
+    console.log(result)
+
+    res.redirect('/')
+    // const result = await axios.post('https://us-central1-ninjadrink-25671.cloudfunctions.net/login',{},{
+    //     headers:{
+    //         'username': account.username,
+    //         'password': account.password
+    //     }
+    // })
     
+})
 
-
-});
-
+module.exports = router
