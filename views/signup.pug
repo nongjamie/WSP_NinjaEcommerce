@@ -5,49 +5,66 @@ block head
   title Ninja Sign Up
 
 block content
-  div(class="container")
-    .row.my-5
-        .col-sm-6.text-right
-            label.my-2 Name:
-            br
-            label.my-2 Email:
-            br
-            label.my-2 Username:
-            br
-            label.my-2 Password:
-            br
-            label.my-2 Confirm password:
-            br
-        .col-sm-6
-            input.my-2.register_name(style={height : '24px'}, type='text')
-            br
-            input.my-2.register_email(style={height : '24px'}, type='text')
-            br
-            input.my-2.register_username(style={height : '24px'}, type='text')
-            br
-            input.my-2.register_password(style={height : '24px'}, type='password')
-            br
-            input.my-2.register_confirmpassword(style={height : '24px'}, type='password')
-            br
+  .container.p-5
+    form(method='POST', action='/accounts/addAccount' id='signUpForm')
+      fieldset
+        legend='Account Infomation'
+        .input-group.mb-3
+        .input-group-prepend
+          span.input-group-text Username 
+        input.form-control(name='username' type='text' placeholder='Username', required)
+        .input-group.mb-3
+        .input-group-prepend
+          span.input-group-text e-mail 
+        input.form-control(name='email' type='text' placeholder='e-mail', required)
+        .input-group.mb-3
+        .input-group-prepend
+          span.input-group-text password 
+        input.form-control.password(name='password' type='password' placeholder='Password' required)
+        .input-group.mb-3
+        .input-group-prepend
+          span.input-group-text Confirm password 
+        input.form-control.confirmPassword(name='confirmPassword' type='password' placeholder='Confirm password' required )
+        label.mt-2(id="message")
+        
+        .row
+          .col-sm-6
+            .input-group.mb-3
+            .input-group-prepend
+              span.input-group-text Name 
+            input.form-control(name='name' type='text' placeholder='Name' required)
+          .col-sm-6
+            .input-group.mb-3
+            .input-group-prepend
+              span.input-group-text.mb-2 Gender
+            label.mx-2 #[input(type='radio' name='gender' value='male' checked)] Male
+            label.mx-2 #[input(type='radio' name='gender' value='female' )] Female
+            label.mx-2 #[input(type='radio' name='gender' value='other' )] Other
+        .row.mt-2.mb-4
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text.mr-3 Date of birth
+              input(type='date', name='bday', min='1979-12-31' required)
+        legend='Address Information'
+        .row.mt-3
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text Address
+            input.form-control.mb-3(type='text' name='address' style={width:'100%'} required)
+            .input-group-prepend
+              span.input-group-text Province
+            div
+              input.form-control(type='text' name='province' style={width:'100%'} required)
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text District
+            input.form-control.mb-3(type='text' name='district' style={width:'100%'} required)
+            .input-group-prepend
+              span.input-group-text Zip code
+            input.form-control(type='text' name='zipCode' style={width:'100%'} required)
 
-    
-            //-     label Name: 
-                
-            //- #form-group
-            //-     label Email: 
-            //-     input.form-control(name='email', type='text')
-            //- br    
-            //- #form-group
-            //-     label Username: 
-            //-     input.form-control(name='username', type='text')
-            //- br
-            //- #form-group
-            //-     label Password: 
-            //-     input.form-control(name='password', type='password')
-            //- br
-            //- #form-group
-            //-     label Confirm: 
-            //-     input.form-control(name='password2', type='password')
-            //- br   
-            //- input.btn.btn-primary(type='submit', value='Submit')
-  
+
+
+      h1.text-center(id="validateMessage")
+      input.mt-5.btn.btn-danger.test(type='submit', value='Submit')
+        
