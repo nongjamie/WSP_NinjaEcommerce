@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Account = require('./accountToDataBase')
 
-
+const axios = require('axios')
 const account = new Account()
 
 router.get('/getList', async(req, res) => {
@@ -17,6 +17,10 @@ router.post('/addAccount', async(req, res) => {
     console.log(req.body)
     const result = await account.add({username: req.body.username, password: req.body.password})
     console.log(result)
+    if(result.return_code === '500'){
+        console.log('username : ' + req.body.username + ' has been used !')
+        
+    }
     // console.log('add account complete')
     // res.send(result.data)
 })

@@ -32,13 +32,25 @@ $(function () {
             if (formData[i].name === 'email') {
                 const testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
                 if (!testEmail.test(formData[i].value)) {
-                    console.log(formData[i].name + 'dsadasdasdas')
+                    // console.log(formData[i].name + 'dsadasdasdas')
                     $('#validateMessage').html('Plese input the right email').css('color', 'red');
                     return false;
                 }
             }
         }
     }
+
+    $('#username').focusout( function () {
+        var searchid = $(this).val();
+        console.log(searchid)
+        $.ajax({ 
+            url: 'register.php', data: {action: 'isUserNameTaken', params: [username]},
+            type: 'post',
+            success: function(data) {
+                //Do Something
+            }
+        });
+    })
 
 
 });

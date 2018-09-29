@@ -6,13 +6,13 @@ block head
 
 block content
   .container.p-5
-    form(method='POST', action='/signup' id='signUpForm')
+    form(method='POST', action='/accounts/addAccount' id='signUpForm')
       fieldset
         legend='Account Infomation'
         .input-group.mb-3
         .input-group-prepend
           span.input-group-text Username 
-        input.form-control(name='username' type='text' placeholder='Username', required)
+        input.form-control(id='username' name='username' type='text' placeholder='Username', required)
         .input-group.mb-3
         .input-group-prepend
           span.input-group-text e-mail 
@@ -66,5 +66,6 @@ block content
 
 
       h1.text-center(id="validateMessage")
+
       input.mt-5.btn.btn-danger.test(type='submit', value='Submit')
         

@@ -5,6 +5,17 @@ block head
   title Ninja Log IN
 
 block content
-  div(class="container")
-    h1 I am "Log in Page"
+  .container
+      h1 Login
+        br
+        form(id='loginForm' method='POST', action='/accounts/login')
+          #form-group
+            label Username: 
+            input.form-control(name='username', type='text')
+            br
+          #form-group
+            label Password: 
+            input.form-control(name='password', type='password')
+            br    
+            input.btn.btn-primary(type='submit', value='Submit')
   
