@@ -41,13 +41,16 @@ $(function () {
     }
 
     $('#username').focusout( function () {
-        var searchid = $(this).val();
-        console.log(searchid)
+        var username = $(this).val();
+        console.log(username)
         $.ajax({ 
-            url: 'register.php', data: {action: 'isUserNameTaken', params: [username]},
+            url: 'https://us-central1-ninjadrink-25671.cloudfunctions.net/isUsernameTaken',
+            headers: {
+                'username': username,
+            },
             type: 'post',
             success: function(data) {
-                //Do Something
+               console.log(data.data)
             }
         });
     })
