@@ -1,77 +1,70 @@
-/* * {
+* {
   border: 2px;
   border-style: dashed;
   border-color: green;
-} */
+}
 
-/* Body section */
+/* History */
 
-#body-section {
+#box-1 {
   margin: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: purple;
 }
 
-#history-section {
-  margin: 20px;
-  border: 1px;
-}
-
-.history-section-sentence-1 {
-  text-align: right;
-  margin-top: 25px;
-}
-
-.history-section-picture-1{
-
-}
-
-#senc-1 {
-  font-size: 25px;
-  color: red;
-}
-
-#senc-2 {
+.box-1-sentence {
   font-size: 15px;
-  color: red;
+  color: purple;
+  text-indent: 10%;
+  padding: 40px 20px;
 }
 
-#history-pic-1 {
-  width: 200px;
-  height: 150px;
-  display: block;
+.box-1-picture {
+
+}
+
+.box-1-picture img {
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.history-section-sentence-2 {
-  text-align: left;
-  margin-top: 25px;
-}
-
-.history-section-picture-2{
-
-}
-
-#senc-3 {
-  font-size: 25px;
-  color: red;
-}
-
-#senc-4 {
-  font-size: 25px;
-  color: red;
-}
-
-#history-pic-2 {
-  width: 200px;
-  height: 150px;
   display: block;
+}
+
+#box-2 {
+  margin: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: purple;
+  /* text-align: center; */
+}
+
+.box-2-sentence {
+  font-size: 20px;
+  color: purple;
+  padding: 40px 20px;
+}
+
+.box-2-picture {
+
+}
+
+.box-2-picture img {
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
-  height: 50%;
+  display: block;
 }
 
 .setcenter {
   height: 100px;
   width: 500px;
 }
+
+/* Promotion */
+
+/* Best seller */
