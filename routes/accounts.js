@@ -17,9 +17,12 @@ router.post('/addAccount', async(req, res) => {
     console.log(req.body)
     const result = await account.add({username: req.body.username, password: req.body.password})
     console.log(result)
-    if(result.return_code === '500'){
-        console.log('username : ' + req.body.username + ' has been used !')
-        
+    if(result.return_code !== '500'){
+        console.log('must reditrect')
+        res.redirect('/login')
+    }
+    else{
+        res.redirect('/')
     }
     // console.log('add account complete')
     // res.send(result.data)

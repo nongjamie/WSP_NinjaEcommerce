@@ -1,4 +1,5 @@
 $(function () {
+    var username = ''
     $(document).ready(function () {
         $('#signUpForm').submit(function () {
             // inside event callbacks 'this' is the DOM element so we first 
@@ -22,35 +23,38 @@ $(function () {
     });
 
     function validate(formData, jqForm, options) {
-        for (var i = 0; i < formData.length; i++) {
-            if (formData[i].name === 'password' || formData[i].name === 'confirmPassword') {
-                if (formData[i].value === '') {
-                    $('#validateMessage').html('Plese input your password').css('color', 'red');
-                    return false;
-                }
-            }
-            if (formData[i].name === 'email') {
-                const testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
-                if (!testEmail.test(formData[i].value)) {
-                    // console.log(formData[i].name + 'dsadasdasdas')
-                    $('#validateMessage').html('Plese input the right email').css('color', 'red');
-                    return false;
-                }
-            }
+        const testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+
+        if(username){
+            return false
+        }
+
+        if(formData[2].value !== formData[3].value){
+            return false
+        }
+        if(!testEmail.test(formData[1].value)){
+            console.log('wrong password')
+            $('#emailError').html('Plese input the right email').css('color', 'red');
+            return false;
         }
     }
 
     $('#username').focusout( function () {
-        var username = $(this).val();
-        console.log(username)
+        username = $(this).val();
         $.ajax({ 
             url: 'https://us-central1-ninjadrink-25671.cloudfunctions.net/isUsernameTaken',
             headers: {
                 'username': username,
             },
-            type: 'post',
+            type: 'POST',
             success: function(data) {
-               console.log(data.data)
+                if(data.return_code === '400'){
+                    $('#usernameError').html('Username has been used').css('color', 'red');
+                    username = true
+                }else{
+                    $('#usernameError').html('')
+                    username = false
+                }
             }
         });
     })
