@@ -150,6 +150,7 @@
 }
 
 .promotion-box img {
+  border: 2px solid black;
   width: 90%;
   height: 100%;
   max-height: 300px;
@@ -158,3 +159,14 @@
 }
 
 /* Best seller */
+
+.bestseller-welcome-sentence {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bestseller-box {
+  border: 2px solid black;
+
+}
