@@ -82,6 +82,45 @@ app.get("/login", function(req, res) {
   })
 })
 
+app.get("/af_index", async(req, res) => {
+  console.log('print')
+  res.render("af_index", {
+    title: "Ninja Home"
+  });
+}) 
+
+app.get("/af_status", function(req, res) {
+  res.render("af_status", {
+    menu: 'status'
+  });
+});
+
+app.get("/af_beer", function(req, res) {
+  res.render("af_beer", {
+    menu: 'beer'
+  });
+});
+
+app.get("/af_promotion", function(req, res) {
+  res.render("af_promotion", {
+    menu: 'promotion'
+  });
+});
+
+// Store route
+app.get("/af_store", function(req, res) {
+  res.render("af_store", {
+    menu: 'store'
+  });
+});
+
+// Store route
+app.get("/af_whisky", function(req, res) {
+  res.render("af_whisky", {
+    menu: 'whisky'
+  });
+});
+
 
 
 app.use('/accounts', require('./routes/accounts'))
