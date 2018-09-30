@@ -17,23 +17,17 @@ router.post('/addAccount', async(req, res) => {
     console.log(req.body)
     const result = await account.add({username: req.body.username, password: req.body.password})
     console.log(result)
-    // console.log('add account complete')
-    // res.send(result.data)
+    if(result.return_code=='200'){
+        console.log('jp')
+        res.redirect('/login')
+    }
 })
 
 router.post('/login', async(req, res) => {
     console.log('logging in')
     const result = await account.login({username: req.body.username, password: req.body.password})
     console.log(result)
-
-    res.redirect('/')
-    // const result = await axios.post('https://us-central1-ninjadrink-25671.cloudfunctions.net/login',{},{
-    //     headers:{
-    //         'username': account.username,
-    //         'password': account.password
-    //     }
-    // })
-    
+    res.redirect('/af_index')
 })
 
 module.exports = router
