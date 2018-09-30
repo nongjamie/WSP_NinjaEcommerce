@@ -22,7 +22,7 @@ router.post('/addAccount', async(req, res) => {
         res.redirect('/login')
     }
     else{
-        res.redirect('/')
+        res.redirect('/login')
     }
     // console.log('add account complete')
     // res.send(result.data)
