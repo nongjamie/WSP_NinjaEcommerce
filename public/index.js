@@ -1,5 +1,6 @@
 $(function () {
     var username = ''
+    var email = ''
     $(document).ready(function () {
         $('#signUpForm').ajaxForm({ beforeSubmit: validate, success: showResponse });
     });
@@ -34,8 +35,12 @@ $(function () {
             }
         }
         if(username){
-            console.log(username)
             alert('Please input a new username')
+            return false
+        }
+
+        if(email){
+            alert('Please input a new email')
             return false
         }
         return true
@@ -69,6 +74,30 @@ $(function () {
                     console.log(data)
                     $('#usernameError').html('')
                     username = false
+                }
+            },
+            error: function(error){
+                console.log(error)
+            }
+        });
+    })
+    $('#email').focusout( function () {
+        email = $(this).val();
+        $.ajax({ 
+            url: 'https://us-central1-ninjadrink-25671.cloudfunctions.net/isEmailTaken',
+            headers: {
+                'email': email,
+            },
+            type: 'POST',
+            success: function(data) {
+                if(data.return_code === '400'){
+                    console.log(data)
+                    $('#emailError').html('email has been used').css('color', 'red');
+                    email = true
+                }else{
+                    console.log(data)
+                    $('#emailError').html('')
+                    email = false
                 }
             },
             error: function(error){

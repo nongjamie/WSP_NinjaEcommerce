@@ -17,7 +17,7 @@ block content
         .input-group.mb-3
         .input-group-prepend
           span.input-group-text e-mail 
-        input.form-control(name='email' type='text' placeholder='e-mail', required)
+        input.form-control(id='email' name='email' type='text' placeholder='e-mail', required)
         span(id='emailError')
         .input-group.mb-3
         .input-group-prepend
@@ -64,6 +64,12 @@ block content
             .input-group-prepend
               span.input-group-text Zip code
             input.form-control(type='text' name='zipCode' style={width:'100%'} required)
+        .row.mt-3
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text Telephone
+            input.form-control.mb-3(type='text' name='telephone' style={width:'100%'} required)
+
 
       input.mt-5.btn.btn-danger.test(type='submit', value='Submit')
 

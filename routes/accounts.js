@@ -13,9 +13,7 @@ router.get('/getList', async(req, res) => {
 })
 
 router.post('/addAccount', async(req, res) => {
-    console.log('add account')
-    console.log(req.body)
-    const result = await account.add({username: req.body.username, password: req.body.password})
+    const result = await account.add(req.body)
     console.log(result)
     if(result.return_code !== '500'){
         console.log('must reditrect')
