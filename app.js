@@ -34,21 +34,24 @@ app.get("/promotion", function(req, res) {
 // Store route
 app.get("/store", function(req, res) {
   res.render("store", {
-    menu: 'store'
+    menu: 'store',
+    typeDrink: 'null'
   });
 });
 
 // Store route
 app.get("/whisky", function(req, res) {
   res.render("whisky", {
-    menu: 'whisky'
+    menu: 'store',
+    typeDrink: 'whisky'
   });
 });
 
 // Beer route
 app.get("/beer", function(req, res) {
   res.render("beer", {
-    menu: 'beer'
+    menu: 'store',
+    typeDrink: 'beer'
   });
 });
 
@@ -83,7 +86,7 @@ app.get("/af_index", async(req, res) => {
   res.render("af_index", {
     title: "Ninja Home"
   });
-}) 
+})
 
 app.get("/af_status", function(req, res) {
   res.render("af_status", {
