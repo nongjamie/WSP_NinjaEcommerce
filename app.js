@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require('body-parser')
 const passport = require('passport')
+const session = require('express-session')
 var cors = require('cors')
 
 const port = process.env.PORT || 3000
@@ -11,6 +12,7 @@ const app = express();
 //Passport config
 require('./config/passport')(passport);
 //Middle ware
+app.use(session({ secret: "cats" }))
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))
@@ -24,9 +26,11 @@ app.use(express.static('public'))
 // Load view engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
+
 //Use passport
 app.get('*',function(req,res,next){
-  res.locals.user=req.user || null;
+  console.log()
+  res.locals.user = req.user || null;
   next();
 })
 // Home page route

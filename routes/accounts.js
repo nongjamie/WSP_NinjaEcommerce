@@ -25,11 +25,12 @@ router.post('/addAccount', async(req, res) => {
 
 })
 
-router.post('/login', async(req, res) => {
+router.post('/login', 
    passport.authenticate('local',{
        successRedirect:'/',
        failureRedirect:'/users/login',
        failureFlash:true
-   })(req,res,next);
-})
+   })
+)
+
 module.exports = router
