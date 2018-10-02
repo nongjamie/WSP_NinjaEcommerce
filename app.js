@@ -55,26 +55,22 @@ app.get("/beer", function(req, res) {
   });
 });
 
-// Beer route
+// Wine route
 app.get("/wine", function(req, res) {
   res.render("wine", {
-    menu: 'wine'
+    menu: 'wine',
+    typeDrink: 'wine'
   });
 });
 
-// Beer route
+// Mixer route
 app.get("/mixer", function(req, res) {
   res.render("mixer", {
-    menu: 'mixer'
+    menu: 'mixer' ,
+    typeDrink: 'mixer'
   });
 });
 
-// Beer route
-app.get("/milk", function(req, res) {
-  res.render("milk", {
-    menu: 'milk'
-  });
-});
 
 // Status route
 app.get("/status", function(req, res) {
