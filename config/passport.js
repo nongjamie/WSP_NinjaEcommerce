@@ -28,7 +28,8 @@ module.exports = function (passport) {
     });
 
     passport.deserializeUser(async function (user, done) {
-        const result = await accout.getAccountBy({user:user})
+        console.log("Eiei:"+user)
+        const result = await accout.getAccountBy(user)
         console.log('user:', result)
         done(null, result)
     });

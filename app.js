@@ -29,7 +29,7 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*',function(req,res,next){
-  console.log()
+  console.log(req.user+' jp')
   res.locals.user = req.user || null;
   next();
 })

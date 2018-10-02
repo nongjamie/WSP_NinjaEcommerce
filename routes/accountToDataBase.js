@@ -58,7 +58,7 @@ class Account {
     }
     async getAccountBy(username){
            
-       try { const response = await axios.post(this.URL+'login',{},{
+       try { const response = await axios.post(this.URL+'getAccountByUsername',{},{
                 headers:{
                     'username': username
                 }
