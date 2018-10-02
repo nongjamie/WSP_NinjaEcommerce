@@ -10,6 +10,11 @@ button.button1 {
   width:60%;
 }
 
+#fixsizePromotion {
+  height:10%;
+  width:10%;
+}
+
 
 button.button1:hover {
     background-color: #555555;
