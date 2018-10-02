@@ -55,6 +55,27 @@ app.get("/beer", function(req, res) {
   });
 });
 
+// Beer route
+app.get("/wine", function(req, res) {
+  res.render("wine", {
+    menu: 'wine'
+  });
+});
+
+// Beer route
+app.get("/mixer", function(req, res) {
+  res.render("mixer", {
+    menu: 'mixer'
+  });
+});
+
+// Beer route
+app.get("/milk", function(req, res) {
+  res.render("milk", {
+    menu: 'milk'
+  });
+});
+
 // Status route
 app.get("/status", function(req, res) {
   res.render("status", {
