@@ -5,7 +5,7 @@ html
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
-    link(rel='stylesheet', type='text/css', href='../CSS/layout.css')
+    link(rel='stylesheet', type='text/css', href='../CSS/store-layout.css')
     
     block head
 
@@ -28,6 +28,18 @@ html
               a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
             li(class="nav-item")
               a(class=(menu === 'login' ? "nav-link active": "nav-link") href="/login") LOG IN
+      div(id="nav-bar-box-2", class="row")
+        div(class="col-sm-12")
+          ul(id="menu-nav-bar", class="nav nav-pills nav-fill")
+            li(class="nav-item")
+              a(class=(typeDrink === 'whisky' ? "nav-link active": "nav-link") href="/whisky") Whisky
+            li(class="nav-item")
+              a(class=(typeDrink === 'beer' ? "nav-link active": "nav-link") href="/beer") Beer
+            li(class="nav-item")
+              a(class=(typeDrink === 'wine' ? "nav-link active": "nav-link") href="/wine") Wine
+            li(class="nav-item")
+              a(class=(typeDrink === 'mixer' ? "nav-link active": "nav-link") href="/mixer") Mixer
+                
 
     // Body section
     block content
