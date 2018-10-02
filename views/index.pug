@@ -75,14 +75,8 @@ block content
               th(scope="col") Product Name
               th(scope="col") Product Cost(฿)
               th(scope="col") Description
-          tbody
-            tr
-              th(scope="row") 1
-              td Varit Ass
-              td 3,000
-              td varit.as@ku.th
-            tr
-              th(scope="row") 2
-              td Varit Ass
-              td 5,000
-              td varit.as@ku.th
+          tbody(class="bestseller-box-table-detail")
+            //- Details in the table are from homeScript.js
+
+block linkScript
+  script(src='./jQuery/homeScript.js')

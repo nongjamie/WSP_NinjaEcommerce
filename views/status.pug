@@ -17,7 +17,7 @@ block content
             div(class="input-group-prepend")
               span(class="input-group-text")
                 | Order number
-            input(type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default")
+            input(id="status-inputform" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default")
     //- Progess bar
     div(class="container")
       div(class="row justify-content-md-center")
@@ -62,4 +62,5 @@ block content
           div(class="status-remind-sentence")
             | If you have any question, don't be hesitate to contact us.
 
-        
+block linkScript
+  script(src='./jQuery/statusScript.js')
