@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require('body-parser')
 const passport = require('passport')
+var cors = require('cors')
 
 const port = process.env.PORT || 3000
 
@@ -14,6 +15,8 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
+app.use(cors())
+
 
 // Public folder
 app.use(express.static('public'))
