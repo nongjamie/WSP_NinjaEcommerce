@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Account = require('./accountToDataBase')
 const axios = require('axios')
+const passport = require('passport')
 
 const account = new Account()
 
@@ -24,10 +25,10 @@ router.post('/addAccount', async(req, res) => {
 })
 
 router.post('/login', async(req, res) => {
-    console.log('logging in')
-    const result = await account.login({username: req.body.username, password: req.body.password})
-    console.log(result)
-    res.redirect('/af_index')
+   passport.authenticate('local',{
+       successRedirect:'/',
+       failureRedirect:'/users/login',
+       failureFlash:true
+   })(req,res,next);
 })
-
 module.exports = router

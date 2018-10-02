@@ -1,12 +1,17 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require('body-parser')
+const passport = require('passport')
 
 const port = process.env.PORT || 3000
 
 // Init app
 const app = express();
-
+//Passport config
+require('./config/passport')(passport);
+//Middle ware
+app.use(passport.initialize())
+app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
@@ -16,14 +21,17 @@ app.use(express.static('public'))
 // Load view engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
-
+//Use passport
+app.get('*',function(req,res,next){
+  res.locals.user=req.user || null;
+  next();
+})
 // Home page route
 app.get("/", function(req, res) {
   res.render("index", {
     menu: "homepage"
   });
 });
-
 // Promotion route
 app.get("/promotion", function(req, res) {
   res.render("promotion", {
