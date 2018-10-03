@@ -57,6 +57,19 @@ class Account {
             return error.data
         }
     }
+    async getAccountBy(username){
+           
+       try { const response = await axios.post(this.URL+'getAccountByUsername',{},{
+                headers:{
+                    'username': username
+                }
+            })
+            return response.data
+        }catch(error){
+            return error.data
+        }
+    }
+
 }
 
 module.exports = Account
