@@ -17,10 +17,10 @@ router.post('/addAccount', async(req, res) => {
     console.log(result)
     if(result.return_code !== '500'){
         console.log('must reditrect')
-        res.send('/login')
+        res.send('success')
     }
     else{
-        res.redirect('/signup')
+        res.send('fail')
     }
 
 })
