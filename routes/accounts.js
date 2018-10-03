@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Account = require('./accountToDataBase')
 const axios = require('axios')
-
+const passport = require('passport')
 const account = new Account()
 
 router.get('/getList', async(req, res) => {
@@ -13,21 +13,24 @@ router.get('/getList', async(req, res) => {
 })
 
 router.post('/addAccount', async(req, res) => {
-    console.log('add account')
-    console.log(req.body)
-    const result = await account.add({username: req.body.username, password: req.body.password})
+    const result = await account.add(req.body)
     console.log(result)
-    if(result.return_code=='200'){
-        console.log('jp')
-        res.redirect('/login')
+    if(result.return_code !== '500'){
+        console.log('must reditrect')
+        res.send('/login')
     }
+    else{
+        res.redirect('/signup')
+    }
+
 })
 
-router.post('/login', async(req, res) => {
-    console.log('logging in')
-    const result = await account.login({username: req.body.username, password: req.body.password})
-    console.log(result)
-    res.redirect('/af_index')
-})
+router.post('/login', 
+   passport.authenticate('local',{
+       successRedirect:'/',
+       failureRedirect:'/users/login',
+       failureFlash:true
+   })
+)
 
 module.exports = router

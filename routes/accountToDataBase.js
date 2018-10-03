@@ -17,16 +17,20 @@ class Account {
     async add(account) {
         try {
             console.log('=====add method======')
-            const accountList = await this.getList()
-            let id = accountList.data.accounts.length + 1
-            console.log(account.username)
-            console.log(account.password)
-            console.log(id.toString())
+            console.log(account)
             const response = await axios.post(this.URL + 'addAccount',{},{
                 headers:{
                     username: account.username,
                     password: account.password,
-                    customerID: id
+                    email: account.email,
+                    name: account.name,
+                    gender: account.gender,
+                    bday: account.bday,
+                    address: account.address,
+                    province: account.province,
+                    district: account.district,
+                    zipCode: parseInt(account.zipCode),
+                    phone: account.telephone
                 }
             })
             return response.data
@@ -52,6 +56,19 @@ class Account {
             return error.data
         }
     }
+    async getAccountBy(username){
+           
+       try { const response = await axios.post(this.URL+'getAccountByUsername',{},{
+                headers:{
+                    'username': username
+                }
+            })
+            return response.data
+        }catch(error){
+            return error.data
+        }
+    }
+
 }
 
 module.exports = Account
