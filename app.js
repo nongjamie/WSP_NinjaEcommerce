@@ -39,6 +39,13 @@ app.get("/", function(req, res) {
     menu: "homepage"
   });
 });
+//Logout
+app.get("/logout",function(req,res){
+  req.logout()
+ // req.flash('success','You are logged out')
+  res.redirect('/login')
+
+})
 // Promotion route
 app.get("/promotion", function(req, res) {
   res.render("promotion", {

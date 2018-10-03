@@ -1,0 +1,23 @@
+.status-welcome-sentence {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+#status-inputform {
+  padding: 10px 0px;
+}
+
+#status-progessbar {
+  margin: 10px 0px;
+}
+
+#status-table {
+  margin: 10px 0px;
+}
+
+.status-remind-sentence {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
