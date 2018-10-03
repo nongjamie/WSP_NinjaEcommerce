@@ -12,7 +12,7 @@ const app = express();
 //Passport config
 require('./config/passport')(passport);
 //Middle ware
-app.use(session({ secret: "cats" }))
+app.use(session({ secret: "VaritAss", resave: true, saveUninitialized: true }))
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))

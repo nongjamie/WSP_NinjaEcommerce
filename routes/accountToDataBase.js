@@ -33,6 +33,7 @@ class Account {
                     phone: account.telephone
                 }
             })
+            console.log('Response' + response.data)
             return response.data
         } catch (error) {
             console.log('Post account to database error')
