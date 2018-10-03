@@ -25,7 +25,7 @@ class Account {
                     email: account.email,
                     name: account.name,
                     gender: account.gender,
-                    bday: account.bday,
+                    bday: account.day + '/' + account.month + '/' + account.year,
                     address: account.address,
                     province: account.province,
                     district: account.district,

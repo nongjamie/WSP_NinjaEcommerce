@@ -1,6 +1,7 @@
 $(function () {
     var username = ''
     var email = ''
+    
     $(document).ready(function () {
         $('#signUpForm').ajaxForm({ beforeSubmit: validate, success: showResponse });
     });
