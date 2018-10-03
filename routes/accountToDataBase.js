@@ -36,6 +36,7 @@ class Account {
             return response.data
         } catch (error) {
             console.log('Post account to database error')
+            console.log(error)
             return error.data
         }
     }
