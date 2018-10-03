@@ -12,13 +12,12 @@ const app = express();
 //Passport config
 require('./config/passport')(passport);
 //Middle ware
-app.use(session({ secret: "Varit",resave: true, saveUninitialized: true }))
+app.use(session({ secret: "Varit", resave: true, saveUninitialized: true }))
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 app.use(cors())
-
 
 // Public folder
 app.use(express.static('public'))
@@ -28,17 +27,17 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 //Use passport
-app.get('*',function(req,res,next){
+app.get('*', function(req,res,next){
   res.locals.user = req.user || null;
   next();
 })
+
 // Home page route
 app.get("/", function(req, res) {
   res.render("index", {
     menu: "homepage"
   });
 });
-
 
 // Promotion route
 app.get("/promotion", function(req, res) {
@@ -113,6 +112,7 @@ app.get("/login", function(req, res) {
     menu: 'login'
   })
 })
+
 //Logout
 app.get("/logout",function(req,res){
   req.logout()
@@ -120,9 +120,7 @@ app.get("/logout",function(req,res){
   res.redirect('/')
 })
 
-
 app.use('/accounts', require('./routes/accounts'))
-
 
 // Log in server
 app.listen(port, function() {
