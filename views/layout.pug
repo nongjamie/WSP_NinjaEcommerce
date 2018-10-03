@@ -4,8 +4,8 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous")
-    link(rel='stylesheet', type='text/css', href='../CSS/layout.css')
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+    link(rel='stylesheet', type='text/css', href='../CSS/main.css')
     
     block head
 
@@ -17,20 +17,24 @@ html
         div(class="col-sm-12")
           ul(id="menu-nav-bar", class="nav nav-pills nav-fill")
             li(class="nav-item")
-              a(class=(menu === 'homepage' ? "nav-link active": "nav-link") href="/") HOME
+              a(class=(menu === 'index' ? "nav-link active": "nav-link") href="/") HOME
             li(class="nav-item")
               a(class=(menu === 'promotion' ? "nav-link active": "nav-link") href="/promotion") PROMOTION
             li(class="nav-item")
               a(class=(menu === 'store' ? "nav-link active": "nav-link") href="/store") STORE
             li(class="nav-item")
               a(class=(menu === 'status' ? "nav-link active": "nav-link") href="/status") STATUS
-            li(class="nav-item")
-              a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
-            li(class="nav-item")
-              a(class=(menu === 'login' ? "nav-link active": "nav-link") href="/login") LOG IN
+            if user
+              li(class="nav-item")
+                a(class=(menu === 'logout' ? "nav-link active": "nav-link") href="/logout") Logout
+            else
+              li(class="nav-item")
+                a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
+              li(class="nav-item")
+                a(class=(menu === 'login' ? "nav-link active": "nav-link") href="/login") LOG IN
 
     // Body section
-    block content
+    block content 
 
     // Footer section
     div(id="footer-section", class="container")
@@ -47,7 +51,7 @@ html
       div(class="row")
         div(id="footer-company-name-background", class="col-sm-12")
           h1(id="footer-company-name") NINJA ECOMMERCE 
-    script(src="index.js")
-    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous")
-    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous")
+  script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+  script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js")
+  script(src="http://malsup.github.com/jquery.form.js")
+  script(src="index.js")
