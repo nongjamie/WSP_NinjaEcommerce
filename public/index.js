@@ -59,27 +59,29 @@ $(function () {
 
     $('#username').focusout( function () {
         username = $(this).val();
-        $.ajax({ 
-            url: 'https://us-central1-ninjadrink-25671.cloudfunctions.net/isUsernameTaken',
-            headers: {
-                'username': username,
-            },
-            type: 'POST',
-            success: function(data) {
-                if(data.return_code === '400'){
-                    console.log(data)
-                    $('#usernameError').html('Username has been used').css('color', 'red');
-                    username = true
-                }else{
-                    console.log(data)
-                    $('#usernameError').html('')
-                    username = false
+        if (username !== ''){
+            $.ajax({ 
+                url: 'https://us-central1-ninjadrink-25671.cloudfunctions.net/isUsernameTaken',
+                headers: {
+                    'username': username,
+                },
+                type: 'POST',
+                success: function(data) {
+                    if(data.return_code === '400'){
+                        console.log(data)
+                        $('#usernameError').html('Username has been used').css('color', 'red');
+                        username = true
+                    }else{
+                        console.log(data)
+                        $('#usernameError').html('')
+                        username = false
+                    }
+                },
+                error: function(error){
+                    console.log(error)
                 }
-            },
-            error: function(error){
-                console.log(error)
-            }
-        });
+            })
+        }
     })
     $('#email').focusout( function () {
         email = $(this).val();

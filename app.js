@@ -12,7 +12,7 @@ const app = express();
 //Passport config
 require('./config/passport')(passport);
 //Middle ware
-app.use(session({ secret: "cats" }))
+app.use(session({ secret: "Varit",resave: true, saveUninitialized: true }))
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))
@@ -29,7 +29,6 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*',function(req,res,next){
-  console.log(req.user+' jp')
   res.locals.user = req.user || null;
   next();
 })
@@ -39,13 +38,8 @@ app.get("/", function(req, res) {
     menu: "homepage"
   });
 });
-//Logout
-app.get("/logout",function(req,res){
-  req.logout()
- // req.flash('success','You are logged out')
-  res.redirect('/login')
 
-})
+
 // Promotion route
 app.get("/promotion", function(req, res) {
   res.render("promotion", {
@@ -119,46 +113,12 @@ app.get("/login", function(req, res) {
     menu: 'login'
   })
 })
-
-app.get("/af_index", async(req, res) => {
-  console.log('print')
-  res.render("af_index", {
-    title: "Ninja Home"
-  });
+//Logout
+app.get("/logout",function(req,res){
+  req.logout()
+ // req.flash('success','You are logged out')
+  res.redirect('/')
 })
-
-app.get("/af_status", function(req, res) {
-  res.render("af_status", {
-    menu: 'status'
-  });
-});
-
-app.get("/af_beer", function(req, res) {
-  res.render("af_beer", {
-    menu: 'beer'
-  });
-});
-
-app.get("/af_promotion", function(req, res) {
-  res.render("af_promotion", {
-    menu: 'promotion'
-  });
-});
-
-// Store route
-app.get("/af_store", function(req, res) {
-  res.render("af_store", {
-    menu: 'store'
-  });
-});
-
-// Store route
-app.get("/af_whisky", function(req, res) {
-  res.render("af_whisky", {
-    menu: 'whisky'
-  });
-});
-
 
 
 app.use('/accounts', require('./routes/accounts'))
