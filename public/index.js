@@ -109,6 +109,11 @@ $(function () {
         });
     })
 
+    $('#test').on('click', () => {
+        const test = window.localStorage
+        console.log(test)
+    })
+
 
 });
 
