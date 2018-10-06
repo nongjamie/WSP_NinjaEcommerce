@@ -1,6 +1,6 @@
 const LocalStrategy = require('passport-local').Strategy;
 const axios = require('axios');
-const Account = require('../routes/accountToDataBase')
+const Account = require('../class/account')
 const accout = new Account()
 module.exports = function (passport) {
 

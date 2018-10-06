@@ -1,12 +1,11 @@
 const axios = require('axios')
+const URL = require('../config/database')
 
 class Account {
-    constructor(){
-        this.URL = 'https://us-central1-ninjadrink-25671.cloudfunctions.net/'
-    }
+
     async getList() {
         try {
-            const response = await axios.get(this.URL + 'getAccountList')
+            const response = await axios.get(URL.getList)
             return response
         } catch (error) {
             console.log('get account list error')
@@ -18,7 +17,7 @@ class Account {
         try {
             console.log('=====add method======')
             console.log(account)
-            const response = await axios.post(this.URL + 'addAccount',{},{
+            const response = await axios.post(URL.addAccount,{},{
                 headers:{
                     username: account.username,
                     password: account.password,
@@ -44,7 +43,7 @@ class Account {
         try {
             console.log(account)
             console.log(account.username)
-            const response = await axios.post(this.URL + 'login',{},{
+            const response = await axios.post(URL.login,{},{
                 headers:{
                     'username': account.username,
                     'password': account.password
@@ -59,7 +58,7 @@ class Account {
     }
     async getAccountBy(username){
            
-       try { const response = await axios.post(this.URL+'getAccountByUsername',{},{
+       try { const response = await axios.post(URL.getAccountByUsername,{},{
                 headers:{
                     'username': username
                 }

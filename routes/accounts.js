@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Account = require('./accountToDataBase')
-const axios = require('axios')
+const Account = require('../class/account')
 const passport = require('passport')
 const account = new Account()
 
