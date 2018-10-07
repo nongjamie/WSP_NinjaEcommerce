@@ -31,6 +31,13 @@ app.get("/promotion", function(req, res) {
   });
 });
 
+// Promotion route
+app.get("/pro1", function(req, res) {
+  res.render("pro1", {
+    menu: 'pro1'
+  });
+});
+
 // Store route
 app.get("/store", function(req, res) {
   res.render("store", {

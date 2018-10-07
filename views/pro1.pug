@@ -1,0 +1,37 @@
+extends layout
+
+block head
+  meta(charset='utf-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+  link(rel='stylesheet', type='text/css', href='../CSS/promotion.css')
+  script(src='../jQuery/SelectPromotion.js')
+  title Ninja Promotion
+
+block content
+  .container
+    h2 Pro1
+    .row
+      .col-md-8
+        img#fixsize-Promotion(src='../pictures/Logo_Black.jpg')
+      .col-md-4.product-border
+        h Include
+        .dropdown
+          select#list(onchange='getSelectValue('changeMixer','this.value');')
+            option(value='Whisky_Black_Lite') BlackLabel (1.0 Lite )
+            option(value='Whisky_Red_Lite') RedLabel (1.0 Lite )
+          h  x 1
+        .dropdown
+          select#list(onchange='getSelectValue('changeMixer','this.value');')
+            option(value='9Mixer_Cola') Coca Cola (1.50 Lite)
+            option(value='9Mixer_Sprite') Sprite (1.25 Lite )
+          h  x 1
+        .dropdown
+          select#list(onchange='getSelectValue();')
+            option(value='Singha') Soda Singha (325 ml. )
+          h  x 8
+        img#fixsize-Promotion(src='../pictures/9Mixer_Sprite.jpg' id="changeMixer")
+        h ฿ 1399
+        button#fixsize.button1
+          | Add To Cart
+          a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
