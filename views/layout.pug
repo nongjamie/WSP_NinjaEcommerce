@@ -27,7 +27,8 @@ html
             if user
               li(class="nav-item")
                 a(class=(menu === 'logout' ? "nav-link active": "nav-link") href="/logout") Logout
-                button(id='test') Test
+              li(class='nav-item')
+                a(class=(menu === 'logout' ? "nav-link active": "nav-link") href=`/mycart/`+user.username) Mycart
             else
               li(class="nav-item")
                 a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
