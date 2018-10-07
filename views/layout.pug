@@ -9,6 +9,8 @@ html
     block head
 
   body
+    link(rel='stylesheet', type='style/css', href='../CSS/style.css')  
+    != messages('message', locals)
     // Header section
     div(class="container-fluid")
       div(id="nav-bar-box", class="row")

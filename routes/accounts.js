@@ -27,7 +27,9 @@ router.post('/addAccount', async(req, res) => {
 router.post('/login', 
    passport.authenticate('local', {
        successRedirect:'/',
-       failureRedirect:'/signup',
+       failureRedirect:'/login',
+       failureFlash:true,
+       successFlash:'Success'
    })
 )
 
