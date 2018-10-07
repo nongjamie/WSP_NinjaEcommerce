@@ -1,6 +1,7 @@
 $(function () {
     var username = ''
     var email = ''
+    
     $(document).ready(function () {
         $('#signUpForm').ajaxForm({ beforeSubmit: validate, success: showResponse });
     });
@@ -106,6 +107,11 @@ $(function () {
                 console.log(error)
             }
         });
+    })
+
+    $('#test').on('click', () => {
+        const test = window.localStorage
+        console.log(test)
     })
 
 

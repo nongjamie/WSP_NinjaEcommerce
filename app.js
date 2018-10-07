@@ -116,7 +116,7 @@ app.get("/login", function(req, res) {
 //Logout
 app.get("/logout",function(req,res){
   req.logout()
- // req.flash('success','You are logged out')
+  console.log('You are logged out')
   res.redirect('/')
 })
 
