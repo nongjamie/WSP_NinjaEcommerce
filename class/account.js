@@ -1,12 +1,11 @@
 const axios = require('axios')
+const URL = require('../config/database')
 
 class Account {
-    constructor(){
-        this.URL = 'https://us-central1-ninjadrink-25671.cloudfunctions.net/'
-    }
+
     async getList() {
         try {
-            const response = await axios.get(this.URL + 'getAccountList')
+            const response = await axios.get(URL.getList)
             return response
         } catch (error) {
             console.log('get account list error')
@@ -18,14 +17,14 @@ class Account {
         try {
             console.log('=====add method======')
             console.log(account)
-            const response = await axios.post(this.URL + 'addAccount',{},{
+            const response = await axios.post(URL.addAccount,{},{
                 headers:{
                     username: account.username,
                     password: account.password,
                     email: account.email,
                     name: account.name,
                     gender: account.gender,
-                    bday: account.bday,
+                    bday: account.day + '/' + account.month + '/' + account.year,
                     address: account.address,
                     province: account.province,
                     district: account.district,
@@ -36,6 +35,7 @@ class Account {
             return response.data
         } catch (error) {
             console.log('Post account to database error')
+            console.log(error)
             return error.data
         }
     }
@@ -43,7 +43,7 @@ class Account {
         try {
             console.log(account)
             console.log(account.username)
-            const response = await axios.post(this.URL + 'login',{},{
+            const response = await axios.post(URL.login,{},{
                 headers:{
                     'username': account.username,
                     'password': account.password
@@ -58,7 +58,7 @@ class Account {
     }
     async getAccountBy(username){
            
-       try { const response = await axios.post(this.URL+'getAccountByUsername',{},{
+       try { const response = await axios.post(URL.getAccountByUsername,{},{
                 headers:{
                     'username': username
                 }

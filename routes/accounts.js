@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const Account = require('./accountToDataBase')
-const axios = require('axios')
+const Account = require('../class/account')
 const passport = require('passport')
 const account = new Account()
 
@@ -17,19 +16,18 @@ router.post('/addAccount', async(req, res) => {
     console.log(result)
     if(result.return_code !== '500'){
         console.log('must reditrect')
-        res.send('/login')
+        res.send('success')
     }
     else{
-        res.redirect('/signup')
+        res.send('fail')
     }
 
 })
 
 router.post('/login', 
-   passport.authenticate('local',{
+   passport.authenticate('local', {
        successRedirect:'/',
-       failureRedirect:'/users/login',
-       failureFlash:true
+       failureRedirect:'/signup',
    })
 )
 

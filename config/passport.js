@@ -1,6 +1,6 @@
 const LocalStrategy = require('passport-local').Strategy;
 const axios = require('axios');
-const Account = require('../routes/accountToDataBase')
+const Account = require('../class/account')
 const accout = new Account()
 module.exports = function (passport) {
 
@@ -8,9 +8,10 @@ module.exports = function (passport) {
         try {
             const result = await accout.login({ username: username, password: password })
             console.log(result)
-            if (result.return_code = '200') {
+            if (result.return_code === '200') {
                 return done(null, result)
             } else {
+                console.log(result)
                 return done(null, false, { message: 'Wrong Username or Password' })
             }
 
@@ -23,15 +24,14 @@ module.exports = function (passport) {
 
         console.log('serialize ' + JSON.stringify(user))
         console.log(user)
-        console.log(user.account.username)
+
         done(null, user.account.username)
     });
 
     passport.deserializeUser(async function (user, done) {
-        console.log("Eiei:"+user)
         const result = await accout.getAccountBy(user)
-        console.log('user:', result)
-        done(null, result)
+
+        done(null, result || false)
     });
 
 }

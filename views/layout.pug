@@ -26,6 +26,7 @@ html
             if user
               li(class="nav-item")
                 a(class=(menu === 'logout' ? "nav-link active": "nav-link") href="/logout") Logout
+                button(id='test') Test
             else
               li(class="nav-item")
                 a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
@@ -50,7 +51,6 @@ html
       div(class="row")
         div(id="footer-company-name-background", class="col-sm-12")
           h1(id="footer-company-name") NINJA ECOMMERCE 
-    script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
   script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js")
   script(src="http://malsup.github.com/jquery.form.js")
   script(src="index.js")
