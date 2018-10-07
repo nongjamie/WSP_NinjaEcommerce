@@ -1,20 +1,9 @@
 $(function () {
     var username = ''
     var email = ''
+
     $(document).ready(function () {
-<<<<<<< HEAD
-        $('#signUpForm').submit(function () {
-            // inside event callbacks 'this' is the DOM element so we first
-            // wrap it in a jQuery object and then invoke ajaxSubmit
-            $(this).ajaxSubmit({ beforeSubmit: validate });
-            console.log('ajaxform beforesubmit')
-            // !!! Important !!!
-            // always return false to prevent standard browser submit and page navigation
-            return false;
-        });
-=======
         $('#signUpForm').ajaxForm({ beforeSubmit: validate, success: showResponse });
->>>>>>> 6d66a036dfe5fe986f98162e9cb4814b90192b9d
     });
 
     $('.password, .confirmPassword').on('keyup', function () {
@@ -38,12 +27,12 @@ $(function () {
                     return false;
                 }
             }
-            
+
             if(formData[i].name === 'password' && formData[i+1].name === 'confirmPassword'){
                 if(formData[i].value !== formData[i+1].value){
                     alert('Password is not matching')
                     return false
-                } 
+                }
             }
         }
         if(username){
@@ -58,7 +47,7 @@ $(function () {
         return true
     }
 
-    function showResponse(responseText, statusText, xhr, $form)  { 
+    function showResponse(responseText, statusText, xhr, $form)  {
         if(statusText === 'success'){
             console.log('Redirecting to /login ...')
             alert('Sign up complete!!')
@@ -71,7 +60,7 @@ $(function () {
 
     $('#username').focusout( function () {
         username = $(this).val();
-        $.ajax({ 
+        $.ajax({
             url: 'https://us-central1-ninjadrink-25671.cloudfunctions.net/isUsernameTaken',
             headers: {
                 'username': username,
@@ -95,7 +84,7 @@ $(function () {
     })
     $('#email').focusout( function () {
         email = $(this).val();
-        $.ajax({ 
+        $.ajax({
             url: 'https://us-central1-ninjadrink-25671.cloudfunctions.net/isEmailTaken',
             headers: {
                 'email': email,
