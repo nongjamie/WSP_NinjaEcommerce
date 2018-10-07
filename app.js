@@ -50,7 +50,7 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
-  
+
   res.locals.user = req.user || null;
   next();
 })
@@ -103,7 +103,7 @@ app.get("/beer", function(req, res) {
 // Wine route
 app.get("/wine", function(req, res) {
   res.render("wine", {
-    menu: 'wine',
+    menu: 'store',
     typeDrink: 'wine'
   });
 });
@@ -111,11 +111,17 @@ app.get("/wine", function(req, res) {
 // Mixer route
 app.get("/mixer", function(req, res) {
   res.render("mixer", {
-    menu: 'mixer' ,
+    menu: 'store' ,
     typeDrink: 'mixer'
   });
 });
 
+// Confirm route
+app.get("/confirmOrder", function(req, res) {
+  res.render("confirmOrder", {
+    menu: 'confirmOrder'
+  });
+});
 
 // Status route
 app.get("/status", function(req, res) {
@@ -133,7 +139,6 @@ app.get("/signup", function(req, res) {
 
 app.post('/signup', (req, res) => {
   console.log(req.body)
-
 })
 
 // Log in route
