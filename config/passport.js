@@ -30,9 +30,7 @@ module.exports = function (passport) {
 
     passport.deserializeUser(async function (user, done) {
         const result = await accout.getAccountBy(user)
-
-
-        done(null, result.account || false)
+        done(null, result || null)
     });
 
 }
