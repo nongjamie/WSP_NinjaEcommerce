@@ -3,7 +3,6 @@ const path = require("path");
 const bodyParser = require('body-parser')
 const passport = require('passport')
 const session = require('express-session')
-var cors = require('cors')
 
 const port = process.env.PORT || 3000
 
@@ -18,7 +17,6 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
-app.use(cors())
 
 // Public folder
 app.use(express.static('public'))
@@ -29,6 +27,7 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
+  
   res.locals.user = req.user || null;
   next();
 })
@@ -122,6 +121,12 @@ app.get("/logout",function(req,res){
 })
 
 app.use('/accounts', require('./routes/accounts'))
+
+app.use('/mycart', require('./routes/cart'))
+
+app.use(function(req, res, next) {
+  return res.status(404).render('404')
+});
 
 // Log in server
 app.listen(port, function() {
