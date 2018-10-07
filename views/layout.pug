@@ -10,6 +10,8 @@ html
     block head
 
   body
+    link(rel='stylesheet', type='style/css', href='../CSS/style.css')  
+    != messages('message', locals)
     // Header section
     div(class="container")
       img(id="logo-image", src="../pictures/ningja_logo.png", alt="")

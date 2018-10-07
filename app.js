@@ -3,6 +3,8 @@ const path = require("path");
 const bodyParser = require('body-parser')
 const passport = require('passport')
 const session = require('express-session')
+const expressValidator =require('express-validator')
+const flash = require('connect-flash')
 var cors = require('cors')
 
 const port = process.env.PORT || 3000
@@ -18,7 +20,26 @@ app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 app.use(cors())
-
+app.use(require('connect-flash')());
+app.use(function(req,res,next){
+  res.locals.messages = require('express-messages')(req,res)
+  next()
+})
+app.use(expressValidator({
+  errorFormatter :function(param,msg,value){
+      var namespace = param.split('.'),
+      root = namespace.shift(),
+      formParam =root;
+      while(namespace.length){
+          formParam+='['+namespace.shift()+']';
+      }
+      return{
+          param : formParam,
+          msg   : msg,
+          value : value
+      };
+  }
+}))
 // Public folder
 app.use(express.static('public'))
 
@@ -116,7 +137,7 @@ app.get("/login", function(req, res) {
 //Logout
 app.get("/logout",function(req,res){
   req.logout()
-  console.log('You are logged out')
+  req.flash('success','Logout success')
   res.redirect('/')
 })
 
