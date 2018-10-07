@@ -4,5 +4,7 @@ module.exports = {
     getList : URL + 'getAccountList',
     addAccount : URL + 'addAccount',
     login : URL + 'login',
-    getAccountByUsername : URL + 'getAccountByUsername'
+    getAccountByUsername : URL + 'getAccountByUsername',
+    getProductList : URL + 'getProductList',
+    getCategory : URL + 'getCategory',
 }

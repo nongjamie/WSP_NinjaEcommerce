@@ -53,38 +53,6 @@ app.get("/store", function(req, res) {
   });
 });
 
-// Store route
-app.get("/whisky", function(req, res) {
-  res.render("whisky", {
-    menu: 'store',
-    typeDrink: 'whisky'
-  });
-});
-
-// Beer route
-app.get("/beer", function(req, res) {
-  res.render("beer", {
-    menu: 'store',
-    typeDrink: 'beer'
-  });
-});
-
-// Wine route
-app.get("/wine", function(req, res) {
-  res.render("wine", {
-    menu: 'wine',
-    typeDrink: 'wine'
-  });
-});
-
-// Mixer route
-app.get("/mixer", function(req, res) {
-  res.render("mixer", {
-    menu: 'mixer' ,
-    typeDrink: 'mixer'
-  });
-});
-
 
 // Status route
 app.get("/status", function(req, res) {
@@ -118,6 +86,8 @@ app.get("/logout",function(req,res){
   console.log('You are logged out')
   res.redirect('/')
 })
+
+app.use(require('./routes/store'))
 
 app.use('/accounts', require('./routes/accounts'))
 
