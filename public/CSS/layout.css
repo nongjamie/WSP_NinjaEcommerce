@@ -6,7 +6,7 @@
 
 #nav-bar-box {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   background-color: rgb(254, 209, 0);
 }
 
@@ -38,4 +38,8 @@
 #footer-company-name-background {
   background-color: rgb(254, 209, 0);
   padding: 10px;
+}
+.fixsize-logo{
+  width: 130px;
+  height: 70px;
 }
