@@ -103,6 +103,12 @@ app.get("/logout",function(req,res){
 })
 
 app.use(require('./routes/products'))
+//aboutUs
+app.get("/aboutUs", function(req, res) {
+  res.render("aboutUs", {
+    menu: 'aboutUs'
+  });
+});
 
 app.use('/accounts', require('./routes/accounts'))
 

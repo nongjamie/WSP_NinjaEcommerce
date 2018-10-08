@@ -34,6 +34,12 @@
 
 /* Panther design */
 
+.promotionWelcomeSentence {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+
 button.button1 {
     background-color: white;
     color: black;

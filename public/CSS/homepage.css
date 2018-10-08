@@ -4,169 +4,27 @@
   border-color: green; */
 }
 
-/* History */
-
-.history-welcome-sentence {
-  font-size: 60px;
-  font-weight: bold;
-  text-align: center;
-}
-
-#box-1 {
-  margin: 10px;
-  border: 2px;
-  border-style: solid;
-  border-color: black;
-}
-
-.box-1-sentence {
-  font-size: 20px;
-  color: black;
-}
-
-.box-1-sentence-topic {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.box-1-sentence-detail {
-  text-indent: 10%;
-  padding: 5px 0;
-}
-
-.box-1-picture {
-  margin-top: 10px;
-}
-
-.box-1-picture img {
-  width: 100%;
-  height: 100%;
-  max-width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-#box-2 {
-  margin: 10px;
-  border: 2px;
-  border-style: solid;
-  border-color: red;
-}
-
-.box-2-sentence {
-  font-size: 20px;
-  color: red;
-}
-
-.box-2-sentence-topic {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.box-2-sentence-detail {
-  text-indent: 10%;
-  padding: 5px 0;
-}
-
-.box-2-picture {
-  margin-top: 10px;
-}
-
-.box-2-picture img {
-  width: 100%;
-  height: 100%;
-  max-width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-#box-3 {
-  margin: 10px;
-  border: 2px;
-  border-style: solid;
-  border-color: rgb(255, 185, 48);
-}
-
-.box-3-sentence {
-  font-size: 20px;
-  color: rgb(255, 185, 48);
-}
-
-.box-3-sentence-topic {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.box-3-sentence-detail-1 {
-  text-indent: 10%;
-  padding: 5px 0;
-}
-
-.box-3-sentence-detail-2 {
-  text-indent: 10%;
-  padding: 5px 0;
-}
-
-.box-3-sentence-detail-2-keyword {
-  font-weight: bold;
-}
-
-.box-3-picture {
-  margin-top: 10px;
-}
-
-.box-3-picture img {
-  width: 100%;
-  height: 100%;
-  max-width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.setcenter {
-  height: 100px;
-  width: 500px;
-}
-
 /* Promotion */
 
-.promotion-welcome-sentence {
+.promotionWelcomeSentence {
   font-size: 60px;
   font-weight: bold;
   text-align: center;
-}
-
-.promotion-box {
-  text-align: center;
-}
-
-.promotion-box img {
-  border: 2px solid black;
-  width: 90%;
-  height: 100%;
-  max-height: 300px;
-  padding: 10px 0;
-  margin: 10px 0;
 }
 
 /* Best seller */
 
-.bestseller-welcome-sentence {
+.bestsellerWelcomeSentence {
   font-size: 60px;
   font-weight: bold;
   text-align: center;
 }
 
-.bestseller-box {
+.bestsellerBox {
   border: 2px solid black;
 
+}
+
+.margin-bottom{
+  margin-bottom: 20px;
 }
