@@ -1,12 +1,12 @@
 extends store
 
 block head
-  
+
   link(rel='stylesheet', type='text/css', href='../CSS/store.css')
   title Ninja Whisky
 
 block content
-  
+
   div(class='container')
     div(id="nav-bar-box-2", class="row")
       div(class="col-sm-12")
@@ -19,7 +19,7 @@ block content
             a(class=(typeDrink === 'wine' ? "nav-link active": "nav-link") href="/wine") Wine
           li(class="nav-item")
             a(class=(typeDrink === 'mixer' ? "nav-link active": "nav-link") href="/mixer") Mixer
-  
+
   div(class="container" id='userNavBar')
     div(class='row justify-content-end')
       i(class="far fa-user" id='userNavBarUserIcon')
@@ -27,7 +27,7 @@ block content
       i(class="fas fa-shopping-cart" id='userNavBarCartIcon')
       button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' disabled) 0
       button(type="button" class="btn btn-danger" id='userNavBarConfirm' href='/confirmOrder') CONFIRM
-  
+
   .container-fluid
     h2 Whisky
     .row
@@ -48,7 +48,6 @@ block content
               input#fixsize(type='number', name='pro1', step='1', min='1')
               button#fixsize.button1
                 | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
 
       .container.col-6.col-md-4
         .container.product-border
@@ -67,8 +66,6 @@ block content
               input#fixsize(type='number', name='pro2', step='1', min='1')
               button#fixsize.button1
                 | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
-
 
       .container.col-6.col-md-4
         .container.product-border
@@ -87,7 +84,6 @@ block content
               input#fixsize(type='number', name='pro3', step='1', min='1')
               button#fixsize.button1
                 | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
 
       .container.col-6.col-md-4
         .container.product-border
@@ -106,7 +102,6 @@ block content
               input#fixsize(type='number', name='pro4', step='1', min='1')
               button#fixsize.button1
                 | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
 
       .container.col-6.col-md-4
         .container.product-border
@@ -125,7 +120,6 @@ block content
               input#fixsize(type='number', name='pro5', step='1', min='1')
               button#fixsize.button1
                 | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
 
       .container.col-6.col-md-4
         .container.product-border
@@ -144,8 +138,7 @@ block content
               input#fixsize(type='number', name='pro6', step='1', min='1')
               button#fixsize.button1
                 | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
-                  
+
 block foot
-  
+
   script(src='../script/whisky.js')
