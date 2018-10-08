@@ -155,6 +155,13 @@ app.get("/logout",function(req,res){
   res.redirect('/')
 })
 
+//aboutUs
+app.get("/aboutUs", function(req, res) {
+  res.render("aboutUs", {
+    menu: 'aboutUs'
+  });
+});
+
 app.use('/accounts', require('./routes/accounts'))
 
 app.use('/mycart', require('./routes/cart'))
