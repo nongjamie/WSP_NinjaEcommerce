@@ -8,10 +8,11 @@ block head
 block content
 
   div(class="container-fluid")
-
-    //- Promotion section
+    br
+    //- History section
     div(class="container-fluid")
-
+      div(class="row")
+        div(class="col-md-6").margin-bottom
           //- carousel start
           div(id="carouselExampleIndicators" class="carousel slide" style="width: 100%; margin:0 auto" data-ride="carousel")
             ol(class="carousel-indicators")
@@ -40,6 +41,7 @@ block content
             ol(class="carousel-indicators")
               li(data-target="#carouselExampleIndicators2" data-slide-to="0" class="active")
               li(data-target="#carouselExampleIndicators2" data-slide-to="1")
+              li(data-target="#carouselExampleIndicators2" data-slide-to="2")
             div(class="carousel-inner")
               div(class="carousel-item active")
                 a(href='/pro1')
@@ -49,7 +51,7 @@ block content
                   img(class="d-block w-100" src="./pictures/WhiteWalker_2_2.jpg" alt="Second slide")
               div(class="carousel-item")
                 a(href='/pro1')
-                  img(class="d-block w-100" src="./pictures/WhiteWalker_3_3.jpg" alt="Second slide")
+                  img(class="d-block w-100" src="./pictures/WhiteWalker_3_3.jpg" alt="Third slide")
               //- div(class="carousel-item")
                 img(class="d-block w-100" src="./pictures/home.png" alt="Third slide")
             a(class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev")
@@ -58,46 +60,11 @@ block content
             a(class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next")
               span(class="carousel-control-next-icon" aria-hidden="true")
               span(class="sr-only") Next
+            a(class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next")
+              span(class="carousel-control-next-icon" aria-hidden="true")
+              span(class="sr-only") Next
             //- carousel ending
-<<<<<<< HEAD
-      div(class="history-welcome-sentence")
-        | KNOW MORE ABOUT US
-      div(class="row" id="box-1")
-        div(class="col-sm-3")
-          div(class="box-1-picture")
-            img(src="https://ae01.alicdn.com/kf/HTB118uvSXXXXXcVXXXXq6xXFXXXH/9-6cm-9-8cm-Car-Sticker-Cartoon-Funny-Ninja-Vinyl-Decal-Black-Silver-Accessories-S6-4099.jpg_640x640.jpg")
-        div(class="col-sm-9")
-          div(class="box-1-sentence")
-            div(class="box-1-sentence-topic")
-              | What is "Ninja" ?
-            div(class="box-1-sentence-detail")
-              | A ninja (忍者) or shinobi (忍び) was a covert agent or mercenary in feudal Japan.
-              | The functions of the ninja included espionage, sabotage, infiltration, assassination and guerrilla warfare.
-              | Their covert methods of waging irregular warfare were deemed dishonorable and beneath the samurai, who observed strict rules about honor and combat.
-              | The shinobi proper, a specially trained group of spies and mercenaries, appeared in the 15th century during the Sengoku period, but antecedents may have existed as early as the 12th century.
-      div(class="row" id="box-2")
-        div(class="col-sm-3")
-          div(class="box-2-picture")
-            img(src="https://static.thenounproject.com/png/16757-200.png")
-        div(class="col-sm-9")
-          div(class="box-2-sentence")
-            div(class="box-2-sentence-topic")
-              | What is "Ecommerce" ?
-            div(class="box-2-sentence-detail")
-              | E-commerce is the activity of buying or selling of products on online services or over the Internet.
-              | Electronic commerce draws on technologies such as mobile commerce, electronic funds transfer, supply chain management, Internet marketing, online transaction processing, electronic data interchange (EDI), inventory management systems, and automated data collection systems.
-      div(class="row" id="box-3")
-        div(class="col-sm-3")
-          div(class="box-3-picture")
-            img(src="../pictures/ningja_logo.png")
-        div(class="col-sm-9")
-          div(class="box-3-sentence")
-            div(class="box-3-sentence-topic")
-              | " Ninja Ecommerce "
-            div(class="box-3-sentence-detail-1")
-              | It is the best ecommerce website that ever had in this century.
-            div(class="box-3-sentence-detail-2")
-              | We promise that our services will <span class="box-3-sentence-detail-2-keyword">fast, safe, inexpensive, secretly, good quality, reliable, and silently</span> sent like a ninja.
+
 
     //- Promotion section
     div(class="container-fluid")
@@ -114,22 +81,19 @@ block content
           a(href="https://www.google.co.th")
             img(src="http://www.absolat.com/images/promotion-in-marketing.jpg")
 
-=======
-
->>>>>>> fc4375780b599b7799ccfca0e8e2b96617d1bc9b
     //- Seller section
     div(class="container-fluid")
-      div(class="bestsellerWelcomeSentence")
+      div(class="bestseller-welcome-sentence")
         | BEST SELLER
-      div(class="bestsellerBox")
-        table(class="table table-hover" id="bestsellerBoxTable")
+      div(class="bestseller-box")
+        table(class="table table-hover" id="bestseller-box-table")
           thead
             tr
               th(scope="col") Rank
               th(scope="col") Product Name
               th(scope="col") Product Cost(฿)
               th(scope="col") Description
-          tbody(id="bestsellerBoxTableItem")
+          tbody(id="bestseller-box-table-item")
 
 block foot
 
