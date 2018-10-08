@@ -8,9 +8,11 @@ block head
 block content
 
   div(class="container-fluid")
-    br
-    //- History section
+    
+    //- Promotion section
     div(class="container-fluid")
+      div(class="promotionWelcomeSentence")
+        | PROMOTION
       div(class="row")
         div(class="col-md-6").margin-bottom
           //- carousel start
@@ -65,35 +67,19 @@ block content
               span(class="sr-only") Next
             //- carousel ending
 
-
-    //- Promotion section
-    div(class="container-fluid")
-      div(class="promotion-welcome-sentence")
-        | PROMOTION
-      div(class="promotion-box")
-        div(class="promotion-box-1")
-          a(href="https://www.google.co.th")
-            img(src="http://www.cipprint.com/images/Promotion%201.jpg")
-        div(class="promotion-box-1")
-          a(href="https://www.google.co.th")
-            img(src="http://fb1-cw.lnwfile.com/_/cw/_raw/ks/iu/h0.png")
-        div(class="promotion-box-1")
-          a(href="https://www.google.co.th")
-            img(src="http://www.absolat.com/images/promotion-in-marketing.jpg")
-
     //- Seller section
     div(class="container-fluid")
-      div(class="bestseller-welcome-sentence")
+      div(class="bestsellerWelcomeSentence")
         | BEST SELLER
-      div(class="bestseller-box")
-        table(class="table table-hover" id="bestseller-box-table")
+      div(class="bestsellerBox")
+        table(class="table table-hover" id="bestsellerBoxTable")
           thead
             tr
               th(scope="col") Rank
               th(scope="col") Product Name
               th(scope="col") Product Cost(฿)
               th(scope="col") Description
-          tbody(id="bestseller-box-table-item")
+          tbody(id="bestsellerBoxTableItem")
 
 block foot
 
