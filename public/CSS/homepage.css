@@ -6,34 +6,21 @@
 
 /* Promotion */
 
-.promotion-welcome-sentence {
+.promotionWelcomeSentence {
   font-size: 60px;
   font-weight: bold;
   text-align: center;
-}
-
-.promotion-box {
-  text-align: center;
-}
-
-.promotion-box img {
-  border: 2px solid black;
-  width: 90%;
-  height: 100%;
-  max-height: 300px;
-  padding: 10px 0;
-  margin: 10px 0;
 }
 
 /* Best seller */
 
-.bestseller-welcome-sentence {
+.bestsellerWelcomeSentence {
   font-size: 60px;
   font-weight: bold;
   text-align: center;
 }
 
-.bestseller-box {
+.bestsellerBox {
   border: 2px solid black;
 
 }

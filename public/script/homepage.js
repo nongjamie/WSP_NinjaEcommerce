@@ -3,23 +3,23 @@ $( () => {
 
   let testArray = [
     {
-      productName: 'Varit Ass',
-      productCost: 8000,
-      description: 'varit.as@ku.th'
+      productName: 'Beer',
+      productCost: 300,
+      description: 'Varit love thailand.'
     },
     {
-      productName: 'Varit Ass',
-      productCost: 9000,
-      description: 'varit.as@ku.th'
+      productName: 'Wine',
+      productCost: 500,
+      description: 'Jim love thailand.'
     },
     {
-      productName: 'Varit Ass',
-      productCost: 10000,
-      description: 'varit.as@ku.th'
+      productName: 'Whisky',
+      productCost: 1000,
+      description: 'Fame love thailand.'
     }
   ];
 
-  $('#bestseller-box-table-item').html( () => {
+  $('#bestsellerBoxTableItem').html( () => {
     let ans = '';
     for(let i=0 ; i < testArray.length ; i++) {
       let name = testArray[i].productName;
