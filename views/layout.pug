@@ -17,26 +17,26 @@ html
       div(id="nav-bar-box", class="row")
         div(class="col-sm-12")
           ul(id="menu-nav-bar", class="nav nav-pills nav-fill")
-            li(class="nav-item")
+            li(class="nav-item ")
               a(href='/')
                img.fixsize-logo(src='../pictures/logo_onweb.png' href="/")
-            li(class="nav-item")
+            li(class="nav-item alignCenter")
               a(class=(menu === 'promotion' ? "nav-link active": "nav-link") href="/promotion") PROMOTION
-            li(class="nav-item")
+            li(class="nav-item alignCenter")
               a(class=(menu === 'store' ? "nav-link active": "nav-link") href="/store") STORE
-            li(class="nav-item")
+            li(class="nav-item alignCenter")
               a(class=(menu === 'status' ? "nav-link active": "nav-link") href="/status") STATUS
-            li(class="nav-item")
+            li(class="nav-item alignCenter")
               a(class=(menu == 'aboutUs' ? "nav-link active": "nav-link") href="/aboutUs") ABOUTUS
             if user
-              li(class="nav-item")
+              li(class="nav-item alignCenter")
                 a(class=(menu === 'logout' ? "nav-link active": "nav-link") href="/logout") Logout
-              li(class='nav-item')
+              li(class='nav-item alignCenter')
                 a(class=(menu === 'logout' ? "nav-link active": "nav-link") href=`/mycart/`+user.username) Mycart
             else
-              li(class="nav-item")
+              li(class="nav-item alignCenter")
                 a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
-              li(class="nav-item")
+              li(class="nav-item alignCenter")
                 a(class=(menu === 'login' ? "nav-link active": "nav-link") href="/login") LOG IN
 
     // Body section
