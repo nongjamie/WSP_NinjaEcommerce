@@ -50,11 +50,6 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
-<<<<<<< HEAD
-
-=======
-
->>>>>>> Status
   res.locals.user = req.user || null;
   next();
 })
