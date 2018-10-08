@@ -5,6 +5,7 @@
 // }
 
 function jsDropDown(imgid,newing){
+  console.log("js is running");
   document.getElementById(imgid).src = "../pictures/" + newing + ".jpg"
 }
 // function setImageSrc(){
