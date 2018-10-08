@@ -1,7 +1,7 @@
 $(function () {
     var username = ''
     var email = ''
-
+    
     $(document).ready(function () {
         $('#signUpForm').ajaxForm({ beforeSubmit: validate, success: showResponse });
     });
@@ -27,12 +27,12 @@ $(function () {
                     return false;
                 }
             }
-
+            
             if(formData[i].name === 'password' && formData[i+1].name === 'confirmPassword'){
                 if(formData[i].value !== formData[i+1].value){
                     alert('Password is not matching')
                     return false
-                }
+                } 
             }
         }
         if(username){
@@ -47,7 +47,7 @@ $(function () {
         return true
     }
 
-    function showResponse(responseText, statusText, xhr, $form)  {
+    function showResponse(responseText, statusText, xhr, $form)  { 
         if(statusText === 'success'){
             console.log('Redirecting to /login ...')
             alert('Sign up complete!!')
@@ -60,31 +60,33 @@ $(function () {
 
     $('#username').focusout( function () {
         username = $(this).val();
-        $.ajax({
-            url: 'https://us-central1-ninjadrink-25671.cloudfunctions.net/isUsernameTaken',
-            headers: {
-                'username': username,
-            },
-            type: 'POST',
-            success: function(data) {
-                if(data.return_code === '400'){
-                    console.log(data)
-                    $('#usernameError').html('Username has been used').css('color', 'red');
-                    username = true
-                }else{
-                    console.log(data)
-                    $('#usernameError').html('')
-                    username = false
+        if (username !== ''){
+            $.ajax({ 
+                url: 'https://us-central1-ninjadrink-25671.cloudfunctions.net/isUsernameTaken',
+                headers: {
+                    'username': username,
+                },
+                type: 'POST',
+                success: function(data) {
+                    if(data.return_code === '400'){
+                        console.log(data)
+                        $('#usernameError').html('Username has been used').css('color', 'red');
+                        username = true
+                    }else{
+                        console.log(data)
+                        $('#usernameError').html('')
+                        username = false
+                    }
+                },
+                error: function(error){
+                    console.log(error)
                 }
-            },
-            error: function(error){
-                console.log(error)
-            }
-        });
+            })
+        }
     })
     $('#email').focusout( function () {
         email = $(this).val();
-        $.ajax({
+        $.ajax({ 
             url: 'https://us-central1-ninjadrink-25671.cloudfunctions.net/isEmailTaken',
             headers: {
                 'email': email,
@@ -107,5 +109,11 @@ $(function () {
         });
     })
 
+    $('#test').on('click', () => {
+        const test = window.localStorage
+        console.log(test)
+    })
+
 
 });
+

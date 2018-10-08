@@ -3,6 +3,8 @@ const path = require("path");
 const bodyParser = require('body-parser')
 const passport = require('passport')
 const session = require('express-session')
+const expressValidator =require('express-validator')
+const flash = require('connect-flash')
 var cors = require('cors')
 
 const port = process.env.PORT || 3000
@@ -12,14 +14,33 @@ const app = express();
 //Passport config
 require('./config/passport')(passport);
 //Middle ware
-app.use(session({ secret: "cats" }))
+
+app.use(session({ secret: "VaritAss", resave: true, saveUninitialized: true }))
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 app.use(cors())
-
-
+app.use(require('connect-flash')());
+app.use(function(req,res,next){
+  res.locals.messages = require('express-messages')(req,res)
+  next()
+})
+app.use(expressValidator({
+  errorFormatter :function(param,msg,value){
+      var namespace = param.split('.'),
+      root = namespace.shift(),
+      formParam =root;
+      while(namespace.length){
+          formParam+='['+namespace.shift()+']';
+      }
+      return{
+          param : formParam,
+          msg   : msg,
+          value : value
+      };
+  }
+}))
 // Public folder
 app.use(express.static('public'))
 
@@ -28,28 +49,30 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 //Use passport
-app.get('*',function(req,res,next){
-  console.log(req.user+' jp')
+app.get('*', function(req,res,next){
+  
   res.locals.user = req.user || null;
   next();
 })
+
 // Home page route
 app.get("/", function(req, res) {
   res.render("index", {
     menu: "homepage"
   });
 });
-//Logout
-app.get("/logout",function(req,res){
-  req.logout()
- // req.flash('success','You are logged out')
-  res.redirect('/login')
 
-})
 // Promotion route
 app.get("/promotion", function(req, res) {
   res.render("promotion", {
     menu: 'promotion'
+  });
+});
+
+// Promotion route
+app.get("/pro1", function(req, res) {
+  res.render("pro1", {
+    menu: 'pro1'
   });
 });
 
@@ -120,49 +143,20 @@ app.get("/login", function(req, res) {
   })
 })
 
-app.get("/af_index", async(req, res) => {
-  console.log('print')
-  res.render("af_index", {
-    title: "Ninja Home"
-  });
+//Logout
+app.get("/logout",function(req,res){
+  req.logout()
+  req.flash('success','Logout success')
+  res.redirect('/')
 })
-
-app.get("/af_status", function(req, res) {
-  res.render("af_status", {
-    menu: 'status'
-  });
-});
-
-app.get("/af_beer", function(req, res) {
-  res.render("af_beer", {
-    menu: 'beer'
-  });
-});
-
-app.get("/af_promotion", function(req, res) {
-  res.render("af_promotion", {
-    menu: 'promotion'
-  });
-});
-
-// Store route
-app.get("/af_store", function(req, res) {
-  res.render("af_store", {
-    menu: 'store'
-  });
-});
-
-// Store route
-app.get("/af_whisky", function(req, res) {
-  res.render("af_whisky", {
-    menu: 'whisky'
-  });
-});
-
-
 
 app.use('/accounts', require('./routes/accounts'))
 
+app.use('/mycart', require('./routes/cart'))
+
+app.use(function(req, res, next) {
+  return res.status(404).render('404')
+});
 
 // Log in server
 app.listen(port, function() {

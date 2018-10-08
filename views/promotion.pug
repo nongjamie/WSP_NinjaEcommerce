@@ -1,19 +1,23 @@
 extends layout
 
 block head
-  meta(charset='utf-8')
-  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-  link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+  
   link(rel='stylesheet', type='text/css', href='../CSS/promotion.css')
   title Ninja Promotion
 
 block content
+  
   .container
     h2 Promotion
     .row
       .col-md-12
-        img#fixsize-Promotion(src='../pictures/Promotion_Black_9Mixer.jpg')
+        a(href='/pro1')
+          img#fixsize-Promotion(src='../pictures/Promotion_Black_9Mixer.jpg')
       .col-md-6
         img#fixsize-Promotion(src='../pictures/Promotion_Black_9Mixer.jpg')
       .col-md-6
         img#fixsize-Promotion(src='../pictures/Promotion_Red_9Mixer.jpg')
+          
+block foot
+  
+  script(src='../script/promotion.js')

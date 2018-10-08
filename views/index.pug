@@ -1,14 +1,16 @@
 extends layout
 
 block head
+  
   link(rel='stylesheet', type='text/css', href='../CSS/homepage.css')
   title Ninja Ecommerce
 
 block content
-  div(class="container")
+  
+  div(class="container-fluid")
     
     //- History section
-    div(class="container")
+    div(class="container-fluid")
       div(class="history-welcome-sentence")
         | KNOW MORE ABOUT US
       div(class="row" id="box-1")
@@ -49,7 +51,7 @@ block content
               | We promise that our services will <span class="box-3-sentence-detail-2-keyword">fast, safe, inexpensive, secretly, good quality, reliable, and silently</span> sent like a ninja.
     
     //- Promotion section
-    div(class="container")
+    div(class="container-fluid")
       div(class="promotion-welcome-sentence")
         | PROMOTION
       div(class="promotion-box")
@@ -64,7 +66,7 @@ block content
             img(src="http://www.absolat.com/images/promotion-in-marketing.jpg")
     
     //- Seller section
-    div(class="container")
+    div(class="container-fluid")
       div(class="bestseller-welcome-sentence")
         | BEST SELLER
       div(class="bestseller-box")
@@ -75,8 +77,8 @@ block content
               th(scope="col") Product Name
               th(scope="col") Product Cost(฿)
               th(scope="col") Description
-          tbody(class="bestseller-box-table-detail")
-            //- Details in the table are from homeScript.js
+          tbody(id="bestseller-box-table-item")
 
-//- block linkScript
-//-   script(src='./jQuery/homeScript.js')
+block foot
+  
+  script(src='../script/homepage.js')
