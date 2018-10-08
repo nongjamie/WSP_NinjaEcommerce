@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nongjamie/NinjaEcommerce#readme",
   "dependencies": {
+    "acorn-globals": "^4.3.0",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "connect-flash": "^0.1.1",
