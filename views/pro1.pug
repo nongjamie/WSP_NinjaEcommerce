@@ -8,19 +8,19 @@ block head
 block content
 
   .container
-    h2 Promotion BlackLabel Lite with 9 Mixer
+    h2(id="changeName") Promotion BlackLabel with 9 Mixer
     .row
       .col-md-8
         img.fixsize-Promotion(src='../pictures/Logo_Black.jpg' id ="changeWhisky")
       .col-md-4.product-border
         h Include
         .dropdown
-          select#list(onchange="jsDropDown('changeWhisky',this.value)")
+          select#list(onchange="jsDropDown('changeWhisky','changeName','changePrice',this.value)" )
             option(value='Logo_Black') BlackLabel (1.0 Lite )
             option(value='Logo_Red') RedLabel (1.0 Lite )
           h  x 1
         .dropdown
-          select#list(onchange="jsDropDown('changeMixer',this.value)")
+          select#list(onchange="jsDropDown('changeMixer','changeName','changePrice',this.value)")
             option(value='9Mixer_Cola') Coca Cola (1.50 Lite)
             option(value='9Mixer_Sprite') Sprite (1.25 Lite )
           h  x 1
@@ -29,7 +29,7 @@ block content
             option(value='Singha') Soda Singha (325 ml. )
           h  x 8
         img.fixsize-Promotion(src='../pictures/9Mixer_Cola.jpg' id ="changeMixer")
-        h ฿ 1399
+        h(id ="changePrice") ฿ 1399
         button#fixsize.button1
           | Add To Cart
 
