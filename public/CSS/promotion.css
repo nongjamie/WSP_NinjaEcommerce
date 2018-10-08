@@ -92,3 +92,7 @@ button.button1:focus{
     margin-bottom: 30px;
     border-radius:10px;
 }
+
+.margin-bottom{
+  margin-bottom: 20px;
+}
