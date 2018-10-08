@@ -50,7 +50,11 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> Status
   res.locals.user = req.user || null;
   next();
 })
@@ -156,6 +160,7 @@ app.get("/logout",function(req,res){
 })
 
 app.use('/accounts', require('./routes/accounts'))
+<<<<<<< HEAD
 
 app.use('/mycart', require('./routes/cart'))
 
@@ -163,6 +168,15 @@ app.use(function(req, res, next) {
   return res.status(404).render('404')
 });
 
+=======
+
+app.use('/mycart', require('./routes/cart'))
+
+app.use(function(req, res, next) {
+  return res.status(404).render('404')
+});
+
+>>>>>>> Status
 // Log in server
 app.listen(port, function() {
   console.log("server started on port " + port);

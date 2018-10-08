@@ -17,13 +17,13 @@ block content
             div(class="input-group-prepend")
               span(class="input-group-text")
                 | Order number
-            input(type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default")
+            input(type="text" id='idOrder' class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default")
     //- Progess bar
     div(class="container")
       div(class="row justify-content-md-center")
         div(class="col-sm-6")
           div(class="progress" id="status-progessbar")
-            div(class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%")
+            div(class="progress-bar progress-bar-striped progress-bar-animated" id="statusProgessbarResult" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 10%")
     //- Table result
     div(class="container")
       div(class="row justify-content-md-center")
@@ -36,25 +36,7 @@ block content
                 th(scope="col") Amount
                 th(scope="col") Cost(฿)
                 th(scope="col") Status
-            tbody
-              tr
-                th(scope="row") 1
-                td Kong
-                td Kong
-                td Kong
-                td Kong
-              tr
-                th(scope="row") 2
-                td Varit
-                td Varit
-                td Varit
-                td Varit
-              tr
-                th(scope="row") 3
-                td Ass
-                td Ass
-                td Ass
-                td Ass
+            tbody(id="status-table-item")
     //- Remind sentence
     div(class="container")
       div(class="row justify-content-md-center")
