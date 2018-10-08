@@ -39,3 +39,7 @@
   background-color: rgb(254, 209, 0);
   padding: 10px;
 }
+
+* {
+  font-family: 'Luckiest Guy', cursive;
+}

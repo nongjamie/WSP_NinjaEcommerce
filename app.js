@@ -26,21 +26,21 @@ app.use(function(req,res,next){
   res.locals.messages = require('express-messages')(req,res)
   next()
 })
-app.use(expressValidator({
-  errorFormatter :function(param,msg,value){
-      var namespace = param.split('.'),
-      root = namespace.shift(),
-      formParam =root;
-      while(namespace.length){
-          formParam+='['+namespace.shift()+']';
-      }
-      return{
-          param : formParam,
-          msg   : msg,
-          value : value
-      };
-  }
-}))
+// app.use(expressValidator({
+//   errorFormatter :function(param,msg,value){
+//       var namespace = param.split('.'),
+//       root = namespace.shift(),
+//       formParam =root;
+//       while(namespace.length){
+//           formParam+='['+namespace.shift()+']';
+//       }
+//       return{
+//           param : formParam,
+//           msg   : msg,
+//           value : value
+//       };
+//   }
+// }))
 // Public folder
 app.use(express.static('public'))
 
@@ -62,59 +62,6 @@ app.get("/", function(req, res) {
   });
 });
 
-// Promotion route
-app.get("/promotion", function(req, res) {
-  res.render("promotion", {
-    menu: 'promotion'
-  });
-});
-
-// Promotion route
-app.get("/pro1", function(req, res) {
-  res.render("pro1", {
-    menu: 'pro1'
-  });
-});
-
-// Store route
-app.get("/store", function(req, res) {
-  res.render("store", {
-    menu: 'store',
-    typeDrink: 'null'
-  });
-});
-
-// Store route
-app.get("/whisky", function(req, res) {
-  res.render("whisky", {
-    menu: 'store',
-    typeDrink: 'whisky'
-  });
-});
-
-// Beer route
-app.get("/beer", function(req, res) {
-  res.render("beer", {
-    menu: 'store',
-    typeDrink: 'beer'
-  });
-});
-
-// Wine route
-app.get("/wine", function(req, res) {
-  res.render("wine", {
-    menu: 'store',
-    typeDrink: 'wine'
-  });
-});
-
-// Mixer route
-app.get("/mixer", function(req, res) {
-  res.render("mixer", {
-    menu: 'store' ,
-    typeDrink: 'mixer'
-  });
-});
 
 // Confirm route
 app.get("/confirmOrder", function(req, res) {
@@ -154,6 +101,8 @@ app.get("/logout",function(req,res){
   req.flash('success','Logout success')
   res.redirect('/')
 })
+
+app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))
 
