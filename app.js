@@ -26,7 +26,6 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
-  
   res.locals.user = req.user || null;
   next();
 })
@@ -87,7 +86,7 @@ app.get("/logout",function(req,res){
   res.redirect('/')
 })
 
-app.use(require('./routes/store'))
+app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))
 
