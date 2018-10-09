@@ -26,21 +26,21 @@ app.use(function(req,res,next){
   res.locals.messages = require('express-messages')(req,res)
   next()
 })
-app.use(expressValidator({
-  errorFormatter :function(param,msg,value){
-      var namespace = param.split('.'),
-      root = namespace.shift(),
-      formParam =root;
-      while(namespace.length){
-          formParam+='['+namespace.shift()+']';
-      }
-      return{
-          param : formParam,
-          msg   : msg,
-          value : value
-      };
-  }
-}))
+// app.use(expressValidator({
+//   errorFormatter :function(param,msg,value){
+//       var namespace = param.split('.'),
+//       root = namespace.shift(),
+//       formParam =root;
+//       while(namespace.length){
+//           formParam+='['+namespace.shift()+']';
+//       }
+//       return{
+//           param : formParam,
+//           msg   : msg,
+//           value : value
+//       };
+//   }
+// }))
 // Public folder
 app.use(express.static('public'))
 
@@ -162,6 +162,7 @@ app.get("/logout",function(req,res){
   res.redirect('/')
 })
 
+app.use(require('./routes/products'))
 //aboutUs
 app.get("/aboutUs", function(req, res) {
   res.render("aboutUs", {

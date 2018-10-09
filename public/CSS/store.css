@@ -40,6 +40,11 @@ button.button1 {
   height:50%;
   width:60%;
 }
+.fixsize {
+  height:50%;
+  width:60%;
+}
+
 
 button.button1:hover {
     background-color: #555555;
@@ -76,4 +81,21 @@ text-align: center;
 
 h3{
   font-size: 10px;
+}
+
+.flex-container {
+  overflow: auto;
+  display: flex;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(254, 209, 0);
+  border-radius: 1em;
+}
+.flex-container > div {
+  background-color: #fff;
+  margin: 10px;
+  text-align: center;
+  flex-basis: 30%;
+  border-radius: 4px;
 }
