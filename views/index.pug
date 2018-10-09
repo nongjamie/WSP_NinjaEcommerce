@@ -1,22 +1,21 @@
 extends layout
 
 block head
-  
+
   link(rel='stylesheet', type='text/css', href='../CSS/homepage.css')
   title Ninja Ecommerce
 
 block content
-  
+
   div(class="container-fluid")
-    
+
     //- Promotion section
     div(class="container-fluid")
-      div(class="promotionWelcomeSentence")
-        | HOT PROMOTION !!!
+      br
       div(class="row")
-        div(class="col-sm-6")
+        div(class="col-md-6").margin-bottom
           //- carousel start
-          div(id="carouselExampleIndicators" class="carousel slide" style="width: 600px; margin:0 auto" data-ride="carousel")
+          div(id="carouselExampleIndicators" class="carousel slide" style="width: 100%; margin:0 auto" data-ride="carousel")
             ol(class="carousel-indicators")
               li(data-target="#carouselExampleIndicators" data-slide-to="0" class="active")
               li(data-target="#carouselExampleIndicators" data-slide-to="1")
@@ -37,19 +36,23 @@ block content
               span(class="carousel-control-next-icon" aria-hidden="true")
               span(class="sr-only") Next
             //- carousel ending
-        div(class="col-sm-6")
+        div(class="col-md-6")
           //- carousel start
-          div(id="carouselExampleIndicators2" class="carousel slide" style="width: 600px; margin:0 auto" data-ride="carousel")
+          div(id="carouselExampleIndicators2" class="carousel slide" style="width: 100%; margin:0 auto" data-ride="carousel")
             ol(class="carousel-indicators")
               li(data-target="#carouselExampleIndicators2" data-slide-to="0" class="active")
               li(data-target="#carouselExampleIndicators2" data-slide-to="1")
+              li(data-target="#carouselExampleIndicators2" data-slide-to="2")
             div(class="carousel-inner")
               div(class="carousel-item active")
-                a(href='/pro1')
-                  img(class="d-block w-100" src="./pictures/Promotion_Black_9Mixer.jpg" alt="First slide")
+                a(href='/pro2')
+                  img(class="d-block w-100" src="./pictures/WhiteWalker_1_1.jpg" alt="First slide")
               div(class="carousel-item")
-                a(href='/pro1')
-                  img(class="d-block w-100" src="./pictures/Promotion_Red_9Mixer.jpg" alt="Second slide")
+                a(href='/pro2')
+                  img(class="d-block w-100" src="./pictures/WhiteWalker_2_2.jpg" alt="Second slide")
+              div(class="carousel-item")
+                a(href='/pro2')
+                  img(class="d-block w-100" src="./pictures/WhiteWalker_3_3.jpg" alt="Third slide")
               //- div(class="carousel-item")
                 img(class="d-block w-100" src="./pictures/home.png" alt="Third slide")
             a(class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev")
@@ -58,8 +61,11 @@ block content
             a(class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next")
               span(class="carousel-control-next-icon" aria-hidden="true")
               span(class="sr-only") Next
+            a(class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next")
+              span(class="carousel-control-next-icon" aria-hidden="true")
+              span(class="sr-only") Next
             //- carousel ending
-    
+
     //- Seller section
     div(class="container-fluid")
       div(class="bestsellerWelcomeSentence")
@@ -76,4 +82,4 @@ block content
 
 block foot
   
-  script(src='../script/homepage.js')
+  script(src='./script/homepage.js')

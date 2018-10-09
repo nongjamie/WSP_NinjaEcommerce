@@ -208,3 +208,9 @@
   text-indent: 100%;
   padding: 5px 0;
 }
+
+.alignCenter{
+  display : flex;
+  align-content: left;
+  align-items: center;
+}
