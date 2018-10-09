@@ -6,8 +6,16 @@ const account = new Account()
 router.get('/admin', async (req, res) => {
         const result = await account.getAccountList()
         console.log(result)
-        res.render('admin', {
+        res.render('admin-all-user', {
                 users: result.accounts
+        })
+})
+
+router.get('/admin/:username', async (req, res) => {
+        const result = await account.getAccountBy(req.params.username)
+        console.log(result)
+        res.render('admin-user-info',{
+                account : result.account
         })
 })
 

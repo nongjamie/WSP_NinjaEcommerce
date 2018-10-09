@@ -23,11 +23,12 @@
     transition: all 0.2s ease;
 }
 
-.test{
+
+.onHoverNavComponent{
     display: inline-block;
 }
 
-.test:hover .navComponent{
+.onHoverNavComponent:hover .navComponent{
     transition:  1s;
     background-color: darkcyan;
 }
@@ -72,19 +73,34 @@
   
 .flex-container > div {
     background-color: whitesmoke;
-    width: 50%;
-    margin: 1em;
+    min-width: 100px;
+    margin: 5px;
     flex-basis: 30%;
+    word-wrap:break-word;
 }
-.varit{
-    display: block;
+
+.myCard{
+    color: black;
 }
+
+
+
 
 @media (max-width: 1150px) {
     .logo{
         margin-left: 0;
     }
     .myBody{
-        margin-left: 8em;
+        margin: 0px;
+    }
+    .flex-container > div {
+        background-color: whitesmoke;
+        width: 100%;
+        flex-basis: 30%;
+        word-wrap:break-word;
+    }
+    .sidenav{
+        display: inline;
+        float: none;   
     }
 }

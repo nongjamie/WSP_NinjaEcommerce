@@ -9,32 +9,23 @@ html
   body
     .container-fluid
       nav.myNavBar(class="navbar navbar-light sticky-top")
-        .container.temp
+        .container
           div.logo
             img.img(src="/pictures/home.png", alt="")
           div
-            div
-              .test
-                span.px-2.navComponent.mx-2 Home
-              .test
-                span.px-2.navComponent.mx-2 Setting
-              .test 
-                span.px-2.navComponent.mx-2 Logout
+            .onHoverNavComponent
+              span.px-2.navComponent.mx-2 
+                a(href='/') Home
+            .onHoverNavComponent
+              span.px-2.navComponent.mx-2 Setting
+            .onHoverNavComponent 
+              span.px-2.navComponent.mx-2 
+                a(href='/logout') Logout
       div
         .sidenav
-          a(href="") Dashboard
+          a(href="/admin") Dashboard
           a(href="") 
-        .myBody
-          .border.border-dark
-            .flex-container
-              each user in users
-                div.container
-                  img(src="", alt="")
-                  br
-                  .varit
-                    h5 #{user.username}
-                  .varit  
-                    h5 #{user.email}
+        block content
       .container-fluid
         //sidebar
         
