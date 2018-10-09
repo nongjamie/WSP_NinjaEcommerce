@@ -1,0 +1,90 @@
+.myNavBar{
+    background-color:whitesmoke;
+    padding : 1em;
+}
+
+.img{
+  opacity: 1;
+  display: block;
+  max-width: 50px;
+  max-height: 50px;
+  transition: all  0.2s ease;
+}
+
+.logo{
+    margin-left: -4em;
+}
+
+.logo:hover .img{
+    max-width: 500px;
+    opacity: 0.4;
+}
+.navComponent {
+    transition: all 0.2s ease;
+}
+
+.test{
+    display: inline-block;
+}
+
+.test:hover .navComponent{
+    transition:  1s;
+    background-color: darkcyan;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    display: block;
+    float: left;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:whitesmoke;
+    overflow-x: auto;
+    padding-top: 20px;
+}
+
+.sidenav a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: darkslategrey;
+}
+
+.myBody{
+    margin-left: 8em;
+}
+
+.flex-container {
+    overflow: auto;
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: palegoldenrod;
+}
+  
+.flex-container > div {
+    background-color: whitesmoke;
+    width: 50%;
+    margin: 1em;
+    flex-basis: 30%;
+}
+.varit{
+    display: block;
+}
+
+@media (max-width: 1150px) {
+    .logo{
+        margin-left: 0;
+    }
+    .myBody{
+        margin-left: 8em;
+    }
+}

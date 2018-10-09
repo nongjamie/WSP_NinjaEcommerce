@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+    link(rel='stylesheet', type='text/css', href='../CSS/admin.css')
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+  body
+    .container-fluid
+      nav.myNavBar(class="navbar navbar-light sticky-top")
+        .container.temp
+          div.logo
+            img.img(src="/pictures/home.png", alt="")
+          div
+            div
+              .test
+                span.px-2.navComponent.mx-2 Home
+              .test
+                span.px-2.navComponent.mx-2 Setting
+              .test 
+                span.px-2.navComponent.mx-2 Logout
+      div
+        .sidenav
+          a(href="") Dashboard
+          a(href="") 
+        .myBody
+          .border.border-dark
+            .flex-container
+              each user in users
+                div.container
+                  img(src="", alt="")
+                  br
+                  .varit
+                    h5 #{user.username}
+                  .varit  
+                    h5 #{user.email}
+      .container-fluid
+        //sidebar
+        
+
+        
+    
+    
+
+  
