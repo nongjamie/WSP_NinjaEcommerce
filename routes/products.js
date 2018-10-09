@@ -3,6 +3,8 @@ const router = express.Router()
 const Product = require('../class/product')
 const product = new Product()
 
+
+
 // Promotion route
 router.get("/promotion",async function(req, res) {
     res.render("promotion", {
@@ -27,7 +29,7 @@ router.get("/promotion",async function(req, res) {
   
   // Store route
   router.get("/whisky",async function(req, res) {
-
+    console.log('dadasd')
     const result = await product.getCategoryByName('Whisky')
     console.log(result)
     res.render("whisky", {
