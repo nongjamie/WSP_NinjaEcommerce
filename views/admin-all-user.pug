@@ -2,13 +2,13 @@ extends admin-layout
 
 block content
   .myBody
-    .border.border-dark
       .flex-container.allCard
         each user in users
-          div.container
+          div.cardMargin
             img(src="", alt="")
             br
-            div
+            div.m-3
               a.myCard(href="/admin/"+user.username) #{user.username}
-            div  
+            hr
+            div.m-3 
               a.myCard(href='/admin/'+user.username) #{user.email}
