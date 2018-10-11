@@ -92,12 +92,12 @@ app.get("/store", function(req, res) {
 });
 
 // Store route
-app.get("/whisky", function(req, res) {
-  res.render("whisky", {
-    menu: 'store',
-    typeDrink: 'whisky'
-  });
-});
+// app.get("/whisky", function(req, res) {
+//   res.render("whisky", {
+//     menu: 'store',
+//     typeDrink: 'whisky'
+//   });
+// });
 
 // Beer route
 app.get("/beer", function(req, res) {
