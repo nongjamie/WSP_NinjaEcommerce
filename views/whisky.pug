@@ -36,7 +36,7 @@ block content
     h2 Whisky
     .flex-container.mt-3
       each product, i in products
-        div.p-3
+        div.p-3.border.border-danger
           h.mt-2 #{product.productName}
           h3 #{product.productDetail}
           img.fixsize(src='../pictures/Whisky_'+product.productName+'.jpg')

@@ -69,57 +69,11 @@ app.get("/promotion", function(req, res) {
   });
 });
 
-// Promotion route
-app.get("/pro1", function(req, res) {
-  res.render("pro1", {
-    menu: 'pro1'
-  });
-});
 
 // Promotion route
 app.get("/pro2", function(req, res) {
   res.render("pro2", {
     menu: 'pro2'
-  });
-});
-
-// Store route
-app.get("/store", function(req, res) {
-  res.render("store", {
-    menu: 'store',
-    typeDrink: 'null'
-  });
-});
-
-// Store route
-// app.get("/whisky", function(req, res) {
-//   res.render("whisky", {
-//     menu: 'store',
-//     typeDrink: 'whisky'
-//   });
-// });
-
-// Beer route
-app.get("/beer", function(req, res) {
-  res.render("beer", {
-    menu: 'store',
-    typeDrink: 'beer'
-  });
-});
-
-// Wine route
-app.get("/wine", function(req, res) {
-  res.render("wine", {
-    menu: 'store',
-    typeDrink: 'wine'
-  });
-});
-
-// Mixer route
-app.get("/mixer", function(req, res) {
-  res.render("mixer", {
-    menu: 'store' ,
-    typeDrink: 'mixer'
   });
 });
 
@@ -162,13 +116,14 @@ app.get("/logout",function(req,res){
   res.redirect('/')
 })
 
-app.use(require('./routes/products'))
 //aboutUs
 app.get("/aboutUs", function(req, res) {
   res.render("aboutUs", {
     menu: 'aboutUs'
   });
 });
+
+app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))
 
