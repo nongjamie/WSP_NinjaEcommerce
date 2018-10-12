@@ -1,0 +1,14 @@
+extends admin-layout
+
+block content
+  .myBody
+      .flex-container.allCard
+        each user in users
+          div.cardMargin
+            img(src="", alt="")
+            br
+            div.m-3
+              a.myCard(href="/admin/"+user.username) #{user.username}
+            hr
+            div.m-3 
+              a.myCard(href='/admin/'+user.username) #{user.email}

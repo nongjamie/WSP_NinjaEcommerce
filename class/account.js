@@ -3,10 +3,10 @@ const URL = require('../config/database')
 
 class Account {
 
-    async getList() {
+    async getAccountList() {
         try {
             const response = await axios.get(URL.getList)
-            return response
+            return response.data
         } catch (error) {
             console.log('get account list error')
             console.log(error)
