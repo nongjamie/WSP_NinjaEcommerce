@@ -61,6 +61,11 @@ app.get("/", function(req, res) {
     menu: "homepage"
   });
 });
+app.post('/', (req, res) => {
+  const data = req.body
+  console.log(data)
+  res.send('success')
+})
 
 // Promotion route
 app.get("/promotion", function(req, res) {
@@ -98,9 +103,6 @@ app.get("/signup", function(req, res) {
   });
 });
 
-app.post('/signup', (req, res) => {
-  console.log(req.body)
-})
 
 // Log in route
 app.get("/login", function(req, res) {

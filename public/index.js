@@ -55,7 +55,6 @@ $(function () {
         }else{
             alert('Response error')
         }
-
     }
 
     $('#username').focusout( function () {
