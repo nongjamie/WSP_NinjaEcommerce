@@ -64,11 +64,11 @@ html
     .feedbackSign
       label.mt-1.mx-2.animated.infinite.pulse.slow Feedback
     .feedback
-      .container
+      .container.mt-4
         div
-          form(id='feedbackForm' method='POST', action='/')
+          form(id='feedbackForm' method='POST', action='/addFeedback')
             p Your name or username (Optional)
-            input.form-control(name='username', type='text')
+            input.form-control(name='name', type='text')
             br
             p Give us feedback
             textarea.form-control(name="feedback", cols="5", rows="3")
