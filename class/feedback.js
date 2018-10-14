@@ -4,7 +4,8 @@ const URL = require('../config/database')
 class Feedback {
     async addFeedback(data){
         try{
-            console.log(data)
+            console.log(data.name)
+            console.log(data.feedback)
             const response = await axios.post(URL.addFeedback,{},{
                 headers:{
                     'name': data.name,
@@ -18,7 +19,6 @@ class Feedback {
         }
         
     }
-
     async getFeedbacks(){
         try {
             const response = await axios.get(URL.getFeedbacks)
