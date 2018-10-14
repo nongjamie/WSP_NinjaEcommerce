@@ -26,21 +26,21 @@ app.use(function(req,res,next){
   res.locals.messages = require('express-messages')(req,res)
   next()
 })
-app.use(expressValidator({
-  errorFormatter :function(param,msg,value){
-      var namespace = param.split('.'),
-      root = namespace.shift(),
-      formParam =root;
-      while(namespace.length){
-          formParam+='['+namespace.shift()+']';
-      }
-      return{
-          param : formParam,
-          msg   : msg,
-          value : value
-      };
-  }
-}))
+// app.use(expressValidator({
+//   errorFormatter :function(param,msg,value){
+//       var namespace = param.split('.'),
+//       root = namespace.shift(),
+//       formParam =root;
+//       while(namespace.length){
+//           formParam+='['+namespace.shift()+']';
+//       }
+//       return{
+//           param : formParam,
+//           msg   : msg,
+//           value : value
+//       };
+//   }
+// }))
 // Public folder
 app.use(express.static('public'))
 
@@ -61,6 +61,11 @@ app.get("/", function(req, res) {
     menu: "homepage"
   });
 });
+app.post('/', (req, res) => {
+  const data = req.body
+  console.log(data)
+  res.send('success')
+})
 
 // Promotion route
 app.get("/promotion", function(req, res) {
@@ -69,50 +74,11 @@ app.get("/promotion", function(req, res) {
   });
 });
 
+
 // Promotion route
-app.get("/pro1", function(req, res) {
-  res.render("pro1", {
-    menu: 'pro1'
-  });
-});
-
-// Store route
-app.get("/store", function(req, res) {
-  res.render("store", {
-    menu: 'store',
-    typeDrink: 'null'
-  });
-});
-
-// Store route
-app.get("/whisky", function(req, res) {
-  res.render("whisky", {
-    menu: 'store',
-    typeDrink: 'whisky'
-  });
-});
-
-// Beer route
-app.get("/beer", function(req, res) {
-  res.render("beer", {
-    menu: 'store',
-    typeDrink: 'beer'
-  });
-});
-
-// Wine route
-app.get("/wine", function(req, res) {
-  res.render("wine", {
-    menu: 'store',
-    typeDrink: 'wine'
-  });
-});
-
-// Mixer route
-app.get("/mixer", function(req, res) {
-  res.render("mixer", {
-    menu: 'store' ,
-    typeDrink: 'mixer'
+app.get("/pro2", function(req, res) {
+  res.render("pro2", {
+    menu: 'pro2'
   });
 });
 
@@ -137,9 +103,6 @@ app.get("/signup", function(req, res) {
   });
 });
 
-app.post('/signup', (req, res) => {
-  console.log(req.body)
-})
 
 // Log in route
 app.get("/login", function(req, res) {
@@ -162,9 +125,13 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
+app.use(require('./routes/products'))
+
 app.use('/accounts', require('./routes/accounts'))
 
 app.use('/mycart', require('./routes/cart'))
+
+app.use(require('./routes/admin'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')

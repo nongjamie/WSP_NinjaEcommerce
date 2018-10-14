@@ -1,0 +1,49 @@
+extends layout
+
+block head
+    link(rel='stylesheet', type='text/css', href='../CSS/cart.css')
+    title Cart
+
+block content
+  .container
+    br
+    div
+        .row.rowBorder.myRow
+            .col-sm-2
+                span Product
+            .col-sm-4
+                span Description
+            .col-sm-2
+                span Unit price
+            .col-sm-2
+                span Qty
+            .col-sm-2
+                span total
+
+        each product, i in products
+            .row.mt-2.myRow
+                .col-sm-2.alignCenter
+                    img.myImg(src="/pictures/Whisky_" + product.productName + '.jpg' , alt="")
+                .col-sm-4.alignLeft
+                    span #{product.productName}
+                .col-sm-2.alignLeft
+                    span #{product.productPrice}
+                .col-sm-2.alignLeft
+                    span #{product.quantity} 
+                .col-sm-2.alignLeft
+                    span.eachTotal= product.quantity*product.productPrice
+    br
+    hr
+    .text-right
+        span.total Total : #{total}
+    .checkoutZone
+        button.btn.btn-danger(type="button" id='userNavBarConfirm' ) Checkout
+    //- .row
+    //-     .col-sm-4
+    //-         h1= user.username
+    //-     .col-sm-8
+    //-         each product, i in products
+    //-             = product.productID
+    
+
+

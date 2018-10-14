@@ -10,7 +10,10 @@ block content
   div(class="container" id='userNavBar')
     div(class='row justify-content-end')
         i(class="far fa-user" id='userNavBarUserIcon')
-        button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' disabled) Annonymous
+        if user
+          button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' value=user.username ) #{user.username}
+        else
+          button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' ) None
         i(class="fas fa-shopping-cart" id='userNavBarCartIcon')
         button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' disabled) 0
         button(type="button" class="btn btn-danger" id='userNavBarConfirm') CONFIRM
@@ -19,15 +22,45 @@ block content
     div(class="promotionWelcomeSentence")
       | PROMOTION
     .row
-      .col-md-12
-        a(href='/pro1')
-          img.fixsize-Promotion(src='../pictures/Promotion_Black_9Mixer.jpg')
+      .col-md-12.margin-bottom
+        div(id="carouselExampleIndicators2" class="carousel slide" style="width: 100%; margin:0 auto" data-ride="carousel")
+          ol(class="carousel-indicators")
+            li(data-target="#carouselExampleIndicators2" data-slide-to="0" class="active")
+            li(data-target="#carouselExampleIndicators2" data-slide-to="1")
+            li(data-target="#carouselExampleIndicators2" data-slide-to="2")
+          div(class="carousel-inner")
+            div(class="carousel-item active")
+              a(href='/pro2')
+                img(class="d-block w-100" src="./pictures/WhiteWalker_1_1.jpg" alt="First slide")
+            div(class="carousel-item")
+              a(href='/pro2')
+                img(class="d-block w-100" src="./pictures/WhiteWalker_2_2.jpg" alt="Second slide")
+            div(class="carousel-item")
+              a(href='/pro2')
+                img(class="d-block w-100" src="./pictures/WhiteWalker_3_3.jpg" alt="Third slide")
+            //- div(class="carousel-item")
+              img(class="d-block w-100" src="./pictures/home.png" alt="Third slide")
+          a(class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev")
+            span(class="carousel-control-prev-icon" aria-hidden="true")
+            span(class="sr-only") Previous
+          a(class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next")
+            span(class="carousel-control-next-icon" aria-hidden="true")
+            span(class="sr-only") Next
+          a(class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next")
+            span(class="carousel-control-next-icon" aria-hidden="true")
+            span(class="sr-only") Next
       .col-md-6
         a(href='/pro1')
           img.fixsize-Promotion(src='../pictures/Promotion_Black_9Mixer.jpg')
       .col-md-6
         a(href='/pro1')
-          img.fixsize-Promotion(src='../pictures/Promotion_Red_9Mixer.jpg')       
+          img.fixsize-Promotion(src='../pictures/Promotion_Red_9Mixer.jpg')
+      .col-md-6
+        a(href='/pro1')
+          img.fixsize-Promotion(src='../pictures/Promotion_Black_9Mixer.jpg')
+      .col-md-6
+        a(href='/pro1')
+          img.fixsize-Promotion(src='../pictures/Promotion_Red_9Mixer.jpg')
 
 block foot
 

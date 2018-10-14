@@ -39,7 +39,49 @@
   background-color: rgb(254, 209, 0);
   padding: 10px;
 }
+
+* {
+  font-family: 'Mali', cursive;
+}
 .fixsize-logo{
   width: 130px;
   height: 70px;
+}
+
+.alignCenter{
+  display : flex;
+  align-content: center;
+  align-items: center;
+}
+
+.feedbackSign {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  background-color: #ffcb14;
+  padding: 4px;
+  border-radius: 20px;
+  box-shadow: 0px 7px 39px -4px rgba(0,0,0,0.75);
+  transition: all 1s;
+}
+
+.feedbackSign :hover{
+  cursor: pointer;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.feedback{
+  border-radius: 1em;
+  border: 1em;
+  display: none;
+  position: fixed;
+  bottom: 2em;
+  right: 0;
+  width: 300px;
+  height: 400px;
+  z-index: 999 !important;
+  background-color: whitesmoke; 
+  box-shadow: 0px 7px 39px -4px rgba(0,0,0,0.75);
+
 }

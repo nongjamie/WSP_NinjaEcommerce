@@ -3,16 +3,38 @@ extends layout
 block head
 
   link(rel='stylesheet', type='text/css', href='../CSS/homepage.css')
+  link(rel='stylesheet', type='text/css', href='../CSS/header-index.css')
   title Ninja Ecommerce
 
 block content
 
   div(class="container-fluid")
+    //- KongSKE
+    //- Header 
+    header
+      div(class="overlay")
+      video(id="beer_background" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop")
+        source(src="./video/Beer_Pour_Videvo.mp4" type="video/mp4")
+      div(class="container h-100")
+        div(class="d-flex text-center h-100")
+          div(class="my-auto w-100 text-white")
+            h1(class="display-3") Drink
+            h2 For Your Life
+
+    //- section(class="my-5")
+    //-   div(class="container")
+    //-     div(class="row")
+    //-       div(class="col-md-8 mx-auto")
+    //-         p FEEL THE POWER
+    //-         p 
+    //-         p 
+    //-         p(class="mb-0") Created by 
+    //-           a(href="https://startbootstrap.com") Start Bootstrap
+    //- Header Ending
     
     //- Promotion section
     div(class="container-fluid")
-      div(class="promotionWelcomeSentence")
-        | PROMOTION
+      br
       div(class="row")
         div(class="col-md-6").margin-bottom
           //- carousel start
@@ -46,13 +68,13 @@ block content
               li(data-target="#carouselExampleIndicators2" data-slide-to="2")
             div(class="carousel-inner")
               div(class="carousel-item active")
-                a(href='/pro1')
+                a(href='/pro2')
                   img(class="d-block w-100" src="./pictures/WhiteWalker_1_1.jpg" alt="First slide")
               div(class="carousel-item")
-                a(href='/pro1')
+                a(href='/pro2')
                   img(class="d-block w-100" src="./pictures/WhiteWalker_2_2.jpg" alt="Second slide")
               div(class="carousel-item")
-                a(href='/pro1')
+                a(href='/pro2')
                   img(class="d-block w-100" src="./pictures/WhiteWalker_3_3.jpg" alt="Third slide")
               //- div(class="carousel-item")
                 img(class="d-block w-100" src="./pictures/home.png" alt="Third slide")
@@ -82,5 +104,5 @@ block content
           tbody(id="bestsellerBoxTableItem")
 
 block foot
-
-  script(src='../script/homepage.js')
+  script(src='./script/video.js')
+  script(src='./script/homepage.js')
