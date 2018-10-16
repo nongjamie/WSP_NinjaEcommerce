@@ -13,33 +13,35 @@ html
     block head
 
   body
+    
     // Header section
-    div(class="container-fluid")
-      div(id="nav-bar-box", class="row")
-        div(class="col-sm-12")
-          ul(id="menu-nav-bar", class="nav nav-pills nav-fill")
-            li(class="nav-item ")
-              a(href='/')
-               img.fixsize-logo(src='../pictures/logo_onweb.png' href="/")
-            li(class="nav-item alignCenter")
-              a(class=(menu === 'promotion' ? "nav-link active": "nav-link") href="/promotion") PROMOTION
-            li(class="nav-item alignCenter")
-              a(class=(menu === 'store' ? "nav-link active": "nav-link") href="/store") STORE
-            li(class="nav-item alignCenter")
-              a(class=(menu === 'status' ? "nav-link active": "nav-link") href="/status") STATUS
-            li(class="nav-item alignCenter")
-              a(class=(menu == 'aboutUs' ? "nav-link active": "nav-link") href="/aboutUs") ABOUTUS
-            if user
-              li(class="nav-item alignCenter")
-                a(class=(menu === 'logout' ? "nav-link active": "nav-link") href="/logout") Logout
-              li(class='nav-item alignCenter')
-                a(class=(menu === 'logout' ? "nav-link active": "nav-link") href=`/mycart/`+user.username) Mycart
-            else
-              li(class="nav-item alignCenter")
-                a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
-              li(class="nav-item alignCenter")
-                a(class=(menu === 'login' ? "nav-link active": "nav-link") href="/login") LOG IN
-
+    div.container-fluid
+      div.headerSection
+        div(id="nav-bar-box", class="row")
+          div(class="col-sm-12")
+            ul(id="menu-nav-bar", class="nav nav-pills nav-fill")
+              li(class="nav-item ")
+                a(href='/')
+                 img.fixsize-logo(src='../pictures/logo_onweb.png' href="/")
+              li(class="nav-item")
+                a(class=(menu === 'promotion' ? "nav-link active": "nav-link") href="/promotion") PROMOTION
+              li(class="nav-item")
+                a(class=(menu === 'store' ? "nav-link active": "nav-link") href="/store") STORE
+              li(class="nav-item")
+                a(class=(menu === 'status' ? "nav-link active": "nav-link") href="/status") STATUS
+              li(class="nav-item")
+                a(class=(menu == 'aboutUs' ? "nav-link active": "nav-link") href="/aboutUs") ABOUTUS
+              if user
+                li(class="nav-item")
+                  a(class=(menu === 'logout' ? "nav-link active": "nav-link") href="/logout") Logout
+                li(class='nav-item')
+                  a(class=(menu === 'logout' ? "nav-link active": "nav-link") href=`/mycart/`+user.username) Mycart
+              else
+                li(class="nav-item")
+                  a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
+                li(class="nav-item")
+                  a(class=(menu === 'login' ? "nav-link active": "nav-link") href="/login") LOG IN
+      
     // Body section
     link(rel='stylesheet', type='style/css', href='../CSS/style.css')
     != messages('message', locals)
@@ -49,18 +51,8 @@ html
     div(id="footer-section", class="container-fluid")
       hr
       div(class="row")
-        div(id="footer-quote", class="col-sm-12")
-          span
-            | The fastest, most silent, most quality ecommerce like a
-            mark NINJA
-            |  service.
-          br
-          span
-            |  -- Varit Asshole ( Tester of Ninja 4.0 ) --
-      div(class="row")
         div(id="footer-company-name-background", class="col-sm-12")
           span.mx-2(id="footer-company-name") NINJA ECOMMERCE
-    
     .feedbackSign
       label.mt-1.mx-2.animated.infinite.pulse.slow Feedback
     .feedback
@@ -77,11 +69,6 @@ html
               button.btn.btn-danger.d-inline-block.mr-3.feedbackCancelButton(type='button') Cancel
               input.btn.btn-primary.d-inline-block.feedbackSummitButton(type='submit', value='Submit') 
         
-
-
-
-
-
   script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
