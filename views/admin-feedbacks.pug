@@ -1,0 +1,12 @@
+extends admin-layout
+
+block content
+  .myBody
+      .flex-container.allCard
+        each feedback in feedbacks
+          div.cardMargin.container
+           span.mr-3 Name :  
+           span #{feedback.username}
+           br
+           span.mr-3 Feedback : 
+           span #{feedback.feedback}

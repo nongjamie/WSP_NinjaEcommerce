@@ -11,8 +11,6 @@ $(()=>{
         }
     }
 
-
-
     $('.feedbackSign').click(() => {
         // $('.feedback').toggle('slide')
         $('.feedback').removeClass('fadeOutUpBig')
