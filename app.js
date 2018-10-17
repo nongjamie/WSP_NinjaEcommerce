@@ -61,6 +61,11 @@ app.get("/", function(req, res) {
     menu: "homepage"
   });
 });
+app.post('/', (req, res) => {
+  const data = req.body
+  console.log(data)
+  res.send('success')
+})
 
 // Promotion route
 app.get("/promotion", function(req, res) {
@@ -98,9 +103,6 @@ app.get("/signup", function(req, res) {
   });
 });
 
-app.post('/signup', (req, res) => {
-  console.log(req.body)
-})
 
 // Log in route
 app.get("/login", function(req, res) {
@@ -123,11 +125,15 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
+
+
 app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))
 
 app.use('/mycart', require('./routes/cart'))
+
+app.use(require('./routes/admin'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')

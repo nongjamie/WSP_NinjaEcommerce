@@ -1,18 +1,31 @@
-/* * {
-  border: 2px solid green;
-} */
+* {
+  /* border: 2px solid green; */
+  font-family: 'Mali', cursive;
+  font-size: 23px !important;
+}
+
+body {
+  background-image: url('http://7wallpapers.net/wp-content/uploads/3_Jack-Daniels.jpg');
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
 
 /* Header section */
 
 #nav-bar-box {
   padding-top: 20px;
   padding-bottom: 10px;
-  background-color: rgb(254, 209, 0);
+  background-color: rgb(2, 231, 222);
 }
 
 .nav-link {
+  font-weight: bolder;
   color: black;
-  font-size: 20px;
+  font-size: 30px;
+}
+
+.headerSection {
+
 }
 
 /* Footer section */
@@ -29,20 +42,18 @@
 }
 
 #footer-company-name {
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: bold;
   text-align: center;
   padding: 20px;
   margin: 20px
 }
 
 #footer-company-name-background {
-  background-color: rgb(254, 209, 0);
+  background-color: rgb(2, 231, 222);
   padding: 10px;
 }
 
-* {
-  font-family: 'Mali', cursive;
-}
 .fixsize-logo{
   width: 130px;
   height: 70px;
@@ -52,4 +63,37 @@
   display : flex;
   align-content: center;
   align-items: center;
+}
+
+.feedbackSign {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  z-index: 999 !important;
+  background-color: #ffcb14;
+  padding: 4px;
+  border-radius: 20px;
+  box-shadow: 0px 7px 39px -4px rgba(0,0,0,0.75);
+  transition: all 1s;
+}
+
+.feedbackSign :hover{
+  cursor: pointer;
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.feedback{
+  border-radius: 1em;
+  border: 1em;
+  display: none;
+  position: fixed;
+  bottom: 2em;
+  right: 0;
+  width: 300px;
+  height: 500px;
+  z-index: 999 !important;
+  background-color: whitesmoke;
+  box-shadow: 0px 7px 39px -4px rgba(0,0,0,0.75);
+
 }

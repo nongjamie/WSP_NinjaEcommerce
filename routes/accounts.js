@@ -6,7 +6,7 @@ const account = new Account()
 
 router.get('/getList', async(req, res) => {
     console.log('get list')
-    const result = await account.getList()
+    const result = await account.getAccountList()
     // console.log(result.data)
     res.send(result.data)
 })

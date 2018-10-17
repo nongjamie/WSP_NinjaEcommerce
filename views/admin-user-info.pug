@@ -1,0 +1,19 @@
+extends admin-layout
+
+block content
+  .myBody
+    .row
+      .col-sm-6.mt-4.ml-3
+        p Username : #{account.username}
+        hr
+        p Email : #{account.email}
+        hr
+        p Point : #{account.point}
+        hr
+      .col-sm-6.mt-4.ml-3
+        img(src="", alt="")
+    .container
+      p History order 
+      //- each order in account.orderHistory
+          
+

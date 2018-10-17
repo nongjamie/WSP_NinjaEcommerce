@@ -1,0 +1,52 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+    link(rel='stylesheet', type='text/css', href='/CSS/admin.css')
+    script(src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous")
+    script(src="/script/admin.js")
+  body
+    .container-fluid
+      nav.myNavBar(class="navbar navbar-light sticky-top ")
+        .container
+          div.logo
+            a(href='/admin')
+              img.img(src="/pictures/home.png", alt="")
+          div
+            .onHoverNavComponent
+              span.px-2.navComponent.mx-2 
+                a.navLink(href='/admin') Home
+            .onHoverNavComponent
+              span.px-2.navComponent.mx-2
+                a.navLink(href="/admin/feedbacks") Feedbacks
+            .onHoverNavComponent 
+              span.px-2.navComponent.mx-2 
+                a.navLink(href='/logout') Logout
+          .navToggle
+            div
+              img.navMenuImg(src="/pictures/admin-menu.svg", alt="")
+              
+      div.test
+        .sidenav
+          a(href="/admin") Dashboard
+        block content
+
+  .toggleNavBar.bg-light
+    .container.text-center.mt-5
+      div.my-2
+        a.btn.btn-danger.btn-block(href='/admin') Home
+      div.my-2
+        a.btn.btn-danger.btn-block(href='/admin/feedbacks') Feedbacks
+      div.my-2
+        a.btn.btn-danger.btn-block(href='/logout') Logout
+
+        
+        
+
+        
+    
+    
+
+  
