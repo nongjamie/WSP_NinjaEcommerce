@@ -8,6 +8,13 @@
 #userNavBar {
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: rgb(255, 255, 195);
+  font-size: 23px;
+  padding: 20px;
+}
+
+#userNavBarSentence {
+  font-size: 23px;
 }
 
 #userNavBarUserIcon {
@@ -34,10 +41,15 @@
 
 /* Panther design */
 
+#promotionContent {
+  background-color: rgb(255, 255, 195);
+}
+
 .promotionWelcomeSentence {
-  font-size: 60px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
+  margin: 10px 0px;
 }
 
 button.button1 {
