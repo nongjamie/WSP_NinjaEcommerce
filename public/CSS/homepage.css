@@ -10,18 +10,10 @@
   margin-top: 20px;
 }
 
-/* Promotion */
-
-.promotionWelcomeSentence {
-  font-size: 60px;
-  font-weight: bold;
-  text-align: center;
-}
-
 /* Best seller */
 
 .bestsellerWelcomeSentence {
-  font-size: 60px;
+  font-size: 23px;
   font-weight: bold;
   text-align: center;
   background-color: rgb(255, 255, 123);
@@ -30,6 +22,7 @@
 
 #bestsellerBoxTable {
   background-color: rgb(255, 255, 195);
+  font-size: 20px;
 }
 
 .margin-bottom{
