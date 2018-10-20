@@ -8,33 +8,30 @@ block head
 block content
   
   .container
-    br
-    div
-        .row.rowBorder.myRow
-            .col-sm-2
-                span Product
-            .col-sm-4
-                span Description
-            .col-sm-2
-                span Unit price
-            .col-sm-2
-                span Qty
-            .col-sm-2
-                span total
-
-        each product, i in products
-            .row.mt-2.myRow
-                .col-sm-2.alignCenter
-                    img.myImg(src="/pictures/Whisky_" + product.productName + '.jpg' , alt="")
-                .col-sm-4.alignLeft
-                    span #{product.productName}
-                .col-sm-2.alignLeft
-                    span #{product.productPrice}
-                .col-sm-2.alignLeft
-                    span #{product.quantity} 
-                .col-sm-2.alignLeft
-                    span.eachTotal= product.quantity*product.productPrice
-    br
+    div.row.rowBorder.myRow
+      div.col-sm-2
+          span Product
+      div.col-sm-4
+          span Description
+      div.col-sm-2
+          span Unit price
+      div.col-sm-2
+          span Qty
+      div.col-sm-2
+          span total
+      each product, i in products
+        div.row.mt-2.myRow
+          div.col-sm-2.alignCenter
+              img.myImg(src="/pictures/Whisky_" + product.productName + '.jpg' , alt="")
+          div.col-sm-4.alignLeft
+              span #{product.productName}
+          div.col-sm-2.alignLeft
+              span #{product.productPrice}
+          div.col-sm-2.alignLeft
+              span #{product.quantity} 
+          div.col-sm-2.alignLeft
+              span.eachTotal= product.quantity*product.productPrice
+    
     hr
     .text-right
         span.total Total : #{total}
