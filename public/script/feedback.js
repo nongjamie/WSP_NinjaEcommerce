@@ -1,9 +1,10 @@
 $(()=>{
+
     $(document).ready(function () {
         $('#feedbackForm').ajaxForm({ success: showResponse });
     });
 
-    function showResponse(responseText, statusText, xhr, $form)  { 
+    function showResponse(responseText, statusText, xhr, $form)  {
         if(statusText === 'success'){
             alert('Thank you for sending feedback')
         }else{
@@ -29,4 +30,5 @@ $(()=>{
             'position' : 'fixed',
         })
     })
+    
 })

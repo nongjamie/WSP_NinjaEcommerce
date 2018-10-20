@@ -1,5 +1,6 @@
 $(function () {
-    $('.button1').on('click', function(e){
+
+    $('.addToCartButton').on('click', function(e){
         const val = this.value
         const data = val.split(',')
         const quantity = $(`.fixsize[name=${data[1]}]`).val()
@@ -7,13 +8,13 @@ $(function () {
         console.log(username)
         console.log(quantity)
         console.log(data)
-        $.ajax({ 
+        $.ajax({
             url: '/whisky',
             data:{
                 'username': username,
                 'productID': data[2],
                 'quantity': parseInt(quantity)
-                
+
             },
             type: 'POST',
             success: function(data) {
@@ -33,7 +34,4 @@ $(function () {
         window.location = '/mycart/' + $('#userNavBarUsername').text()
     })
 
-    
-
 });
-
