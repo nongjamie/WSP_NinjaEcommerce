@@ -7,25 +7,6 @@ block head
 
 block content
 
-  div(class="container" id='userNavBar')
-    div.row.align-items-center
-      div.col-sm-6
-        span(id="userNavBarSentence")
-          if user
-            | Welcome #{user.username} !
-          else
-            | Welcome anonymous !
-      div.col-sm-6
-        div(class='row justify-content-end')
-          i(class="far fa-user fa-10x" id='userNavBarUserIcon')
-          if user
-            button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' value=user.username disabled) #{user.username}
-          else
-            button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' disabled) None
-          i(class="fas fa-shopping-cart" id='userNavBarCartIcon')
-          button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' disabled) 0
-          button(type="button" class="btn btn-danger" id='userNavBarConfirm') CONFIRM
-
   .container#promotionContent
     div(class="promotionWelcomeSentence")
       | PROMOTION

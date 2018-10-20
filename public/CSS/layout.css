@@ -9,6 +9,42 @@ body {
   background-size: 100% 100%;
 }
 
+/* user nav bar */
+
+#userNavBar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 195);
+  font-size: 23px;
+  padding: 20px;
+}
+
+#userNavBarSentence {
+  font-size: 23px;
+}
+
+#userNavBarUserIcon {
+  font-size: 200%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#userNavBarUsername {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#userNavBarCartIcon {
+  font-size: 200%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#userNavBarOrder {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 /* Header section */
 
 #nav-bar-box {
