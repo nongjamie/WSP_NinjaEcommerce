@@ -16,7 +16,7 @@ block content
     //- Product catalogue
     .flex-container.mt-3
       each product, i in products
-        div.p-3.border.border-danger
+        div(class='p-3 border border-dark' style='margin-top: 20px; margin-bottom: 20px;')
           h.mt-2 #{product.productName}
           h3 #{product.productDetail}
           img.fixsize(src='../pictures/Whisky_'+product.productName+'.jpg')

@@ -60,10 +60,10 @@ button.button1:focus{
 }
 
 input {
-text-align: center;
+  text-align: center;
 }
 
-h3{
+h3 {
   font-size: 10px;
 }
 
@@ -73,7 +73,7 @@ h3{
   height: auto;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: rgb(254, 209, 0);
+  background-color: rgb(255, 255, 195);
   border-radius: 1em;
 }
 .flex-container > div {
