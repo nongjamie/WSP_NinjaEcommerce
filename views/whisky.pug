@@ -7,7 +7,13 @@ block head
 
 block content
 
-    h2 Whisky
+    //- Product topic
+    div(class='container')
+      div(class='row justify-content-center')
+        div(class='col-sm-6' id='productContent')
+          span(id='productContentTopic') >> Whisky <<
+          
+    //- Product catalogue
     .flex-container.mt-3
       each product, i in products
         div.p-3.border.border-danger
