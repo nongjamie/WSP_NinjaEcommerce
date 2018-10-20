@@ -7,42 +7,93 @@ block head
 
 block content
   
-  .container
-    div.row.rowBorder.myRow
-      div.col-sm-2
-          span Product
-      div.col-sm-4
-          span Description
-      div.col-sm-2
-          span Unit price
-      div.col-sm-2
-          span Qty
-      div.col-sm-2
-          span total
-      each product, i in products
-        div.row.mt-2.myRow
-          div.col-sm-2.alignCenter
+  //- Confirm order topic
+  div.container
+    div.row.justify-content-center
+      span.confirmOrderWelcomeSentence 
+        | Confirm Order
+  
+  //- Table of confirm order
+  div.container
+    table.table
+      thead.headTable
+        tr
+          th(scope='col')
+            | Product
+          th(scope='col')
+            | Product name
+          th(scope='col')
+            | Unit price(฿)
+          th(scope='col')
+            | Qty
+          th(scope='col')
+            | TotalCost(฿)
+      tbody.bodyTable
+        each product, i in products
+          tr
+            th(scope='row')
               img.myImg(src="/pictures/Whisky_" + product.productName + '.jpg' , alt="")
-          div.col-sm-4.alignLeft
+            td
               span #{product.productName}
-          div.col-sm-2.alignLeft
+            td
               span #{product.productPrice}
-          div.col-sm-2.alignLeft
+            td
               span #{product.quantity} 
-          div.col-sm-2.alignLeft
-              span.eachTotal= product.quantity*product.productPrice
+            td 
+              span.eachTotal= product.quantity * product.productPrice
+        tr
+          th(scope='row') -
+          td -
+          td - 
+          td Total(฿)
+          td 101010
+            
     
-    hr
-    .text-right
-        span.total Total : #{total}
-    .checkoutZone
-        button.btn.btn-danger(type="button" id='userNavBarConfirm' ) Checkout
-    //- .row
-    //-     .col-sm-4
-    //-         h1= user.username
-    //-     .col-sm-8
-    //-         each product, i in products
-    //-             = product.productID
+  //- Button selection
+  div.container
+    div.row.justify-content-center
+      button(type="button" class="btn btn-success" id='confirmButton')
+        | Confirm
+      button(type="button" class="btn btn-danger" id='cancelButton')
+        | Cancel
+  
+  //- Ton's old code
+  //- .container
+  //-   div.row.rowBorder.myRow
+  //-     div.col-sm-2
+  //-         span Product
+  //-     div.col-sm-4
+  //-         span Description
+  //-     div.col-sm-2
+  //-         span Unit price
+  //-     div.col-sm-2
+  //-         span Qty
+  //-     div.col-sm-2
+  //-         span total
+  //-     each product, i in products
+  //-         div.row.mt-2.myRow
+  //-           div.col-sm-2.alignCenter
+  //-               img.myImg(src="/pictures/Whisky_" + product.productName + '.jpg' , alt="")
+  //-           div.col-sm-4.alignLeft
+  //-               span #{product.productName}
+  //-           div.col-sm-2.alignLeft
+  //-               span #{product.productPrice}
+  //-           div.col-sm-2.alignLeft
+  //-               span #{product.quantity} 
+  //-           div.col-sm-2.alignLeft
+  //-               span.eachTotal= product.quantity*product.productPrice
+  //- 
+  //-   hr
+  //-   .text-right
+  //-       span.total Total : #{total}
+  //-   .checkoutZone
+  //-       button.btn.btn-danger(type="button" id='userNavBarConfirm' ) Checkout
+  //-   .row
+  //-       .col-sm-4
+  //-           h1= user.username
+  //-       .col-sm-8
+  //-           each product, i in products
+  //-               = product.productID
 
 block foot
   
