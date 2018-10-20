@@ -3,39 +3,17 @@
   /* border: 2px solid green; */
 }
 
-/* user nav bar */
-
-#userNavBar {
+.container {
+  background-color: rgb(255, 255, 195);
   margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#userNavBarUserIcon {
-  font-size: 200%;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#userNavBarUsername {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#userNavBarCartIcon {
-  font-size: 200%;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#userNavBarOrder {
-  margin-left: 5px;
-  margin-right: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* History */
 
 .history-welcome-sentence {
-  font-size: 60px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
 }
@@ -168,7 +146,7 @@
 /* Contact */
 
 .contactWelcomeSentence {
-  font-size: 60px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
 }
@@ -177,12 +155,12 @@
   margin: 10px;
 }
 
-.contactBox1Picture {
+.contactBoxPicture {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.contactBox1Picture img {
+.contactBoxPicture img {
   width: 100%;
   height: 100%;
   max-width: 150px;
@@ -191,26 +169,7 @@
   display: block;
 }
 
-.contactBox1Sentence {
+.contactBoxSentence {
   font-size: 20px;
   color: black;
-  text-align: center
-}
-
-.contactBox1SentenceTopic {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.contactBox1SentenceDetail {
-  text-indent: 100%;
-  padding: 5px 0;
-}
-
-.alignCenter{
-  display : flex;
-  align-content: left;
-  align-items: center;
 }
