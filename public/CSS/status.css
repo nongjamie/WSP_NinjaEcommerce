@@ -10,7 +10,7 @@
 .status-welcome-sentence {
   text-align: center;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 30px;
   margin-top: 10px;
 }
 
@@ -23,7 +23,7 @@
   color: black;
   text-align: center;
   font-weight: bolder;
-  font-size: 25px;
+  font-size: 23px;
   padding: 20px 0px;
 }
 
@@ -37,16 +37,17 @@
 
 .statusTableHead {
   background-color: rgb(255, 255, 123);
+  font-size: 23px;
 }
 
 #statusTableItem {
-  /* Do nothing */
+  font-size: 20px;
 }
 
 .status-remind-sentence {
   color: black;
   text-align: center;
   font-weight: bolder;
-  font-size: 25px;
+  font-size: 23px;
   padding: 20px 0px;
 }
