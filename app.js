@@ -125,6 +125,8 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
+
+
 app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))

@@ -9,6 +9,42 @@ body {
   background-size: 100% 100%;
 }
 
+/* user nav bar */
+
+#userNavBar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 195);
+  font-size: 23px;
+  padding: 20px;
+}
+
+#userNavBarSentence {
+  font-size: 23px;
+}
+
+#userNavBarUserIcon {
+  font-size: 200%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#userNavBarUsername {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#userNavBarCartIcon {
+  font-size: 200%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#userNavBarOrder {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 /* Header section */
 
 #nav-bar-box {
@@ -21,6 +57,10 @@ body {
   font-weight: bolder;
   color: black;
   font-size: 30px;
+}
+
+.nav-item a {
+    font-size: 23px;
 }
 
 .headerSection {
@@ -68,7 +108,8 @@ body {
   position: fixed;
   bottom: 1em;
   right: 1em;
-  background-color: rgb(2, 231, 222);
+  z-index: 999 !important;
+  background-color: #ffcb14;
   padding: 4px;
   border-radius: 20px;
   box-shadow: 0px 7px 39px -4px rgba(0,0,0,0.75);
@@ -89,7 +130,7 @@ body {
   bottom: 2em;
   right: 0;
   width: 300px;
-  height: 400px;
+  height: 500px;
   z-index: 999 !important;
   background-color: whitesmoke;
   box-shadow: 0px 7px 39px -4px rgba(0,0,0,0.75);
