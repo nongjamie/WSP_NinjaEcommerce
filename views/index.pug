@@ -8,29 +8,31 @@ block head
 
 block content
 
+  //- Welcome video section by KongSKE
   div(class="container-fluid")
-    //- KongSKE
-    //- Header 
-    header
-      div(class="overlay")
-      video(id="beer_background" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop")
-        source(src="./video/Beer_Pour_Videvo.mp4" type="video/mp4")
-      div(class="container h-100")
-        div(class="d-flex text-center h-100")
-          div(class="my-auto w-100 text-white")
-            h1(class="display-3") Drink
-            h2 For Your Life
+    div.welcomeVideo
+      //- KongSKE
+      //- Header 
+      header
+        div(class="overlay")
+        video(id="beer_background" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop")
+          source(src="./video/Beer_Pour_Videvo.mp4" type="video/mp4")
+        div(class="container h-100")
+          div(class="d-flex text-center h-100")
+            div(class="my-auto w-100 text-white")
+              h1(class="display-3") Drink
+              h2 For Your Life
 
-    //- section(class="my-5")
-    //-   div(class="container")
-    //-     div(class="row")
-    //-       div(class="col-md-8 mx-auto")
-    //-         p FEEL THE POWER
-    //-         p 
-    //-         p 
-    //-         p(class="mb-0") Created by 
-    //-           a(href="https://startbootstrap.com") Start Bootstrap
-    //- Header Ending
+      //- section(class="my-5")
+      //-   div(class="container")
+      //-     div(class="row")
+      //-       div(class="col-md-8 mx-auto")
+      //-         p FEEL THE POWER
+      //-         p 
+      //-         p 
+      //-         p(class="mb-0") Created by 
+      //-           a(href="https://startbootstrap.com") Start Bootstrap
+      //- Header Ending
     
     //- Promotion section
     div(class="container-fluid")
@@ -89,7 +91,7 @@ block content
               span(class="sr-only") Next
             //- carousel ending
 
-    //- Seller section
+    //- Best seller section
     div(class="container-fluid")
       div(class="bestsellerWelcomeSentence")
         | BEST SELLER
@@ -104,5 +106,6 @@ block content
           tbody(id="bestsellerBoxTableItem")
 
 block foot
+  
   script(src='./script/video.js')
   script(src='./script/homepage.js')
