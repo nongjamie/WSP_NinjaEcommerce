@@ -3,41 +3,17 @@
   /* border: 2px solid green; */
 }
 
-/* user nav bar */
-
-#userNavBar {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#userNavBarUserIcon {
-  font-size: 200%;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#userNavBarUsername {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#userNavBarCartIcon {
-  font-size: 200%;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#userNavBarOrder {
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
 /* Panther design */
 
+#promotionContent {
+  background-color: rgb(255, 255, 195);
+}
+
 .promotionWelcomeSentence {
-  font-size: 60px;
+  font-size: 30px;
   font-weight: bold;
   text-align: center;
+  margin: 10px 0px;
 }
 
 button.button1 {

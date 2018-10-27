@@ -1,13 +1,48 @@
 * {
   /* border: 2px solid green; */
   font-family: 'Mali', cursive;
-  font-size: 23px !important;
 }
 
 body {
   background-image: url('http://7wallpapers.net/wp-content/uploads/3_Jack-Daniels.jpg');
   background-attachment: fixed;
   background-size: 100% 100%;
+}
+
+/* user nav bar */
+
+#userNavBar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(255, 255, 195);
+  font-size: 23px;
+  padding: 20px;
+}
+
+#userNavBarSentence {
+  font-size: 23px;
+}
+
+#userNavBarUserIcon {
+  font-size: 200%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#userNavBarUsername {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#userNavBarCartIcon {
+  font-size: 200%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#userNavBarOrder {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 /* Header section */
@@ -22,6 +57,10 @@ body {
   font-weight: bolder;
   color: black;
   font-size: 30px;
+}
+
+.nav-item a {
+    font-size: 23px;
 }
 
 .headerSection {

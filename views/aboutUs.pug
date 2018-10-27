@@ -6,22 +6,13 @@ block head
   title About Us
 
 block content
-
-  //- User account nav bar
-  div(class="container" id='userNavBar')
-    div(class='row justify-content-end')
-      i(class="far fa-user" id='userNavBarUserIcon')
-      button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' disabled) Annonymous
-      i(class="fas fa-shopping-cart" id='userNavBarCartIcon')
-      button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' disabled) 0
-      button(type="button" class="btn btn-danger" id='userNavBarConfirm') CONFIRM
   
   //- History section
   div(class="container")
     div(class="history-welcome-sentence")
       | KNOW MORE ABOUT US
     div(class="row" id="box-1")
-      div(class="col-sm-3 alignCenter")
+      div(class="col-sm-3 align-self-center")
         div(class="box-1-picture ")
           img(src="https://ae01.alicdn.com/kf/HTB118uvSXXXXXcVXXXXq6xXFXXXH/9-6cm-9-8cm-Car-Sticker-Cartoon-Funny-Ninja-Vinyl-Decal-Black-Silver-Accessories-S6-4099.jpg_640x640.jpg")
       div(class="col-sm-9")
@@ -34,7 +25,7 @@ block content
             | Their covert methods of waging irregular warfare were deemed dishonorable and beneath the samurai, who observed strict rules about honor and combat. 
             | The shinobi proper, a specially trained group of spies and mercenaries, appeared in the 15th century during the Sengoku period, but antecedents may have existed as early as the 12th century.
     div(class="row" id="box-2")
-      div(class="col-sm-3 alignCenter")
+      div(class="col-sm-3 align-self-center")
         div(class="box-2-picture")
           img(src="https://static.thenounproject.com/png/16757-200.png")
       div(class="col-sm-9")
@@ -45,7 +36,7 @@ block content
             | E-commerce is the activity of buying or selling of products on online services or over the Internet.
             | Electronic commerce draws on technologies such as mobile commerce, electronic funds transfer, supply chain management, Internet marketing, online transaction processing, electronic data interchange (EDI), inventory management systems, and automated data collection systems.
     div(class="row" id="box-3")
-      div(class="col-sm-3 alignCenter")
+      div(class="col-sm-3 align-self-center")
         div(class="box-3-picture")
           img(src="../pictures/ningja_logo.png")
       div(class="col-sm-9")
@@ -61,28 +52,21 @@ block content
   div(class="container")
     div(class="contactWelcomeSentence")
       | CONTACT US
-    div(class="row justify-content-center" id="contactBox1")
+    div(class="row justify-content-center" id="contactBox")
       div(class="col-sm-3")
-        div(class="contactBox1Picture")
+        div(class="contactBoxPicture")
           img(src="./pictures/addAddress.png")
-      div(class="col-sm-5")
-        div(class="contactBox1Sentence")
-          span(class="contactBox1SentenceTopic")
-            | Line  <tb>
-          span(class="contactBox1SentenceDetail")
-            | KongRukThailandMakMak <br>
-          span(class="contactBox1SentenceTopic")
-            | Email  <tb>
-          span(class="contactBox1SentenceDetail")
-            | varit.as@ku.th <br>
-          span(class="contactBox1SentenceTopic")
-            | Tel  <tb>
-          span(class="contactBox1SentenceDetail")
-            | 5910545833 <br>
-          span(class="contactBox1SentenceTopic")
-            | Github  <tb>
-          span(class="contactBox1SentenceDetail")
-            | KongSKE <br>
+      div(class="col-sm-5 align-self-center")
+        div(class="contactBoxSentence")
+          div(class="contactBoxLine")
+            | Line : <tb> KongRukThailandMakMak
+          div(class="contactBoxEmail")
+            | Email : <tb> varit.as@ku.th
+          div(class="contactBoxTel")
+            | Tel : <tb> 5910545833
+          div(class="contactBoxSkype")
+            | Skype : <tb> KongVarito
+            
 block foot
 
   script(src='../script/aboutUs.js')
