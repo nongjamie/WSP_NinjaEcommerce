@@ -18,4 +18,8 @@ router.get('/:username', async(req, res) => {
     })
 })
 
+router.post('/confirmOrder',async(req,res)=>{
+    res.redirect('/')
+})
+
 module.exports = router

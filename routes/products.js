@@ -41,9 +41,13 @@ router.get("/promotion",async function(req, res) {
   
   // Beer route
   router.get("/beer",async function(req, res) {
+    console.log('beer na ja')    
+    const result = await product.getCategoryByName('Beer')
+    console.log(result)            
     res.render("beer", {
       menu: 'store',
-      typeDrink: 'beer'
+      typeDrink: 'beer',
+      products: result.products
     });
   });
   
@@ -69,6 +73,13 @@ router.get("/promotion",async function(req, res) {
     const data = req.body
     const result = await product.addProductToCart(data)
     console.log('post whisky')
+    console.trace(result)
+    res.send('send success')
+  })
+  router.post('/beer',async function(req, res){
+    const data = req.body
+    const result = await product.addProductToCart(data)
+    console.log('post beer')
     console.trace(result)
     res.send('send success')
   })

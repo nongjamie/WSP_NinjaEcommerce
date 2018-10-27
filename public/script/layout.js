@@ -1,4 +1,4 @@
-console.log('this is from wine.js');
+console.log('this is from layout.js');
 
 $( () => {
 
