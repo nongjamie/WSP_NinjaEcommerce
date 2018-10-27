@@ -3,7 +3,7 @@ extends store
 block head
 
   link(rel='stylesheet', type='text/css', href='../CSS/store.css')
-  title Ninja Whisky
+  title Ninja Beer
 
 block content
 
@@ -15,17 +15,17 @@ block content
           
     //- Product catalogue
     .flex-container.mt-3
-      //- each product, i in products
-      //-   div(class='p-3 border border-dark' style='margin-top: 20px; margin-bottom: 20px;')
-      //-     h.mt-2 #{product.productName}
-      //-     h3 #{product.productDetail}
-      //-     img.fixsize(src='../pictures/Beer_'+product.productName+'.jpg')
-      //-     br
-      //-     h ฿ #{product.productPrice}
-      //-     br
-      //-     div
-      //-       input.mb-2.fixsize(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
-      //-       button.mb-2.fixsize.addToCartButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
+      each product, i in products
+        div(class='p-3 border border-dark' style='margin-top: 20px; margin-bottom: 20px;')
+          h.mt-2 #{product.productName}
+          h3 #{product.productDetail}
+          img.fixsize(src='../pictures/Beer_'+product.productName+'.jpg')
+          br
+          h ฿ #{product.productPrice}
+          br
+          div
+            input.mb-2.fixsize(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
+            button.mb-2.fixsize.addToCartButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
 
 
 block foot
