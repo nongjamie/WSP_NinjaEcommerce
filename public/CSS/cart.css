@@ -31,6 +31,10 @@
     max-height: 75px;
 }
 
+.deleteButton:hover {
+  color: red;
+}
+
 /* Button selection */
 
 #confirmButton {
