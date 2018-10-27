@@ -11,7 +11,7 @@ block content
   div.container
     div.row.justify-content-center
       span.confirmOrderWelcomeSentence 
-        | Confirm Order
+        | My Cart
   
   //- Table of confirm order
   div.container
@@ -28,6 +28,8 @@ block content
             | Qty
           th(scope='col')
             | TotalCost(฿)
+          th(scope='col')
+            | 
       tbody.bodyTable
         each product, i in products
           tr
@@ -41,12 +43,15 @@ block content
               span #{product.quantity} 
             td 
               span.eachTotal= product.quantity * product.productPrice
+            td
+              i(class="far fa-times-circle deleteButton")
         tr
           th(scope='row') 
           td 
           td  
           td Total(฿)
           td 101010
+          td
             
     
   //- Button selection
