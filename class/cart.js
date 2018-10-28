@@ -33,5 +33,17 @@ class Cart {
         
 
     }
+    async checkoutByUsername(username){
+        try{
+            const response = await axios.post(URL.checkoutByUsername,{},{
+                headers:{
+                    'username': username,
+                }
+            })
+            return response.data
+        }catch(e){
+            return e.data
+        }
+    }
 }
 module.exports = Cart
