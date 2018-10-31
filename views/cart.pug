@@ -3,7 +3,7 @@ extends layout
 block head
   
     link(rel='stylesheet', type='text/css', href='../CSS/cart.css')
-    title Cart
+    title Ninja Cart
 
 block content
   
@@ -67,7 +67,7 @@ block content
   div.container
     div.row.justify-content-center
       //- Confirm the cart, the modal plugin
-      button(type="button" class="btn btn-success" id='confirmButton' data-toggle="modal" data-target="#exampleModal")
+      button(type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id='confirmCartButton')
         | Confirm
       div(class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
         div(class="modal-dialog" role="document")
@@ -82,7 +82,7 @@ block content
               p (may be your residence or others place)
             div(class="modal-footer")
               button(type="button" class="btn btn-secondary" data-dismiss="modal") No, let me check my cart again
-              button(type="button" class="btn btn-primary") OK! Let's go
+              button(type="button" class="btn btn-primary" id='confirmButton' ) OK! Let's go
       //- Cancel button
       button(type="button" class="btn btn-danger" id='cancelButton')
         | Cancel
