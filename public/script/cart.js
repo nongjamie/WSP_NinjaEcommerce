@@ -1,8 +1,9 @@
 $( () => {
 
   // Cofirm button clicked.
-  $('#confirmButton').click( () => {
-    console.log('Send the confirm order to database.');
+  $('#yesButton').click( () => {
+    console.log('Go to appointment page.');
+    window.location = "http://localhost:3000/myappointment/None";
   });
 
   // Cancel button clicked then go to whisky page.
@@ -13,7 +14,7 @@ $( () => {
 
   // Delete button clicked.
   $('.deleteButton').on('click', () => {
-    
+
   });
 
 } );
