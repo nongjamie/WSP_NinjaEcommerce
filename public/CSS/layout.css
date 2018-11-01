@@ -12,8 +12,8 @@ body {
 /* Header section */
 
 #nav-bar-box {
-  /* padding-top: 10px; */
-  /* padding-bottom: 10px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: rgb(2, 231, 222);
 }
 
@@ -23,7 +23,7 @@ body {
   font-size: 30px;
 }
 
-@media screen and (max-width:950px) {
+@media screen and (max-width:1030px) {
   .nav-item {
     width:100%;
   }
