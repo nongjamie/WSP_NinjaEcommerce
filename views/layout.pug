@@ -17,7 +17,7 @@ html
     // Header section
     div.container-fluid
       div.headerSection
-        div(id="nav-bar-box", class="row")
+        div(class="row", id="nav-bar-box")
           div(class="col-sm-12")
             ul(id="menu-nav-bar", class="nav nav-pills nav-fill")
               li(class="nav-item")
@@ -62,14 +62,15 @@ html
     // User navigation bar status
     div(class="container" id='userNavBar')
       div.row.align-items-center
-        div.col-sm-6
-          span(id="userNavBarSentence")
-            if user
-              | Welcome #{user.username} !
-            else
-              | Welcome anonymous !
-        div.col-sm-6
-          div(class='row justify-content-end')
+        div.userNavBarSentenceSection
+          div(class='row justify-content-center')
+            span(id="userNavBarSentence")
+              if user
+                | Welcome #{user.username} !
+              else
+                | Welcome anonymous !
+        div.userNavBarStatusSection
+          div(class='row justify-content-center')
             i(class="far fa-user fa-10x" id='userNavBarUserIcon')
             if user
               button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' value=user.username disabled) #{user.username}
