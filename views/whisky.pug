@@ -7,10 +7,16 @@ block head
 
 block content
 
-    h2 Whisky
+    //- Product topic
+    div(class='container')
+      div(class='row justify-content-center')
+        div(class='col-sm-6' id='productContent')
+          span(id='productContentTopic') >> Whisky <<
+          
+    //- Product catalogue
     .flex-container.mt-3
       each product, i in products
-        div.p-3.border.border-danger
+        div(class='p-3 border border-dark' style='margin-top: 20px; margin-bottom: 20px;')
           h.mt-2 #{product.productName}
           h3 #{product.productDetail}
           img.fixsize(src='../pictures/Whisky_'+product.productName+'.jpg')
@@ -19,7 +25,7 @@ block content
           br
           div
             input.mb-2.fixsize(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
-            button.mb-2.fixsize.button1(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
+            button.mb-2.fixsize.addToCartButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
 
 
 block foot

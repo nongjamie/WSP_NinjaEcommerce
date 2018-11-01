@@ -41,25 +41,35 @@ router.get("/promotion",async function(req, res) {
   
   // Beer route
   router.get("/beer",async function(req, res) {
+    console.log('beer na ja')    
+    const result = await product.getCategoryByName('Beer')
+    console.log(result)            
     res.render("beer", {
       menu: 'store',
-      typeDrink: 'beer'
+      typeDrink: 'beer',
+      products: result.products
     });
   });
   
   // Wine route
   router.get("/wine",async function(req, res) {
+    const result = await product.getCategoryByName('Wine')
+    console.log(result)
     res.render("wine", {
       menu: 'store',
-      typeDrink: 'wine'
+      typeDrink: 'wine',
+      products: result.products
     });
   });
   
   // Mixer route
   router.get("/mixer",async function(req, res) {
+    const result = await product.getCategoryByName('Mixer')
+    console.log(result)
     res.render("mixer", {
       menu: 'store' ,
-      typeDrink: 'mixer'
+      typeDrink: 'mixer',
+      products:result.products
     });
   });
 
@@ -69,6 +79,29 @@ router.get("/promotion",async function(req, res) {
     const data = req.body
     const result = await product.addProductToCart(data)
     console.log('post whisky')
+    console.trace(result)
+    res.send('send success')
+  })
+  router.post('/beer',async function(req, res){
+    const data = req.body
+    const result = await product.addProductToCart(data)
+    console.log('post beer')
+    console.trace(result)
+    res.send('send success')
+  })
+
+  router.post('/wine',async function(req, res){
+    const data = req.body
+    const result = await product.addProductToCart(data)
+    console.log('post wine')
+    console.trace(result)
+    res.send('send success')
+  })
+
+  router.post('/mixer',async function(req, res){
+    const data = req.body
+    const result = await product.addProductToCart(data)
+    console.log('post mixer')
     console.trace(result)
     res.send('send success')
   })

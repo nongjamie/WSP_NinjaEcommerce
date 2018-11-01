@@ -1,6 +1,71 @@
+* {
+  /* border: 1px solid green; */
+}
+
+/* Confirm order topic */
+
+.confirmOrderWelcomeSentence {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 195);
+  padding: 20px 100px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Shopping status */
+
+.shoppingDisplayStatusColumn {
+  background-color: rgb(255, 255, 195);
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 100px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.shoppingDisplayStatusColumn .progress {
+  margin-top: 10px;
+}
+
+/* Table of confirm order */
+
+.headTable {
+  background-color: rgb(254, 209, 0);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.bodyTable {
+  background-color: rgb(255, 255, 195);
+  font-size: 20px;
+}
+
 .myImg {
     max-width: 75px;
-    max-height: 75px
+    max-height: 75px;
+}
+
+.deleteButton:hover {
+  color: red;
+}
+
+/* Button selection */
+
+#confirmButton {
+  font-size: 23px;
+  margin: 0px 30px 0px 0px;
+}
+
+#cancelButton {
+  font-size: 23px;
+  margin: 0px 0px 0px 30px;
+}
+
+/* Ton's old code */
+/* .myImg {
+    max-width: 75px;
+    max-height: 75px;
 }
 .alignLeft{
     display : flex;
@@ -21,4 +86,4 @@
 .myRow{
     margin-right: 0px !important;
     margin-left: 0px !important;
-}
+} */
