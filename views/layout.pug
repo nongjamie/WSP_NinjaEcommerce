@@ -24,10 +24,8 @@ html
                 a(href='/')
                  img.fixsize-logo(src='../pictures/logo_onweb.png' href="/")
               li(class="nav-item")
-                //- a(class=(menu === 'promotion' ? "nav-link active": "nav-link") href="/promotion") PROMOTION
                 a(class='nav-link' href="/promotion") PROMOTION
               li(class="nav-item dropdown")
-                //- a(class=(menu === 'store' ? "nav-link active": "nav-link") href="/store") STORE
                 a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") STORE
                 div(class="dropdown-menu" aria-labelledby="navbarDropdown")
                   a(class="dropdown-item" id='whiskyChoice')
@@ -39,24 +37,18 @@ html
                   a(class="dropdown-item" id='mixerChoice')
                     | Mixer
               li(class="nav-item")
-                //- a(class=(menu === 'status' ? "nav-link active": "nav-link") href="/status") STATUS
                 a(class='nav-link' href="/status") STATUS
               li(class="nav-item")
-                //- a(class=(menu == 'aboutUs' ? "nav-link active": "nav-link") href="/aboutUs") ABOUTUS
                 a(class='nav-link' href="/aboutUs") ABOUTUS
               if user
                 li(class="nav-item")
-                  //- a(class=(menu === 'logout' ? "nav-link active": "nav-link") href="/logout") Logout
                   a(class='nav-link' href="/logout") Logout
                 li(class='nav-item')
-                  //- a(class=(menu === 'logout' ? "nav-link active": "nav-link") href=`/mycart/`+user.username) Mycart
                   a(class='nav-link' href=`/mycart/`+user.username) Mycart
               else
                 li(class="nav-item")
-                  //- a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
                   a(class='nav-link' href="/signup") SIGN UP
                 li(class="nav-item")
-                  //- a(class=(menu === 'login' ? "nav-link active": "nav-link") href="/login") LOG IN
                   a(class='nav-link' href="/login") LOG IN
     
     // User navigation bar status
