@@ -1,7 +1,7 @@
 $( () => {
 
   // Cofirm button clicked.
-  $('#confirmButton').click( () => {
+  $('#yesButton').click( () => {
     console.log('Go to appointment page.');
     window.location = "http://localhost:3000/myappointment/None";
   });
