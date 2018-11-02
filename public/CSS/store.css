@@ -57,6 +57,7 @@ button.button1:focus{
     padding-top: 30px;
     margin-bottom: 30px;
     border-radius:10px;
+    background: white;
 }
 
 input {
@@ -82,4 +83,13 @@ h3 {
   text-align: center;
   flex-basis: 30%;
   border-radius: 4px;
+}
+
+.color-container{
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-collapse: separate;
+  background-color:  rgb(255, 255, 195);
+  border-radius: 40px!important;
 }
