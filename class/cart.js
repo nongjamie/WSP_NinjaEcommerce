@@ -45,5 +45,21 @@ class Cart {
             return e.data
         }
     }
+    async removeProductFromCart(username){
+        try{
+            console.log(username)
+            const response = await axios.post(URL.removeProductFromCart,{},{
+                headers:{
+                    'username': username,
+                    'productID': username.productID,
+                    'quantity':parseInt(username.quantity)
+                }
+            })
+            return response.data
+        }catch(e){
+            console.log('remove product error')
+            return e.data
+        }
+    }
 }
 module.exports = Cart

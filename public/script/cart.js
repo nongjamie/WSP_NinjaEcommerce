@@ -13,8 +13,24 @@ $( () => {
   });
 
   // Delete button clicked.
-  $('.deleteButton').on('click', () => {
-
+  $('.deleteButton').on('click', (e) => {
+    const username = $('#userNavBarUsername').text()
+    $target=$(e.target);
+    const id =$target.attr('data-id');
+    $.ajax(
+        {
+            type:'POST',
+            url:'/mycart/'+username,
+            success: function(response){
+                alert('Delete');
+                window.location.href='/';
+        },
+        error: function(err){
+             console.log(err);
+        }
+     }
+    );
+    
   });
 
 } );
