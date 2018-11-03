@@ -93,3 +93,9 @@ h3 {
   background-color:  rgb(255, 255, 195);
   border-radius: 40px!important;
 }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
