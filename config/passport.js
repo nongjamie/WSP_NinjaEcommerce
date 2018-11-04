@@ -23,7 +23,6 @@ module.exports = function (passport) {
     passport.serializeUser(function (user, done) {
 
         console.log('serialize ' + JSON.stringify(user))
-        console.log(user)
 
         done(null, user.username)
     });
