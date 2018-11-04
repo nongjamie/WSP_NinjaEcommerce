@@ -12,22 +12,21 @@ block content
       div(class='row justify-content-center')
         div(class='col-sm-6' id='productContent')
           span(id='productContentTopic') >> Whisky <<
-          
+
     //- Product catalogue
-    .flex-container.mt-3
-      each product, i in products
-        div(class='p-3 border border-dark' style='margin-top: 20px; margin-bottom: 20px;')
-          h.mt-2 #{product.productName}
-          h3 #{product.productDetail}
-          img.fixsize(src='../pictures/Whisky_'+product.productName+'.jpg')
-          br
-          h ฿ #{product.productPrice}
-          br
-          div
-            input.mb-2.fixsize(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
-            button.mb-2.fixsize.addToCartButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
+    .row.color-container.mt-3
+        each product, i in products
+          .container.col-6.col-md-4
+            div(class='product-border')
+              h.mt-2 #{product.productName}
+              h3 #{product.productDetail}
+              img.fixsize(src='../pictures/Whisky_'+product.productName+'.jpg')
+              br
+              h ฿ #{product.productPrice}
+              br
+              div
+                input.mb-2.fixsize(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
+                button.mb-2.fixsize.addToCartButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
 
 
 block foot
-
-  script(src='../script/whisky.js')

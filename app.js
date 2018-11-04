@@ -126,6 +126,13 @@ app.get("/aboutUs", function(req, res) {
 });
 
 
+// Appointment page
+// Can be deleted when backend team do this task
+app.get("/myappointment/None", function(req, res) {
+  res.render("appointment", {
+    menu: 'appointment'
+  });
+});
 
 app.use(require('./routes/products'))
 
