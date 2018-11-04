@@ -51,6 +51,12 @@ body {
 
 /* Header section */
 
+#most-header {
+  font-size: 30px;
+  background-color: yellow;
+  text-align: left;
+}
+
 #nav-bar-box {
   padding-top: 20px;
   padding-bottom: 10px;
