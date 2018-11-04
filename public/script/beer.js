@@ -1,5 +1,5 @@
 $(function () {
-    
+
         $('.addToCartButton').on('click', function(e){
             const val = this.value
             const data = val.split(',')
@@ -14,7 +14,7 @@ $(function () {
                     'username': username,
                     'productID': data[2],
                     'quantity': parseInt(quantity)
-    
+
                 },
                 type: 'POST',
                 success: function(data) {
@@ -29,9 +29,17 @@ $(function () {
                 }
             })
         })
-    
+
         $('#userNavBarConfirm').on('click', ()=>{
             window.location = '/mycart/' + $('#userNavBarUsername').text()
         })
-    
+
     });
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}

@@ -6,103 +6,40 @@ block head
   title Ninja Beer
 
 block content
-  doctype html
-  link(rel='stylesheet', type='text/css', href='../CSS/store.css')
-  html
-    head
-      meta(name='viewport', content='width=device-width, initial-scale=1')
-      style.
-        body {font-family: Arial, Helvetica, sans-serif;}
-        * {box-sizing: border-box;}
-        /* Button used to open the contact form - fixed at the bottom of the page */
-
-        /* The popup form - hidden by default */
-        .form-popup {
-        display: none;
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        border: 5px solid #f1f1f1;
-        z-index: 9;
-        }
-        /* Add styles to the form container */
-        .form-container {
-        max-width: 600px;
-        padding: 10px;
-        background-color: white;
-        }
-
-        /* Set a style for the submit/login button */
-        .form-container .btn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 16px 20px;
-        border: none;
-        cursor: pointer;
-        width: 100%;
-        margin-bottom:10px;
-        opacity: 0.8;
-        }
-        /* Add a red background color to the cancel button */
-        .form-container .cancel {
-        background-color: red;
-        }
-        .form-container .number {
-        color : black;
-        background-color: rgb(255, 255, 195);
-        }
-        .form-container .favorite {
-        color : black;
-        background-color: rgb(239, 153, 245);
-        }
-        /* Add some hover effects to buttons */
-        .form-container .btn:hover, .open-button:hover {
-        opacity: 1;
-        }
-    body
+  body
+  br
+  img.fixsize(src='../pictures/Beer_Leo_can.jpg' , onclick='openForm()')
+  #myForm.form-popup
+    form.form-container(action='/action_page.php')
+      h1 Leo Can
+      hr
       .container
         .row
-          .col-6
-            | 1123123123
-          .col-6
-            | 234324234
-      br
-      img.fixsize(src='../pictures/Beer_Leo_can.jpg' , onclick='openForm()')
-      button(onclick='openForm()') Open Form
-      #myForm.form-popup
-        form.form-container(action='/action_page.php')
-          h1 Leo Can
-          hr
-          .container
-            .row
-              .col-4
-                img(src='../pictures/Beer_Leo_can.jpg' , onclick='openForm()' ,height='200', width='170')
-              .col-4
-                | Vol : 320 ml.
-                br
-                br
-                | Type : Beer
-                br
-                br
-                | Distributor : Boon Rawd Brewery Co.,Ltd.
-              .col-4
-                | ABV : 5 %
-                br
-                br
-                | Country : Thailand
-                br
-                br
-                button.btn.favorite Add To Favorite
-              h Beer Leo is a beer from Boon Rawd Brewery Co.,Ltd first produced in 1996, is a quality product from Beer Singha.
-          hr
-          input.btn.number.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
-          button.btn.mb-2.fixsize.addToCartButton.center Add To Cart
-          button.btn.cancel(type='button', onclick='closeForm()') Close
-      script(src='../script/beer.js')
-      script.
-        function openForm() {
-        document.getElementById("myForm").style.display = "block";
-        }
-        function closeForm() {
-        document.getElementById("myForm").style.display = "none";
-        }
+          .col-4
+            img(src='../pictures/Beer_Leo_can.jpg' , onclick='openForm()' ,height='200', width='200')
+          .col-4
+            | Vol : 320 ml.
+            br
+            br
+            | Type : Beer
+            br
+            br
+            | Distributor : Boon Rawd Brewery Co.,Ltd.
+          .col-4
+            | ABV : 5 %
+            br
+            br
+            | Country : Thailand
+            br
+            br
+            button.btn.favorite Add To Favorite
+          h Beer Leo is a beer from Boon Rawd Brewery Co.,Ltd first produced in 1996, is a quality product from Beer Singha.
+      hr
+      input.btn.number.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
+      button.btn.mb-2.fixsize.addToCartButton.center Add To Cart
+      button.btn.cancel(type='button', onclick='closeForm()') Close
+  img.fixsize(src='../pictures/Beer_Leo_bottle.jpg' , onclick='openForm()')
+
+block foot
+
+  script(src='../script/beer.js')
