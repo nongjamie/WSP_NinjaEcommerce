@@ -91,11 +91,11 @@ html
         div
           form(id='feedbackForm' method='POST', action='/addFeedback')
             p Your name or username (Optional)
-            input.form-control(name='name', type='text')
+            input.form-control(name='name', type='text' placeholder='Mr. Varit Assawa')
             br
             p Give us feedback
-            textarea.mb-2.form-control(name="feedback", cols="5", rows="3")
-            div.ml-4.mt-2
+            textarea.mb-2.form-control(name="feedback", cols="5", rows="4")
+            div.ml-4.mt-4
               button.btn.btn-danger.d-inline-block.mr-3.feedbackCancelButton(type='button') Cancel
               input.btn.btn-primary.d-inline-block.feedbackSummitButton(type='submit', value='Submit') 
         
