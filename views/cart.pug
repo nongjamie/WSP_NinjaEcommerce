@@ -43,7 +43,7 @@ block content
         each product, i in products
           tr
             th(scope='row')
-              img.myImg(src="/pictures/Whisky_" + product.productName + '.jpg' , alt="")
+              img.myImg(src="/pictures/"+product.productID+'_'+product.productName+'.jpg' , alt="")
             td
               span #{product.productName}
             td
