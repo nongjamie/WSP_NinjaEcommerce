@@ -125,15 +125,6 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
-
-// Appointment page
-// Can be deleted when backend team do this task
-app.get("/myappointment/None", function(req, res) {
-  res.render("appointment", {
-    menu: 'appointment'
-  });
-});
-
 app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))
@@ -141,6 +132,8 @@ app.use('/accounts', require('./routes/accounts'))
 app.use('/mycart', require('./routes/cart'))
 
 app.use(require('./routes/admin'))
+
+app.use('/myappointment',require('./routes/appointment'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')
