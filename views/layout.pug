@@ -54,7 +54,6 @@ html
     // User navigation bar status
     div(class="container" id='userNavBar')
       div.row.align-items-center
-<<<<<<< HEAD
         div.userNavBarSentenceSection
           div(class='row justify-content-center')
             span(id="userNavBarSentence")
@@ -64,17 +63,7 @@ html
                 | Welcome anonymous !
         div.userNavBarStatusSection
           div(class='row justify-content-center')
-=======
-        div.col-sm-6
-          span(id="userNavBarSentence")
-            if user
-              | Welcome #{user.username} !
-            else
-              | Welcome anonymous !
-              
-        div.col-sm-6
-          div(class='row justify-content-end')
->>>>>>> feedback-zone
+
             i(class="far fa-user fa-10x" id='userNavBarUserIcon')
             if user
               button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' value=user.username disabled) #{user.username}
@@ -106,7 +95,7 @@ html
             br
             p Give us feedback
             textarea.mb-2.form-control(name="feedback", cols="5", rows="3")
-            div.ml-4.mt-5
+            div.ml-4.mt-2
               button.btn.btn-danger.d-inline-block.mr-3.feedbackCancelButton(type='button') Cancel
               input.btn.btn-primary.d-inline-block.feedbackSummitButton(type='submit', value='Submit') 
         
