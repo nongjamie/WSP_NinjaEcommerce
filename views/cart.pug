@@ -53,7 +53,7 @@ block content
             td 
               span.eachTotal= product.quantity * product.productPrice
             td
-              input.mb-2.fixsize(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
+              input.mb-2.fixsize#inputNumberDelete(type='number' name='pro'+(i+1) step='1' min='1' max=product.quantity value='1')
               button.mb-2.fixsize.deletesButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID) delete 
         tr
           th(scope='row') 
