@@ -18,9 +18,8 @@ router.get('/:username', async(req, res) => {
     })
 })
 router.post('/:username',async(req,res)=>{
-    console.log('paul')
-    const username = req.params.username   
-    cart.removeProductFromCart(username)
+    const data = req.body 
+    cart.removeProductFromCart(data)
 })
 
 module.exports = router
