@@ -7,86 +7,27 @@ block head
 
 block content
 
-  //- Product topic
-  div(class='container')
-    div(class='row justify-content-center')
-      div(class='col-sm-6' id='productContent')
-        span(id='productContentTopic') >> Wine <<
-              
-  .container-fluid
-    h2 Wine
-    .row
-      .container.col-6.col-md-4
-        .container.product-border
-          h Full Moon White
-          h3 (275 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Wine_Fullmoon_White.jpg')
-          br
-          // ราคา
-          h ฿ 30
-          br
-          .row
-            .col.align-self-center
+    //- Product topic
+    div(class='container')
+      div(class='row justify-content-center')
+        div(class='col-sm-6' id='productContent')
+          span(id='productContentTopic') >> Wine <<
+
+    //- Product catalogue
+    .row.color-container.mt-3
+        each product, i in products
+          .container.col-6.col-md-4
+            div(class='product-border')
+              h.mt-2 #{product.productName}
+              h3 #{product.productDetail}
+              img.fixsize(src='../pictures/'+product.productID+'_'+product.productName+'.jpg')
               br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro1', step='1', min='1' , value='1')
-              button#fixsize.button1
-                | Add To Cart
-  
-      .container.col-6.col-md-4
-        .container.product-border
-          h Full Moon Red
-          h3 (275 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Wine_Fullmoon_Red.jpg')
-          br
-          // ราคา
-          h ฿ 30
-          br
-          .row
-            .col.align-self-center
+              h ฿ #{product.productPrice}
               br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro2', step='1', min='1' , value='1')
-              button#fixsize.button1
-                | Add To Cart
-  
-      .container.col-6.col-md-4
-        .container.product-border
-          h Full Moon Dark
-          h3 (275 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Wine_Fullmoon_Dark.jpg')
-          br
-          // ราคา
-          h ฿ 30
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro3', step='1', min='1' , value='1')
-              button#fixsize.button1
-                | Add To Cart
-  
-      .container.col-6.col-md-4
-        .container.product-border
-          h Full Moon Rose
-          h3 (275 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Wine_Fullmoon_Rose.jpg')
-          br
-          // ราคา
-          h ฿ 30
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro4', step='1', min='1' , value='1')
-              button#fixsize.button1
-                | Add To Cart
+              div
+                input.mb-2.fixsize(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
+                button.mb-2.fixsize.addToCartButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
+
 
 block foot
 

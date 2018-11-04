@@ -9,6 +9,38 @@ body {
   background-size: 100% 100%;
 }
 
+/* Header section */
+
+#nav-bar-box {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(2, 231, 222);
+}
+
+.nav-link {
+  font-weight: bolder;
+  color: black;
+  font-size: 30px;
+}
+
+@media screen and (max-width:1030px) {
+
+  .nav-item {
+    width:100%;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
+.nav-item a {
+    font-size: 23px;
+}
+
+
 /* user nav bar */
 
 #userNavBar {
@@ -19,12 +51,20 @@ body {
   padding: 20px;
 }
 
+.userNavBarSentenceSection {
+  width: 50%;
+}
+
+.userNavBarStatusSection {
+  width: 50%;
+}
+
 #userNavBarSentence {
   font-size: 23px;
 }
 
 #userNavBarUserIcon {
-  font-size: 200%;
+  font-size: 2em;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -49,6 +89,9 @@ body {
   margin-right: 5px;
 }
 
+<<<<<<< HEAD
+@media screen and (max-width:800px) {
+=======
 /* Header section */
 
 #most-header {
@@ -68,12 +111,17 @@ body {
   color: black;
   font-size: 30px;
 }
+>>>>>>> 154e447e23acf21eadc4d1b82b60e845f05da517
 
-.nav-item a {
-    font-size: 23px;
-}
+  .userNavBarSentenceSection {
+    width:100%;
+    margin-bottom: 5px;
+  }
 
-.headerSection {
+  .userNavBarStatusSection {
+    width:100%;
+    margin-top: 5px;
+  }
 
 }
 
@@ -161,6 +209,6 @@ body {
   height: 500px;
   z-index: 999 !important;
   background-color: whitesmoke;
-  box-shadow: 0px 7px 39px -4px rgba(0,0,0,0.75);
+  box-shadow: 0px 7px 39px -4px rgba(19, 19, 19, 0.75);
 
 }

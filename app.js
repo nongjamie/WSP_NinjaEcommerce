@@ -125,8 +125,6 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
-
-
 app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))
@@ -134,6 +132,8 @@ app.use('/accounts', require('./routes/accounts'))
 app.use('/mycart', require('./routes/cart'))
 
 app.use(require('./routes/admin'))
+
+app.use('/myappointment',require('./routes/appointment'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')

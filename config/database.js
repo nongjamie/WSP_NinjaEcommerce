@@ -7,7 +7,9 @@ module.exports = {
     getAccountByUsername : URL + 'getAccountByUsername',
     getProductListByCategoryname : URL + 'getProductListByCategoryname',
     addProductToCartByUsername : URL +'addProductToCartByUsername',
+    checkoutByUsername:URL+'checkoutByUsername',
     getCartByUsername : URL + 'getCartByUsername',
+    removeProductFromCart : URL + 'removeProductFromCart',
     addFeedback : URL + 'addFeedback',
     getFeedbacks : URL + 'getFeedbackList'
 }

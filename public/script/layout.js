@@ -9,7 +9,7 @@ $( () => {
   });
 
   // Go to beer page.
-  $('#ิbeerChoice').on('click', () => {
+  $('#beerChoice').on('click', () => {
     console.log('Going to beer page.');
     window.location = "http://localhost:3000/beer";
   });

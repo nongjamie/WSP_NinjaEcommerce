@@ -37,10 +37,8 @@ html
               //-   a(href='/')
               //-    img.fixsize-logo(src='../pictures/logo_onweb.png' href="/")
               li(class="nav-item")
-                //- a(class=(menu === 'promotion' ? "nav-link active": "nav-link") href="/promotion") PROMOTION
                 a(class='nav-link' href="/promotion") PROMOTION
               li(class="nav-item dropdown")
-                //- a(class=(menu === 'store' ? "nav-link active": "nav-link") href="/store") STORE
                 a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") STORE
                 div(class="dropdown-menu" aria-labelledby="navbarDropdown")
                   a(class="dropdown-item" id='whiskyChoice')
@@ -52,37 +50,33 @@ html
                   a(class="dropdown-item" id='mixerChoice')
                     | Mixer
               li(class="nav-item")
-                //- a(class=(menu === 'status' ? "nav-link active": "nav-link") href="/status") STATUS
                 a(class='nav-link' href="/status") STATUS
               li(class="nav-item")
-                //- a(class=(menu == 'aboutUs' ? "nav-link active": "nav-link") href="/aboutUs") ABOUTUS
                 a(class='nav-link' href="/aboutUs") ABOUTUS
               if user
                 li(class="nav-item")
-                  //- a(class=(menu === 'logout' ? "nav-link active": "nav-link") href="/logout") Logout
                   a(class='nav-link' href="/logout") Logout
                 li(class='nav-item')
-                  //- a(class=(menu === 'logout' ? "nav-link active": "nav-link") href=`/mycart/`+user.username) Mycart
                   a(class='nav-link' href=`/mycart/`+user.username) Mycart
               else
                 li(class="nav-item")
-                  //- a(class=(menu === 'signup' ? "nav-link active": "nav-link") href="/signup") SIGN UP
                   a(class='nav-link' href="/signup") SIGN UP
                 li(class="nav-item")
-                  //- a(class=(menu === 'login' ? "nav-link active": "nav-link") href="/login") LOG IN
                   a(class='nav-link' href="/login") LOG IN
     
     // User navigation bar status
     div(class="container" id='userNavBar')
       div.row.align-items-center
-        div.col-sm-6
-          span(id="userNavBarSentence")
-            if user
-              | Welcome #{user.username} !
-            else
-              | Welcome anonymous !
-        div.col-sm-6
-          div(class='row justify-content-end')
+        div.userNavBarSentenceSection
+          div(class='row justify-content-center')
+            span(id="userNavBarSentence")
+              if user
+                | Welcome #{user.username} !
+              else
+                | Welcome anonymous !
+        div.userNavBarStatusSection
+          div(class='row justify-content-center')
+
             i(class="far fa-user fa-10x" id='userNavBarUserIcon')
             if user
               button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' value=user.username disabled) #{user.username}
@@ -139,12 +133,13 @@ html
         div
           form(id='feedbackForm' method='POST', action='/addFeedback')
             p Your name or username (Optional)
-            input.form-control(name='name', type='text')
+            input.form-control(name='name', type='text' placeholder='Mr. Varit Assawa')
             br
             p Give us feedback
-            textarea.mb-2.form-control(name="feedback", cols="5", rows="3")
-            button.btn.btn-danger.d-inline-block.mr-3.feedbackCancelButton(type='button') Cancel
-            input.btn.btn-primary.d-inline-block.feedbackSummitButton(type='submit', value='Submit') 
+            textarea.mb-2.form-control(name="feedback", cols="5", rows="4")
+            div.ml-4.mt-4
+              button.btn.btn-danger.d-inline-block.mr-3.feedbackCancelButton(type='button') Cancel
+              input.btn.btn-primary.d-inline-block.feedbackSummitButton(type='submit', value='Submit') 
         
   script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
@@ -156,4 +151,3 @@ html
 
   // Foot section
   block foot
-  

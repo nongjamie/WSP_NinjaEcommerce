@@ -6,124 +6,40 @@ block head
   title Ninja Beer
 
 block content
-
-  //- Product topic
-  div(class='container')
-    div(class='row justify-content-center')
-      div(class='col-sm-6' id='productContent')
-        span(id='productContentTopic') >> Beer <<
-
-  .container-fluid
-    h2 Beer
-    .row
-      .container.col-6.col-md-4
-        .container.product-border
-          h Leo can
-          h3 (330 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Beer_Leo_can.jpg')
-          br
-          // ราคา
-          h ฿ 35
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro1', step='1', min='1' , value='1')
-              button#fixsize.button1
-                | Add To Cart
-
-      .container.col-6.col-md-4
-        .container.product-border
-          h Leo bottle
-          h3 (630 ml)
-          .col-1
-          img#fixsize(src='../pictures/Beer_Leo_bottle.jpg')
-          br
-          // ราคา
-          h ฿ 55
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro2', step='1', min='1' , value='1')
-              button#fixsize.button1
-                | Add To Cart
-
-      .container.col-6.col-md-4
-        .container.product-border
-          h Chang can
-          h3 (320 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Beer_Chang_can.jpg')
-          br
-          // ราคา
-          h ฿ 32
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro3', step='1', min='1' , value='1')
-              button#fixsize.button1
-                | Add To Cart
-
-      .container.col-6.col-md-4
-        .container.product-border
-          h Chang bottle
-          h3 (620 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Beer_Chang_bottle.jpg')
-          br
-          // ราคา
-          h ฿ 52
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro4', step='1', min='1' , value='1')
-              button#fixsize.button1
-                | Add To Cart
-
-      .container.col-6.col-md-4
-        .container.product-border
-          h Singha can
-          h3 (330 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Beer_Singha_can.jpg')
-          br
-          // ราคา
-          h ฿ 36
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro5', step='1', min='1' , value='1')
-              button#fixsize.button1
-                | Add To Cart
-
-      .container.col-6.col-md-4
-        .container.product-border
-          h Singha bottle
-          h3 (630 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Beer_Singha_bottle.jpg')
-          br
-          // ราคา
-          h ฿ 62
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro6', step='1', min='1' , value='1')
-              button#fixsize.button1
-                | Add To Cart
+  body
+  br
+  img.fixsize(src='../pictures/Beer_Leo_can.jpg' , onclick='openForm()')
+  #myForm.form-popup
+    form.form-container(action='/action_page.php')
+      h1 Leo Can
+      hr
+      .container
+        .row
+          .col-4
+            img(src='../pictures/Beer_Leo_can.jpg' , onclick='openForm()' ,height='200', width='200')
+          .col-4
+            | Vol : 320 ml.
+            br
+            br
+            | Type : Beer
+            br
+            br
+            | Distributor : Boon Rawd Brewery Co.,Ltd.
+          .col-4
+            | ABV : 5 %
+            br
+            br
+            | Country : Thailand
+            br
+            br
+            button.btn.favorite Add To Favorite
+          h Beer Leo is a beer from Boon Rawd Brewery Co.,Ltd first produced in 1996, is a quality product from Beer Singha.
+      hr
+      input.btn.number.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
+      button.btn.mb-2.fixsize.addToCartButton.center Add To Cart
+      button.btn.cancel(type='button', onclick='closeForm()') Close
+  img.fixsize(src='../pictures/Beer_Leo_bottle.jpg' , onclick='openForm()')
 
 block foot
 
-  script(src='../script/wine.js')
+  script(src='../script/beer.js')
