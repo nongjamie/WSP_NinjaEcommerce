@@ -7,22 +7,35 @@ html
     link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
     link(href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet")
-    link(rel='stylesheet', type='text/css', href='../CSS/layout.css')   
+    link(rel='stylesheet', type='text/css', href='../CSS/layout.css')
     link(rel="stylesheet" href="../CSS/animate.css") 
 
     block head
 
   body
-    
     // Header section
     div.container-fluid
       div.headerSection
-        div(class="row", id="nav-bar-box")
+        div(class="row" id='most-header')
+          .col-sm-4
+            a(href='/')
+              center
+                img.logo(src='../pictures/logo_onweb.png' href="/")
+          .col-sm-4
+            p.mx-2 NinjaEcommerce
+            div(class="input-group mb-3")
+                  input(type="text" class="form-control" placeholder="Enter your favourite drink" aria-label="Enter your e-mail" aria-describedby="basic-addon2")
+                  div(class="input-group-append")
+                    button(class="btn btn-secondary" type="button") Search
+          .col-sm-4
+            
+
+        div(id="nav-bar-box", class="row")
           div(class="col-sm-12")
             ul(id="menu-nav-bar", class="nav nav-pills nav-fill")
-              li(class="nav-item")
-                a(href='/')
-                 img.fixsize-logo(src='../pictures/logo_onweb.png' href="/")
+              //- li(class="nav-item")
+              //-   a(href='/')
+              //-    img.fixsize-logo(src='../pictures/logo_onweb.png' href="/")
               li(class="nav-item")
                 a(class='nav-link' href="/promotion") PROMOTION
               li(class="nav-item dropdown")
@@ -83,7 +96,36 @@ html
       hr
       div(class="row")
         div(id="footer-company-name-background", class="col-sm-12")
-          span.mx-2(id="footer-company-name") NINJA ECOMMERCE
+          //- span.mx-2(id="footer-company-name") NINJA ECOMMERCE
+          div(class="row")
+            div(class="col-sm-4")
+              b.mx-5(id="footer-font") CONTACT US
+              .mx-3
+                p 90/9 Sathorn Thani Building 1, 6FL.  North Sathorn Road  Silom, 
+                p Bangrak, Bangkok 10500 Thailand.
+                p Tel: (+66) 02-XXX-XXXX
+                p Email: sathira.k@ku.th 
+            div(class="col-sm-4")
+              //- center
+              //-   img.logo(src='../pictures/logo_onweb.png')
+              b.mx-2(id="footer-font") NEWSLETTER
+                div(class="input-group mb-3")
+                  input(type="text" class="form-control" placeholder="Enter your e-mail" aria-label="Enter your e-mail" aria-describedby="basic-addon2")
+                  div(class="input-group-append")
+                    button(class="btn btn-secondary" type="button") Submit
+              center
+                iframe(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25E0%25B8%25AA%25E0%25B8%25A7%25E0%25B8%25B1%25E0%25B8%25AA%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B8%259C%25E0%25B8%25A1%25E0%25B8%258A%25E0%25B8%25B7%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%2595%25E0%25B9%2589%25E0%25B8%2599-716682038690707%2F&tabs=message&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media")
+            div(class="col-sm-4")
+              b.mx-5(id="footer-font") ABOUT US
+              p.mx-3 It is the best ecommerce website that ever had in this century. We promise that our services will fast, safe, inexpensive, secretly, good quality, reliable, and silently sent like a ninja.
+              b.mx-5(id="footer-font") Payment
+                p
+                img.fixsize2-logo(src="../pictures/master-logo.png")
+                img.fixsize2-logo(src="../pictures/scb-logo.png")
+                img.fixsize2-logo(src="../pictures/kbank-logo.png")
+
+
+
     .feedbackSign
       label.mt-1.mx-2.animated.infinite.pulse.slow Feedback
     .feedback
