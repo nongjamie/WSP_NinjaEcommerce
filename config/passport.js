@@ -21,30 +21,13 @@ module.exports = function (passport) {
     }))
 
     passport.serializeUser(async function (user, done) {
-
-        console.log('serialize ' + JSON.stringify(user))
+        // console.log('serialize ' + JSON.stringify(user))
         await done(null, user.username)
     });
 
-    passport.deserializeUser(function (user, done) {
-        accout.getAccountBy(user)
-        .then(result => {
-            console.log('Deserialize')
-            console.log(result)
-            done(null, result.account || null)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-
-        
-        // if(result == undefined){
-        //     console.log('dadadasdas')
-        //     done(null, null)
-        // }
-        // else{
-        //     done(null, result.account || null)
-        // }
+    passport.deserializeUser(async (user, done) => {
+        const result = await accout.getAccountBy(user)
+        done(null, result.account || null)
 
     });
 
