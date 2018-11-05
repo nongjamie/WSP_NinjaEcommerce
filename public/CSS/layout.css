@@ -1,54 +1,45 @@
 * {
   /* border: 2px solid green; */
+  /* background-color: rgb(0, 51, 153); */
   font-family: 'Mali', cursive;
-}
-
-body {
-  background-image: url('http://7wallpapers.net/wp-content/uploads/3_Jack-Daniels.jpg');
-  background-attachment: fixed;
-  background-size: 100% 100%;
 }
 
 /* Header section */
 
-#nav-bar-box {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: rgb(2, 231, 222);
-}
-
-.nav-link {
-  font-weight: bolder;
-  color: black;
+#most-header {
   font-size: 30px;
+  text-align: left;
 }
 
-@media screen and (max-width:1030px) {
+/* Nav bar section */
 
-  .nav-item {
-    width:100%;
-  }
-
-  .dropdown-menu {
-    width: 100%;
-    text-align: center;
-  }
-
+.navBar {
+  background-color: black;
+  font-size: 23px;
 }
 
-.nav-item a {
-    font-size: 23px;
+.navBar button {
+    background-color: white;
 }
 
+#whiteLetter {
+  color: white;
+}
 
-/* user nav bar */
+.dropdown-menu {
+  background-color: black;
+}
+
+.dropdown-item:hover{
+  background-color: grey;
+}
+
+/* User nav bar section */
 
 #userNavBar {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: rgb(255, 255, 195);
+  background-color: rgb(217, 217, 217);
   font-size: 23px;
-  padding: 20px;
+  padding: 10px;
 }
 
 .userNavBarSentenceSection {
@@ -89,29 +80,7 @@ body {
   margin-right: 5px;
 }
 
-<<<<<<< HEAD
 @media screen and (max-width:800px) {
-=======
-/* Header section */
-
-#most-header {
-  font-size: 30px;
-  background-color: yellow;
-  text-align: left;
-}
-
-#nav-bar-box {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  background-color: rgb(2, 231, 222);
-}
-
-.nav-link {
-  font-weight: bolder;
-  color: black;
-  font-size: 30px;
-}
->>>>>>> 154e447e23acf21eadc4d1b82b60e845f05da517
 
   .userNavBarSentenceSection {
     width:100%;
@@ -128,17 +97,10 @@ body {
 /* Footer section */
 
 #footer-section {
-  margin-bottom: 10px;
+  color: white;
 }
 
-#footer-quote {
-  text-align: center;
-  padding: 20px;
-  font-size: 15px;
-  line-height: 40px;
-}
-
-.footer-font{
+#footer-font {
   font-size: 22px;
   font-weight: bold;
   text-align: left;
@@ -146,16 +108,8 @@ body {
   margin: 20px
 }
 
-#footer-company-name {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  padding: 20px;
-  margin: 20px
-}
-
 #footer-company-name-background {
-  background-color: rgb(2, 231, 222);
+  background-color: black;
   padding: 10px;
 }
 
@@ -179,6 +133,8 @@ body {
   align-content: center;
   align-items: center;
 }
+
+/* Feedback feature section */
 
 .feedbackSign {
   position: fixed;
@@ -210,5 +166,4 @@ body {
   z-index: 999 !important;
   background-color: whitesmoke;
   box-shadow: 0px 7px 39px -4px rgba(19, 19, 19, 0.75);
-
 }

@@ -6,9 +6,7 @@ const Feedback = require('../class/feedback')
 const account = new Account()
 const feedback = new Feedback()
 
-
         //TODO check user.isAdmin waiting for isAdmin feild
-
 router.get('/admin', async (req, res) => {
         const user = res.locals.user
         console.log(user)
@@ -28,8 +26,14 @@ router.get('/admin/user/:username', async (req, res) => {
 })
 
 router.post('/addFeedback', async(req, res) => {
-        await feedback.addFeedback(req.body)
-        console.log('add feedback success')
+        const result = await feedback.addFeedback(req.body)
+        console.log(result)
+        res.send('success')
+})
+
+router.post('/removeFeedback', async(req, res) => {
+        const result = await feedback.removeFeedback(req.body)
+        console.log(result)
         res.send('success')
 })
 

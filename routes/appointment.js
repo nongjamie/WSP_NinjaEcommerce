@@ -12,9 +12,11 @@ router.get('/:username', async(req, res) => {
 
 router.post('/:username',async(req,res)=>{
     console.log("appoint")
-    const username = req.params.username    
+    console.log(req.body.username)
+    const username = req.body.username   
     const result = await cart.getUserCart(username)
     cart.checkoutByUsername(username)
+    res.send('send success')
 })
 
 module.exports = router

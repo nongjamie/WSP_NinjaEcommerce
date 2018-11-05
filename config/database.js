@@ -3,6 +3,7 @@ const URL = 'https://us-central1-ninjadrink-25671.cloudfunctions.net/'
 module.exports = {
     getList : URL + 'getAccountList',
     addAccount : URL + 'addAccount',
+    removeAccount : URL + 'removeAccount',
     login : URL + 'login',
     getAccountByUsername : URL + 'getAccountByUsername',
     getProductListByCategoryname : URL + 'getProductListByCategoryname',
@@ -11,5 +12,6 @@ module.exports = {
     getCartByUsername : URL + 'getCartByUsername',
     removeProductFromCart : URL + 'removeProductFromCart',
     addFeedback : URL + 'addFeedback',
-    getFeedbacks : URL + 'getFeedbackList'
+    getFeedbacks : URL + 'getFeedbackList',
+    removeFeedback : URL + 'removeFeedback'
 }

@@ -36,10 +36,26 @@ $(function () {
 
     });
 
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
-}
+// function openForm() {
+//     document.getElementById("myForm").style.display = "block";
+//     for(i =0 ; i<1 ; i++){
+//       product
+//     }
+//
+// }
+//
+// function closeForm() {
+//     document.getElementById("myForm").style.display = "none";
+// }
 
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-}
+$(".imgClick").on("click", function(){
+    const id = $(this).attr('id')
+    console.log('id ' + id)
+    $('.form-popup.'+id).css("display", "block");
+});
+
+$('.cancelButton').on('click', function() {
+    const id = $(this).attr('id')
+    console.log("Close" + id)
+    $('.form-popup.'+id).css("display", "none");
+})
