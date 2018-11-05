@@ -13,5 +13,6 @@ module.exports = {
     removeProductFromCart : URL + 'removeProductFromCart',
     addFeedback : URL + 'addFeedback',
     getFeedbacks : URL + 'getFeedbackList',
-    removeFeedback : URL + 'removeFeedback'
+    removeFeedback : URL + 'removeFeedback',
+    getCategory : URL +'getCategory'
 }

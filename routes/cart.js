@@ -7,7 +7,6 @@ router.get('/:username', async(req, res) => {
     console.log('get cart  ')
     const username = req.params.username    
     const result = await cart.getUserCart(username)
-    console.log(result.cart)
     let total = result.cart.reduce((acc, cur) => 
         acc + (cur.quantity * cur.productPrice)
     ,0)
@@ -19,7 +18,7 @@ router.get('/:username', async(req, res) => {
 })
 router.post('/:username',async(req,res)=>{
     const data = req.body 
-    cart.removeProductFromCart(data)
+     const result= await cart.removeProductFromCart(data)
     res.send('send success')
 })
 

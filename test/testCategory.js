@@ -3,5 +3,5 @@ const category = new Category()
 
 test('(Class: Cart)Test get category', async () => {
     const result = await category.getCategory();
-    expect(result.return_code).toMatch('200');
+    expect(result.data.return_code).toMatch('200');
 });
