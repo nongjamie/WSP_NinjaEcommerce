@@ -1,0 +1,100 @@
+* {
+  /* border: 1px solid green; */
+}
+
+/* Fill Payment topic */
+
+.paymentTopicContainer {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+@media screen and (max-width: 500px) {
+  .paymentTopicContainer {
+    font-size: 23px;
+  }
+}
+
+/* Shopping status */
+
+.shoppingDisplayStatusContainer {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.shoppingDisplayStatusColumn {
+  padding: 20px 100px;
+}
+
+.shoppingDisplayStatusColumn .progress {
+  margin-top: 10px;
+}
+
+/* Payment selection part  */
+
+.paymentLogoSentence {
+  text-align: center;
+  font-size: 23px;
+}
+
+.paymentLogo img {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+}
+
+.paymentLogo img:hover {
+  border: 2px solid red;
+}
+
+.paymentField {
+  margin-bottom: 10px;
+}
+
+.paymentFieldInputSentence {
+  text-align: center;
+  font-size: 23px;
+}
+
+.paymentFieldInput {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.paymentFieldInput .input-group-prepend {
+  padding: 10px;
+  width: 100%;
+}
+
+.paymentFieldUploadSentence {
+  text-align: center;
+  font-size: 23px;
+}
+
+.paymentFieldUpload {
+  text-align: center;
+}
+
+.paymentFieldUploadDetail {
+  font-size: 20px;
+}
+
+/* Button selection */
+
+.buttonFinalSelection {
+  margin-bottom: 10px;
+}
+
+#confirmCartButton {
+  font-size: 23px;
+  margin: 0px 30px 0px 0px;
+}
+
+#cancelButton {
+  font-size: 23px;
+  margin: 0px 0px 0px 30px;
+}
