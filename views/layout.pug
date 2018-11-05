@@ -17,17 +17,16 @@ html
     // Header section
     div.container-fluid
       div.headerSection
-        div(class="row" id='most-header')
-          .col-6.col-md-4
-            a(href='/')
-              center
-                img.logo(src='../pictures/logo_onweb.png' href="/")
-          .col-6.col-md-4
-            p.mx-2 NinjaEcommerce
-            div(class="input-group mb-3")
-                  input(type="text" class="form-control" placeholder="Enter your favourite drink" aria-label="Enter your e-mail" aria-describedby="basic-addon2")
-                  div(class="input-group-append")
-                    button(class="btn btn-secondary" type="button") Search
+        .container(id='most-header')
+          .row
+            .col-md-5
+              img.fixsize.logo(src='../pictures/logo_onweb.png' href="/")
+            .col-md-7
+              p.mx-2 NinjaEcommerce
+              div(class="input-group mb-3")
+                    input(type="text" class="form-control" placeholder="Enter your favourite drink" aria-label="Enter your e-mail" aria-describedby="basic-addon2")
+                    div(class="input-group-append")
+                      button(class="btn btn-secondary" type="button") Search
 
     // Nav bar section
     div.container-fluid.navBar
