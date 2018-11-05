@@ -6,9 +6,7 @@ const Feedback = require('../class/feedback')
 const account = new Account()
 const feedback = new Feedback()
 
-
         //TODO check user.isAdmin waiting for isAdmin feild
-
 router.get('/admin', async (req, res) => {
         const user = res.locals.user
         console.log(user)
