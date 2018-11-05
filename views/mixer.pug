@@ -3,7 +3,7 @@ extends layout
 block head
 
   link(rel='stylesheet', type='text/css', href='../CSS/store.css')
-  title Ninja Beer
+  title Ninja Mixer
 
 block content
 
@@ -11,7 +11,7 @@ block content
     div(class='container')
       div(class='row justify-content-center')
         div(class='col-sm-6' id='productContent')
-          span(id='productContentTopic') >> Beer <<
+          span(id='productContentTopic') >> Mixer <<
 
 
     //- Product catalogue
@@ -22,7 +22,7 @@ block content
               h.mt-2 #{product.productName}
               h3 #{product.productDetail}
               div
-                img.fixsize.imgClick(id=i+1 src='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
+                //- img.fixsize.imgClick(id=i+1 src='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
                 .tile.imgClick.center(id=i+1, data-scale='2', data-image='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
               br
               h ฿ #{product.productPrice}
@@ -41,19 +41,19 @@ block content
               .col-4
                 img.onClickedImg(src='../pictures/'+product.productID+'_'+product.productName+'.jpg',height='200', width='200')
               .col-4
-                | Vol : 320 ml.
+                | Vol : #{product.vol}
 
                 br
                 br
-                | Type : Beer
+                | Type : #{typeDrink}
                 br
                 br
-                | Distributor : Boon Rawd Brewery Co.,Ltd.
+                | Distributor : #{product.distributor}
               .col-4
-                | ABV : 5 %
+                | ABV : #{product.ABV}
                 br
                 br
-                | Country : Thailand
+                | Country : #{product.country}
                 br
                 br
                 button.btn.favorite Add To Favorite
@@ -64,4 +64,4 @@ block content
           button.btn.cancel.cancelButton(type='button' id=i+1) Close
 block foot
 
-  script(src='../script/beer.js')
+  script(src='../script/mixer.js')

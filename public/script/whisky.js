@@ -1,40 +1,52 @@
 $(function () {
 
-    $('.addToCartButton').on('click', function(e){
-        const val = this.value
-        const data = val.split(',')
-        const quantity = $(`.fixsize[name=${data[1]}]`).val()
-        const username = $('#userNavBarUsername').text()
-        console.log(username)
-        console.log(quantity)
-        console.log(data)
-        $.ajax({
-            url: '/whisky',
-            data:{
-                'username': username,
-                'productID': data[2],
-                'quantity': parseInt(quantity)
+        $('.addToCartButton').on('click', function(e){
+            const val = this.value
+            const data = val.split(',')
+            const quantity = $(`.fixsize[name=${data[1]}]`).val()
+            const username = $('#userNavBarUsername').text()
+            console.log(username)
+            console.log(quantity)
+            console.log(data)
+            $.ajax({
+                url: '/beer',
+                data:{
+                    'username': username,
+                    'productID': data[2],
+                    'quantity': parseInt(quantity)
 
-            },
-            type: 'POST',
-            success: function(data) {
-                if(data.return_code === '400'){
-                   console.log('error')
-                }else{
-                    console.log(data)
+                },
+                type: 'POST',
+                success: function(data) {
+                    if(data.return_code === '400'){
+                       console.log('error')
+                    }else{
+                        console.log(data)
+                    }
+                },
+                error: function(error){
+                    console.log('add to cart error')
                 }
-            },
-            error: function(error){
-                console.log('add to cart error')
-            }
+            })
         })
-    })
 
-    $('#userNavBarConfirm').on('click', () => {
-        window.location = '/mycart/' + $('#userNavBarUsername').text()
-    })
+        $('#userNavBarConfirm').on('click', ()=>{
+            window.location = '/mycart/' + $('#userNavBarUsername').text()
+        })
 
-});
+    });
+
+// function openForm() {
+//     document.getElementById("myForm").style.display = "block";
+//     for(i =0 ; i<1 ; i++){
+//       product
+//     }
+//
+// }
+//
+// function closeForm() {
+//     document.getElementById("myForm").style.display = "none";
+// }
 
 $(".imgClick").on("click", function(){
     const id = $(this).attr('id')
@@ -48,22 +60,7 @@ $('.cancelButton').on('click', function() {
     $('.form-popup.'+id).css("display", "none");
 })
 
-// $('.cancelButton').focusout("click",function() {
-//     const id = $(this).attr('id')
-//     console.log("Close" + id)
-//     $('.form-popup.'+id).css("display", "none");
-// })
-
-
-
-// $(".form-container").focusout('click',function(){
-//   console.log("Outtttt")
-//   const id = $(this).attr('id')
-//   console.log("Close" + id)
-//   $('.form-popup.'+id).css("display", "none");
-// })
-
-
+// mouse point
 $('.tile')
   // tile mouse actions
   .on('mouseover', function(){
@@ -81,7 +78,7 @@ $('.tile')
       // add a photo container
       .append('<div class="photo"></div>')
       // some text just to show zoom level on current item in this example
-      .append('<div class="txt"><div class="x">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>')
+      .append('<div class="fixsize">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>'+'x</div>ZOOM ON<br>HOVER</div>')
       // set up a background image for each tile based on data-image attribute
       .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
   })

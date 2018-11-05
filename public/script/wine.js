@@ -9,7 +9,7 @@ $(function () {
             console.log(quantity)
             console.log(data)
             $.ajax({
-                url: '/wine',
+                url: '/beer',
                 data:{
                     'username': username,
                     'productID': data[2],
@@ -35,6 +35,18 @@ $(function () {
         })
 
     });
+
+// function openForm() {
+//     document.getElementById("myForm").style.display = "block";
+//     for(i =0 ; i<1 ; i++){
+//       product
+//     }
+//
+// }
+//
+// function closeForm() {
+//     document.getElementById("myForm").style.display = "none";
+// }
 
 $(".imgClick").on("click", function(){
     const id = $(this).attr('id')

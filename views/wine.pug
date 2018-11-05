@@ -41,19 +41,19 @@ block content
               .col-4
                 img.onClickedImg(src='../pictures/'+product.productID+'_'+product.productName+'.jpg',height='200', width='200')
               .col-4
-                | Vol : 320 ml.
+                | Vol : #{product.vol}
 
                 br
                 br
-                | Type : Beer
+                | Type : #{typeDrink}
                 br
                 br
-                | Distributor : Boon Rawd Brewery Co.,Ltd.
+                | Distributor : #{product.distributor}
               .col-4
-                | ABV : 5 %
+                | ABV : #{product.ABV}
                 br
                 br
-                | Country : Thailand
+                | Country : #{product.country}
                 br
                 br
                 button.btn.favorite Add To Favorite
@@ -64,4 +64,4 @@ block content
           button.btn.cancel.cancelButton(type='button' id=i+1) Close
 block foot
 
-  script(src='../script/wine.js')
+  script(src='../script/Wine.js')
