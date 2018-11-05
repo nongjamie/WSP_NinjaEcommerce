@@ -27,5 +27,19 @@ class Feedback {
             console.log('get feedbacks error')
         }
     }
+
+    async removeFeedback(feedbackID){
+        try {
+            const response = await axios.post(URL.removeFeedback, {}, {
+                headers:{
+                    'feedbackID' : feedbackID
+                }
+            })
+            return response.data
+        } catch (error) {
+            console.log('remove feedbacks error')
+            return error.data
+        }
+    }
 }
 module.exports = Feedback

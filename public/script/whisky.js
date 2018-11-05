@@ -30,7 +30,7 @@ $(function () {
         })
     })
 
-    $('#userNavBarConfirm').on('click', ()=>{
+    $('#userNavBarConfirm').on('click', () => {
         window.location = '/mycart/' + $('#userNavBarUsername').text()
     })
 
