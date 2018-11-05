@@ -6,10 +6,13 @@ block head
   title Ninja Promotion
 
 block content
+  
+  div(class='container')
+    div(class='row justify-content-center')
+      div(class='col-sm-6' id='productContent')
+        span(id='productContentTopic') >> Beer <<
 
   .container#promotionContent
-    div(class="promotionWelcomeSentence")
-      | PROMOTION
     .row
       .col-md-12.margin-bottom
         div(id="carouselExampleIndicators2" class="carousel slide" style="width: 100%; margin:0 auto" data-ride="carousel")
