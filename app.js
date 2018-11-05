@@ -125,12 +125,19 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
+// Payment
+// This can be deleted when the backend team see.
+app.get("/payment", function(req, res) {
+  res.render("payment", {
+    menu: 'payment'
+  });
+});
 
-// Appointment page
-// Can be deleted when backend team do this task
-app.get("/myappointment/None", function(req, res) {
-  res.render("appointment", {
-    menu: 'appointment'
+// Summary
+// This can be deleted when the backend team see.
+app.get("/summary", function(req, res) {
+  res.render("summary", {
+    menu: 'summary'
   });
 });
 
@@ -141,6 +148,8 @@ app.use('/accounts', require('./routes/accounts'))
 app.use('/mycart', require('./routes/cart'))
 
 app.use(require('./routes/admin'))
+
+app.use('/myappointment',require('./routes/appointment'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')

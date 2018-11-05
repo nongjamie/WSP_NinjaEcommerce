@@ -17,9 +17,10 @@ router.get('/:username', async(req, res) => {
         total: total,
     })
 })
-
-router.post('/confirmOrder',async(req,res)=>{
-    res.redirect('/')
+router.post('/:username',async(req,res)=>{
+    const data = req.body 
+    cart.removeProductFromCart(data)
+    res.send('send success')
 })
 
 module.exports = router

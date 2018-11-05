@@ -7,7 +7,21 @@
 /* Welcome video */
 
 .welcomeVideo {
-  margin-top: 20px;
+  width: 100%;
+}
+
+/* Carousel */
+
+.myCarousel {
+  width: 50%;
+}
+
+@media screen and (max-width: 750px) {
+
+  .myCarousel {
+    width: 100%;
+  }
+
 }
 
 /* Best seller */
@@ -25,17 +39,20 @@
   font-size: 20px;
 }
 
-.margin-bottom{
-  margin-bottom: 20px;
-}
+/* Unuse code */
 
-.temp{
+/* .margin-bottom{
+  margin-bottom: 20px;
+} */
+
+/* .temp{
   max-width: 500px;
   max-height: 500px;
-}
-.temp2{
+} */
+
+/* .temp2{
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
