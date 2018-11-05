@@ -77,14 +77,14 @@ router.get("/promotion",async function(req, res) {
     const data = req.body
     const result = await product.addProductToCart(data)
     console.log('post whisky')
-    console.trace(result)
+    console.log(result)
     res.send('send success')
   })
   router.post('/beer',async function(req, res){
     const data = req.body
     const result = await product.addProductToCart(data)
     console.log('post beer')
-    console.trace(result)
+    console.log(result)
     res.send('send success')
   })
 
@@ -92,7 +92,7 @@ router.get("/promotion",async function(req, res) {
     const data = req.body
     const result = await product.addProductToCart(data)
     console.log('post wine')
-    console.trace(result)
+    console.log(result)
     res.send('send success')
   })
 
@@ -100,7 +100,7 @@ router.get("/promotion",async function(req, res) {
     const data = req.body
     const result = await product.addProductToCart(data)
     console.log('post mixer')
-    console.trace(result)
+    console.log(result)
     res.send('send success')
   })
 
