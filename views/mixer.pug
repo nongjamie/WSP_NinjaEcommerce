@@ -22,8 +22,8 @@ block content
               h.mt-2 #{product.productName}
               h3 #{product.productDetail}
               div
-                //- img.fixsize.imgClick(id=i+1 src='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
-                .tile.imgClick.center(id=i+1, data-scale='2', data-image='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
+                img.fixsize.imgClick(id=i+1 src='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
+                //- .tile.imgClick.center(id=i+1, data-scale='2', data-image='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
               br
               h ฿ #{product.productPrice}
               br
