@@ -2,6 +2,7 @@ extends layout
 
 block head
   
+    script(src="https://www.paypalobjects.com/api/checkout.js")
     link(rel='stylesheet', type='text/css', href='../CSS/payment.css')
     title Ninja Payment
 
@@ -31,6 +32,9 @@ block content
         img.masterCardWay(src="/pictures/master-logo.png" )
         img.scbWay(src="/pictures/scb-logo.png" )
         img.kbankWay(src="/pictures/kbank-logo.png" )
+        div(id="paypal-button")
+
+    
   div.paymentField
     div.paymentFieldInputSentence
       p Step 2 : Follow the instruction.

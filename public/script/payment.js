@@ -2,13 +2,13 @@ $( () => {
 
   // Cofirm button clicked.
   $('#yesButton').click( () => {
-    console.log('Go to payment page.');
+    console.log('Go to summary page.');
     window.location = "http://localhost:3000/summary";
   });
 
   // Cancel button clicked then go to whisky page.
   $('#cancelButton').click( () => {
-    console.log('Cancel the confirm order, go back to whisky page.');
+    console.log('Cancel the payment, go back to appointment page.');
     window.location = "http://localhost:3000/myappointment/None";
   });
 
@@ -113,5 +113,40 @@ $( () => {
         <button type="button" class="btn btn-primary">Upload</button>
         `);
   });
+
+  //fame part
+  paypal.Button.render({
+    // Configure environment
+    env: 'sandbox',
+    client: {
+      sandbox: 'demo_sandbox_client_id',
+      production: 'demo_production_client_id'
+    },
+    // Customize button (optional)
+    locale: 'en_US',
+    style: {
+      size: 'medium',
+      color: 'black',
+      shape: 'pill',
+    },
+    // Set up a payment
+    payment: function(data, actions) {
+      return actions.payment.create({
+        transactions: [{
+          amount: {
+            total: '0.01',
+            currency: 'USD'
+          }
+        }]
+      });
+    },
+    // Execute the payment
+    onAuthorize: function(data, actions) {
+      return actions.payment.execute().then(function() {
+        // Show a confirmation message to the buyer
+        window.alert('Thank you for your purchase!');
+      });
+    }
+  }, '#paypal-button');
 
 } );

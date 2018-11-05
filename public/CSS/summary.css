@@ -1,0 +1,33 @@
+* {
+  /* border: 1px solid green; */
+}
+
+/* Fill Payment topic */
+
+.paymentTopicContainer {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+@media screen and (max-width: 500px) {
+  .paymentTopicContainer {
+    font-size: 23px;
+  }
+}
+
+/* Button selection */
+
+.buttonFinalSelection {
+  margin-bottom: 10px;
+}
+
+#confirmCartButton {
+  font-size: 23px;
+  margin: 0px 30px 0px 0px;
+}
+
+#cancelButton {
+  font-size: 23px;
+  margin: 0px 0px 0px 30px;
+}
