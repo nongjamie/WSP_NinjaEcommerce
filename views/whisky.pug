@@ -1,127 +1,65 @@
-extends store-layout
+extends store
 
 block head
-  meta(charset='utf-8')
-  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-  link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
+
   link(rel='stylesheet', type='text/css', href='../CSS/store.css')
   title Ninja Whisky
 
 block content
-  .container
-    h2 Whisky
-    .row
-      .container.col-6.col-md-4
-        .container.product-border
-          h Black Label
-          h3 (700 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Whisky_Black_700ml.jpg')
-          br
-          // ราคา
-          h ฿ 1399
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro1', step='1', min='1')
-              button#fixsize.button1
-                | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
 
-      .container.col-6.col-md-4
-        .container.product-border
-          h Black Label
-          h3 (1.0 Liter)
-          .col-1
-          img#fixsize(src='../pictures/Whisky_Black_Lite.jpg')
-          br
-          // ราคา
-          h ฿ 1699
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro2', step='1', min='1')
-              button#fixsize.button1
-                | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
+    //- Product topic
+    div(class='container')
+      div(class='row justify-content-center')
+        div(class='col-sm-6' id='productContent')
+          span(id='productContentTopic') >> Whisky <<
 
-
-      .container.col-6.col-md-4
-        .container.product-border
-          h Blend285
-          h3 (700 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Whisky_285_700ml.jpg')
-          br
-          // ราคา
-          h ฿ 260
-          br
-          .row
-            .col.align-self-center
+    //- Product catalogue
+    .row.color-container.mt-3
+        each product, i in products
+          .container.col-6.col-md-4
+            div(class='product-border')
+              h.mt-2 #{product.productName}
+              h3 #{product.productDetail}
+              div
+                img.fixsize.imgClick(id=i src='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
               br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro3', step='1', min='1')
-              button#fixsize.button1
-                | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
-
-      .container.col-6.col-md-4
-        .container.product-border
-          h Blend285
-          h3 (1.0 Lite)
-          .col-1
-          img#fixsize(src='../pictures/Whisky_285_700ml.jpg')
-          br
-          // ราคา
-          h ฿ 360
-          br
-          .row
-            .col.align-self-center
+              h ฿ #{product.productPrice}
               br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro4', step='1', min='1')
-              button#fixsize.button1
-                | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
+              div
+                input.mb-2.fixsize(type='number', name='pro'+(i+1), step='1', min='1', max="30" , value='1')
+                button.mb-2.fixsize.addToCartButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
+    each product, i in products
+      .form-popup(class=i)
+        .exitpopup
+        form.form-container(action='/action_page.php')
+          h1 #{product.productName}
+          hr
+          .container
+            .row
+              .col-4
+                img.onClickedImg(src='../pictures/'+product.productID+'_'+product.productName+'.jpg',height='200', width='200')
+              .col-4
+                | Vol : 320 ml.
 
-      .container.col-6.col-md-4
-        .container.product-border
-          h Red Label
-          h3 (700 ml.)
-          .col-1
-          img#fixsize(src='../pictures/Whisky_Red_700ml.jpg')
-          br
-          // ราคา
-          h ฿ 659
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro5', step='1', min='1')
-              button#fixsize.button1
-                | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
+                br
+                br
+                | Type : Beer
+                br
+                br
+                | Distributor : Boon Rawd Brewery Co.,Ltd.
+              .col-4
+                | ABV : 5 %
+                br
+                br
+                | Country : Thailand
+                br
+                br
+                button.btn.favorite Add To Favorite
+              h Beer Leo is a beer from Boon Rawd Brewery Co.,Ltd first produced in 1996, is a quality product from Beer Singha.
+          hr
+          input.btn.number.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1', max="30" , value='1')
+          button.btn.mb-2.fixsize.addToCartButton.center Add To Cart
+          button.btn.cancel.cancelButton(type='button' id=i) Close
+block foot
 
-      .container.col-6.col-md-4
-        .container.product-border
-          h Red Label
-          h3 (1.0 Liter)
-          .col-1
-          img#fixsize(src='../pictures/Whisky_Red_Lite.jpg')
-          br
-          // ราคา
-          h ฿ 899
-          br
-          .row
-            .col.align-self-center
-              br
-              // ช่องtextfeild
-              input#fixsize(type='number', name='pro6', step='1', min='1')
-              button#fixsize.button1
-                | Add To Cart
-                a(href='file:///Users/panther/Documents/atom/wsp/akedelivery/addToCart.html')
+  script(src='../script/Whisky.js')

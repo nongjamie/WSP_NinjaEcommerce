@@ -1,0 +1,131 @@
+extends layout
+
+block head
+  
+    link(rel='stylesheet', type='text/css', href='../CSS/cart.css')
+    title Ninja Cart
+
+block content
+  
+  //- Confirm order topic
+  div.container
+    div.row.justify-content-center
+      span.confirmOrderWelcomeSentence 
+        | My Cart
+  
+  div.container.shoppingDisplayStatusContainer
+    div.row.justify-content-center
+      div.col-sm-8.shoppingDisplayStatusColumn
+        span.shoppingDisplayStatus
+          | Check your products in the cart.
+        div.progress
+          div(class="progress-bar bg-success" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100")
+            | Done 0%
+            
+  //- Table of confirm order
+  div.container
+    table.table
+      thead.headTable
+        tr
+          th(scope='col')
+            | Product
+          th(scope='col')
+            | Product name
+          th(scope='col')
+            | Unit price(฿)
+          th(scope='col')
+            | Qty
+          th(scope='col')
+            | TotalCost(฿)
+          th(scope='col')
+            | 
+      tbody.bodyTable
+        each product, i in products
+          tr
+            th(scope='row')
+              img.myImg(src="/pictures/"+product.productID+'_'+product.productName+'.jpg' , alt="")
+            td
+              span #{product.productName}
+            td
+              span #{product.productPrice}
+            td
+              span #{product.quantity} 
+            td 
+              span.eachTotal= product.quantity * product.productPrice
+            td
+              input.mb-2.fixsize#inputNumberDelete(type='number' name='pro'+(i+1) step='1' min='1' max=product.quantity value='1')
+              button.mb-2.fixsize.deletesButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID) delete 
+        tr
+          th(scope='row') 
+          td 
+          td  
+          td Total(฿)
+          td #{total}
+          td
+            
+    
+  //- Button selection
+  div.container.buttonFinalSelection
+    div.row.justify-content-center
+      //- Confirm the cart, the modal plugin
+      button(type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id='confirmCartButton')
+        | Confirm
+      div(class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+        div(class="modal-dialog" role="document")
+          div(class="modal-content")
+            div(class="modal-header")
+              h5(class="modal-title" id="exampleModalLabel") Ninja notes
+              button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                span(aria-hidden="true") &times;
+            div(class="modal-body")
+              p Your cart has been save! 
+              p Next , let we know our appointment.
+              p (may be your residence or others place)
+            div(class="modal-footer")
+              button(type="button" class="btn btn-secondary" data-dismiss="modal") No
+              button(type="button" class="btn btn-primary" id='yesButton' ) OK
+      //- Cancel button
+      button(type="button" class="btn btn-danger" id='cancelButton')
+        | Cancel
+  
+  //- Ton's old code
+  //- .container
+  //-   div.row.rowBorder.myRow
+  //-     div.col-sm-2
+  //-         span Product
+  //-     div.col-sm-4
+  //-         span Description
+  //-     div.col-sm-2
+  //-         span Unit price
+  //-     div.col-sm-2
+  //-         span Qty
+  //-     div.col-sm-2
+  //-         span total
+  //-     each product, i in products
+  //-         div.row.mt-2.myRow
+  //-           div.col-sm-2.alignCenter
+  //-               img.myImg(src="/pictures/Whisky_" + product.productName + '.jpg' , alt="")
+  //-           div.col-sm-4.alignLeft
+  //-               span #{product.productName}
+  //-           div.col-sm-2.alignLeft
+  //-               span #{product.productPrice}
+  //-           div.col-sm-2.alignLeft
+  //-               span #{product.quantity} 
+  //-           div.col-sm-2.alignLeft
+  //-               span.eachTotal= product.quantity*product.productPrice
+  //- 
+  //-   hr
+  //-   .text-right
+  //-       span.total Total : #{total}
+  //-   .checkoutZone
+  //-       button.btn.btn-danger(type="button" id='userNavBarConfirm' ) Checkout
+  //-   .row
+  //-       .col-sm-4
+  //-           h1= user.username
+  //-       .col-sm-8
+  //-           each product, i in products
+  //-               = product.productID
+
+block foot
+  
+  script(src='../script/cart.js')

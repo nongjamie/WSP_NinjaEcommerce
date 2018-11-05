@@ -1,3 +1,21 @@
+/* For checking the element */
+* {
+  /* border: 2px solid green; */
+}
+
+/* Panther design */
+
+#promotionContent {
+  background-color: rgb(255, 255, 195);
+}
+
+.promotionWelcomeSentence {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0px;
+}
+
 button.button1 {
     background-color: white;
     color: black;
@@ -10,9 +28,19 @@ button.button1 {
   width:90%;
 }
 
-#fixsize-Promotion {
+.fixsize-Promotion {
   height:100%;
   width:100%;
+  padding-bottom: 20px;
+}
+.fixsize-Promotion3 {
+  height:80%;
+  width:80%;
+  /*padding-bottom: 20px;*/
+}
+#fixsize-Promotion2 {
+  height:50%;
+  width:50%;
   padding-bottom: 20px;
 }
 
@@ -44,4 +72,17 @@ button.button1:focus{
     padding-top: 30px;
     margin-bottom: 30px;
     border-radius:10px;
+}
+
+.product-border2 {
+    text-align: center;
+    margin: auto;
+    border: 3px solid #99999C;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border-radius:10px;
+}
+
+.margin-bottom{
+  margin-bottom: 20px;
 }

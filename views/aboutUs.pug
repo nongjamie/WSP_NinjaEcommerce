@@ -1,0 +1,72 @@
+extends layout
+
+block head
+
+  link(rel='stylesheet', type='text/css', href='../CSS/aboutUs.css')
+  title About Us
+
+block content
+  
+  //- History section
+  div(class="container")
+    div(class="history-welcome-sentence")
+      | KNOW MORE ABOUT US
+    div(class="row" id="box-1")
+      div(class="col-sm-3 align-self-center")
+        div(class="box-1-picture ")
+          img(src="https://ae01.alicdn.com/kf/HTB118uvSXXXXXcVXXXXq6xXFXXXH/9-6cm-9-8cm-Car-Sticker-Cartoon-Funny-Ninja-Vinyl-Decal-Black-Silver-Accessories-S6-4099.jpg_640x640.jpg")
+      div(class="col-sm-9")
+        div(class="box-1-sentence")
+          div(class="box-1-sentence-topic")
+            | What is "Ninja" ?
+          div(class="box-1-sentence-detail")
+            | A ninja (忍者) or shinobi (忍び) was a covert agent or mercenary in feudal Japan. 
+            | The functions of the ninja included espionage, sabotage, infiltration, assassination and guerrilla warfare. 
+            | Their covert methods of waging irregular warfare were deemed dishonorable and beneath the samurai, who observed strict rules about honor and combat. 
+            | The shinobi proper, a specially trained group of spies and mercenaries, appeared in the 15th century during the Sengoku period, but antecedents may have existed as early as the 12th century.
+    div(class="row" id="box-2")
+      div(class="col-sm-3 align-self-center")
+        div(class="box-2-picture")
+          img(src="https://static.thenounproject.com/png/16757-200.png")
+      div(class="col-sm-9")
+        div(class="box-2-sentence")
+          div(class="box-2-sentence-topic")
+            | What is "Ecommerce" ?
+          div(class="box-2-sentence-detail")
+            | E-commerce is the activity of buying or selling of products on online services or over the Internet.
+            | Electronic commerce draws on technologies such as mobile commerce, electronic funds transfer, supply chain management, Internet marketing, online transaction processing, electronic data interchange (EDI), inventory management systems, and automated data collection systems.
+    div(class="row" id="box-3")
+      div(class="col-sm-3 align-self-center")
+        div(class="box-3-picture")
+          img(src="../pictures/ningja_logo.png")
+      div(class="col-sm-9")
+        div(class="box-3-sentence")
+          div(class="box-3-sentence-topic")
+            | " Ninja Ecommerce "
+          div(class="box-3-sentence-detail-1")
+            | It is the best ecommerce website that ever had in this century.
+          div(class="box-3-sentence-detail-2")
+            | We promise that our services will <span class="box-3-sentence-detail-2-keyword">fast, safe, inexpensive, secretly, good quality, reliable, and silently</span> sent like a ninja.
+      
+  //- Contact 
+  div(class="container")
+    div(class="contactWelcomeSentence")
+      | CONTACT US
+    div(class="row justify-content-center" id="contactBox")
+      div(class="col-sm-3")
+        div(class="contactBoxPicture")
+          img(src="./pictures/addAddress.png")
+      div(class="col-sm-5 align-self-center")
+        div(class="contactBoxSentence")
+          div(class="contactBoxLine")
+            | Line : <tb> KongRukThailandMakMak
+          div(class="contactBoxEmail")
+            | Email : <tb> varit.as@ku.th
+          div(class="contactBoxTel")
+            | Tel : <tb> 5910545833
+          div(class="contactBoxSkype")
+            | Skype : <tb> KongVarito
+            
+block foot
+
+  script(src='../script/aboutUs.js')

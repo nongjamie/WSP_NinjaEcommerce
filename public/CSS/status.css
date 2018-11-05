@@ -1,23 +1,53 @@
+* {
+  /* border: 2px solid green; */
+}
+
+#statusContent {
+  background-color: rgb(255, 255, 195);
+  margin-top: 20px;
+}
+
 .status-welcome-sentence {
   text-align: center;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 30px;
+  margin-top: 10px;
 }
 
 #status-inputform {
   padding: 10px 0px;
 }
 
+.orderNumberDisplay {
+  background-color: rgb(255, 255, 123);
+  color: black;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 23px;
+  padding: 20px 0px;
+}
+
 #status-progessbar {
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 #status-table {
   margin: 10px 0px;
 }
 
-.status-remind-sentence {
-  text-align: center;
-  font-weight: bold;
+.statusTableHead {
+  background-color: rgb(255, 255, 123);
+  font-size: 23px;
+}
+
+#statusTableItem {
   font-size: 20px;
+}
+
+.status-remind-sentence {
+  color: black;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 23px;
+  padding: 20px 0px;
 }

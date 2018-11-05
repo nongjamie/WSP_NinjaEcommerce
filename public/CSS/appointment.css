@@ -1,0 +1,138 @@
+* {
+  /* border: 1px solid green; */
+}
+
+/* Fill Appointment topic */
+
+.appointmentWelcomeSentence {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 195);
+  padding: 20px 100px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .appointmentWelcomeSentence {
+    font-size: 23px;
+  }
+}
+
+/* Shopping status */
+
+.shoppingDisplayStatusColumn {
+  background-color: rgb(255, 255, 195);
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 100px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.shoppingDisplayStatusColumn .progress {
+  margin-top: 10px;
+}
+
+/* Appointment section */
+
+.appointmentSection {
+  background-color: rgb(255, 255, 195);
+}
+
+.halfField {
+  width: 50%;
+  padding: 10px ;
+}
+
+.fullField {
+  width: 100%;
+  padding: 10px ;
+}
+
+.personalField {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.personalFieldTopic {
+  padding: 10px 0px 10px 1em;
+}
+
+.fullAddressField {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fullAddressFieldTopic {
+  padding: 10px 0px 10px 1em;
+}
+
+select {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 810px) {
+
+  .halfField {
+    width: 100%;
+  }
+
+  .fullField {
+    width: 100%;
+  }
+
+}
+
+.noticeField {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.noticeFieldTopic {
+  padding: 10px 0px 10px 1em;
+  color: red;
+}
+
+.noticeFieldSentence {
+  padding: 10px 0px 10px 1em;
+  font-size: 23px;
+}
+
+.noticeFieldSentence button {
+  font-size: 23px;
+}
+
+@media screen and (max-width: 770px) {
+
+  .noticeFieldSentence {
+    font-size: 13px;
+  }
+
+  .noticeFieldSentence button {
+    font-size: 13px;
+  }
+
+}
+
+/* Button selection */
+
+.buttonFinalSelection {
+  margin-bottom: 10px;
+}
+
+#confirmCartButton {
+  font-size: 23px;
+  margin: 0px 30px 0px 0px;
+}
+
+#cancelButton {
+  font-size: 23px;
+  margin: 0px 0px 0px 30px;
+}

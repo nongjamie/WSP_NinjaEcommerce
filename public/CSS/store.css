@@ -1,3 +1,18 @@
+/* Product topic  */
+
+#productContent {
+  background-color: rgb(255, 255, 195);
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+#productContentTopic {
+  font-size: 30px;
+}
+
+/* Panther design */
+
 button.button1 {
     background-color: white;
     color: black;
@@ -9,10 +24,9 @@ button.button1 {
   height:50%;
   width:60%;
 }
-
-#fixsizePromotion {
-  height:10%;
-  width:10%;
+.fixsize {
+  height:50%;
+  width:60%;
 }
 
 
@@ -43,8 +57,94 @@ button.button1:focus{
     padding-top: 30px;
     margin-bottom: 30px;
     border-radius:10px;
+    background: white;
 }
 
-h3{
+input {
+  text-align: center;
+}
+
+h3 {
   font-size: 10px;
+}
+
+.flex-container {
+  overflow: auto;
+  display: flex;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 195);
+  border-radius: 1em;
+}
+.flex-container > div {
+  background-color: #fff;
+  margin: 10px;
+  text-align: center;
+  flex-basis: 30%;
+  border-radius: 4px;
+}
+
+.color-container{
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-collapse: separate;
+  background-color:  rgb(255, 255, 195);
+  border-radius: 40px!important;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*style for popup*/
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+/* Button used to open the contact form - fixed at the bottom of the page */
+
+/* The popup form - hidden by default */
+.form-popup {
+display: none;
+position: fixed;
+bottom: 30px;
+right: 30px;
+border: 5px solid #f1f1f1;
+z-index: 9;
+}
+/* Add styles to the form container */
+.form-container {
+max-width: 600px;
+padding: 10px;
+background-color: white;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+background-color: #4CAF50;
+color: white;
+padding: 16px 20px;
+border: none;
+cursor: pointer;
+width: 100%;
+margin-bottom:10px;
+opacity: 0.8;
+}
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+background-color: red;
+}
+.form-container .number {
+color : black;
+background-color: rgb(255, 255, 195);
+}
+.form-container .favorite {
+color : black;
+background-color: rgb(239, 153, 245);
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+opacity: 1;
 }

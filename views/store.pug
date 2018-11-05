@@ -1,12 +1,29 @@
-extends store-layout
+extends layout
 
 block head
-  link(rel='stylesheet', type='text/css', href='../CSS/homepage.css')
+  
+  link(rel='stylesheet', type='text/css', href='../CSS/store.css')
   title Ninja Store
 
 block content
-  div(class="container")
+  
+  div(class='container')
+    div(id="nav-bar-box-2", class="row")
+      div(class="col-sm-12")
+        ul(id="menu-nav-bar", class="nav nav-pills nav-fill")
+          li(class="nav-item")
+            a(class=(typeDrink === 'whisky' ? "nav-link active": "nav-link") href="/whisky") Whisky
+          li(class="nav-item")
+            a(class=(typeDrink === 'beer' ? "nav-link active": "nav-link") href="/beer") Beer
+          li(class="nav-item")
+            a(class=(typeDrink === 'wine' ? "nav-link active": "nav-link") href="/wine") Wine
+          li(class="nav-item")
+            a(class=(typeDrink === 'mixer' ? "nav-link active": "nav-link") href="/mixer") Mixer
+  
+  div(class="container-fluid")
     h1
       | An regulation of shopping section
 
+block foot
   
+  script(src='../script/store.js')

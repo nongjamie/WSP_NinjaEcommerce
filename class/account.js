@@ -3,10 +3,11 @@ const URL = require('../config/database')
 
 class Account {
 
-    async getList() {
+    async getAccountList() {
         try {
             const response = await axios.get(URL.getList)
-            return response
+            console.log(response.data)
+            return response.data
         } catch (error) {
             console.log('get account list error')
             console.log(error)
@@ -39,6 +40,22 @@ class Account {
             return error.data
         }
     }
+
+    async remove(username){
+        try {
+            const response = await axios.post(URL.removeAccount,{},{
+                headers:{
+                    'username' : username,
+                }
+            })
+            return response.data
+        } catch (error) {
+            console.log('Login error')
+            console.log(error.data)
+            return error.data
+        }
+    }
+
     async login(account) {
         try {
             console.log(account)
@@ -69,7 +86,7 @@ class Account {
             return error.data
         }
     }
-
+// TODO Remove account by username
 }
 
 module.exports = Account
