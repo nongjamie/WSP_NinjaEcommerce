@@ -1,0 +1,83 @@
+* {
+  border: 1px solid green;
+}
+
+/* Fill Payment topic */
+
+.paymentWelcomeSentence {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 195);
+  padding: 20px 100px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .paymentWelcomeSentence {
+    font-size: 23px;
+  }
+}
+
+/* Shopping status */
+
+.shoppingDisplayStatusColumn {
+  background-color: rgb(255, 255, 195);
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 100px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.shoppingDisplayStatusColumn .progress {
+  margin-top: 10px;
+}
+
+/* Payment selection part  */
+
+.paymentLogoSentence {
+  background-color: rgb(255, 255, 195);
+}
+
+.paymentLogo img {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+}
+
+.paymentLogo img:hover {
+  border: 2px solid red;
+}
+
+.paymentField {
+  margin-bottom: 10px;
+}
+
+.paymentFieldInputSentence {
+  background-color: rgb(255, 255, 195);
+}
+
+.paymentFieldInput {
+  background-color: rgb(255, 255, 195);
+}
+
+.paymentFieldUploadSentence {
+  background-color: rgb(255, 255, 195);
+}
+
+.paymentFieldUpload {
+  background-color: rgb(255, 255, 195);
+}
+
+/* Button selection */
+
+#confirmButton {
+  font-size: 23px;
+  margin: 0px 30px 0px 0px;
+}
+
+#cancelButton {
+  font-size: 23px;
+  margin: 0px 0px 0px 30px;
+}
