@@ -4,30 +4,28 @@
 
 /* Fill Payment topic */
 
-.paymentWelcomeSentence {
+.paymentTopicContainer {
   font-size: 30px;
   font-weight: bold;
-  background-color: rgb(255, 255, 195);
-  padding: 20px 100px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  padding: 10px 0px;
 }
 
 @media screen and (max-width: 500px) {
-  .paymentWelcomeSentence {
+  .paymentTopicContainer {
     font-size: 23px;
   }
 }
 
 /* Shopping status */
 
-.shoppingDisplayStatusColumn {
-  background-color: rgb(255, 255, 195);
+.shoppingDisplayStatusContainer {
   font-size: 20px;
   text-align: center;
+  padding: 10px 0px;
+}
+
+.shoppingDisplayStatusColumn {
   padding: 20px 100px;
-  margin-top: 10px;
-  margin-bottom: 20px;
 }
 
 .shoppingDisplayStatusColumn .progress {
@@ -37,7 +35,8 @@
 /* Payment selection part  */
 
 .paymentLogoSentence {
-  background-color: rgb(255, 255, 195);
+  text-align: center;
+  font-size: 23px;
 }
 
 .paymentLogo img {
@@ -47,7 +46,7 @@
 }
 
 .paymentLogo img:hover {
-  border: 2px solid yellow;
+  border: 2px solid red;
 }
 
 .paymentField {
@@ -55,29 +54,42 @@
 }
 
 .paymentFieldInputSentence {
-  background-color: rgb(255, 255, 195);
+  text-align: center;
+  font-size: 23px;
 }
 
 .paymentFieldInput {
-  background-color: rgb(255, 255, 195);
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
 }
 
 .paymentFieldInput .input-group-prepend {
-  margin: 5px;
-  width: 45%;
+  padding: 10px;
+  width: 100%;
 }
 
 .paymentFieldUploadSentence {
-  background-color: rgb(255, 255, 195);
+  text-align: center;
+  font-size: 23px;
 }
 
 .paymentFieldUpload {
-  background-color: rgb(255, 255, 195);
+  text-align: center;
+}
+
+.paymentFieldUploadDetail {
+  font-size: 20px;
 }
 
 /* Button selection */
 
-#confirmButton {
+.buttonFinalSelection {
+  margin-bottom: 10px;
+}
+
+#confirmCartButton {
   font-size: 23px;
   margin: 0px 30px 0px 0px;
 }
