@@ -24,9 +24,9 @@ html
           .col-sm-4
             p.mx-2 NinjaEcommerce
             div(class="input-group mb-3")
-                  input(type="text" class="form-control" placeholder="Enter your favourite drink" aria-label="Enter your e-mail" aria-describedby="basic-addon2")
+                  input(type="text" id="search-input" class="form-control" placeholder="Enter your favourite drink" aria-label="Enter your e-mail" aria-describedby="basic-addon2")
                   div(class="input-group-append")
-                    button(class="btn btn-secondary" type="button") Search
+                    button(class="btn btn-secondary" id="search-button" type="button") Search
           .col-sm-4
             
 
@@ -57,7 +57,7 @@ html
                 li(class="nav-item")
                   a(class='nav-link' href="/logout") Logout
                 li(class='nav-item')
-                  a(class='nav-link' href=`/mycart/`+user.username) Mycart
+                  a(id="mycart" class='nav-link' href=`/mycart/`+user.username) Mycart
               else
                 li(class="nav-item")
                   a(class='nav-link' href="/signup") SIGN UP
@@ -148,6 +148,6 @@ html
   script(src="http://malsup.github.com/jquery.form.js")
   script(src="../script/layout.js")
   script(src="../script/feedback.js")
-
+  script(src="../script/search.js")
   // Foot section
   block foot

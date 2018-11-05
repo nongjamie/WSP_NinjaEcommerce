@@ -35,5 +35,4 @@ $( () => {
   $('#userNavBarCartIcon').on('click', () => {
     window.location = '/mycart/' + $('#userNavBarUsername').text();
   });
-
 });
