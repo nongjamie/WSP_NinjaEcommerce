@@ -82,7 +82,7 @@ class Account {
             })
             return response.data
         }catch(error){
-            console.log('get account by name error')
+            console.log(error.data)
             return error.data
         }
     }

@@ -11,10 +11,17 @@ const port = process.env.PORT || 3000
 
 // Init app
 const app = express();
+
+// Public folder
+app.use(express.static('public'))
+
+// Load view engine
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
+
 //Passport config
 require('./config/passport')(passport);
 //Middle ware
-
 app.use(session({ secret: "VaritAss", resave: true, saveUninitialized: true }))
 app.use(passport.initialize())
 app.use(passport.session())
@@ -41,16 +48,10 @@ app.use(function(req,res,next){
 //       };
 //   }
 // }))
-// Public folder
-app.use(express.static('public'))
 
-// Load view engine
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
-
   res.locals.user = req.user || null;
   next();
 })
