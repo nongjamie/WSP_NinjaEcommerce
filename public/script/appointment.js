@@ -11,7 +11,8 @@ $(function () {
                 if(data.return_code === '400'){
                     console.log('error')
                 }else{
-                    console.log(data)
+                    alert('success checkout');
+                    window.location='http://localhost:3000/'
                 }
             },
             error: function(error){

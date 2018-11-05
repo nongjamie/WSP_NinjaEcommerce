@@ -1,9 +1,11 @@
+
 $( () => {
 
   // Cofirm button clicked.
   $('#yesButton').click( () => {
     console.log('Go to appointment page.');
-    window.location = "http://localhost:3000/myappointment/None";
+    const username = $('#userNavBarUsername').text()
+    window.location = "http://localhost:3000/myappointment/"+username;
   });
 
   // Cancel button clicked then go to whisky page.
@@ -32,10 +34,12 @@ $( () => {
         },
         type: 'POST',
         success: function(data) {
+            console.log('paul')
             if(data.return_code === '400'){
                console.log('error')
             }else{
-                console.log(data)
+                console.log('paul2')
+                location.reload();
             }
         },
         error: function(error){
