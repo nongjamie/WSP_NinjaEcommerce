@@ -124,9 +124,9 @@ app.get("/payment", function(req, res) {
 
 // Summary
 // This can be deleted when the backend team see.
-app.get("/summary", function(req, res) {
-  res.render("summary", {
-    menu: 'summary'
+app.get("/myappointment", function(req, res) {
+  res.render("myappointment", {
+    menu: 'myappointment'
   });
 });
 
@@ -138,7 +138,7 @@ app.use('/mycart', require('./routes/cart'))
 
 app.use(require('./routes/admin'))
 
-app.use('/myappointment',require('./routes/appointment'))
+app.use('/summary',require('./routes/summary'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')
