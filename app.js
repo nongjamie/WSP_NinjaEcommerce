@@ -133,6 +133,14 @@ app.get("/payment", function(req, res) {
   });
 });
 
+// Summary
+// This can be deleted when the backend team see.
+app.get("/summary", function(req, res) {
+  res.render("summary", {
+    menu: 'summary'
+  });
+});
+
 app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))
