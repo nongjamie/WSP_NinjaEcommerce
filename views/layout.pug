@@ -13,6 +13,7 @@ html
     block head
 
   body
+    
     // Header section
     div.container-fluid
       div.headerSection
@@ -29,49 +30,46 @@ html
                     button(class="btn btn-secondary" type="button") Search
           .col-sm-4
             
-
-        div(id="nav-bar-box", class="row")
-          div(class="col-sm-12")
-            ul(id="menu-nav-bar", class="nav nav-pills nav-fill")
-              //- li(class="nav-item")
-              //-   a(href='/')
-              //-    img.fixsize-logo(src='../pictures/logo_onweb.png' href="/")
+    // Nav bar section
+    div.container-fluid.navBar
+      nav(class="navbar navbar-expand-lg  navbar-light")
+        a(class="nav-link" id="whiteLetter" href="/") HOME
+        button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+          span(class="navbar-toggler-icon")
+        div(class="collapse navbar-collapse" id="navbarNav")
+          div(id="menuNavBar" class="navbar-nav")
+            li(class="nav-item active")
+              a(class="nav-link" id="whiteLetter" href="/promotion") PROMOTION
+            li(class="nav-item dropdown")
+              a(class="nav-link dropdown-toggle" href="#" id="whiteLetter"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") STORE
+              div(class="dropdown-menu" aria-labelledby="navbarDropdown")
+                a(class="dropdown-item whiskyChoice" id="whiteLetter") Whisky
+                a(class="dropdown-item beerChoice" id="whiteLetter") Beer
+                a(class="dropdown-item wineChoice" id="whiteLetter") Wine
+                a(class="dropdown-item mixerChoice" id="whiteLetter") Mixer
+            li(class="nav-item")
+              a(class='nav-link' id="whiteLetter" href="/status") STATUS
+            li(class="nav-item")
+              a(class='nav-link' id="whiteLetter" href="/aboutUs") ABOUTUS
+            if user
               li(class="nav-item")
-                a(class='nav-link' href="/promotion") PROMOTION
-              li(class="nav-item dropdown")
-                a(class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") STORE
-                div(class="dropdown-menu" aria-labelledby="navbarDropdown")
-                  a(class="dropdown-item" id='whiskyChoice')
-                    | Whisky
-                  a(class="dropdown-item" id='beerChoice')
-                    | Beer
-                  a(class="dropdown-item" id='wineChoice')
-                    | Wine
-                  a(class="dropdown-item" id='mixerChoice')
-                    | Mixer
+                a(class='nav-link' id="whiteLetter" href="/logout") Logout
+              li(class='nav-item')
+                a(class='nav-link' id="whiteLetter" href=`/mycart/`+user.username) Mycart
+            else
               li(class="nav-item")
-                a(class='nav-link' href="/status") STATUS
+                a(class='nav-link' id="whiteLetter" href="/signup") SIGN UP
               li(class="nav-item")
-                a(class='nav-link' href="/aboutUs") ABOUTUS
-              if user
-                li(class="nav-item")
-                  a(class='nav-link' href="/logout") Logout
-                li(class='nav-item')
-                  a(class='nav-link' href=`/mycart/`+user.username) Mycart
-              else
-                li(class="nav-item")
-                  a(class='nav-link' href="/signup") SIGN UP
-                li(class="nav-item")
-                  a(class='nav-link' href="/login") LOG IN
+                a(class='nav-link' id="whiteLetter" href="/login") LOG IN
     
-    // User navigation bar status
-    div(class="container" id='userNavBar')
+    // User nav bar section
+    div(class="container-fluid" id='userNavBar')
       div.row.align-items-center
         div.userNavBarSentenceSection
           div(class='row justify-content-center')
             span(id="userNavBarSentence")
               if user
-                | Welcome #{user.username} !
+                | Welcome #{user.username}
               else
                 | Welcome anonymous !
         div.userNavBarStatusSection
@@ -93,7 +91,6 @@ html
 
     // Footer section
     div(id="footer-section", class="container-fluid")
-      hr
       div(class="row")
         div(id="footer-company-name-background", class="col-sm-12")
           //- span.mx-2(id="footer-company-name") NINJA ECOMMERCE
@@ -123,9 +120,8 @@ html
                 img.fixsize2-logo(src="../pictures/master-logo.png")
                 img.fixsize2-logo(src="../pictures/scb-logo.png")
                 img.fixsize2-logo(src="../pictures/kbank-logo.png")
-
-
-
+    
+    // Footer section
     .feedbackSign
       label.mt-1.mx-2.animated.infinite.pulse.slow Feedback
     .feedback
