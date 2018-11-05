@@ -2,18 +2,142 @@
   /* border: 1px solid green; */
 }
 
-/* Fill Payment topic */
+/* Summary section */
 
-.paymentTopicContainer {
+.summarySection {
+  /* margin: 20px 0px; */
+}
+
+/* Summary topic sentence */
+
+.summaryTopicSentence {
   font-size: 30px;
   font-weight: bold;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+/* Shopping status */
+
+.shoppingDisplayStatusContainer {
+  font-size:20px;
+  text-align: center;
   padding: 10px 0px;
 }
 
-@media screen and (max-width: 500px) {
-  .paymentTopicContainer {
-    font-size: 23px;
+.shoppingDisplayStatusColumn {
+  padding: 20px 100px;
+}
+
+.shoppingDisplayStatusColumn .progress {
+  margin-top: 10px;
+}
+
+/* Summary cart */
+
+.summaryCart {
+  margin: 10px 0px;
+}
+
+.pictureColumn {
+  width: 20%;
+}
+
+.pictureColumn div {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.pictureColumn img {
+  height: 50%;
+  width: 50%;
+}
+
+.productNameColumn {
+  width: 20%;
+}
+
+.productNameColumn div {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.productQuantityColumn {
+  width: 20%;
+}
+
+.productQuantityColumn div {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.productUnitPriceColumn {
+  width: 20%;
+}
+
+.productUnitPriceColumn div {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.productTotalPriceColumn {
+  width: 20%;
+}
+
+.productTotalPriceColumn div {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+/* Summary appointment */
+
+.summaryAppointment {
+  width: 50%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.summaryAppointment p {
+  font-weight: bold;
+}
+
+.summaryAppointment .input-group-prepend {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+/* Summary payment */
+
+.summaryPayment {
+  width: 50%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.summaryPayment p {
+  font-weight: bold;
+}
+
+.summaryPayment .input-group-prepend {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+@media screen and (max-width: 950px) {
+
+  #noticeDetail {
+    font-size: 20px;
   }
+
 }
 
 /* Button selection */
