@@ -15,7 +15,7 @@ router.post('/:username',async(req,res)=>{
     console.log(req.body.username)
     const username = req.body.username   
     const result = await cart.getUserCart(username)
-    cart.checkoutByUsername(username)
+    const ss = await cart.checkoutByUsername(username)
     res.send('send success')
 })
 

@@ -21,10 +21,11 @@ block content
             div(class='product-border')
               h.mt-2 #{product.productName}
               h3 #{product.productDetail}
+              hr
               div
                 img.fixsize.imgClick(id=i+1 src='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
                 //- .tile.imgClick.center(id=i+1, data-scale='2', data-image='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
-              br
+              hr
               h ฿ #{product.productPrice}
               br
               div
@@ -57,10 +58,10 @@ block content
                 br
                 br
                 button.btn.favorite Add To Favorite
-              h Beer Leo is a beer from Boon Rawd Brewery Co.,Ltd first produced in 1996, is a quality product from Beer Singha.
+              h Black Label's iconic square bottle makes it one of the world's most recognisable Scotch whiskies - and it's also one of whisky critic Jim Murray's favourite blends: 'If there is a silkier delivery on the market today, I have not seen it: this is sublime stuff...one of the world's most masterful whiskies back in all its complex glory'
           hr
           input.btn.number.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1', max="30" , value='1')
-          button.btn.mb-2.fixsize.addToCartButton.center Add To Cart
+          button.btn.add.mb-2.fixsize.addToCartButton.center(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
           button.btn.cancel.cancelButton(type='button' id=i+1) Close
 block foot
 

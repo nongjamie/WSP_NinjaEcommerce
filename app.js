@@ -11,10 +11,17 @@ const port = process.env.PORT || 3000
 
 // Init app
 const app = express();
+
+// Public folder
+app.use(express.static('public'))
+
+// Load view engine
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
+
 //Passport config
 require('./config/passport')(passport);
 //Middle ware
-
 app.use(session({ secret: "VaritAss", resave: true, saveUninitialized: true }))
 app.use(passport.initialize())
 app.use(passport.session())
@@ -26,31 +33,11 @@ app.use(function(req,res,next){
   res.locals.messages = require('express-messages')(req,res)
   next()
 })
-// app.use(expressValidator({
-//   errorFormatter :function(param,msg,value){
-//       var namespace = param.split('.'),
-//       root = namespace.shift(),
-//       formParam =root;
-//       while(namespace.length){
-//           formParam+='['+namespace.shift()+']';
-//       }
-//       return{
-//           param : formParam,
-//           msg   : msg,
-//           value : value
-//       };
-//   }
-// }))
-// Public folder
-app.use(express.static('public'))
 
-// Load view engine
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
+
 
 //Use passport
 app.get('*', function(req,res,next){
-
   res.locals.user = req.user || null;
   next();
 })
@@ -73,6 +60,7 @@ app.get("/promotion", function(req, res) {
     menu: 'promotion'
   });
 });
+
 
 
 // Promotion route
@@ -117,6 +105,7 @@ app.get("/logout",function(req,res){
   req.flash('success','Logout success')
   res.redirect('/')
 })
+
 
 //aboutUs
 app.get("/aboutUs", function(req, res) {

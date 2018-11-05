@@ -138,7 +138,7 @@ opacity: 0.8;
 
 }
 /* Add a red background color to the cancel button */
-.form-container .cancel {
+/*.form-container .cancel {
 background-color: red;
 }
 .form-container .number {
@@ -148,6 +148,22 @@ background-color: rgb(255, 255, 195);
 .form-container .favorite {
 color : black;
 background-color: rgb(239, 153, 245);
+}*/
+
+.form-container .cancel {
+background-color: black;
+}
+.form-container .number {
+color : black;
+background-color: rgb(252, 252, 252);
+}
+.form-container .favorite {
+color : black;
+background-color: rgb(239, 153, 245);
+}
+.form-container .add {
+color : black;
+background-color: rgb(217, 217, 217);
 }
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {

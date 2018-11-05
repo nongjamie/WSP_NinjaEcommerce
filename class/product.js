@@ -11,7 +11,6 @@ class Product {
             })
             return response.data
         } catch (e) {
-            console.log('get category by username error')
             return e
         }
 
@@ -28,15 +27,8 @@ class Product {
             })
             return response.data
         } catch (error) {
-            console.log('add product to cart error')
             return error.data
         }
     }
-
-    async test(){
-        console.log('Hello Varit')
-    }
-
-
 }
 module.exports = Product

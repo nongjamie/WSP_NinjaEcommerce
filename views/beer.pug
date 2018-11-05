@@ -21,10 +21,11 @@ block content
             div(class='product-border')
               h.mt-2 #{product.productName}
               h3 #{product.productDetail}
+              hr
               div
                 img.fixsize.imgClick(id=i+1 src='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
                 //- .tile.imgClick.center(id=i+1, data-scale='1.5', data-image='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
-              br
+              hr
               h ฿ #{product.productPrice}
               br
               div
@@ -60,7 +61,7 @@ block content
               h Beer Leo is a beer from Boon Rawd Brewery Co.,Ltd first produced in 1996, is a quality product from Beer Singha.
           hr
           input.btn.number.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1', max="30" , value='1')
-          button.btn.mb-2.fixsize.addToCartButton.center Add To Cart
+          button.btn.add.mb-2.fixsize.addToCartButton.center Add To Cart
           button.btn.cancel.cancelButton(type='button' id=i+1) Close
 block foot
 

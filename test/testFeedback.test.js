@@ -12,7 +12,7 @@ test('(Class: Feedback)Test add and remove feedback', async () => {
     const feedbackID = result.feedbackID
     const removeResult = await feedback.removeFeedback(feedbackID)
     expect(removeResult.return_code).toMatch('200')
-});
+},10000);
 
 test('(Class: Feedback)Test get feedbacks', async () => {
     const result = await feedback.getFeedbacks();
