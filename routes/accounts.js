@@ -8,7 +8,8 @@ router.get('/getList', async(req, res) => {
     console.log('get list')
     const result = await account.getAccountList()
     // console.log(result.data)
-    res.send(result.data)
+    console.log(result)
+    res.send(result)
 })
 
 router.post('/addAccount', async(req, res) => {
