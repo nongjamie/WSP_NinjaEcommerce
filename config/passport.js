@@ -27,6 +27,7 @@ module.exports = function (passport) {
 
     passport.deserializeUser(async (user, done) => {
         const result = await accout.getAccountBy(user)
+        console.log(result.account)
         done(null, result.account || null)
 
     });
