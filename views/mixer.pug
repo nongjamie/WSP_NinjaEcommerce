@@ -3,7 +3,7 @@ extends store
 block head
 
   link(rel='stylesheet', type='text/css', href='../CSS/store.css')
-  title Ninja Mixer
+  title Ninja Beer
 
 block content
 
@@ -11,17 +11,19 @@ block content
     div(class='container')
       div(class='row justify-content-center')
         div(class='col-sm-6' id='productContent')
-          span(id='productContentTopic') >> Mixer <<
+          span(id='productContentTopic') >> Beer <<
+
 
     //- Product catalogue
-    .row.color-container.mt-3
+    .row.color-container
         each product, i in products
           .container.col-6.col-md-4
             div(class='product-border')
               h.mt-2 #{product.productName}
               h3 #{product.productDetail}
               div
-                img.fixsize.imgClick(id=i src='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
+                img.fixsize.imgClick(id=i+1 src='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
+                .tile.imgClick.center(id=i+1, data-scale='2', data-image='../pictures/'+product.productID+'_'+product.productName+'.jpg' name='../pictures/'+product.productID+'_'+product.productName+'.jpg')
               br
               h ฿ #{product.productPrice}
               br
@@ -29,7 +31,7 @@ block content
                 input.mb-2.fixsize(type='number', name='pro'+(i+1), step='1', min='1', max="30" , value='1')
                 button.mb-2.fixsize.addToCartButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
     each product, i in products
-      .form-popup(class=i)
+      .form-popup(class=i+1)
         .exitpopup
         form.form-container(action='/action_page.php')
           h1 #{product.productName}
@@ -59,7 +61,7 @@ block content
           hr
           input.btn.number.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1', max="30" , value='1')
           button.btn.mb-2.fixsize.addToCartButton.center Add To Cart
-          button.btn.cancel.cancelButton(type='button' id=i) Close
+          button.btn.cancel.cancelButton(type='button' id=i+1) Close
 block foot
 
-  script(src='../script/mixer.js')
+  script(src='../script/beer.js')
