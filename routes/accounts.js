@@ -20,7 +20,7 @@ router.post('/addAccount', async(req, res) => {
         res.send('success')
     }
     else{
-        res.send('fail')
+        res.status(400).send('fail')
     }
 
 })

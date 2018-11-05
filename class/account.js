@@ -6,6 +6,7 @@ class Account {
     async getAccountList() {
         try {
             const response = await axios.get(URL.getList)
+            console.log(response.data)
             return response.data
         } catch (error) {
             console.log('get account list error')
@@ -68,7 +69,7 @@ class Account {
             return error.data
         }
     }
-
+// TODO Remove account by username
 }
 
 module.exports = Account
