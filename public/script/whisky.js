@@ -36,10 +36,29 @@ $(function () {
 
 });
 
-function openForm() {
-    document.getElementById("myForm").style.display = "block";
-}
+$(".imgClick").on("click", function(){
+    const id = $(this).attr('id')
+    console.log('id ' + id)
+    $('.form-popup.'+id).css("display", "block");
+});
 
-function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-}
+$('.cancelButton').on('click', function() {
+    const id = $(this).attr('id')
+    console.log("Close" + id)
+    $('.form-popup.'+id).css("display", "none");
+})
+
+// $('.cancelButton').focusout("click",function() {
+//     const id = $(this).attr('id')
+//     console.log("Close" + id)
+//     $('.form-popup.'+id).css("display", "none");
+// })
+
+
+
+$(".form-container").focusout('click',function(){
+  console.log("Outtttt")
+  const id = $(this).attr('id')
+  console.log("Close" + id)
+  $('.form-popup.'+id).css("display", "none");
+})
