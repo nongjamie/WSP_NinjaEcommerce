@@ -26,11 +26,6 @@ $( () => {
     window.location = "http://localhost:3000/wine";
   });
 
-  // Go to mycart page by pressing the mycart button.
-  $('#userNavBarConfirm').on('click', ()=>{
-    window.location = '/mycart/' + $('#userNavBarUsername').text();
-  })
-
   // Go to mycart page by pressing the cart icon.
   $('#userNavBarCartIcon').on('click', () => {
     window.location = '/mycart/' + $('#userNavBarUsername').text();
