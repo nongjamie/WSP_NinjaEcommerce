@@ -1,5 +1,5 @@
 $(function () {
-    
+
         $('.addToCartButton').on('click', function(e){
             const val = this.value
             const data = val.split(',')
@@ -14,7 +14,7 @@ $(function () {
                     'username': username,
                     'productID': data[2],
                     'quantity': parseInt(quantity)
-    
+
                 },
                 type: 'POST',
                 success: function(data) {
@@ -29,9 +29,21 @@ $(function () {
                 }
             })
         })
-    
+
         $('#userNavBarConfirm').on('click', ()=>{
             window.location = '/mycart/' + $('#userNavBarUsername').text()
         })
-    
+
     });
+
+$(".imgClick").on("click", function(){
+    const id = $(this).attr('id')
+    console.log('id ' + id)
+    $('.form-popup.'+id).css("display", "block");
+});
+
+$('.cancelButton').on('click', function() {
+    const id = $(this).attr('id')
+    console.log("Close" + id)
+    $('.form-popup.'+id).css("display", "none");
+})
