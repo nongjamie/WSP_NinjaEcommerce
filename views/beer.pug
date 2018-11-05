@@ -6,39 +6,58 @@ block head
   title Ninja Beer
 
 block content
-  body
-  br
-  img.fixsize(src='../pictures/Beer_Leo_can.jpg' , onclick='openForm()')
-  #myForm.form-popup
-    form.form-container(action='/action_page.php')
-      h1 Leo Can
-      hr
-      .container
-        .row
-          .col-4
-            img(src='../pictures/Beer_Leo_can.jpg' , onclick='openForm()' ,height='200', width='200')
-          .col-4
-            | Vol : 320 ml.
-            br
-            br
-            | Type : Beer
-            br
-            br
-            | Distributor : Boon Rawd Brewery Co.,Ltd.
-          .col-4
-            | ABV : 5 %
-            br
-            br
-            | Country : Thailand
-            br
-            br
-            button.btn.favorite Add To Favorite
-          h Beer Leo is a beer from Boon Rawd Brewery Co.,Ltd first produced in 1996, is a quality product from Beer Singha.
-      hr
-      input.btn.number.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
-      button.btn.mb-2.fixsize.addToCartButton.center Add To Cart
-      button.btn.cancel(type='button', onclick='closeForm()') Close
-  img.fixsize(src='../pictures/Beer_Leo_bottle.jpg' , onclick='openForm()')
+
+    //- Product topic
+    div(class='container')
+      div(class='row justify-content-center')
+        div(class='col-sm-6' id='productContent')
+          span(id='productContentTopic') >> Beer <<
+
+    //- Product catalogue
+    .row.color-container.mt-3
+        each product, i in products
+          .container.col-6.col-md-4
+            div(class='product-border')
+              h.mt-2 #{product.productName}
+              h3 #{product.productDetail}
+              img.fixsize(src='../pictures/'+product.productID+'_'+product.productName+'.jpg', onclick='openForm()')
+              br
+              h ฿ #{product.productPrice}
+              br
+              div
+                input.mb-2.fixsize(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
+                button.mb-2.fixsize.addToCartButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
+        each product, i in products
+          #myForm.form-popup
+            form.form-container(action='/action_page.php')
+              h1 #{product.productName}ข
+              hr
+              .container
+                .row
+                  .col-4
+                    img(src='../pictures/'+product.productID+'_'+product.productName+'.jpg',height='200', width='200')
+                  .col-4
+                    | Vol : 320 ml.
+
+                    br
+                    br
+                    | Type : Beer
+                    br
+                    br
+                    | Distributor : Boon Rawd Brewery Co.,Ltd.
+                  .col-4
+                    | ABV : 5 %
+                    br
+                    br
+                    | Country : Thailand
+                    br
+                    br
+                    button.btn.favorite Add To Favorite
+                  h Beer Leo is a beer from Boon Rawd Brewery Co.,Ltd first produced in 1996, is a quality product from Beer Singha.
+              hr
+              input.btn.number.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1' , value='1')
+              button.btn.mb-2.fixsize.addToCartButton.center Add To Cart
+              button.btn.cancel(type='button', onclick='closeForm()') Close
 
 block foot
 
