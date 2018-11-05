@@ -11,7 +11,6 @@ class Cart {
             })
             return response.data
         }catch(e){
-            console.log('get cart by username error')
             return e.data
         }
         
@@ -23,7 +22,6 @@ class Cart {
                     'username': username,
                 }
             })
-            console.log(response)
             return response.data
         }catch(e){
             return e.data

@@ -7,8 +7,6 @@ class Category{
             const response = await axios.get(URL.getCategory)
             return response
         } catch (error) {
-            console.log('get catategory error')
-            console.log(error)
             return error
         }
     }

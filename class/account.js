@@ -6,11 +6,8 @@ class Account {
     async getAccountList() {
         try {
             const response = await axios.get(URL.getList)
-            console.log(response.data)
             return response.data
         } catch (error) {
-            console.log('get account list error')
-            console.log(error)
             return error
         }
     }
@@ -35,8 +32,6 @@ class Account {
             })
             return response.data
         } catch (error) {
-            console.log('Post account to database error')
-            console.log(error)
             return error.data
         }
     }
@@ -50,16 +45,12 @@ class Account {
             })
             return response.data
         } catch (error) {
-            console.log('Login error')
-            console.log(error.data)
             return error.data
         }
     }
 
     async login(account) {
         try {
-            console.log(account)
-            console.log(account.username)
             const response = await axios.post(URL.login,{},{
                 headers:{
                     'username': account.username,
@@ -68,8 +59,6 @@ class Account {
             })
             return response.data
         } catch (error) {
-            console.log('Login error')
-            console.log(error.data)
             return error.data
         }
     }
@@ -82,7 +71,6 @@ class Account {
             })
             return response.data
         }catch(error){
-            console.log(error.data)
             return error.data
         }
     }
