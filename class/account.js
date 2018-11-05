@@ -40,6 +40,22 @@ class Account {
             return error.data
         }
     }
+
+    async remove(username){
+        try {
+            const response = await axios.post(URL.removeAccount,{},{
+                headers:{
+                    'username' : username,
+                }
+            })
+            return response.data
+        } catch (error) {
+            console.log('Login error')
+            console.log(error.data)
+            return error.data
+        }
+    }
+
     async login(account) {
         try {
             console.log(account)

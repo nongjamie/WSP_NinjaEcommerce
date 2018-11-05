@@ -25,6 +25,13 @@ router.post('/addAccount', async(req, res) => {
 
 })
 
+router.post('/removeAccount', async(req, res) => {
+    const result = await account.remove(req.body)
+    console.log(result)
+    if(result.return_code == '200') res.send('success')
+    else res.status(result.return_code).send('error')
+})
+
 router.post('/login', 
    passport.authenticate('local', {
        successRedirect:'/',
