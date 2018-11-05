@@ -31,4 +31,12 @@ $( () => {
     window.location = '/mycart/' + $('#userNavBarUsername').text();
   });
 
+  $('.loadingClicked').on('click', function() {
+    $( ".fadeTo" ).fadeTo( "fast" , 0.5);
+    $('.loading').css({
+        'display':'block',
+        'z-index':'11',
+    })
+})
+
 });
