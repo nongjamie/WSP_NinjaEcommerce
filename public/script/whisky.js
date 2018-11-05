@@ -56,9 +56,9 @@ $('.cancelButton').on('click', function() {
 
 
 
-$(".form-container").focusout('click',function(){
-  console.log("Outtttt")
-  const id = $(this).attr('id')
-  console.log("Close" + id)
-  $('.form-popup.'+id).css("display", "none");
-})
+// $(".form-container").focusout('click',function(){
+//   console.log("Outtttt")
+//   const id = $(this).attr('id')
+//   console.log("Close" + id)
+//   $('.form-popup.'+id).css("display", "none");
+// })
