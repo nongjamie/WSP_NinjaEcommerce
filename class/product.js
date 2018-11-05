@@ -36,7 +36,5 @@ class Product {
     async test(){
         console.log('Hello Varit')
     }
-
-
 }
 module.exports = Product

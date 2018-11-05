@@ -57,10 +57,10 @@ block content
                 each month in months
                   option(value=month) #{month}
               span='/'
-              - var years = 1950
+              - var years = 2018
               select.mx-1(name = 'year' ) 
-                while years < 2000
-                  option(id = years++ value = years) #{years}  
+                while years > 1950
+                  option(id = years-- value = years) #{years}  
         legend='Address Information'
         .row.mt-3
           .col-sm-6
@@ -83,9 +83,10 @@ block content
             .input-group-prepend
               span.input-group-text Telephone
             input.form-control(type='text' name='telephone' style={width:'100%'} required)
+    
+        input.mt-5.btn.btn-danger.test(type='submit', value='Submit')
 
 
-      input.mt-5.btn.btn-danger.test(type='submit', value='Submit')
   script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js")
   script(src="http://malsup.github.com/jquery.form.js")
   script(src="index.js")

@@ -3,8 +3,6 @@ const router = express.Router()
 const Product = require('../class/product')
 const product = new Product()
 
-
-
 // Promotion route
 router.get("/promotion",async function(req, res) {
     res.render("promotion", {
@@ -105,6 +103,5 @@ router.get("/promotion",async function(req, res) {
     console.trace(result)
     res.send('send success')
   })
-
 
 module.exports = router

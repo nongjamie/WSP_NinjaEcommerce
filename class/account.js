@@ -82,6 +82,7 @@ class Account {
             })
             return response.data
         }catch(error){
+            console.log(error.data)
             return error.data
         }
     }
