@@ -25,10 +25,12 @@ test('(Class: Cart)Test remove product from cart', async () => {
 })
 
 test('(Class: Cart)Test check out', async () => {
-    const data = {
-        username: 'hereton',
-     }
-    const result = await cart.checkoutByUsername(data)
-    console.log(result)
+    const data1 = {
+        'username': 'hereton',
+        'productID': '4JbTehkukn42UPXr0H9c',
+        'quantity': 1
+    }
+    product.addProductToCart(data1)
+    const result = await cart.checkoutByUsername('hereton')
     expect(result.return_code).toMatch('200');
 },20000)

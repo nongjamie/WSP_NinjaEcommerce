@@ -23,6 +23,7 @@ class Cart {
                     'username': username,
                 }
             })
+            console.log(response)
             return response.data
         }catch(e){
             return e.data
