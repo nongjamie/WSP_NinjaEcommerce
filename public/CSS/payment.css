@@ -1,5 +1,5 @@
 * {
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 /* Fill Payment topic */
@@ -47,7 +47,7 @@
 }
 
 .paymentLogo img:hover {
-  border: 2px solid red;
+  border: 2px solid yellow;
 }
 
 .paymentField {
@@ -60,6 +60,11 @@
 
 .paymentFieldInput {
   background-color: rgb(255, 255, 195);
+}
+
+.paymentFieldInput .input-group-prepend {
+  margin: 5px;
+  width: 45%;
 }
 
 .paymentFieldUploadSentence {
