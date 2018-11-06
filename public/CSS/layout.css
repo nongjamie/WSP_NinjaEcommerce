@@ -173,8 +173,10 @@
 .loading{
   display: none;
   position: fixed;
-  top: 7em;
-  left: 23em;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
   opacity: 1 !important;
 }
 .imgLoading{
@@ -185,8 +187,10 @@
 
 @media (max-width: 700px) {
   .loading{
-      top: 25%;
-      left: 20%;
+      top: 50%;
+      left: 50%;
+      margin-top: -125px;
+      margin-left: -125px;
       opacity: 1 !important;
   }
 
