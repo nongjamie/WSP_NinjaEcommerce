@@ -10,8 +10,9 @@ class Product {
                 }
             })
             return response.data
-        } catch (e) {
-            return e
+        } catch (error) {
+            console.log('error')
+            return error.data
         }
 
     }
