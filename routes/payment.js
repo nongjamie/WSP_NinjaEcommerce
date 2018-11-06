@@ -3,8 +3,8 @@ const router = express.Router()
 
 router.get('/:username', async(req, res) => {
     const username = req.params.username    
-    res.render("appointment", {
-        menu: 'appointment'
+    res.render("payment", {
+        menu: 'payment'
       });
 })
 
