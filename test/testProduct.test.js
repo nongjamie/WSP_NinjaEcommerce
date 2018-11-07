@@ -13,7 +13,7 @@ test('(Class: Product) Get product by category', async () => {
 
 test('(Class: Product) Get product by category', async () => {
     const data = {
-        username : 'hereton',
+        username : 'TestAccount8',
         productID : '4JbTehkukn42UPXr0H9c',
         quantity : 1,
     }
