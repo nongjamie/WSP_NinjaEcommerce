@@ -13,11 +13,11 @@ block content
         form(id='loginForm' method='POST', action='/accounts/login')
           #form-group
             span Username: 
-            input.form-control(name='username', type='text')
+            input.form-control(id='username' name='username', type='text')
             br
           #form-group
             span Password: 
-            input.form-control(name='password', type='password')
+            input.form-control(id='password' name='password', type='password')
             br    
             input.btn.btn-primary.loadingClicked(type='submit', value='Submit')
   

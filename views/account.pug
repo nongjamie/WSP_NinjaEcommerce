@@ -1,0 +1,93 @@
+extends layout
+
+block head
+    link(rel='stylesheet', type='text/css', href='../CSS/homepage.css')
+    title Ninja Sign Up
+
+block content
+    .container.p-5
+    form(method='POST', action='/accounts/addAccount' id='signUpForm')
+      fieldset
+        legend='Account Infomation'
+        .input-group.mb-3
+        .input-group-prepend
+          span.input-group-text Username 
+        input.form-control(id='username' name='username' type='text' placeholder='username' required)
+        span(id='usernameError')
+        .input-group.mb-3
+        .input-group-prepend
+          span.input-group-text e-mail 
+        input.form-control(id='email' name='email' type='text' placeholder='e-mail', required)
+        span(id='emailError')
+        .input-group.mb-3
+        .input-group-prepend
+          span.input-group-text password 
+        input.form-control.password(name='password' type='password' placeholder='Password' required)
+        .input-group.mb-3
+        .input-group-prepend
+          span.input-group-text Confirm password 
+        input.form-control.confirmPassword(name='confirmPassword' type='password' placeholder='Confirm password' required )
+        label.mt-2(id="message")
+        legend='Profile Information'
+        .row
+          .col-sm-6
+            .input-group.mb-3
+            .input-group-prepend
+              span.input-group-text Name 
+            input.form-control(name='name' type='text' placeholder='Name' required)
+          .col-sm-6
+            .input-group.mb-3
+            .input-group-prepend
+              span.input-group-text.mb-2 Gender
+            label.mx-2 #[input(type='radio' name='gender' value='male' checked)] Male
+            label.mx-2 #[input(type='radio' name='gender' value='female' )] Female
+            label.mx-2 #[input(type='radio' name='gender' value='other' )] Other
+        .row.mt-2.mb-4
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text Date of birth
+          .col-sm-6.mt-2   
+              - var days = 0;
+              select.mx-1(name = 'day' )
+                while days < 31
+                  option(id=days++ value=days) #{days}
+              span='/'
+              - var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+              select.mx-1(name = 'month' )
+                each month in months
+                  option(value=month) #{month}
+              span='/'
+              - var years = 1950
+              select.mx-1(name = 'year' ) 
+                while years < 2000
+                  option(id = years++ value = years) #{years}  
+        legend='Address Information'
+        .row.mt-3
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text Address
+            input.form-control.mb-3(type='text' name='address' style={width:'100%'} required)
+            .input-group-prepend
+              span.input-group-text Province
+            div
+              input.form-control(type='text' name='province' style={width:'100%'} required)
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text District
+            input.form-control.mb-3(type='text' name='district' style={width:'100%'} )
+            .input-group-prepend
+              span.input-group-text Zip code
+            input.form-control(type='text' name='zipCode' style={width:'100%'} required)
+        .row.mt-3
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text Telephone
+            input.form-control(type='text' name='telephone' style={width:'100%'} required)
+
+
+      input.mt-5.btn.btn-danger.test(type='submit', value='Submit')
+
+
+
+block foot
+
