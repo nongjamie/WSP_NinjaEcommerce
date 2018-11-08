@@ -16,7 +16,7 @@ html
 
   body
     
-    // Logo header section
+    //- Logo header section
     div.container-fluid
       div.headerSection
         div(class="row" id='most-header')
@@ -32,7 +32,7 @@ html
                     button(class="btn btn-secondary" type="button") Search
           .col-sm-4
             
-    // Nav bar section
+    //- Nav bar section
     div.container-fluid.navBar
       nav(class="navbar navbar-expand-lg  navbar-light")
         a(class="nav-link loadingClicked" id="whiteLetter" href="/") HOME
@@ -64,7 +64,7 @@ html
               li(class="nav-item")
                 a(class='nav-link loadingClicked' id="whiteLetter" href="/login") LOG IN
     
-    // User nav bar section
+    //- User nav bar section
     div(class="container-fluid" id='userNavBar')
       div.row.align-items-center
         div.userNavBarSentenceSection
@@ -85,12 +85,12 @@ html
             i(class="fas fa-shopping-cart loadingClicked" id='userNavBarCartIcon')
             button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' disabled) 0
       
-    // Body section
+    //- Body section
     link(rel='stylesheet', type='style/css', href='../CSS/style.css')
     != messages('message', locals)
     block content
 
-    // Footer section
+    //- Footer section
     div(id="footer-section", class="container-fluid")
       div(class="row")
         div(id="footer-company-name-background", class="col-sm-12")
@@ -125,7 +125,7 @@ html
                 img.fixsize2-logo(src="../pictures/scb-logo.png")
                 img.fixsize2-logo(src="../pictures/kbank-logo.png")
     
-    // Feedback section
+    //- Feedback section
     .feedbackSign
       label.mt-1.mx-2.animated.infinite.pulse.slow Feedback
     .feedback
@@ -151,5 +151,5 @@ html
   script(src="../script/layout.js")
   script(src="../script/feedback.js")
 
-  // Foot section
+  //- Foot section
   block foot
