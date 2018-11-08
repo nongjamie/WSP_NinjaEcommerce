@@ -4,7 +4,7 @@ $( () => {
   $('#yesButton').click( () => {
     console.log('Go to summary page.');
     const username = $('#userNavBarUsername').text()
-    window.location = "http://localhost:3000/summary"+username;
+    window.location = "http://localhost:3000/summary/"+username;
   });
 
   // Cancel button clicked then go to whisky page.
