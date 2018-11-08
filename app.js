@@ -11,18 +11,12 @@ const port = process.env.PORT || 3000
 
 // Init app
 const app = express();
-
-// Public folder
-app.use(express.static('public'))
-
-// Load view engine
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
-
 //Passport config
 require('./config/passport')(passport);
 //Middle ware
+
 app.use(session({ secret: "VaritAss", resave: true, saveUninitialized: true }))
+app.use(express.static('public'))
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))
@@ -35,9 +29,13 @@ app.use(function(req,res,next){
 })
 
 
+// Load view engine
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
+
   res.locals.user = req.user || null;
   next();
 })
@@ -60,7 +58,6 @@ app.get("/promotion", function(req, res) {
     menu: 'promotion'
   });
 });
-
 
 
 // Promotion route
@@ -106,7 +103,6 @@ app.get("/logout",function(req,res){
   res.redirect('/')
 })
 
-
 //aboutUs
 app.get("/aboutUs", function(req, res) {
   res.render("aboutUs", {
@@ -114,21 +110,6 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
-// Payment
-// This can be deleted when the backend team see.
-app.get("/payment", function(req, res) {
-  res.render("payment", {
-    menu: 'payment'
-  });
-});
-
-// Summary
-// This can be deleted when the backend team see.
-app.get("/summary", function(req, res) {
-  res.render("summary", {
-    menu: 'summary'
-  });
-});
 
 app.use(require('./routes/products'))
 
@@ -139,6 +120,10 @@ app.use('/mycart', require('./routes/cart'))
 app.use(require('./routes/admin'))
 
 app.use('/myappointment',require('./routes/appointment'))
+
+app.use('/mypayment',require('./routes/payment'))
+
+app.use('/summary',require('./routes/summary'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')

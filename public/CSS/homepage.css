@@ -1,7 +1,5 @@
 * {
-  /* border: 2px;
-  border-style: dashed;
-  border-color: green; */
+  /* border: 2px solid green; */
 }
 
 /* Welcome video */
@@ -26,18 +24,71 @@
 
 /* Best seller */
 
-.bestsellerWelcomeSentence {
+.bestsellerTopic {
+  text-align: center;
   font-size: 23px;
   font-weight: bold;
+}
+
+.bestSellerHead {
   text-align: center;
-  background-color: rgb(255, 255, 123);
-}
-
-
-#bestsellerBoxTable {
-  background-color: rgb(255, 255, 195);
   font-size: 20px;
+  font-weight: bold;
 }
+
+.bestSellerBody {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px 10px;
+}
+
+.bestSellerBody img {
+  width: 50%;
+  height: 100%;
+}
+
+.Width25Perc {
+  width: 25%;
+}
+
+.Height80PX {
+  height: 80px;
+}
+
+/**
+  Best seller body when 820px
+  - Decrease the size of details.
+  - Set the margin of table to be 0.
+*/
+@media screen and (max-width: 820px) {
+
+  .bestSellerBody {
+    margin: 0px;
+  }
+
+  .bestSellerBody .row span {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+}
+
+/**
+  Best seller body when 650px
+  - pictures decrease the size.
+*/
+@media screen and (max-width: 650px) {
+
+  .bestSellerBody img {
+    width: 50%;
+    height: 70%;
+  }
+
+}
+
+/* Test part */
 
 .test {
   float: right;

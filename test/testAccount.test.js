@@ -8,8 +8,8 @@ test('(Class: Account)Test get account list', async () => {
 
 test('(Class: Account)Test add account to database', async () => {
     const data = {
-        username: 'TestAccount6',
-        email: 'varitisaboy11500@gmail.com',
+        username: 'TestAccount8',
+        email: 'varitisaboy11511@gmail.com',
         password: '1234',
         confirmPassword: '1234',
         name: 'totsapon menkul',
@@ -28,7 +28,7 @@ test('(Class: Account)Test add account to database', async () => {
 
 test('(Class: Account)Test login', async () => {
     const data = {
-        username: 'TestAccount6',
+        username: 'TestAccount8',
         password: '1234'
     }
     const result = await account.login(data)
@@ -36,13 +36,13 @@ test('(Class: Account)Test login', async () => {
 }, 10000)
 
 test('(Class: Account)Test get account by username', async() => {
-    const username = 'TestAccount5'
+    const username = 'TestAccount8'
     const result = await account.getAccountBy(username)
     expect(result.return_code).toMatch('200');
 }, 10000)
 
 test('(Class: Account)Test remove account', async () => {
-    const username = 'TestAccount5'
+    const username = 'TestAccount8'
     const result = await account.remove(username)
     expect(result.return_code).toMatch('200');
 }, 10000)
