@@ -8,8 +8,6 @@ class Account {
             const response = await axios.get(URL.getList)
             return response.data
         } catch (error) {
-            console.log('get account list error')
-            console.log(error)
             return error
         }
     }
@@ -34,15 +32,25 @@ class Account {
             })
             return response.data
         } catch (error) {
-            console.log('Post account to database error')
-            console.log(error)
             return error.data
         }
     }
+
+    async remove(username){
+        try {
+            const response = await axios.post(URL.removeAccount,{},{
+                headers:{
+                    'username' : username,
+                }
+            })
+            return response.data
+        } catch (error) {
+            return error.data
+        }
+    }
+
     async login(account) {
         try {
-            console.log(account)
-            console.log(account.username)
             const response = await axios.post(URL.login,{},{
                 headers:{
                     'username': account.username,
@@ -51,8 +59,6 @@ class Account {
             })
             return response.data
         } catch (error) {
-            console.log('Login error')
-            console.log(error.data)
             return error.data
         }
     }
@@ -68,7 +74,7 @@ class Account {
             return error.data
         }
     }
-
+// TODO Remove account by username
 }
 
 module.exports = Account

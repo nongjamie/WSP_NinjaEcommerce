@@ -20,22 +20,15 @@ module.exports = function (passport) {
         }
     }))
 
-    passport.serializeUser(function (user, done) {
-
-        console.log('serialize ' + JSON.stringify(user))
-
-        done(null, user.username)
+    passport.serializeUser(async function (user, done) {
+        // console.log('serialize ' + JSON.stringify(user))
+        await done(null, user.username)
     });
 
-    passport.deserializeUser(async function (user, done) {
+    passport.deserializeUser(async (user, done) => {
         const result = await accout.getAccountBy(user)
-        
-        if(result == undefined){
-            done(null, null)
-        }
-        else{
-            done(null, result.account || null)
-        }
+        console.log(result.account)
+        done(null, result.account || null)
 
     });
 

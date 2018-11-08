@@ -11,7 +11,6 @@ class Cart {
             })
             return response.data
         }catch(e){
-            console.log('get cart by username error')
             return e.data
         }
         
@@ -30,10 +29,6 @@ class Cart {
     }
     async removeProductFromCart(data){
         try{
-            console.log(data)
-            console.log(data.username)
-            console.log(data.productID+'ss')
-            console.log(parseInt(data.quantity))
             const response = await axios.post(URL.removeProductFromCart,{},{
                 headers:{
                     'username': data.username,
@@ -41,10 +36,8 @@ class Cart {
                     'quantity':parseInt(data.quantity)
                 }
             })
-            console.log('ss')
             return response.data
         }catch(e){
-            console.log('remove product error')
             return e.data
         }
     }
