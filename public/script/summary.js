@@ -144,36 +144,38 @@ $( () => {
 
   // Cofirm button clicked.
   $('#yesButton').click( () => {
+    const username = $('#userNavBarUsername').text()
     console.log('Go to summary page.');
-    window.location = "http://localhost:3000/confirmTransaction";
+    window.location = "http://localhost:3000/completeTransaction/"+username;
   });
 
   // Cancel button clicked then go to whisky page.
   $('#cancelButton').click( () => {
+    const username = $('#userNavBarUsername').text()
     console.log('Cancel the payment, go back to payment page.');
-    window.location = "http://localhost:3000/payment";
+    window.location = "http://localhost:3000/mypayment/"+username;
   });
 
-  $('#confirm').on('click', function(e){
-      const username = $('#userNavBarUsername').text()
-      $.ajax({
-          url: '/summary/'+username,
-          data:{
-              'username': username,
-          },
-          type: 'POST',
-          success: function(data) {
-              if(data.return_code === '400'){
-                  console.log('error')
-              }else{
-                  alert('success checkout');
-                  window.location='http://localhost:3000/'
-              }
-          },
-          error: function(error){
-              console.log('error check out')
-          }
-      })
-  });
+  // $('#confirm').on('click', function(e){
+  //     const username = $('#userNavBarUsername').text()
+  //     $.ajax({
+  //         url: '/summary/'+username,
+  //         data:{
+  //             'username': username,
+  //         },
+  //         type: 'POST',
+  //         success: function(data) {
+  //             if(data.return_code === '400'){
+  //                 console.log('error')
+  //             }else{
+  //                 alert('success checkout');
+  //                 window.location='http://localhost:3000/'
+  //             }
+  //         },
+  //         error: function(error){
+  //             console.log('error check out')
+  //         }
+  //     })
+  // });
 
 } );

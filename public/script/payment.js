@@ -11,7 +11,7 @@ $( () => {
   $('#cancelButton').click( () => {
     const username = $('#userNavBarUsername').text()
     console.log('Cancel the payment, go back to appointment page.');
-    window.location = "http://localhost:3000/myappointment/";
+    window.location = "http://localhost:3000/myappointment/"+username;
   });
 
   $(".masterCardWay").click( () => {
