@@ -7,37 +7,23 @@
 .appointmentWelcomeSentence {
   font-size: 30px;
   font-weight: bold;
-  background-color: rgb(255, 255, 195);
   padding: 20px 100px;
   margin-top: 10px;
-  margin-bottom: 20px;
 }
 
+/* Change the font size of appointment topic */
 @media screen and (max-width: 500px) {
+
   .appointmentWelcomeSentence {
     font-size: 23px;
   }
-}
 
-/* Shopping status */
-
-.shoppingDisplayStatusColumn {
-  background-color: rgb(255, 255, 195);
-  font-size: 20px;
-  text-align: center;
-  padding: 20px 100px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.shoppingDisplayStatusColumn .progress {
-  margin-top: 10px;
 }
 
 /* Appointment section */
 
 .appointmentSection {
-  background-color: rgb(255, 255, 195);
+  padding: 0px 50px;
 }
 
 .halfField {
@@ -53,8 +39,8 @@
 .personalField {
   font-size: 30px;
   font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .personalFieldTopic {
@@ -64,19 +50,37 @@
 .fullAddressField {
   font-size: 30px;
   font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .fullAddressFieldTopic {
   padding: 10px 0px 10px 1em;
 }
 
+.buttonInAddressField button {
+  margin: 0px 10px;
+}
+
 select {
   font-size: 15px;
 }
 
-@media screen and (max-width: 810px) {
+/* No padding of div appointmentSection */
+@media screen and (max-width: 600px) {
+
+  .appointmentSection {
+    padding: 0px;
+  }
+
+}
+
+/* Input width be 100% */
+@media screen and (max-width: 1075px) {
+
+  .input-group {
+      width: 100%;
+  }
 
   .halfField {
     width: 100%;
@@ -84,6 +88,19 @@ select {
 
   .fullField {
     width: 100%;
+  }
+
+}
+
+/* Decrease the font size of personal and address topic */
+@media screen and (max-width: 500px) {
+
+  .personalFieldTopic {
+    font-size: 23px;
+  }
+
+  .fullAddressFieldTopic {
+    font-size: 23px;
   }
 
 }
@@ -105,10 +122,7 @@ select {
   font-size: 23px;
 }
 
-.noticeFieldSentence button {
-  font-size: 23px;
-}
-
+/* Decease the size of notice part */
 @media screen and (max-width: 770px) {
 
   .noticeFieldSentence {
