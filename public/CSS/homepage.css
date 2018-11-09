@@ -22,7 +22,9 @@
 
 }
 
-/* Best seller */
+/*
+  Best seller
+*/
 
 .bestsellerTopic {
   text-align: center;
@@ -56,7 +58,7 @@
   height: 80px;
 }
 
-/**
+/*
   Best seller body when 820px
   - Decrease the size of details.
   - Set the margin of table to be 0.
@@ -75,7 +77,7 @@
 
 }
 
-/**
+/*
   Best seller body when 650px
   - pictures decrease the size.
 */
@@ -87,6 +89,40 @@
   }
 
 }
+
+/*
+  Text in hr
+*/
+
+div.hr-or {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+  height: 0px;
+  line-height: 0px;
+}
+
+div.hr-or:before {
+  content: 'OR';
+  background-color: #fff;
+}
+
+div.hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+  height: 0px;
+  line-height: 0px;
+}
+
+.hr-title {
+  background-color: #fff;
+}
+
 
 /* Test part */
 
