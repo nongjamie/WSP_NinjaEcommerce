@@ -14,6 +14,21 @@ $( () => {
     window.location = "http://localhost:3000/myappointment/"+username;
   });
 
+  function paymentFileUpload(num) {
+    if(num == 0) {
+      $(".paymentFieldUpload").html(`
+        <p>No need to upload.</p>
+        `);
+    }
+    else {
+      $(".paymentFieldUpload").html(`
+        <input type="file" style="margin: 5px; border: 1px solid black;"/>
+        <button type="button" class="btn btn-primary" style="margin: 5px;">Upload
+        </button>
+        `);
+    }
+  };
+
   $(".masterCardWay").click( () => {
     $(".paymentFieldInputSentence").html(`
       <p>Step 2 : Fill the details of your credit card.</p>
@@ -38,9 +53,7 @@ $( () => {
         </div>
       </div>
       `);
-      $(".paymentFieldUpload").html(`
-        Need not to upload.
-        `);
+      paymentFileUpload(0);
   });
 
   $(".scbWay").click( () => {
@@ -74,9 +87,7 @@ $( () => {
       $(".paymentFieldUploadSentence").html(`
         <p>Step 3 : Upload the slip here.</p>
         `);
-      $(".paymentFieldUpload").html(`
-        <input type="file" /> <button type="button" class="btn btn-primary">Upload</button>
-        `);
+      paymentFileUpload(1);
   });
 
   $(".kbankWay").click( () => {
@@ -110,10 +121,7 @@ $( () => {
       $(".paymentFieldUploadSentence").html(`
         <p>Step 3 : Upload the slip here.</p>
         `);
-      $(".paymentFieldUpload").html(`
-        <input type="file" />
-        <button type="button" class="btn btn-primary">Upload</button>
-        `);
+      paymentFileUpload(1)
   });
 
   //fame part
