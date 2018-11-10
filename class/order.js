@@ -1,15 +1,15 @@
 const axios = require('axios')
 const URL = require('../config/database')
 
-class Category{
-    async getCategory(){
+class Order{
+    async getOrderList(){
         try {
-            const response = await axios.get(URL.getCategory)
+            const response = await axios.get(URL.checkoutByUsername)
             return response.data
         } catch (error) {
-            return error
+            return error.data
         }
     }
 }
 
-module.exports=Category
+module.exports=Order
