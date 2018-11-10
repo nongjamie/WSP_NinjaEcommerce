@@ -1,8 +1,8 @@
 * {
-  /* border: 1px solid green; */
+  border: 1px solid green;
 }
 
-/* Fill Payment topic */
+/* Payment topic */
 
 .paymentTopicContainer {
   font-size: 30px;
@@ -16,23 +16,11 @@
   }
 }
 
-/* Shopping status */
-
-.shoppingDisplayStatusContainer {
-  font-size: 20px;
-  text-align: center;
-  padding: 10px 0px;
-}
-
-.shoppingDisplayStatusColumn {
-  padding: 20px 100px;
-}
-
-.shoppingDisplayStatusColumn .progress {
-  margin-top: 10px;
-}
-
 /* Payment selection part  */
+
+.paymentLogo {
+  width: 50%;
+}
 
 .paymentLogoSentence {
   text-align: center;
@@ -51,6 +39,7 @@
 
 .paymentField {
   margin-bottom: 10px;
+  width: 50%;
 }
 
 .paymentFieldInputSentence {
