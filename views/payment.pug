@@ -20,19 +20,21 @@ block content
       div.paymentLogo
         div.paymentLogoSentence
           p Step 1 : Select your payment method.
-        div.row.justify-content-center
-            img.masterCardWay(src="/pictures/master-logo.png" )
-            img.scbWay(src="/pictures/scb-logo.png" )
-            img.kbankWay(src="/pictures/kbank-logo.png" )
-            div(id="paypal-button")
+        div.row.justify-content-center.paymentLogoImage
+          img.masterCardWay(src="/pictures/master-logo.png" )
+          img.scbWay(src="/pictures/scb-logo.png" )
+          img.kbankWay(src="/pictures/kbank-logo.png" )
+          div(id="paypal-button")
 
       div.paymentField
-        div.paymentFieldInputSentence
-          p Step 2 : Follow the instruction.
-        div.paymentFieldInput
-        div.paymentFieldUploadSentence
-          p Step 3 : Upload your evidence or slip.
-        div.paymentFieldUpload
+        div.paymentFieldStep2
+          div.paymentFieldInputSentence
+            p Step 2 : Follow the instruction.
+          div.paymentFieldInput
+        div.paymentFieldStep3
+          div.paymentFieldUploadSentence
+            p Step 3 : Upload your evidence or slip.
+          div.paymentFieldUpload
     
   //- Button selection
   div.buttonFinalSelection
