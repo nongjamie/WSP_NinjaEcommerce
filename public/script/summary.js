@@ -34,51 +34,108 @@ $( () => {
     cardSecurityCode: "5833"
   };
 
+  let styleHeadColumnCart = "style=\"height: 50px; width: 100%;\"";
+
   // Set the head of row
-  $('.pictureColumn').append(`<div style="height: 50px; width: 100%;"><p id="productSenc" style="font-weight:bold;">Product</p></div>`);
-  $('.productNameColumn').append(`<div style="height: 50px; width: 100%;"><p id="nameSenc" style="font-weight:bold;">Name</p></div>`);
-  $('.productQuantityColumn').append(`<div style="height: 50px; width: 100%;"><p id="quantitySenc" style="font-weight:bold;">Quantity</p></div>`);
-  $('.productUnitPriceColumn').append(`<div style="height: 50px; width: 100%;"><p id="unitPriceSenc" style="font-weight:bold;">UnitPrice</p></div>`);
-  $('.productTotalPriceColumn').append(`<div style="height: 50px; width: 100%;"><p id="totalCostSenc" style="font-weight:bold;">TotalCost</p></div>`);
+  $('.pictureColumn').append(`
+    <div ${styleHeadColumnCart}>
+      <p id="productSenc" style="font-weight:bold;">
+        Product
+      </p>
+    </div>
+    `);
+  $('.productNameColumn').append(`
+    <div ${styleHeadColumnCart}>
+      <p id="nameSenc" style="font-weight:bold;">
+        Name
+      </p>
+    </div>
+    `);
+  $('.productQuantityColumn').append(`
+    <div ${styleHeadColumnCart}>
+      <p id="quantitySenc" style="font-weight:bold;">
+        Quantity
+      </p>
+    </div>
+    `);
+  $('.productUnitPriceColumn').append(`
+    <div ${styleHeadColumnCart}>
+      <p id="unitPriceSenc" style="font-weight:bold;">
+        UnitPrice
+      </p>
+    </div>
+    `);
+  $('.productTotalPriceColumn').append(`
+    <div ${styleHeadColumnCart}>
+      <p id="totalCostSenc" style="font-weight:bold;">
+        TotalCost
+      </p>
+    </div>
+    `);
 
   // Set the detail of each row
   for(let i = 0 ; i < exampleCart.length ; i++) {
     let item = exampleCart[i];
     let cost = item.quantity * item.productPrice;
-    $('.pictureColumn').append(`<div><img src="/pictures/${item.productID}_${item.productName}.jpg" ></div>`);
-    $('.productNameColumn').append(`<div><p id="nameSenc">${item.productName}</p></div>`);
-    $('.productQuantityColumn').append(`<div><p id="quantitySenc">${item.quantity}</p></div>`);
-    $('.productUnitPriceColumn').append(`<div><p id="unitPriceSenc">${item.productPrice}</p></div>`);
-    $('.productTotalPriceColumn').append(`<div><p id="totalCostSenc">${cost}</p></div>`);
+    $('.pictureColumn').append(`
+      <div>
+        <img src="/pictures/${item.productID}_${item.productName}.jpg">
+      </div>
+      `);
+    $('.productNameColumn').append(`
+      <div>
+        <p id="nameSenc">${item.productName}</p>
+      </div>
+      `);
+    $('.productQuantityColumn').append(`
+      <div>
+        <p id="quantitySenc">${item.quantity}</p>
+      </div>
+      `);
+    $('.productUnitPriceColumn').append(`
+      <div>
+        <p id="unitPriceSenc">${item.productPrice}</p>
+      </div>
+      `);
+    $('.productTotalPriceColumn').append(`
+      <div>
+        <p id="totalCostSenc">${cost}</p>
+      </div>
+      `);
   }
 
-  // Set the detail of appointment
-  $('.summaryAppointment').html(`
-    <p>Personal & Appointment</p>
+  $('.summaryPersonal').html(`
+    <p>Personal</p>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">Name</span>
-        <input type="number" class="form-control" placeholder="${exampleAppointment.name}" aria-label="Username" aria-describedby="basic-addon1" disabled>
+        <input type="number" class="form-control" placeholder="${exampleCreditcard.cardHolderName}" aria-label="Username" aria-describedby="basic-addon1" disabled>
       </div>
     </div>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">Surname</span>
-        <input type="number" class="form-control" placeholder="${exampleAppointment.surname}" aria-label="Username" aria-describedby="basic-addon1" disabled>
+        <input type="number" class="form-control" placeholder="${exampleCreditcard.creditCardNumber}" aria-label="Username" aria-describedby="basic-addon1" disabled>
       </div>
     </div>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">Birthday</span>
-        <input type="number" class="form-control" placeholder="${exampleAppointment.birthday}" aria-label="Username" aria-describedby="basic-addon1" disabled>
+        <input type="number" class="form-control" placeholder="${exampleCreditcard.expirationDate}" aria-label="Username" aria-describedby="basic-addon1" disabled>
       </div>
     </div>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">Sex</span>
-        <input type="number" class="form-control" placeholder="${exampleAppointment.sex}" aria-label="Username" aria-describedby="basic-addon1" disabled>
+        <input type="number" class="form-control" placeholder="${exampleCreditcard.cardSecurityCode}" aria-label="Username" aria-describedby="basic-addon1" disabled>
       </div>
     </div>
+    </br>
+  `);
+
+  // Set the detail of appointment
+  $('.summaryAppointment').html(`
+    <p>Address</p>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">Address</span>
@@ -138,8 +195,6 @@ $( () => {
       </div>
     </div>
     </br>
-    <p id="noticeTopic">** Notice **</p>
-    <p id="noticeDetail">If all details are correct, Click the confrim button below to complete the transaction.</p>
   `);
 
   // Cofirm button clicked.
