@@ -2,13 +2,10 @@
   /* border: 1px solid green; */
 }
 
-/* Summary section */
+/* ---------- Summary section ---------- */
 
-.summarySection {
-  /* margin: 20px 0px; */
-}
+/* ----- Summary topic ----- */
 
-/* Summary topic sentence */
 
 .summaryTopicSentence {
   font-size: 30px;
@@ -17,7 +14,7 @@
   margin: 10px 0px;
 }
 
-/* Summary cart */
+/* ----- Summary cart ----- */
 
 .width20 {
   width: 20%;
@@ -74,7 +71,7 @@
   width: 100%;
 }
 
-/* Summary personal */
+/* ----- Summary personal ----- */
 
 .summaryPersonal {
   width: 50%;
@@ -97,7 +94,7 @@
   display: flex;
 }
 
-/* Summary payment */
+/* ----- Summary payment ----- */
 
 .summaryPayment {
   width: 50%;
@@ -120,7 +117,7 @@
   display: flex;
 }
 
-/* Summary appointment */
+/* ----- Summary appointment ----- */
 
 .summaryAppointment {
   width: 100%;
@@ -144,6 +141,7 @@
   display: flex;
 }
 
+/* Personal Payment Appointment full width */
 @media screen and (max-width: 1010px) {
 
   .summaryPersonal {
@@ -160,6 +158,7 @@
 
 }
 
+/* Input field in Personal Payment Appointment full width */
 @media screen and (max-width: 500px) {
 
   .summaryPersonal .input-group-prepend {
@@ -176,7 +175,7 @@
 
 }
 
-/* Button selection */
+/* ---------- Button selection ---------- */
 
 .buttonFinalSelection {
   margin-bottom: 10px;
