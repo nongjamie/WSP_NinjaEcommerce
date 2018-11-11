@@ -2,7 +2,7 @@
   /* border: 2px solid green; */
 }
 
-/* Welcome video */
+/* ---------- Video section ---------- */
 
 .welcomeVideo {
   width: 100%;
@@ -22,9 +22,7 @@
 
 }
 
-/*
-  Best seller
-*/
+/* ---------- Best seller ---------- */
 
 .bestsellerTopic {
   text-align: center;
@@ -59,11 +57,9 @@
   height: 80px;
 }
 
-/*
-  Best seller body when 820px
+/* Best seller body when 820px
   - Decrease the size of details.
-  - Set the margin of table to be 0.
-*/
+  - Set the margin of table to be 0. */
 @media screen and (max-width: 820px) {
 
   .bestSellerBody {
@@ -78,10 +74,8 @@
 
 }
 
-/*
-  Best seller body when 650px
-  - pictures decrease the size.
-*/
+/* Best seller body when 650px
+  - pictures decrease the size. */
 @media screen and (max-width: 650px) {
 
   .bestSellerBody img {
@@ -91,9 +85,7 @@
 
 }
 
-/*
-  Text in hr
-*/
+/* ----- Text in hr ----- */
 
 div.hr {
   margin-top: 40px;
@@ -110,26 +102,8 @@ div.hr {
 }
 
 
-/* Test part */
+/* ---------- Test part ---------- */
 
 .test {
   float: right;
 }
-
-/* Unuse code */
-
-/* .margin-bottom{
-  margin-bottom: 20px;
-} */
-
-/* .temp{
-  max-width: 500px;
-  max-height: 500px;
-} */
-
-/* .temp2{
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
