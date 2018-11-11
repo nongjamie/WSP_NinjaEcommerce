@@ -1,5 +1,5 @@
 * {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   /* background-color: rgb(0, 51, 153); */
   font-family: 'Mali', cursive;
 }
@@ -32,10 +32,6 @@
 
 .dropdown-item:hover{
   background-color: grey;
-}
-
-.nav-item {
-  text-align: center;
 }
 
 /* ---------- User nav bar section ---------- */
