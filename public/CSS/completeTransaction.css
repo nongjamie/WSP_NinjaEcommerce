@@ -1,0 +1,65 @@
+* {
+  /* border: 1px solid green; */
+}
+
+/* ---------- Complete transaction topic ---------- */
+
+.completeTopic {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+@media screen and (max-width: 500px) {
+
+  .completeTopic {
+    font-size: 23px;
+  }
+
+}
+
+/* ---------- Complete transaction body ---------- */
+
+.orderNumberDisplay {
+  font-size: 23px;
+  font-weight: bold;
+  padding: 10px 100px;
+  margin: 10px;
+  color: white;
+  background-color: black;
+}
+
+.orderNumberNotice {
+  font-size: 20px;
+  margin: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.orderNumberNotice span {
+  margin: 20px 0px;
+  padding: 0px 20px;
+}
+
+.orderNumberNotice mark {
+  font-weight: bold;
+  background-color: rgb(217, 217, 217);
+  border-radius: 1em;
+}
+
+/* ---------- Button selection ---------- */
+
+.buttonFinalSelection {
+  margin-bottom: 10px;
+}
+
+#confirmCartButton {
+  font-size: 23px;
+  margin: 0px 30px 0px 0px;
+}
+
+#cancelButton {
+  font-size: 23px;
+  margin: 0px 0px 0px 30px;
+}
