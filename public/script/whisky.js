@@ -1,9 +1,9 @@
 $(function () {
 
-    $('.addToCartButton').on('click', function(e){
+    $('.addToCartButton.onpage').on('click', function(e){
         const val = this.value
         const data = val.split(',')
-        const quantity = $(`.fixsize[name=${data[1]}]`).val()
+        const quantity = $(`.fixsize.onpage[name=${data[1]}]`).val()
         const username = $('#userNavBarUsername').text()
         console.log(username)
         console.log(quantity)
@@ -29,6 +29,37 @@ $(function () {
             }
         })
     })
+
+    $('.addToCartButton.center').on('click', function(e){
+        const val = this.value
+        const data = val.split(',')
+        const quantity = $(`.fixsize.center[name=${data[1]}]`).val()
+        const username = $('#userNavBarUsername').text()
+        console.log(username)
+        console.log(quantity)
+        console.log(data)
+        $.ajax({
+            url: '/whisky',
+            data:{
+                'username': username,
+                'productID': data[2],
+                'quantity': parseInt(quantity)
+
+            },
+            type: 'POST',
+            success: function(data) {
+                if(data.return_code === '400'){
+                   console.log('error')
+                }else{
+                    console.log(data)
+                }
+            },
+            error: function(error){
+                console.log('add to cart error')
+            }
+        })
+    })
+
 
     $('#userNavBarConfirm').on('click', () => {
         window.location = '/mycart/' + $('#userNavBarUsername').text()
