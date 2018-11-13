@@ -110,6 +110,13 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
+app.get("/search", function(req, res) {
+  res.render("search", {
+    menu: 'search'
+  });
+});
+
+
 app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))
