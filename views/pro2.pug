@@ -6,7 +6,9 @@ block head
   title Ninja Promotion 1
 
 block content
-  br  
+
+  br
+
   .container
     .row
       .col-sm-6
@@ -42,6 +44,7 @@ block content
           img.fixsize-Promotion3(src='../pictures/WhiteWalker_4.jpg')
           br
           h ฿ 2099
+          input.mb-2.fixsize(type='number', name='pro', step='1', min='1', max="30" , value='1')
           br
           button#fixsize.button1
             | Add To Cart
