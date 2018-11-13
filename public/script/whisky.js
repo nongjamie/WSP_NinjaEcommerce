@@ -23,7 +23,7 @@ $(function () {
                     if(data.return_code === '400'){
                        console.log('error')
                     }else{
-                        console.log(data)
+                      $('.loading').css({ 'display': 'none', })
                     }
                 },
                 error: function(error){
@@ -40,6 +40,11 @@ $(function () {
             console.log(username)
             console.log(quantity)
             console.log(data)
+            $(".fadeTo").fadeTo("fast", 0.5);
+                  $('.loading').css({
+                      'display': 'block',
+                      'z-index': '11',
+                  })
             $.ajax({
                 url: '/whisky',
                 data:{
@@ -53,6 +58,8 @@ $(function () {
                     if(data.return_code === '400'){
                        console.log('error')
                     }else{
+                      $('.loading').css({ 'display': 'none', })
+
                         console.log(data)
                     }
                 },
