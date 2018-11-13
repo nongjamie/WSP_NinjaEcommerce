@@ -5,7 +5,7 @@ class Category{
     async getCategory(){
         try {
             const response = await axios.get(URL.getCategory)
-            return response
+            return response.data
         } catch (error) {
             return error
         }

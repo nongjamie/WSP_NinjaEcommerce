@@ -9,20 +9,21 @@ block head
 block content
   
   //- Complete transaction topic
-  div.paymentTopicContainer
+  div.completeTopic
     div.row.justify-content-center
       span.paymentWelcomeSentence 
-        | Transaction
-  
-  //- Shopping status
-  div.shoppingDisplayStatusContainer
+        | Your transaction nearly complete!
+        
+  //- Complete transaction body
+  div.completeBody.mb-1
     div.row.justify-content-center
-      div.col-sm-8.shoppingDisplayStatusColumn
-        span.shoppingDisplayStatus
-          | Transaction complete
-        div.progress
-          div(class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100")
-            | Complete 100%
+      .orderNumberDisplay
+        | Order number => 5910545833
+    div.row.justify-content-center
+      .orderNumberNotice
+        span <mark id="beforeMark">&nbsp ** Before ** &nbsp</mark> you confirmed, you can change your transaction.
+        span <mark id="afterMark">&nbsp ** After ** &nbsp</mark> you click it, this order number will be activated and you cannot change any transaction details.
+        span Checking status of the delivery by put the order number in STATUS page.
     
   //- Button selection
   div.buttonFinalSelection

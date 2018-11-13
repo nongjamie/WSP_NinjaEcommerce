@@ -2,13 +2,10 @@
   /* border: 1px solid green; */
 }
 
-/* Summary section */
+/* ---------- Summary section ---------- */
 
-.summarySection {
-  /* margin: 20px 0px; */
-}
+/* ----- Summary topic ----- */
 
-/* Summary topic sentence */
 
 .summaryTopicSentence {
   font-size: 30px;
@@ -17,30 +14,14 @@
   margin: 10px 0px;
 }
 
-/* Shopping status */
+/* ----- Summary cart ----- */
 
-.shoppingDisplayStatusContainer {
-  font-size:20px;
-  text-align: center;
-  padding: 10px 0px;
+.width20 {
+  width: 20%;
 }
-
-.shoppingDisplayStatusColumn {
-  padding: 20px 100px;
-}
-
-.shoppingDisplayStatusColumn .progress {
-  margin-top: 10px;
-}
-
-/* Summary cart */
 
 .summaryCart {
   margin: 10px 0px;
-}
-
-.pictureColumn {
-  width: 20%;
 }
 
 .pictureColumn div {
@@ -50,12 +31,8 @@
 }
 
 .pictureColumn img {
-  height: 50%;
+  height: 70%;
   width: 50%;
-}
-
-.productNameColumn {
-  width: 20%;
 }
 
 .productNameColumn div {
@@ -94,26 +71,30 @@
   width: 100%;
 }
 
-/* Summary appointment */
+/* ----- Summary personal ----- */
 
-.summaryAppointment {
+.summaryPersonal {
   width: 50%;
   text-align: center;
   font-size: 30px;
 }
 
-.summaryAppointment p {
+.summaryPersonal p {
   font-weight: bold;
 }
 
-.summaryAppointment .input-group-prepend {
+.summaryPersonal .input-group {
+  width: 100%;
+}
+
+.summaryPersonal .input-group-prepend {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
 }
 
-/* Summary payment */
+/* ----- Summary payment ----- */
 
 .summaryPayment {
   width: 50%;
@@ -125,22 +106,76 @@
   font-weight: bold;
 }
 
+.summaryPayment .input-group {
+  width: 100%;
+}
+
 .summaryPayment .input-group-prepend {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+/* ----- Summary appointment ----- */
+
+.summaryAppointment {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.summaryAppointment p {
+  font-weight: bold;
+}
+
+.summaryAppointment .input-group {
+  width: 100%;
+}
+
+.summaryAppointment .input-group-prepend {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
 }
 
-@media screen and (max-width: 950px) {
+/* Personal Payment Appointment full width */
+@media screen and (max-width: 1010px) {
 
-  #noticeDetail {
-    font-size: 20px;
+  .summaryPersonal {
+    width: 100%;
+  }
+
+  .summaryPayment {
+    width: 100%;
+  }
+
+  .summaryAppointment {
+    width: 100%;
   }
 
 }
 
-/* Button selection */
+/* Input field in Personal Payment Appointment full width */
+@media screen and (max-width: 500px) {
+
+  .summaryPersonal .input-group-prepend {
+    width: 95%;
+  }
+
+  .summaryPayment .input-group-prepend {
+    width: 95%;
+  }
+
+  .summaryAppointment .input-group-prepend {
+    width: 95%;
+  }
+
+}
+
+/* ---------- Button selection ---------- */
 
 .buttonFinalSelection {
   margin-bottom: 10px;
