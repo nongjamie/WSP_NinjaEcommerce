@@ -4,14 +4,14 @@
   font-family: 'Mali', cursive;
 }
 
-/* Logo header section */
+/*  ---------- Logo header section ---------- */
 
 #most-header {
   font-size: 30px;
   text-align: left;
 }
 
-/* Nav bar section */
+/* ----- Nav bar section ----- */
 
 .navBar {
   background-color: black;
@@ -34,7 +34,7 @@
   background-color: grey;
 }
 
-/* User nav bar section */
+/* ---------- User nav bar section ---------- */
 
 #userNavBar {
   background-color: rgb(217, 217, 217);
@@ -94,7 +94,7 @@
 
 }
 
-/* Footer section */
+/* ---------- Footer section ---------- */
 
 #footer-section {
   color: white;
@@ -151,7 +151,7 @@
 
 }
 
-/* Feedback section */
+/* ---------- Feedback section ---------- */
 
 .feedbackSign {
   position: fixed;
@@ -185,7 +185,7 @@
   box-shadow: 0px 7px 39px -4px rgba(19, 19, 19, 0.75);
 }
 
-/* Loading animation */
+/* ----- Loading animation ----- */
 
 .loading{
   display: none;

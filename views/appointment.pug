@@ -12,28 +12,19 @@ block content
     div.row.justify-content-center
       span.appointmentWelcomeSentence 
         | My Appointment
-  
-  //- Shopping status
-  div.container.shoppingDisplayStatusContainer
-    div.row.justify-content-center
-      div.col-sm-8.shoppingDisplayStatusColumn
-        span.shoppingDisplayStatus
-          | Fill our appointment
-        div.progress
-          div(class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100")
-            | Done 25%
-    
+
   //- Appointment section 
-  div.container.appointmentSection
+  div.container-fluid.appointmentSection
     div.personalField
-      div.personalFieldTopic Personal
+      div.personalFieldTopic 
+        | Personal
       div(class="input-group")
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Name
-          input(type="text" class="form-control" placeholder="Ex: Biwit" aria-label="Username" aria-describedby="basic-addon1")
+          input(type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" disabled value=profile.username)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Surname
-          input(type="text" class="form-control" placeholder="Ex: Triwith" aria-label="Username" aria-describedby="basic-addon1")
+          input(type="text" class="form-control" placeholder="Ex: Triwith" aria-label="Username" aria-describedby="basic-addon1" disabled value)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Birthday
           select(id="birthdayFeild" name="Day ")
@@ -60,24 +51,28 @@ block content
       div(class="input-group")
         div(class="input-group-prepend fullField")
           span(class="input-group-text" id="basic-addon1") Address
-          input(type="text" class="form-control" placeholder="Ex: 50 Ngam Wong Wan Rd, Ladyaow" aria-label="Username" aria-describedby="basic-addon1")
+          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 50 Ngam Wong Wan Rd, Ladyaow" aria-label="Username" aria-describedby="basic-addon1" disabled)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Distrinct
-          input(type="text" class="form-control" placeholder="Ex: Chatuchak" aria-label="Username" aria-describedby="basic-addon1")
+          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: Chatuchak" aria-label="Username" aria-describedby="basic-addon1" disabled)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Province
-          input(type="text" class="form-control" placeholder="Ex: Bangkok" aria-label="Username" aria-describedby="basic-addon1")
+          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: Bangkok" aria-label="Username" aria-describedby="basic-addon1" disabled)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Zip code
-          input(type="text" class="form-control" placeholder="Ex: 10900" aria-label="Username" aria-describedby="basic-addon1")
+          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 10900" aria-label="Username" aria-describedby="basic-addon1" disabled)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Telephone
-          input(type="text" class="form-control" placeholder="Ex: 0987898765" aria-label="Username" aria-describedby="basic-addon1")
+          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 0987898765" aria-label="Username" aria-describedby="basic-addon1" disabled)
+        div(class="input-group-prepend halfField buttonInAddressField")
+          button(type="button" class="btn btn-primary" id="editButtonInAddressField") Edit
+          button(type="button" class="btn btn-secondary" id="confirmButtonInAddressField" disabled) Confirm
     div.noticeField
       div.noticeFieldTopic ** Notice **
       div.noticeFieldSentence
-        | If you already have the account. <br>
-        | You should login and press this <button type="button" class="btn btn-success"> button </button> to auto-fill.
+        ul
+          li Your personal details are depend on your account.
+          li Your address details are depend on your account too.<br>If you want to change the address, you can click "Edit" button.
 
     
   //- Button selection
