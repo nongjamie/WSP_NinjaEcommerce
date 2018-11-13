@@ -110,6 +110,10 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
+//Account page
+app.get("/profile", function(req, res) {
+  res.render("profile")
+});
 
 app.use(require('./routes/products'))
 
