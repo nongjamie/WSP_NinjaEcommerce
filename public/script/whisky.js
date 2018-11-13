@@ -1,30 +1,35 @@
 $(function () {
 
     $('.addToCartButton.onpage').on('click', function(e){
+
         const val = this.value
         const data = val.split(',')
         const quantity = $(`.fixsize.onpage[name=${data[1]}]`).val()
         const username = $('#userNavBarUsername').text()
-        console.log(username)
-        console.log(quantity)
-        console.log(data)
+        $(".fadeTo").fadeTo("fast", 0.5);
+        $('.loading').css({
+            'display': 'block',
+            'z-index': '11',
+        })
         $.ajax({
             url: '/whisky',
-            data:{
+            data: {
                 'username': username,
                 'productID': data[2],
                 'quantity': parseInt(quantity)
 
             },
             type: 'POST',
-            success: function(data) {
-                if(data.return_code === '400'){
-                   console.log('error')
-                }else{
+            success: function (data) {
+                if (data.return_code === '400') {
+                    console.log('error')
+                } else {
+                    $('.loading').css({'display': 'none',})
+                    swal('Product added !!')
                     console.log(data)
                 }
             },
-            error: function(error){
+            error: function (error) {
                 console.log('add to cart error')
             }
         })
@@ -67,16 +72,16 @@ $(function () {
 
 });
 
-$(".imgClick").on("click", function(){
+$(".imgClick").on("click", function () {
     const id = $(this).attr('id')
     console.log('id ' + id)
-    $('.form-popup.'+id).css("display", "block");
+    $('.form-popup.' + id).css("display", "block");
 });
 
-$('.cancelButton').on('click', function() {
+$('.cancelButton').on('click', function () {
     const id = $(this).attr('id')
     console.log("Close" + id)
-    $('.form-popup.'+id).css("display", "none");
+    $('.form-popup.' + id).css("display", "none");
 })
 
 // $('.cancelButton').focusout("click",function() {
