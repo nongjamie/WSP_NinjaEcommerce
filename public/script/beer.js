@@ -23,6 +23,10 @@ $(function () {
                     if(data.return_code === '400'){
                        console.log('error')
                     }else{
+                      $('.loading').css({
+                          'display': 'none',
+                          'z-index': '11',
+                      })
                         console.log(data)
                     }
                 },
