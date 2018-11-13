@@ -1,7 +1,6 @@
 $(function () {
 
     $('.addToCartButton.onpage').on('click', function(e){
-
         const val = this.value
         const data = val.split(',')
         const quantity = $(`.fixsize.onpage[name=${data[1]}]`).val()
