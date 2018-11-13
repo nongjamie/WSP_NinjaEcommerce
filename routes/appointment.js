@@ -1,22 +1,17 @@
 const express = require('express')
 const router = express.Router()
-const Cart = require('../class/cart')
-const cart = new Cart()
+const Account = require('../class/account')
+const account = new Account()
 
 router.get('/:username', async(req, res) => {
-    const username = req.params.username    
-    res.render("appointment", {
-        menu: 'appointment'
-      });
-})
 
-router.post('/:username',async(req,res)=>{
-    console.log("appoint")
-    console.log(req.body.username)
-    const username = req.body.username   
-    const result = await cart.getUserCart(username)
-    const ss = await cart.checkoutByUsername(username)
-    res.send('send success')
+    const result = await account.getAccountBy(req.params.username)
+    console.log(result)
+    // waiting for address
+    res.render("appointment", {
+        menu: 'appointment',
+        profile: result.account,
+      });
 })
 
 module.exports = router

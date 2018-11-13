@@ -1,5 +1,6 @@
 $(function () {
 
+<<<<<<< HEAD
         $('.addToCartButton').on('click', function(e){
             const val = this.value
             const data = val.split(',')
@@ -14,6 +15,56 @@ $(function () {
                     'username': username,
                     'productID': data[2],
                     'quantity': parseInt(quantity)
+=======
+    $('.addToCartButton.onpage').on('click', function(e){
+        const val = this.value
+        const data = val.split(',')
+        const quantity = $(`.fixsize.onpage[name=${data[1]}]`).val()
+        const username = $('#userNavBarUsername').text()
+        $(".fadeTo").fadeTo("fast", 0.5);
+        $('.loading').css({
+            'display': 'block',
+            'z-index': '11',
+        })
+        $.ajax({
+            url: '/whisky',
+            data: {
+                'username': username,
+                'productID': data[2],
+                'quantity': parseInt(quantity)
+
+            },
+            type: 'POST',
+            success: function (data) {
+                if (data.return_code === '400') {
+                    console.log('error')
+                } else {
+                    $('.loading').css({'display': 'none',})
+                    swal('Product added !!')
+                    console.log(data)
+                }
+            },
+            error: function (error) {
+                console.log('add to cart error')
+            }
+        })
+    })
+
+    $('.addToCartButton.center').on('click', function(e){
+        const val = this.value
+        const data = val.split(',')
+        const quantity = $(`.fixsize.center[name=${data[1]}]`).val()
+        const username = $('#userNavBarUsername').text()
+        console.log(username)
+        console.log(quantity)
+        console.log(data)
+        $.ajax({
+            url: '/whisky',
+            data:{
+                'username': username,
+                'productID': data[2],
+                'quantity': parseInt(quantity)
+>>>>>>> 967a672f923c4b0ceceb05f397d739a0c4dbd712
 
                 },
                 type: 'POST',
@@ -30,9 +81,16 @@ $(function () {
             })
         })
 
+<<<<<<< HEAD
         $('#userNavBarConfirm').on('click', ()=>{
             window.location = '/mycart/' + $('#userNavBarUsername').text()
         })
+=======
+
+    $('#userNavBarConfirm').on('click', () => {
+        window.location = '/mycart/' + $('#userNavBarUsername').text()
+    })
+>>>>>>> 967a672f923c4b0ceceb05f397d739a0c4dbd712
 
     });
 
@@ -48,16 +106,16 @@ $(function () {
 //     document.getElementById("myForm").style.display = "none";
 // }
 
-$(".imgClick").on("click", function(){
+$(".imgClick").on("click", function () {
     const id = $(this).attr('id')
     console.log('id ' + id)
-    $('.form-popup.'+id).css("display", "block");
+    $('.form-popup.' + id).css("display", "block");
 });
 
-$('.cancelButton').on('click', function() {
+$('.cancelButton').on('click', function () {
     const id = $(this).attr('id')
     console.log("Close" + id)
-    $('.form-popup.'+id).css("display", "none");
+    $('.form-popup.' + id).css("display", "none");
 })
 
 // mouse point

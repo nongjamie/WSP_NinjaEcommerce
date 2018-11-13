@@ -104,4 +104,7 @@ router.get("/promotion",async function(req, res) {
     res.send('send success')
   })
 
+  
+
+
 module.exports = router

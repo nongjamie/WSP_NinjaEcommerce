@@ -3,38 +3,27 @@ extends layout
 block head
   
     script(src="https://www.paypalobjects.com/api/checkout.js")
-    link(rel='stylesheet', type='text/css', href='../CSS/payment.css')
-    title Ninja Payment
+    link(rel='stylesheet', type='text/css', href='../CSS/completeTransaction.css')
+    title Ninja Complete
 
 block content
   
-  //- Payment Topic
-  div.paymentTopicContainer
+  //- Complete transaction topic
+  div.completeTopic
     div.row.justify-content-center
       span.paymentWelcomeSentence 
-        | My Payment
-            
-  div.container-fluid
-    div.row
-      //- Payment selection part 
-      div.paymentLogo
-        div.paymentLogoSentence
-          p Step 1 : Select your payment method.
-        div.row.justify-content-center.paymentLogoImage
-          img.masterCardWay(src="/pictures/master-logo.png" )
-          img.scbWay(src="/pictures/scb-logo.png" )
-          img.kbankWay(src="/pictures/kbank-logo.png" )
-          div(id="paypal-button")
-
-      div.paymentField
-        div.paymentFieldStep2
-          div.paymentFieldInputSentence
-            p Step 2 : Follow the instruction.
-          div.paymentFieldInput
-        div.paymentFieldStep3
-          div.paymentFieldUploadSentence
-            p Step 3 : Upload your evidence or slip.
-          div.paymentFieldUpload
+        | Your transaction nearly complete!
+        
+  //- Complete transaction body
+  div.completeBody.mb-1
+    div.row.justify-content-center
+      .orderNumberDisplay
+        | Order number => 5910545833
+    div.row.justify-content-center
+      .orderNumberNotice
+        span <mark id="beforeMark">&nbsp ** Before ** &nbsp</mark> you confirmed, you can change your transaction.
+        span <mark id="afterMark">&nbsp ** After ** &nbsp</mark> you click it, this order number will be activated and you cannot change any transaction details.
+        span Checking status of the delivery by put the order number in STATUS page.
     
   //- Button selection
   div.buttonFinalSelection
@@ -50,8 +39,8 @@ block content
               button(type="button" class="close" data-dismiss="modal" aria-label="Close")
                 span(aria-hidden="true") &times;
             div(class="modal-body")
-              p Your payment has been save! 
-              p Next , it is the summary of this transaction.
+              p Your transaction is complete.
+              p Don't forget to remember this order number.
             div(class="modal-footer")
               button(type="button" class="btn btn-secondary" data-dismiss="modal") No
               button(type="button" class="btn btn-primary" id="yesButton") OK
@@ -61,4 +50,4 @@ block content
 
 block foot
   
-  script(src='../script/payment.js')
+  script(src='../script/completeTransaction.js')
