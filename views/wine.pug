@@ -58,16 +58,11 @@ block content
                 br
                 br
                 button.btn.favorite Add To Favorite
-              h Beer Leo is a beer from Boon Rawd Brewery Co.,Ltd first produced in 1996, is a quality product from Beer Singha.
+              h Black Label's iconic square bottle makes it one of the world's most recognisable Scotch whiskies - and it's also one of whisky critic Jim Murray's favourite blends: 'If there is a silkier delivery on the market today, I have not seen it: this is sublime stuff...one of the world's most masterful whiskies back in all its complex glory'
           hr
-          input.btn.number.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1', max="30" , value='1')
-<<<<<<< HEAD
-          button.btn.add.mb-2.fixsize.addToCartButton.center Add To Cart
+          input.mb-2.fixsize.center(type='number', name='pro'+(i+1), step='1', min='1', max="30" , value='1')
+          button.btn.add.mb-2.fixsize.addToCartButton.center(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
           button.btn.cancel.cancelButton(type='button' id=i+1) Close
-=======
-          button.mb-2.fixsize.addToCartButton.center(value= product.productName + ',pro' + (i+1) + ',' + product.productID ) Add To Cart
-          button.btn.cancel.cancelButton(type='button' id=i) Close
->>>>>>> 967a672f923c4b0ceceb05f397d739a0c4dbd712
 block foot
 
   script(src='../script/wine.js')
