@@ -35,9 +35,10 @@ class Product {
         try{
             const response = await axios.post(URL.searchProductByName,{},{
                 headers:{
-                    'productName': productName
+                    'keyword': productName
                 }
             })
+            return response.data
         }catch(e){
             return e.data
         }

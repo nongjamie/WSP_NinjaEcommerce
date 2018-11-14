@@ -45,7 +45,7 @@ $(function () {
             console.log(quantity)
             console.log(data)
             $.ajax({
-                url: '/whisky',
+                url: '/beer',
                 data:{
                     'username': username,
                     'productID': data[2],

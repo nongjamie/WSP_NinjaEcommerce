@@ -11,7 +11,7 @@ $(function () {
                       'z-index': '11',
                   })
             $.ajax({
-                url: '/beer',
+                url: '/mixer',
                 data:{
                     'username': username,
                     'productID': data[2],
@@ -41,7 +41,7 @@ $(function () {
             console.log(quantity)
             console.log(data)
             $.ajax({
-                url: '/whisky',
+                url: '/mixer',
                 data:{
                     'username': username,
                     'productID': data[2],
