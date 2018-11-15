@@ -12,7 +12,6 @@ router.get('/:username', async(req, res) => {
     }
         const cart = await cart.getUserCart(req.params.username)
         const acc = await account.getAccountBy(req.params.username)
-        console.log(result)
         // waiting for address
         res.render("summary", {
             products:cart.cart,
