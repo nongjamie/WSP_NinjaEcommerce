@@ -5,13 +5,20 @@ const account = new Account()
 
 router.get('/:username', async(req, res) => {
 
-    const result = await account.getAccountBy(req.params.username)
-    console.log(result)
-    // waiting for address
-    res.render("appointment", {
-        menu: 'appointment',
-        profile: result.account,
-      });
+    if(res.locals.user.username !== req.params.username || !res.locals.user){
+        console.log('wrong username or null')
+        res.redirect('/')
+    }
+        const result = await account.getAccountBy(req.params.username)
+        console.log(result)
+        // waiting for address
+        res.render("appointment", {
+            menu: 'appointment',
+            account: result.account,
+            customer: result.customer,
+            
+          });
+    
 })
 
 module.exports = router

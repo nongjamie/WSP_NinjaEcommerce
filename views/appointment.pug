@@ -21,47 +21,34 @@ block content
       div(class="input-group")
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Name
-          input(type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" disabled value=profile.username)
+          input(type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1"  value=customer.name readonly)
         div(class="input-group-prepend halfField")
-          span(class="input-group-text" id="basic-addon1") Surname
-          input(type="text" class="form-control" placeholder="Ex: Triwith" aria-label="Username" aria-describedby="basic-addon1" disabled value=profile.email)
+
+          span(class="input-group-text" id="basic-addon1") Email
+          input(type="text" class="form-control" aria-label="Email" aria-describedby="basic-addon1"  value=customer.email readonly)
+
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Birthday
-          input(type="text" class="form-control" placeholder="1-Jan-1998" aria-label="Username" aria-describedby="basic-addon1" disabled value)
-          //- select(id="birthdayFeild" name="Day ")
-          //-   - var days = 0;
-          //-     while days < 31
-          //-       option(id=days++ value=days) #{days}
-          //-   span='/'
-          //- select(id="monthFeild" name="Month ")
-          //-   - var month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-          //-     each m in month
-          //-       option(id=m value=m) #{m}
-          //- select(id="yearField" name="Year ")
-          //-   - var year = 1900;
-          //-     while year < 2018
-          //-       option(id=year++ value=year) #{year}
+          input(type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" readonly value=customer.bday)
         div(class="input-group-prepend halfField")
-          span(class="input-group-text" id="basic-addon1") Sex
-          input(type="text" class="form-control" placeholder="Male" aria-label="Username" aria-describedby="basic-addon1" disabled value)
     div.fullAddressField
       div.fullAddressFieldTopic Address
       div(class="input-group")
         div(class="input-group-prepend fullField")
           span(class="input-group-text" id="basic-addon1") Address
-          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 50 Ngam Wong Wan Rd, Ladyaow" aria-label="Username" aria-describedby="basic-addon1" disabled value="Haven't set yet.")
+          input(type="text" class="form-control fromCanOnOff"  aria-label="Username" aria-describedby="basic-addon1" readonly value=customer.address)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Distrinct
-          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: Chatuchak" aria-label="Username" aria-describedby="basic-addon1" disabled value="Haven't set yet.")
+          input(type="text" class="form-control fromCanOnOff"  aria-label="Username" aria-describedby="basic-addon1" readonly value=customer.district)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Province
-          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: Bangkok" aria-label="Username" aria-describedby="basic-addon1" disabled value="Haven't set yet.")
+          input(type="text" class="form-control fromCanOnOff"  aria-label="Username" aria-describedby="basic-addon1" readonly value=customer.province)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Zip code
-          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 10900" aria-label="Username" aria-describedby="basic-addon1" disabled value="Haven't set yet.")
+          input(type="text" class="form-control fromCanOnOff"  aria-label="Username" aria-describedby="basic-addon1" readonly value=customer.zipCode)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Telephone
-          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 0987898765" aria-label="Username" aria-describedby="basic-addon1" disabled value="Haven't set yet.")
+          input(type="text" class="form-control fromCanOnOff"  aria-label="Username" aria-describedby="basic-addon1" readonly value=customer.phone)
     div.noticeField
       div.noticeFieldTopic ** Notice **
       div.noticeFieldSentence
