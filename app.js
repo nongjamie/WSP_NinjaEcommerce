@@ -110,6 +110,11 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
+//profile
+app.get("/profile", function(req, res) {
+  res.render("profile");
+})
+
 app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))
