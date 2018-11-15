@@ -31,5 +31,17 @@ class Product {
             return error.data
         }
     }
+    async searchProductByName(productName){
+        try{
+            const response = await axios.post(URL.searchProductByName,{},{
+                headers:{
+                    'keyword': productName
+                }
+            })
+            return response.data
+        }catch(e){
+            return e.data
+        }
+    }
 }
 module.exports = Product

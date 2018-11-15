@@ -1,18 +1,18 @@
 extends layout
 
 block head
-  
+
     link(rel='stylesheet', type='text/css', href='../CSS/cart.css')
     title Ninja Cart
 
 block content
-  
+
   //- Cart topic
   div.container
     div.row.justify-content-center
-      span.cartWelcomeSentence 
+      span.cartWelcomeSentence
         | My Cart
-            
+
   //- Table of confirm order
   div.container-fluid
     div.headTable
@@ -28,7 +28,7 @@ block content
         div.headCol
           | TotalCost(฿)
         div.headDeleteCol
-          | 
+          |
     div.bodyTable
       each product, i in products
         div.row
@@ -39,12 +39,12 @@ block content
           div.bodyCol
             span #{product.productPrice}
           div.bodyCol
-            span #{product.quantity} 
+            span #{product.quantity}
           div.bodyCol
             span.eachTotal= product.quantity * product.productPrice
           div.bodyDeleteCol
             input.mb-2.fixsize#inputNumberDelete(type='number' name='pro'+(i+1) step='1' min='1' max=product.quantity value='1')
-            button.mb-2.fixsize.deletesButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID) delete 
+            button.mb-2.fixsize.deletesButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID) delete
 
   //- Button selection
   div.container.buttonFinalSelection
@@ -60,7 +60,7 @@ block content
               button(type="button" class="close" data-dismiss="modal" aria-label="Close")
                 span(aria-hidden="true") &times;
             div(class="modal-body")
-              p Your cart has been save! 
+              p Your cart has been save!
               p Next , let we know our appointment.
               p (may be your residence or others place)
             div(class="modal-footer")
@@ -71,5 +71,5 @@ block content
         | Cancel
 
 block foot
-  
+
   script(src='../script/cart.js')

@@ -5,8 +5,28 @@
 
 /* Panther design */
 
-#promotionContent {
+#productContent {
   background-color: rgb(255, 255, 195);
+  background-color: black;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px 0px;
+  color: white;
+  border-radius: 10px!important;
+}
+
+#productContentTopic {
+  font-size: 30px;
+}
+
+#promotionContent {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-collapse: separate;
+  /* background-color: rgb(255, 255, 195); */
+  background-color: rgb(217, 217, 217);
+  border-radius: 40px!important;
 }
 
 .promotionWelcomeSentence {

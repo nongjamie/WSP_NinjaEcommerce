@@ -131,6 +131,8 @@ app.use('/summary',require('./routes/summary'))
 
 app.use('/completeTransaction',require('./routes/completeTransaction'))
 
+app.use('/search',require('./routes/search'))
+
 app.use(function(req, res, next) {
   return res.status(404).render('404')
 });
