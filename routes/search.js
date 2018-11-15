@@ -9,9 +9,7 @@ router.post('/',async function(req,res){
     console.log(data)
     console.log('post search product')
     console.log(result.products.length)
-    res.render("search", {
-        products: result.products
-    });
+    res.send("success")
 })
 
 router.get('/',async function(req,res){
