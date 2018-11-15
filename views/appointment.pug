@@ -24,55 +24,50 @@ block content
           input(type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" disabled value=profile.username)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Surname
-          input(type="text" class="form-control" placeholder="Ex: Triwith" aria-label="Username" aria-describedby="basic-addon1" disabled value)
+          input(type="text" class="form-control" placeholder="Ex: Triwith" aria-label="Username" aria-describedby="basic-addon1" disabled value=profile.email)
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Birthday
-          select(id="birthdayFeild" name="Day ")
-            - var days = 0;
-              while days < 31
-                option(id=days++ value=days) #{days}
-            span='/'
-          select(id="monthFeild" name="Month ")
-            - var month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-              each m in month
-                option(id=m value=m) #{m}
-          select(id="yearField" name="Year ")
-            - var year = 1900;
-              while year < 2018
-                option(id=year++ value=year) #{year}
+          input(type="text" class="form-control" placeholder="1-Jan-1998" aria-label="Username" aria-describedby="basic-addon1" disabled value)
+          //- select(id="birthdayFeild" name="Day ")
+          //-   - var days = 0;
+          //-     while days < 31
+          //-       option(id=days++ value=days) #{days}
+          //-   span='/'
+          //- select(id="monthFeild" name="Month ")
+          //-   - var month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+          //-     each m in month
+          //-       option(id=m value=m) #{m}
+          //- select(id="yearField" name="Year ")
+          //-   - var year = 1900;
+          //-     while year < 2018
+          //-       option(id=year++ value=year) #{year}
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Sex
-          select(id="sexFeild")
-            option(value="Male") Male
-            option(value="Male") Female
-            option(value="Male") Other
+          input(type="text" class="form-control" placeholder="Male" aria-label="Username" aria-describedby="basic-addon1" disabled value)
     div.fullAddressField
       div.fullAddressFieldTopic Address
       div(class="input-group")
         div(class="input-group-prepend fullField")
           span(class="input-group-text" id="basic-addon1") Address
-          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 50 Ngam Wong Wan Rd, Ladyaow" aria-label="Username" aria-describedby="basic-addon1" disabled)
+          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 50 Ngam Wong Wan Rd, Ladyaow" aria-label="Username" aria-describedby="basic-addon1" disabled value="Haven't set yet.")
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Distrinct
-          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: Chatuchak" aria-label="Username" aria-describedby="basic-addon1" disabled)
+          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: Chatuchak" aria-label="Username" aria-describedby="basic-addon1" disabled value="Haven't set yet.")
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Province
-          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: Bangkok" aria-label="Username" aria-describedby="basic-addon1" disabled)
+          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: Bangkok" aria-label="Username" aria-describedby="basic-addon1" disabled value="Haven't set yet.")
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Zip code
-          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 10900" aria-label="Username" aria-describedby="basic-addon1" disabled)
+          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 10900" aria-label="Username" aria-describedby="basic-addon1" disabled value="Haven't set yet.")
         div(class="input-group-prepend halfField")
           span(class="input-group-text" id="basic-addon1") Telephone
-          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 0987898765" aria-label="Username" aria-describedby="basic-addon1" disabled)
-        div(class="input-group-prepend halfField buttonInAddressField")
-          button(type="button" class="btn btn-primary" id="editButtonInAddressField") Edit
-          button(type="button" class="btn btn-secondary" id="confirmButtonInAddressField" disabled) Confirm
+          input(type="text" class="form-control fromCanOnOff" placeholder="Ex: 0987898765" aria-label="Username" aria-describedby="basic-addon1" disabled value="Haven't set yet.")
     div.noticeField
       div.noticeFieldTopic ** Notice **
       div.noticeFieldSentence
         ul
-          li Your personal details are depend on your account.
-          li Your address details are depend on your account too.<br>If you want to change the address, you can click "Edit" button.
+          li Your personal and address details are depend on your account settings.
+          li If you want to change something, please edit in the account settings.
 
     
   //- Button selection
