@@ -64,9 +64,29 @@ block content
               span.input-group-text Telephone
             input.form-control(id='telephone' type='text' name='telephone' style={width:'100%'} required)
     
-        input.mt-5.btn.btn-success(id='edit' type='submit', value='Edit')
-        input.mt-5.btn.btn-danger(id='cancel' type='submit' value='Cancel')
+        //- input.mt-5.btn.btn-success(id='edit' type='submit', value='Edit')
+        //- input.mt-5.btn.btn-danger(id='cancel' type='submit' value='Cancel')
 
+        //- modal
+        br
+
+        <!-- Button trigger modal -->
+        button(type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal" id='edit')
+          Launch Edit
+        button(type="button" class="btn btn-danger" value='cancel' id='cancel') Cancel
+
+        <!-- Modal -->
+        div(class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+          div(class="modal-dialog" role="document")
+            div(class="modal-content")
+              div(class="modal-header")
+                h5(class="modal-title" id="exampleModalLabel") Confirm 
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+              div(class="modal-body")
+                p Are you sure to change your information?
+              div(class="modal-footer")
+                button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
+                button(type="button" class="btn btn-primary") Save changes
 
   script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js")
   script(src="http://malsup.github.com/jquery.form.js")
