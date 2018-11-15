@@ -77,6 +77,19 @@ class Account {
             return error.data
         }
     }
+    async loginToAdmin(account) {
+        try {
+            const response = await axios.post(URL.loginToAdmin,{},{
+                headers:{
+                    'username': account.username,
+                    'password': account.password
+                }
+            })
+            return response.data
+        } catch (error) {
+            return error.data
+        }
+    }
 // TODO Remove account by username
 }
 
