@@ -1,0 +1,76 @@
+extends layout
+
+block head
+  link(rel='stylesheet', type='text/css', href='../CSS/profile.css')
+  title Ninja Profile
+
+block content
+  .container.p-5
+    form(method='POST', action='/accounts/addAccount' id='signUpForm')
+      fieldset
+        legend='Profile Information'
+        .row
+          .col-sm-6
+            .input-group.mb-3
+            .input-group-prepend
+              span.input-group-text Name 
+            input.form-control(id='name' name='name' type='text' placeholder='Name' required)
+          .col-sm-6
+            .input-group.mb-3
+            .input-group-prepend
+              span.input-group-text.mb-2 Gender
+            label.mx-2 #[input(id='gender' type='radio' name='gender' value='male' checked)] Male
+            label.mx-2 #[input(id='gender' type='radio' name='gender' value='female' )] Female
+            label.mx-2 #[input(id='gender' type='radio' name='gender' value='other' )] Other
+        .row.mt-2.mb-4
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text Date of birth
+          .col-sm-6.mt-2   
+              - var days = 0;
+              select.mx-1(name = 'day' )
+                while days < 31
+                  option(id=days++ value=days) #{days}
+              span='/'
+              - var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+              select.mx-1(name = 'month' )
+                each month in months
+                  option(value=month) #{month}
+              span='/'
+              - var years = 2018
+              select.mx-1(name = 'year' ) 
+                while years > 1950
+                  option(id = years-- value = years) #{years}  
+        legend='Address Information'
+        .row.mt-3
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text Address
+            input.form-control.mb-3(id='address' type='text' name='address' style={width:'100%'} required)
+            .input-group-prepend
+              span.input-group-text Province
+            div
+              input.form-control(id='province' type='text' name='province' style={width:'100%'} required)
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text District
+            input.form-control.mb-3(id='distinct' type='text' name='district' style={width:'100%'} )
+            .input-group-prepend
+              span.input-group-text Zip code
+            input.form-control(id='zip' type='text' name='zipCode' style={width:'100%'} required)
+        .row.mt-3
+          .col-sm-6
+            .input-group-prepend
+              span.input-group-text Telephone
+            input.form-control(id='telephone' type='text' name='telephone' style={width:'100%'} required)
+    
+        input.mt-5.btn.btn-success(id='edit' type='submit', value='Edit')
+        input.mt-5.btn.btn-danger(id='cancel' type='submit' value='Cancel')
+
+
+  script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js")
+  script(src="http://malsup.github.com/jquery.form.js")
+  script(src="index.js")
+  block foot
+  script(src='../script/profile.js')
+

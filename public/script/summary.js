@@ -1,38 +1,6 @@
 $( () => {
 
-  let exampleCart = [
-    { productID: '4JbTehkukn42UPXr0H9c',
-      productName: 'Red_label (1.0 Liter)',
-      quantity: '1',
-      productPrice: 899 },
-    { productID: '65ROqAYqoDhHx0YYA6iX',
-      productName: 'Singha',
-      quantity: '1',
-      productPrice: 36 },
-    { productPrice: 35,
-      productID: 'K0wrg0WgKIzZYCqSrkqg',
-      productName: 'Leo',
-      quantity: 3 }
-  ];
 
-  let exampleAppointment = {
-    name: "Varit",
-    surname: "Assavavisidchai",
-    birthday: "1-Jan-1998",
-    sex: "Male",
-    address: "Bangkok",
-    distrinct: "Bangkok",
-    province: "Bangkok",
-    zipCode: "10190",
-    telephone: "0918548372"
-  };
-
-  let exampleCreditcard = {
-    cardHolderName: "Varit Assavavisidchai",
-    creditCardNumber: "1234-5678-9012-3456",
-    expirationDate: "12/2020",
-    cardSecurityCode: "5833"
-  };
 
   let styleHeadColumnCart = "style=\"height: 50px; width: 100%;\"";
 
@@ -73,36 +41,6 @@ $( () => {
     </div>
     `);
 
-  // Set the detail of each row
-  for(let i = 0 ; i < exampleCart.length ; i++) {
-    let item = exampleCart[i];
-    let cost = item.quantity * item.productPrice;
-    $('.pictureColumn').append(`
-      <div>
-        <img src="/pictures/${item.productID}_${item.productName}.jpg">
-      </div>
-      `);
-    $('.productNameColumn').append(`
-      <div>
-        <p id="nameSenc">${item.productName}</p>
-      </div>
-      `);
-    $('.productQuantityColumn').append(`
-      <div>
-        <p id="quantitySenc">${item.quantity}</p>
-      </div>
-      `);
-    $('.productUnitPriceColumn').append(`
-      <div>
-        <p id="unitPriceSenc">${item.productPrice}</p>
-      </div>
-      `);
-    $('.productTotalPriceColumn').append(`
-      <div>
-        <p id="totalCostSenc">${cost}</p>
-      </div>
-      `);
-  }
 
   $('.summaryPersonal').html(`
     <p>Personal</p>

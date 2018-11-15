@@ -110,6 +110,11 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
+//profile
+app.get("/profile", function(req, res) {
+  res.render("profile");
+})
+
 app.use(require('./routes/products'))
 
 app.use('/accounts', require('./routes/accounts'))
@@ -125,6 +130,8 @@ app.use('/mypayment',require('./routes/payment'))
 app.use('/summary',require('./routes/summary'))
 
 app.use('/completeTransaction',require('./routes/completeTransaction'))
+
+app.use('/search',require('./routes/search'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')

@@ -31,6 +31,12 @@ $(() => {
     window.location = '/mycart/' + $('#userNavBarUsername').text();
   });
 
+  // Go to profile page by pressing the user icon.
+  $('#userNavBarUserIcon').on('click', () => {
+    // window.location = '/mycart/' + $('#userNavBarUsername').text();
+    window.location = '/profile';
+  });
+
   $('.loadingClicked').on('click', function () {
     $(".fadeTo").fadeTo("fast", 0.5);
     $('.loading').css({
@@ -39,5 +45,29 @@ $(() => {
     })
   })
 
-
-});
+  $('#searchbutton').on('click', () => {
+    const productName = $('#searchinput').val()
+    $(".fadeTo").fadeTo("fast", 0.5);
+    $('.loading').css({
+        'display': 'block',
+        'z-index': '11',
+    })
+      $.ajax({
+      url: '/search/',
+      data:{
+          'productName':productName
+        },
+  type: 'POST',
+  success: function(data) {
+      if(data.return_code === '400'){
+         console.log('error')
+      }else{
+         window.location="/search/"
+      }
+  },
+  error: function(error){
+      console.log(error)
+  }
+})
+  })
+})
