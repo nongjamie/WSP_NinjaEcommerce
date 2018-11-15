@@ -31,6 +31,12 @@ $(() => {
     window.location = '/mycart/' + $('#userNavBarUsername').text();
   });
 
+  // Go to profile page by pressing the user icon.
+  $('#userNavBarUserIcon').on('click', () => {
+    // window.location = '/mycart/' + $('#userNavBarUsername').text();
+    window.location = '/profile';
+  });
+
   $('.loadingClicked').on('click', function () {
     $(".fadeTo").fadeTo("fast", 0.5);
     $('.loading').css({
