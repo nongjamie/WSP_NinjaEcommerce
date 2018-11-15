@@ -6,41 +6,40 @@ block head
 
 block content
   
-  div(class="container" id="statusContent")
+  div(class="container-fluid" id="statusContent")
     
     //- Welcome sentence
-    div(class="container")
+    div(class="container-fluid")
       div(class="row justify-content-md-center")
         div(class="col-sm-11")
             div(class="status-welcome-sentence")
               | CHECK STATUS
               
     //- Input form
-    div(class="container")
+    div(class="container-fluid")
       div(class="row justify-content-md-center")
-        div(class="col-sm-6")
-          div(class="input-group mb-3" id="status-inputform")
-            div(class="input-group-prepend")
-              span(class="input-group-text")
-                | Order number
-            input(type="text" id='idOrder' class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default")
+        div(class="input-group mb-3" id="status-inputform")
+          div(class="input-group-prepend")
+            span(class="input-group-text")
+              | Order number
+          input(type="text" id='idOrder' class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default")
     
     //- Order number displays
-    div.container
+    div.container-fluid
       div.row.justify-content-md-center
         div.col-sm-6
           div.orderNumberDisplay
             | Please enter your order number.
     
     //- Progess bar
-    div(class="container")
+    div(class="container-fluid")
       div(class="row justify-content-md-center")
         div(class="col-sm-6")
           div(class="progress" id="status-progessbar")
             div(class="progress-bar progress-bar-striped progress-bar-animated bg-danger" id="statusProgessbarResult" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 10%")
     
     //- Table result
-    div(class="container")
+    div(class="container-fluid")
       div(class="row justify-content-md-center")
         div(class="col-sm-11")
           table(class="table" id="status-table")
@@ -54,7 +53,7 @@ block content
             tbody(id="statusTableItem")
     
     //- Remind sentence
-    div(class="container")
+    div(class="container-fluid")
       div(class="row justify-content-md-center")
         div(class="col-sm-11")
           div(class="status-remind-sentence")
