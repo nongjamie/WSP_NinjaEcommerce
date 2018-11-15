@@ -3,7 +3,6 @@
 }
 
 #statusContent {
-  background-color: rgb(255, 255, 195);
   margin-top: 20px;
 }
 
@@ -16,6 +15,7 @@
 
 #status-inputform {
   padding: 10px 0px;
+  width: 50%;
 }
 
 .orderNumberDisplay {
@@ -50,4 +50,12 @@
   font-weight: bolder;
   font-size: 23px;
   padding: 20px 0px;
+}
+
+@media screen and (max-width: 900px) {
+
+  #status-inputform {
+    width: 90%;
+  }
+
 }
