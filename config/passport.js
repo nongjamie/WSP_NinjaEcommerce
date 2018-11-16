@@ -12,6 +12,7 @@ module.exports = function (passport) {
                 return done(null, result.account)
             } else {
                 const result2 =  await accout.login({ username: username, password: password })
+                console.log(result2)
                 if (result2.return_code === '200') {
                     return done(null, result2.account)
                 } else {

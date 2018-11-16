@@ -14,7 +14,8 @@ block content
             .input-group.mb-3
             .input-group-prepend
               span.input-group-text Name 
-            input.form-control(id='name' name='name' type='text' placeholder='Name' required)
+            input.form-control(id='name' type='text' placeholder='Name' required) 
+            |#{customer.name} 
           .col-sm-6
             .input-group.mb-3
             .input-group-prepend
@@ -68,9 +69,6 @@ block content
         input.mt-5.btn.btn-danger(id='cancel' type='submit' value='Cancel')
 
 
-  script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js")
-  script(src="http://malsup.github.com/jquery.form.js")
-  script(src="index.js")
   block foot
   script(src='../script/profile.js')
 

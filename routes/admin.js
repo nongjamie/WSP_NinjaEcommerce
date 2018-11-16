@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Account = require('../class/account')
 const Feedback = require('../class/feedback')
+const passport = require('passport')
 
 const account = new Account()
 const feedback = new Feedback()
@@ -43,5 +44,14 @@ router.get('/admin/feedbacks', async(req, res) => {
                 feedbacks : result.feedbacks
         })
 })
+
+router.post('/login', 
+passport.authenticate('local', {
+    successRedirect:'/admin',
+    failureRedirect:'/login',
+    failureFlash:true,
+    successFlash:'Success Admin'
+})
+)
 
 module.exports = router
