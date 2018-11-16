@@ -1,176 +1,84 @@
-/* For checking the element */
 * {
   /* border: 2px solid green; */
 }
 
 .container {
-  background-color: rgb(255, 255, 195);
-  margin-top: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* History */
-
-.history-welcome-sentence {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-}
-
-#box-1 {
-  margin: 10px;
-  border: 2px;
-  border-style: solid;
-  border-color: black;
-}
-
-.box-1-sentence {
-  font-size: 20px;
-  color: black;
-}
-
-.box-1-sentence-topic {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.box-1-sentence-detail {
-  text-indent: 10%;
-  padding: 5px 0;
-}
-
-.box-1-picture {
-  margin-top: 10px;
-}
-
-.box-1-picture img {
-  width: 100%;
-  height: 100%;
-  max-width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-#box-2 {
-  margin: 10px;
-  border: 2px;
-  border-style: solid;
-  border-color: red;
-}
-
-.box-2-sentence {
-  font-size: 20px;
-  color: red;
-}
-
-.box-2-sentence-topic {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.box-2-sentence-detail {
-  text-indent: 10%;
-  padding: 5px 0;
-}
-
-.box-2-picture {
-  margin-top: 10px;
-}
-
-.box-2-picture img {
-  width: 100%;
-  height: 100%;
-  max-width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-#box-3 {
-  margin: 10px;
-  border: 2px;
-  border-style: solid;
-  border-color: green;
-}
-
-.box-3-sentence {
-  font-size: 20px;
-  color: green;
-}
-
-.box-3-sentence-topic {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.box-3-sentence-detail-1 {
-  text-indent: 10%;
-  padding: 5px 0;
-}
-
-.box-3-sentence-detail-2 {
-  text-indent: 10%;
-  padding: 5px 0;
-}
-
-.box-3-sentence-detail-2-keyword {
-  font-weight: bold;
-}
-
-.box-3-picture {
-  margin-top: 10px;
-}
-
-.box-3-picture img {
-  width: 100%;
-  height: 100%;
-  max-width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-.setcenter {
-  height: 100px;
-  width: 500px;
-}
-
-/* Contact */
-
-.contactWelcomeSentence {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-}
-
-#contactBox1 {
-  margin: 10px;
-}
-
-.contactBoxPicture {
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.contactBoxPicture img {
-  width: 100%;
-  height: 100%;
-  max-width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+.historyTopic {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 
-.contactBoxSentence {
+.contactTopic {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pictureCol {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.infoCol {
+  width: 70%;
+}
+
+.question {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.answer {
+  font-size: 23px;
+  padding: 10px;
+  text-indent: 2em;
+}
+
+.historySection .row {
+  margin: 10px 0px;
+  padding: 10px 0px;
+  border: 2px solid black;
+  border-radius: 2em;
+}
+
+.contactSection .row {
+  margin: 10px 0px;
+  border: 2px solid black;
+  border-radius: 2em;
+}
+
+.contactPart {
+  display: flex;
+  justify-content: center;
+}
+
+.contactPictureCol {
+  width: 50%;
+  text-align: right;
+  padding-right: 5%;
+}
+
+.contactInfoCol {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
   font-size: 20px;
-  color: black;
-  padding-left: 5%;
+  padding-top: 1%;
 }
