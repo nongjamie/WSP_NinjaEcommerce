@@ -1,45 +1,67 @@
-$( () => {
+$(() => {
 
   // Initial setup in cart, personal, address, payment section.
   initialSetUp();
 
   // Cofirm button clicked.
-  $('#yesButton').click( () => {
+  $('#yesButton').click(() => {
     const username = $('#userNavBarUsername').text()
-    console.log('Go to summary page.');
-    window.location = "http://localhost:3000/completeTransaction/"+username;
+    $('.loading').css({
+      'display': 'block',
+      'z-index': '999 !important',
+    })
+
+    console.log('summary.js ok button clicked !!!!!!!')
+    $.ajax({
+      url: '/completeTransaction/' + username,
+      data: {
+        'username': username,
+      },
+      type: 'GET',
+      success: function (data) {
+        if (data.return_code === '400') {
+          console.log('error')
+        } else {
+          console.log('summary.js responsed !!!!!!!!')
+          window.location.href = '/completeTransaction/order/' + data
+        }
+      },
+      error: function (error) {
+        console.log('error check out')
+      }
+    })
   });
 
   // Cancel button clicked then go to whisky page.
-  $('#cancelButton').click( () => {
+  $('#cancelButton').click(() => {
     const username = $('#userNavBarUsername').text()
     console.log('Cancel the payment, go back to payment page.');
-    window.location = "http://localhost:3000/mypayment/"+username;
+    window.location = "/mypayment/" + username;
   });
 
   // $('#confirm').on('click', function(e){
   //     const username = $('#userNavBarUsername').text()
-  //     $.ajax({
-  //         url: '/summary/'+username,
-  //         data:{
-  //             'username': username,
-  //         },
-  //         type: 'POST',
-  //         success: function(data) {
-  //             if(data.return_code === '400'){
-  //                 console.log('error')
-  //             }else{
-  //                 alert('success checkout');
-  //                 window.location='http://localhost:3000/'
-  //             }
-  //         },
-  //         error: function(error){
-  //             console.log('error check out')
+  // $.ajax({
+  //     url: '/summary/'+username,
+  //     data:{
+  //         'username': username,
+  //     },
+  //     type: 'POST',
+  //     success: function(data) {
+  //         if(data.return_code === '400'){
+  //             console.log('error')
+  //         }else{
+  //             alert('success checkout');
+  //             window.location='http://localhost:3000/'
   //         }
-  //     })
+  //     },
+  //     error: function(error){
+  //         console.log('error check out')
+  //     }
+  // })
   // });
 
-} );
+});
 
 function initialSetUp() {
 
@@ -72,7 +94,7 @@ function initialSetUp() {
       detail: "TotalCost"
     }
   ];
-  for(let j = 0 ; j <  ; j++ ) {
+  for (let j = 0; j < 0; j++) {
     $(headOfRow[j].class).append(`
       <div style="height: 50px; width: 100%;">
         <p id=${headOfRow[j].id} style="font-weight:bold;">
@@ -86,9 +108,9 @@ function initialSetUp() {
 
   // Personal initial setup
 
-  let personal = [ "Name", "Surname", "Birthday", "Sex" ];
+  let personal = ["Name", "Surname", "Birthday", "Sex"];
   let personalCode = '<p>Personal</p>';
-  for(let i = 0 ; i < personal.length ; i++) {
+  for (let i = 0; i < personal.length; i++) {
     personalCode = personalCode + `
     <div class="input-group mb-3">
       <div class="input-group-prepend">
@@ -103,9 +125,9 @@ function initialSetUp() {
 
   // Address initial setup
 
-  let address = [ "Address", "Distrinct", "Province", "ZipCode", "Telephone" ];
+  let address = ["Address", "Distrinct", "Province", "ZipCode", "Telephone"];
   let addressCode = '<p>Address</p>';
-  for(let i = 0 ; i < address.length ; i++) {
+  for (let i = 0; i < address.length; i++) {
     addressCode = addressCode + `
     <div class="input-group mb-3">
       <div class="input-group-prepend">
@@ -139,7 +161,7 @@ function initialSetUp() {
     },
   ];
   let paymentCode = '<p>Payment</p>';
-  for(let i = 0 ; i < payment.length ; i++) {
+  for (let i = 0; i < payment.length; i++) {
     paymentCode = paymentCode + `
     <div class="input-group mb-3">
       <div class="input-group-prepend">
