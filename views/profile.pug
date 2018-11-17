@@ -40,16 +40,22 @@ block content
               - var daysArr = bday.split("/")
               select.mx-1(name = 'day' )
                 while days < 31
+                  if days==daysArr[0]
+                    option(id=days value=days selected) #{days}
                   option(id=days++ value=days) #{days}
               span='/'
               - var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
               select.mx-1(name = 'month' )
                 each month in months
+                  if month==daysArr[1]
+                    option(id=days++ value=month selected) #{month}
                   option(value=month) #{month}
               span='/'
               - var years = 2018
               select.mx-1(name = 'year' ) 
                 while years > 1950
+                  if years==daysArr[2]
+                    option(id=days++ value=years selected) #{years}
                   option(id = years-- value = years) #{years}  
         legend='Address Information'
         .row.mt-3

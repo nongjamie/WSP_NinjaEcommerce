@@ -21,7 +21,6 @@ $(() => {
             const zipcode = $('#zip').val()
             const telephone = $('#telephone').val()
             const customerID = $('#edit').val()
-            console.log(district)
               $(".fadeTo").fadeTo("fast", 0.5);
               $('.loading').css({
                   'display': 'block',
