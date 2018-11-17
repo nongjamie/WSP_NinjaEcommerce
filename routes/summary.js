@@ -6,13 +6,12 @@ const account = new Account()
 const cart = new Cart()
 
 router.get('/:username', async (req, res) => {
-    if (res.locals.user.username !== req.params.username || !res.locals.user) {
+    if (!res.locals.user || res.locals.user.username !== req.params.username) {
         console.log('wrong username or null')
         res.redirect('/')
     } else {
         const cartResult = await cart.getUserCart(req.params.username)
         const accResult = await account.getAccountBy(req.params.username)
-        // waiting for address
         res.render("summary", {
             products: cartResult.cart,
             account: accResult.account,
