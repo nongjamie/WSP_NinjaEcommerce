@@ -1,9 +1,5 @@
-console.log("profile.js")
-
-// document.getElementById('edit').
 
 $(() => {
-    // if('#name' != document.getElementById('name').value) {
         $("#name").on({
             keypress: function(){
                 $(this).css("background-color", "lightgray");
@@ -19,5 +15,4 @@ $(() => {
         console.log("cancel");
     })
     
-    // }
 });
