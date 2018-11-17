@@ -63,19 +63,19 @@ class Account {
         }
     }
     async getAccountBy(username){
-        console.log('dasdad')
-           console.log(username)
+       // console.log('dasdad')
+       //    console.log(username)
        try { 
            const response = await axios.post(URL.getAccountByUsername,{},{
                 headers:{
                     'username': username
                 }
             })
-            console.log("response")
-            console.log(response.data)
+          //  console.log("response")
+           // console.log(response.data)
             return response.data
         }catch(error){
-            console.log('error')
+          //  console.log('error')
             return error.data
         }
     }
