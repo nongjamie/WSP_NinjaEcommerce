@@ -45,13 +45,13 @@ router.get('/admin/feedbacks', async(req, res) => {
         })
 })
 
-router.post('/login', 
-passport.authenticate('local', {
-    successRedirect:'/admin',
-    failureRedirect:'/login',
-    failureFlash:true,
-    successFlash:'Success Admin'
-})
+router.post('/login',
+passport.authenticate('admin-local', {
+        successRedirect:'/admin',
+        failureRedirect:'/loginAdmin',
+        failureFlash:true,
+        successFlash:'Success Admin'
+    })
 )
 
 module.exports = router

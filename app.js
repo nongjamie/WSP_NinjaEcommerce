@@ -35,7 +35,8 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
-
+  console.log('sssssssssssssss')
+  console.log(req.user)
   res.locals.user = req.user || null;
   next();
 })
@@ -95,6 +96,12 @@ app.get("/login", function(req, res) {
     menu: 'login'
   })
 })
+//log in admin
+app.get("/loginAdmin", function(req, res) {
+  res.render("loginAdmin", {
+    menu: 'loginAdmin'
+  })
+})
 
 //Logout
 app.get("/logout",function(req,res){
@@ -130,6 +137,8 @@ app.use('/completeTransaction',require('./routes/completeTransaction'))
 app.use('/search',require('./routes/search'))
 
 app.use('/profile',require('./routes/profile'))
+
+app.use('/admin',require('./routes/admin'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')
