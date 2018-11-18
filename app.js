@@ -35,7 +35,8 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
-  console.log(res.locals)
+  console.log('sssssssssssssss')
+  console.log(req.user)
   res.locals.user = req.user || null;
   next();
 })
