@@ -12,3 +12,8 @@ block content
             hr
             div.m-3 
               a.myCard(href='/admin/user/'+user.username) #{user.email}
+            div.m-3 
+              button.mt-5.btn.btn-danger(value= user.username) Delete
+
+
+  script(src='../script/removeUser.js')

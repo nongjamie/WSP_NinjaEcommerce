@@ -9,8 +9,6 @@ const feedback = new Feedback()
 
         //TODO check user.isAdmin waiting for isAdmin feild
 router.get('/admin', async (req, res) => {
-        const user = res.locals.user
-        console.log(user)
         // if user is an admin 
         const accounts = await account.getAccountList()
         res.render('admin-all-user', {
@@ -43,6 +41,13 @@ router.get('/admin/feedbacks', async(req, res) => {
         res.render('admin-feedbacks', {
                 feedbacks : result.feedbacks
         })
+})
+
+router.post('/removeUser',async(req,res)=>{
+        const username=req.body.username
+        console.log(username)
+        const result = await account.remove(username)
+        res.send('success')
 })
 
 router.post('/login',
