@@ -34,7 +34,7 @@ $(() => {
   // Go to profile page by pressing the user icon.
   $('#userNavBarUserIcon').on('click', () => {
     // window.location = '/mycart/' + $('#userNavBarUsername').text();
-    window.location = '/profile';
+    window.location = '/profile/';
   });
 
   $('.loadingClicked').on('click', function () {
@@ -47,11 +47,13 @@ $(() => {
 
   $('#searchbutton').on('click', () => {
     const productName = $('#searchinput').val()
-    $(".fadeTo").fadeTo("fast", 0.5);
-    $('.loading').css({
-        'display': 'block',
-        'z-index': '11',
-    })
+    if(productName === ""){
+    }else{
+      $(".fadeTo").fadeTo("fast", 0.5);
+      $('.loading').css({
+          'display': 'block',
+          'z-index': '11',
+      })
       $.ajax({
       url: '/search/',
       data:{
@@ -63,6 +65,33 @@ $(() => {
          console.log('error')
       }else{
          window.location="/search/"
+      }
+  },
+  error: function(error){
+      console.log(error)
+  }
+})
+}
+  })
+
+  $('#userNavBarUserIcon').on('click', () => {
+    const username = $('#userNavBarUsername').val()
+      $(".fadeTo").fadeTo("fast", 0.5);
+      $('.loading').css({
+          'display': 'block',
+          'z-index': '11',
+      })
+      $.ajax({
+      url: '/profile/',
+      data:{
+          'username':username
+        },
+  type: 'POST',
+  success: function(data) {
+      if(data.return_code === '400'){
+         console.log('error')
+      }else{
+         window.location="/profile/"
       }
   },
   error: function(error){

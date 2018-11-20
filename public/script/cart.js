@@ -5,6 +5,10 @@ $( () => {
   $('#yesButton').click( () => {
     console.log('Go to appointment page.');
     const username = $('#userNavBarUsername').text()
+    $('.loading').css({
+        'display': 'block',
+        'z-index': '11',
+      })
     window.location = "http://localhost:3000/myappointment/"+username;
   });
 

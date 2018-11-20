@@ -154,6 +154,30 @@ $( () => {
     onAuthorize: function(data, actions) {
       return actions.payment.execute().then(function() {
         // Show a confirmation message to the buyer
+        const username = $('#userNavBarUsername').text()
+        $('.loading').css({
+          'display': 'block',
+          'z-index': '999 !important',
+        })
+        console.log('summary.js ok button clicked !!!!!!!')
+        $.ajax({
+          url: '/completeTransaction/' + username,
+          data: {
+            'username': username,
+          },
+          type: 'GET',
+          success: function (data) {
+            if (data.return_code === '400') {
+              console.log('error')
+            } else {
+              console.log('summary.js responsed !!!!!!!!')
+              window.location.href = '/completeTransaction/order/' + data
+            }
+          },
+          error: function (error) {
+            console.log('error check out')
+          }
+        })
         window.alert('Thank you for your purchase!');
       });
     }
