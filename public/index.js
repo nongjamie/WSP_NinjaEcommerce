@@ -50,10 +50,16 @@ $(function () {
     function showResponse(responseText, statusText, xhr, $form)  { 
         if(statusText === 'success'){
             console.log('Redirecting to /login ...')
-            alert('Sign up complete!!')
-            window.location.pathname = '/login'
+            swal("Good job!", "Complete sign up", "success")
+            .then(e => {
+                $('.loading').css({
+                    'display': 'block',
+                    'z-index': '99',
+                })
+                window.location.pathname = '/login'
+            })
         }else{
-            alert('Response error')
+            swal('Response error')
         }
     }
 
@@ -108,9 +114,8 @@ $(function () {
         });
     })
 
-    $('#test').on('click', () => {
-        const test = window.localStorage
-        console.log(test)
+    $('.test').on('click', () => {
+        console.log('hello world')
     })
         
     $('#alertmessage').delay(500).fadeIn('normal', function() {

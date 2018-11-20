@@ -7,120 +7,122 @@ html
     link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css", integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO", crossorigin="anonymous")
     link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
     link(href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet")
-    link(rel='stylesheet', type='text/css', href='../CSS/layout.css')
-    link(rel="stylesheet" href="../CSS/animate.css")
+    link(rel='stylesheet', type='text/css', href='/CSS/layout.css')
+    link(rel="stylesheet" href="/CSS/animate.css")
+    script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js")
+
 
     block head
 
   body
 
-    // Header section
+    //- Logo header section
     div.container-fluid
       div.headerSection
         div(class="row" id='most-header')
           .col-6.col-md-4
             a(href='/')
               center
-                img.logo(src='../pictures/logo_onweb.png' href="/")
-          .col-6.col-md-4
+                img.loadingClicked.logo(src='/pictures/logo_onweb.png' href="/")
+          .col-sm-4
             p.mx-2 NinjaEcommerce
             div(class="input-group mb-3")
-                  input(type="text" class="form-control" placeholder="Enter your favourite drink" aria-label="Enter your e-mail" aria-describedby="basic-addon2")
+                  input(type="text" class="form-control" id="searchinput" placeholder="Enter your favourite drink"  aria-describedby="basic-addon2")
                   div(class="input-group-append")
-                    button(class="btn btn-secondary" type="button") Search
+                    button(class="btn btn-secondary" type="button" id='searchbutton') Search
+          .col-sm-4
 
-    // Nav bar section
+    //- Nav bar section
     div.container-fluid.navBar
       nav(class="navbar navbar-expand-lg  navbar-light")
-        a(class="nav-link" id="whiteLetter" href="/") HOME
+        a(class="nav-link loadingClicked" id="whiteLetter" href="/") HOME
         div(class="nav-item active")
-          a(class="nav-link" id="whiteLetter" href="/promotion") PROMOTION
+          a(class="nav-link loadingClicked" id="whiteLetter" href="/promotion") PROMOTION
         div(class="nav-item dropdown")
           a(class="nav-link dropdown-toggle" href="#" id="whiteLetter"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") STORE
           div(class="dropdown-menu" aria-labelledby="navbarDropdown")
-            a(class="dropdown-item whiskyChoice" id="whiteLetter") Whisky
-            a(class="dropdown-item beerChoice" id="whiteLetter") Beer
-            a(class="dropdown-item wineChoice" id="whiteLetter") Wine
-            a(class="dropdown-item mixerChoice" id="whiteLetter") Mixer
+            a(class="dropdown-item loadingClicked whiskyChoice" id="whiteLetter") Whisky
+            a(class="dropdown-item loadingClicked beerChoice" id="whiteLetter") Beer
+            a(class="dropdown-item loadingClicked wineChoice" id="whiteLetter") Wine
+            a(class="dropdown-item loadingClicked mixerChoice" id="whiteLetter") Mixer
         button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
           span(class="navbar-toggler-icon")
         div(class="collapse navbar-collapse" id="navbarNav")
           div(id="menuNavBar" class="navbar-nav")
             li(class="nav-item")
-              a(class='nav-link' id="whiteLetter" href="/status") STATUS
+              a(class='nav-link loadingClicked' id="whiteLetter" href="/status") STATUS
             li(class="nav-item")
-              a(class='nav-link' id="whiteLetter" href="/aboutUs") ABOUTUS
+              a(class='nav-link loadingClicked' id="whiteLetter" href="/aboutUs") ABOUTUS
             if user
               li(class="nav-item")
-                a(class='nav-link' id="whiteLetter" href="/logout") Logout
+                a(class='nav-link loadingClicked' id="whiteLetter" href="/logout") Logout
               li(class='nav-item')
-                a(class='nav-link' id="whiteLetter" href=`/mycart/`+user.username) Mycart
+                a(class='nav-link loadingClicked' id="whiteLetter" href=`/mycart/`+user.username) Mycart
             else
               li(class="nav-item")
-                a(class='nav-link' id="whiteLetter" href="/signup") SIGN UP
+                a(class='nav-link loadingClicked' id="whiteLetter" href="/signup") SIGN UP
               li(class="nav-item")
-                a(class='nav-link' id="whiteLetter" href="/login") LOG IN
+                a(class='nav-link loadingClicked' id="whiteLetter" href="/login") LOG IN
+              li(class="nav-item")
+                a(class='nav-link loadingClicked' id="whiteLetter" href="/loginAdmin") LOG IN Admin
 
-    // User nav bar section
-    div(class="container-fluid" id='userNavBar')
-      div.row.align-items-center
-        div.userNavBarSentenceSection
-          div(class='row justify-content-center')
-            span(id="userNavBarSentence")
-              if user
+    //- User nav bar section
+    if user
+      div(class="container-fluid" id='userNavBar')
+        div.row.align-items-center
+          div.userNavBarSentenceSection
+            div(class='row justify-content-center')
+              span(id="userNavBarSentence")
                 | Welcome #{user.username}
-              else
-                | Welcome anonymous !
-        div.userNavBarStatusSection
-          div(class='row justify-content-center')
+          div.userNavBarStatusSection
+            div(class='row justify-content-center')
+              i(class="far fa-user fa-10x" id='userNavBarUserIcon')
+              if user
+                button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' value=user.username disabled) #{user.username}
+              i(class="fas fa-shopping-cart loadingClicked" id='userNavBarCartIcon')
+              button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' disabled) 0
 
-            i(class="far fa-user fa-10x" id='userNavBarUserIcon')
-            if user
-              button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' value=user.username disabled) #{user.username}
-            else
-              button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' disabled) None
-            i(class="fas fa-shopping-cart" id='userNavBarCartIcon')
-            button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' disabled) 0
-            button(type="button" class="btn btn-danger" id='userNavBarConfirm') MY CART
-
-    // Body section
-    link(rel='stylesheet', type='style/css', href='../CSS/style.css')
+    //- Body section
+    link(rel='stylesheet', type='style/css', href='/CSS/style.css')
     != messages('message', locals)
     block content
 
-    // Footer section
+    //- Footer section
     div(id="footer-section", class="container-fluid")
       div(class="row")
         div(id="footer-company-name-background", class="col-sm-12")
           //- span.mx-2(id="footer-company-name") NINJA ECOMMERCE
           div(class="row")
-            div(class="col-sm-4")
+            //- div(class="col-sm-4")
+            div(class="footerEachPart")
               b.mx-5(id="footer-font") CONTACT US
               .mx-3
                 p 90/9 Sathorn Thani Building 1, 6FL.  North Sathorn Road  Silom,
                 p Bangrak, Bangkok 10500 Thailand.
                 p Tel: (+66) 02-XXX-XXXX
                 p Email: sathira.k@ku.th
-            div(class="col-sm-4")
+            //- div(class="col-sm-4")
+            div(class="footerEachPart")
               //- center
               //-   img.logo(src='../pictures/logo_onweb.png')
               b.mx-2(id="footer-font") NEWSLETTER
                 div(class="input-group mb-3")
-                  input(type="text" class="form-control" placeholder="Enter your e-mail" aria-label="Enter your e-mail" aria-describedby="basic-addon2")
+                  input(id="newsLetterInput" type="text" class="form-control" placeholder="Enter your e-mail" aria-label="Enter your e-mail" aria-describedby="basic-addon2")
                   div(class="input-group-append")
                     button(class="btn btn-secondary" type="button") Submit
               center
                 iframe(src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2F%25E0%25B8%25AA%25E0%25B8%25A7%25E0%25B8%25B1%25E0%25B8%25AA%25E0%25B8%2594%25E0%25B8%25B5%25E0%25B8%259C%25E0%25B8%25A1%25E0%25B8%258A%25E0%25B8%25B7%25E0%25B9%2588%25E0%25B8%25AD%25E0%25B8%2595%25E0%25B9%2589%25E0%25B8%2599-716682038690707%2F&tabs=message&width=340&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media")
-            div(class="col-sm-4")
-              b.mx-5(id="footer-font") ABOUT US
-              p.mx-3 It is the best ecommerce website that ever had in this century. We promise that our services will fast, safe, inexpensive, secretly, good quality, reliable, and silently sent like a ninja.
-              b.mx-5(id="footer-font") Payment
+            //- div(class="col-sm-4")
+            div(class="footerEachPart")
+              b(id="footer-font") ABOUT US
+              p It is the best ecommerce website that ever had in this century. We promise that our services will fast, safe, inexpensive, secretly, good quality, reliable, and silently sent like a ninja.
+              b(id="footer-font") Payment
                 p
-                img.fixsize2-logo(src="../pictures/master-logo.png")
-                img.fixsize2-logo(src="../pictures/scb-logo.png")
-                img.fixsize2-logo(src="../pictures/kbank-logo.png")
+                img.fixsize2-logo(src="/pictures/master-logo.png")
+                img.fixsize2-logo(src="/pictures/scb-logo.png")
+                img.fixsize2-logo(src="/pictures/kbank-logo.png")
 
-    // Footer section
+    //- Feedback section
     .feedbackSign
       label.mt-1.mx-2.animated.infinite.pulse.slow Feedback
     .feedback
@@ -135,14 +137,16 @@ html
             div.ml-4.mt-4
               button.btn.btn-danger.d-inline-block.mr-3.feedbackCancelButton(type='button') Cancel
               input.btn.btn-primary.d-inline-block.feedbackSummitButton(type='submit', value='Submit')
+    .loading
+      img.imgLoading(src="/pictures/loading.gif", alt="")
 
   script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
   script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
   script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
   script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js")
   script(src="http://malsup.github.com/jquery.form.js")
-  script(src="../script/layout.js")
-  script(src="../script/feedback.js")
+  script(src="/script/layout.js")
+  script(src="/script/feedback.js")
 
-  // Foot section
+  //- Foot section
   block foot

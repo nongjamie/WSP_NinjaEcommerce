@@ -1,0 +1,56 @@
+extends layout
+
+block head
+  
+    link(rel='stylesheet', type='text/css', href='../CSS/summary.css')
+    title Ninja Summary
+
+block content
+  
+  //- Summary section
+  div.summarySection
+    div.summaryTopicSentence
+      span Transaction Summary
+
+    div.summaryDetail
+      div.summaryCart
+        div.row
+          div.pictureColumn.width20
+          div.productNameColumn.width20
+          div.productQuantityColumn.width20
+          div.productUnitPriceColumn.width20
+          div.productTotalPriceColumn.width20
+      div.summary2
+        div.row
+          div.summaryPersonal
+          div.summaryPayment
+        div.row
+          div.summaryAppointment
+    
+  //- Button selection
+  div.buttonFinalSelection
+    div.row.justify-content-center
+      //- Confirm the payment, the modal plugin
+      button(type="button" class="btn btn-success" id='confirmCartButton' data-toggle="modal" data-target="#exampleModal")
+        | Confirm
+      div(class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+        div(class="modal-dialog" role="document")
+          div(class="modal-content")
+            div(class="modal-header")
+              h5(class="modal-title" id="exampleModalLabel") Ninja notes
+              button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                span(aria-hidden="true") &times;
+            div(class="modal-body")
+              p You have confirmed the transaction.
+              p Next , Your transaction will be complete
+              p And you will get the order number to check your delivery status.
+            div(class="modal-footer")
+              button(type="button" class="btn btn-secondary" data-dismiss="modal") No
+              button(type="button" class="btn btn-primary" id="yesButton") OK
+      //- Cancel button
+      button(type="button" class="btn btn-danger" id='cancelButton')
+        | Cancel
+
+block foot
+  
+  script(src='../script/summary.js')

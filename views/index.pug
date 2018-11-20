@@ -23,6 +23,7 @@ block content
   //-           div(class="col-lg-12")
   //-             img(src="../pictures/logo_onweb.png" class="img-responsive")
   
+  //- Video section
   div.welcomeVideo
     //- KongSKE
     //- Header 
@@ -103,17 +104,21 @@ block content
         //- carousel ending
 
   //- Best seller section
-  div(class="bestsellerWelcomeSentence")
-    | BEST SELLER
-  div(class="bestsellerBox")
-    table(class="table table-hover" id="bestsellerBoxTable")
-      thead
-        tr
-          th(scope="col") Rank
-          th(scope="col") Product Name
-          th(scope="col") Product Cost(฿)
-          th(scope="col") Description
-      tbody(id="bestsellerBoxTableItem")
+  div(class="bestsellerTopic hr")
+      span.hr-title
+        | &nbsp RECOMMEND &nbsp
+  div.row.bestSellerHead
+    .bestSellerHeadProduct.Width25Perc
+      | Product
+    .bestSellerHeadRank.Width25Perc
+      | Rank
+    .bestSellerHeadName.Width25Perc
+      | Name
+    .bestSellerHeadCost.Width25Perc
+      | Cost
+  div.bestSellerBody
+      
+  
 
 block foot
   script(src='./script/video.js')

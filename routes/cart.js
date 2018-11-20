@@ -4,10 +4,13 @@ const Cart = require('../class/cart')
 const cart = new Cart()
 
 router.get('/:username', async(req, res) => {
-    console.log('get cart  ')
+    if(res.locals.user.username !== req.params.username || !res.locals.user){
+        console.log('wrong username or null')
+        res.redirect('/')
+    }
+
     const username = req.params.username    
     const result = await cart.getUserCart(username)
-    console.log(result.cart)
     let total = result.cart.reduce((acc, cur) => 
         acc + (cur.quantity * cur.productPrice)
     ,0)
@@ -18,8 +21,12 @@ router.get('/:username', async(req, res) => {
     })
 })
 router.post('/:username',async(req,res)=>{
+    if(res.locals.user.username !== req.params.username || !res.locals.user){
+        console.log('wrong username or null')
+        res.status(403)
+    }
     const data = req.body 
-    cart.removeProductFromCart(data)
+     const result= await cart.removeProductFromCart(data)
     res.send('send success')
 })
 

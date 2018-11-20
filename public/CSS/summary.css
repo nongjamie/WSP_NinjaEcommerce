@@ -1,0 +1,192 @@
+* {
+  /* border: 1px solid green; */
+}
+
+/* ---------- Summary section ---------- */
+
+/* ----- Summary topic ----- */
+
+
+.summaryTopicSentence {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+/* ----- Summary cart ----- */
+
+.width20 {
+  width: 20%;
+}
+
+.summaryCart {
+  margin: 10px 0px;
+}
+
+.pictureColumn div {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.pictureColumn img {
+  height: 70%;
+  width: 50%;
+}
+
+.productNameColumn div {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.productQuantityColumn {
+  width: 20%;
+}
+
+.productQuantityColumn div {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.productUnitPriceColumn {
+  width: 20%;
+}
+
+.productUnitPriceColumn div {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+.productTotalPriceColumn {
+  width: 20%;
+}
+
+.productTotalPriceColumn div {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+}
+
+/* ----- Summary personal ----- */
+
+.summaryPersonal {
+  width: 50%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.summaryPersonal p {
+  font-weight: bold;
+}
+
+.summaryPersonal .input-group {
+  width: 100%;
+}
+
+.summaryPersonal .input-group-prepend {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+/* ----- Summary payment ----- */
+
+.summaryPayment {
+  width: 50%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.summaryPayment p {
+  font-weight: bold;
+}
+
+.summaryPayment .input-group {
+  width: 100%;
+}
+
+.summaryPayment .input-group-prepend {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+/* ----- Summary appointment ----- */
+
+.summaryAppointment {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.summaryAppointment p {
+  font-weight: bold;
+}
+
+.summaryAppointment .input-group {
+  width: 100%;
+}
+
+.summaryAppointment .input-group-prepend {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+/* Personal Payment Appointment full width */
+@media screen and (max-width: 1010px) {
+
+  .summaryPersonal {
+    width: 100%;
+  }
+
+  .summaryPayment {
+    width: 100%;
+  }
+
+  .summaryAppointment {
+    width: 100%;
+  }
+
+}
+
+/* Input field in Personal Payment Appointment full width */
+@media screen and (max-width: 500px) {
+
+  .summaryPersonal .input-group-prepend {
+    width: 95%;
+  }
+
+  .summaryPayment .input-group-prepend {
+    width: 95%;
+  }
+
+  .summaryAppointment .input-group-prepend {
+    width: 95%;
+  }
+
+}
+
+/* ---------- Button selection ---------- */
+
+.buttonFinalSelection {
+  margin-bottom: 10px;
+}
+
+#confirmCartButton {
+  font-size: 23px;
+  margin: 0px 30px 0px 0px;
+}
+
+#cancelButton {
+  font-size: 23px;
+  margin: 0px 0px 0px 30px;
+}

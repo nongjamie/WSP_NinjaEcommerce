@@ -6,59 +6,49 @@ block head
 
 block content
   
-  div(class="container" id="statusContent")
+  div(class="container-fluid statusContent")
     
-    //- Welcome sentence
-    div(class="container")
-      div(class="row justify-content-md-center")
-        div(class="col-sm-11")
-            div(class="status-welcome-sentence")
-              | CHECK STATUS
+    //- First sentence
+    div(class="container-fluid")
+      div(class="statusFirstSentence")
+        | CHECK STATUS
               
     //- Input form
-    div(class="container")
-      div(class="row justify-content-md-center")
-        div(class="col-sm-6")
-          div(class="input-group mb-3" id="status-inputform")
-            div(class="input-group-prepend")
-              span(class="input-group-text")
-                | Order number
-            input(type="text" id='idOrder' class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default")
+    div(class="container-fluid statusInputForm")
+      div(class="input-group mb-3")
+        div(class="input-group-prepend")
+          span(class="input-group-text")
+            | Order number
+        input(type="text" id='idOrder' class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default")
     
     //- Order number displays
-    div.container
-      div.row.justify-content-md-center
-        div.col-sm-6
-          div.orderNumberDisplay
-            | Please enter your order number.
+    div.container-fluid.statusOrderNumberDisplay
+        div.orderNumberDisplay
+          | Please enter your order number.
     
     //- Progess bar
-    div(class="container")
-      div(class="row justify-content-md-center")
-        div(class="col-sm-6")
-          div(class="progress" id="status-progessbar")
-            div(class="progress-bar progress-bar-striped progress-bar-animated bg-danger" id="statusProgessbarResult" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 10%")
+    div(class="container-fluid statusProgressbar")
+      div(class="progress")
+        div(class="progress-bar progress-bar-striped progress-bar-animated bg-danger" id="statusProgessbarResult" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 10%")
     
     //- Table result
-    div(class="container")
-      div(class="row justify-content-md-center")
-        div(class="col-sm-11")
-          table(class="table" id="status-table")
-            thead(class="statusTableHead")
-              tr
-                th(scope="col") No.
-                th(scope="col") Product
-                th(scope="col") Amount
-                th(scope="col") Cost(฿)
-                th(scope="col") Status
-            tbody(id="statusTableItem")
-    
+    div(class="container-fluid statusTableResult")
+      div.row
+        div.numberColHead.width20Percent.headStyle No.
+        div.productColHead.width20Percent.headStyle Product 
+        div.amountColHead.width20Percent.headStyle Amount
+        div.costColHead.width20Percent.headStyle Cost
+        div.statusColHead.width20Percent.headStyle Status
+      div.row
+        div.numberColBody.width20Percent
+        div.productColBody.width20Percent
+        div.amountColBody.width20Percent
+        div.costColBody.width20Percent
+        div.statusColBody.width20Percent
     //- Remind sentence
-    div(class="container")
-      div(class="row justify-content-md-center")
-        div(class="col-sm-11")
-          div(class="status-remind-sentence")
-            | ** If you have any question, don't be hesitate to contact us. **
+    div(class="container-fluid statusRemindSentence")
+      div(class="remindSentence")
+        | ** If you have any question, don't be hesitate to contact us. **
 
 block foot
               

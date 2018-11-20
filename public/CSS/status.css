@@ -2,52 +2,161 @@
   /* border: 2px solid green; */
 }
 
-#statusContent {
-  background-color: rgb(255, 255, 195);
+/* ---------- Big container ---------- */
+
+.statusContent {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.status-welcome-sentence {
+/* ----- First sentence ----- */
+
+.statusFirstSentence {
   text-align: center;
   font-weight: bold;
   font-size: 30px;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
-#status-inputform {
-  padding: 10px 0px;
+/* ----- Input form ----- */
+
+.statusInputForm{
+  display: flex;
+  justify-content: center;
+}
+
+.input-group {
+  width: 50%;
+  margin-top: 5px;
+}
+
+/* ----- Order number display ----- */
+
+.statusOrderNumberDisplay {
+  display: flex;
+  justify-content: center;
 }
 
 .orderNumberDisplay {
-  background-color: rgb(255, 255, 123);
-  color: black;
+  background-color: black;
+  color: white;
   text-align: center;
   font-weight: bolder;
   font-size: 23px;
   padding: 20px 0px;
+  width: 50%;
 }
 
-#status-progessbar {
-  margin: 20px 0px;
+.statusProgressbar {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
-#status-table {
-  margin: 10px 0px;
+.statusProgressbar .progress {
+  width: 50%;
 }
 
-.statusTableHead {
-  background-color: rgb(255, 255, 123);
-  font-size: 23px;
+/* ----- Table result ----- */
+
+.statusTableResult {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-#statusTableItem {
+.width20Percent {
+  width: 20%;
+}
+
+.headStyle {
+  text-align: center;
+  font-size: 25px;
+  font-width: bold;
+  height: 50px;
+  background-color: rgb(217, 217, 217);
+  padding-top: 10px;
+}
+
+.bodyStyle {
   font-size: 20px;
+  text-align: center;
+  height: 50px;
+  border-bottom: 1px solid black;
+  padding-top: 10px;
 }
 
-.status-remind-sentence {
-  color: black;
-  text-align: center;
-  font-weight: bolder;
+/* Remind sentence */
+
+.statusRemindSentence {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.remindSentence {
   font-size: 23px;
-  padding: 20px 0px;
+  font-weight: bold;
+}
+
+/* Medium size */
+@media screen and (max-width: 900px) {
+
+  .input-group {
+    width: 90%;
+  }
+
+  .orderNumberDisplay {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .statusProgressbar .progress {
+    width: 90%;
+  }
+
+  .headStyle {
+    font-size: 20px;
+  }
+
+  .bodyStyle {
+    font-size: 15px;
+  }
+
+  .remindSentence {
+    font-size: 20px;
+  }
+
+}
+
+/* Small size */
+@media screen and (max-width: 700px) {
+
+  .input-group {
+    width: 100%;
+  }
+
+  .orderNumberDisplay {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .statusProgressbar .progress {
+    width: 100%;
+  }
+
+  .headStyle {
+    font-size: 15px;
+  }
+
+  .bodyStyle {
+    font-size: 12px;
+  }
+
+  .remindSentence {
+    font-size: 15px;
+  }
+
 }

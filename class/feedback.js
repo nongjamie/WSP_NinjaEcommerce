@@ -4,8 +4,6 @@ const URL = require('../config/database')
 class Feedback {
     async addFeedback(data){
         try{
-            console.log(data.name)
-            console.log(data.feedback)
             const response = await axios.post(URL.addFeedback,{},{
                 headers:{
                     'name': data.name,
@@ -14,7 +12,6 @@ class Feedback {
             })
             return response.data
         }catch(e){
-            console.log('add feedback error')
             return e.data
         }
         
@@ -24,7 +21,20 @@ class Feedback {
             const response = await axios.get(URL.getFeedbacks)
             return response.data
         } catch (error) {
-            console.log('get feedbacks error')
+            return error.data
+        }
+    }
+
+    async removeFeedback(feedbackID){
+        try {
+            const response = await axios.post(URL.removeFeedback, {}, {
+                headers:{
+                    'feedbackID' : feedbackID
+                }
+            })
+            return response.data
+        } catch (error) {
+            return error.data
         }
     }
 }

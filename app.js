@@ -16,6 +16,7 @@ require('./config/passport')(passport);
 //Middle ware
 
 app.use(session({ secret: "VaritAss", resave: true, saveUninitialized: true }))
+app.use(express.static('public'))
 app.use(passport.initialize())
 app.use(passport.session())
 app.use(bodyParser.urlencoded({extended:false}))
@@ -26,23 +27,7 @@ app.use(function(req,res,next){
   res.locals.messages = require('express-messages')(req,res)
   next()
 })
-// app.use(expressValidator({
-//   errorFormatter :function(param,msg,value){
-//       var namespace = param.split('.'),
-//       root = namespace.shift(),
-//       formParam =root;
-//       while(namespace.length){
-//           formParam+='['+namespace.shift()+']';
-//       }
-//       return{
-//           param : formParam,
-//           msg   : msg,
-//           value : value
-//       };
-//   }
-// }))
-// Public folder
-app.use(express.static('public'))
+
 
 // Load view engine
 app.set("views", path.join(__dirname, "views"));
@@ -50,7 +35,8 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
-
+  console.log('sssssssssssssss')
+  console.log(req.user)
   res.locals.user = req.user || null;
   next();
 })
@@ -110,6 +96,12 @@ app.get("/login", function(req, res) {
     menu: 'login'
   })
 })
+//log in admin
+app.get("/loginAdmin", function(req, res) {
+  res.render("loginAdmin", {
+    menu: 'loginAdmin'
+  })
+})
 
 //Logout
 app.get("/logout",function(req,res){
@@ -125,13 +117,6 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
-// Payment
-// This can be deleted when the backend team see.
-app.get("/payment", function(req, res) {
-  res.render("payment", {
-    menu: 'payment'
-  });
-});
 
 app.use(require('./routes/products'))
 
@@ -142,6 +127,18 @@ app.use('/mycart', require('./routes/cart'))
 app.use(require('./routes/admin'))
 
 app.use('/myappointment',require('./routes/appointment'))
+
+app.use('/mypayment',require('./routes/payment'))
+
+app.use('/summary',require('./routes/summary'))
+
+app.use('/completeTransaction',require('./routes/completeTransaction'))
+
+app.use('/search',require('./routes/search'))
+
+app.use('/profile',require('./routes/profile'))
+
+app.use('/admin',require('./routes/admin'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')

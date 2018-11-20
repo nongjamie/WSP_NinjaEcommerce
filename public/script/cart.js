@@ -5,6 +5,10 @@ $( () => {
   $('#yesButton').click( () => {
     console.log('Go to appointment page.');
     const username = $('#userNavBarUsername').text()
+    $('.loading').css({
+        'display': 'block',
+        'z-index': '11',
+      })
     window.location = "http://localhost:3000/myappointment/"+username;
   });
 
@@ -20,10 +24,15 @@ $( () => {
     const data = val.split(',')
     const quantity = $(`.fixsize[name=${data[1]}]`).val()
     const username = $('#userNavBarUsername').text()
-    console.log(val)
-    console.log(username)
-    console.log(quantity)
-    console.log(data)
+    // console.log(val)
+    // console.log(username)
+    // console.log(quantity)
+    // console.log(data)
+    $(".fadeTo").fadeTo("fast", 0.5);
+    $('.loading').css({
+      'display': 'block',
+      'z-index': '11',
+    })
     $.ajax({
         url: '/mycart/'+username,
         data:{
@@ -39,7 +48,13 @@ $( () => {
                console.log('error')
             }else{
                 console.log('paul2')
-                location.reload();
+                $('.loading').css({
+                    'display': 'block',
+                    'z-index': '11',
+                  })
+                swal('Item delete').then(e => {
+                    location.reload();
+                })
             }
         },
         error: function(error){

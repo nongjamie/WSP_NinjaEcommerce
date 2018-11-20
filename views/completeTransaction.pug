@@ -1,0 +1,53 @@
+extends layout
+
+block head
+    script(src="https://www.paypalobjects.com/api/checkout.js")
+    link(rel='stylesheet', type='text/css', href='/CSS/completeTransaction.css')
+    title Ninja Complete
+
+block content
+
+  //- Complete transaction topic
+  div.completeTopic
+    div.row.justify-content-center
+      span.paymentWelcomeSentence 
+        | Your transaction nearly complete!
+        
+  //- Complete transaction body
+  div.completeBody.mb-1
+    div.row.justify-content-center
+      .orderNumberDisplay
+        | Order number => 
+        span #{orderID}
+    div.row.justify-content-center
+      .orderNumberNotice
+        span <mark id="beforeMark">&nbsp ** Before ** &nbsp</mark> you confirmed, you can change your transaction.
+        span <mark id="afterMark">&nbsp ** After ** &nbsp</mark> you click it, this order number will be activated and you cannot change any transaction details.
+        span Checking status of the delivery by put the order number in STATUS page.
+    
+  //- Button selection
+  div.buttonFinalSelection
+    div.row.justify-content-center
+      //- Confirm the payment, the modal plugin
+      button(type="button" class="btn btn-success" id='confirmCartButton' data-toggle="modal" data-target="#exampleModal")
+        | Confirm
+      div(class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+        div(class="modal-dialog" role="document")
+          div(class="modal-content")
+            div(class="modal-header")
+              h5(class="modal-title" id="exampleModalLabel") Ninja notes
+              button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                span(aria-hidden="true") &times;
+            div(class="modal-body")
+              p Your transaction is complete.
+              p Don't forget to remember this order number.
+            div(class="modal-footer")
+              button(type="button" class="btn btn-secondary" data-dismiss="modal") No
+              button(type="button" class="btn btn-primary" id="yesButton") OK
+      //- Cancel button
+      button(type="button" class="btn btn-danger" id='cancelButton')
+        | Cancel
+
+block foot
+  
+  script(src='/script/completeTransaction.js')

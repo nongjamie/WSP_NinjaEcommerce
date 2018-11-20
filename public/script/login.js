@@ -1,1 +1,5 @@
-console.log('this is from login.js');
+console.log('login');
+
+$(() => {
+
+});

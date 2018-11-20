@@ -4,11 +4,9 @@ const URL = require('../config/database')
 class Category{
     async getCategory(){
         try {
-            const response = await axios.get(URL)
-            return response
+            const response = await axios.get(URL.getCategory)
+            return response.data
         } catch (error) {
-            console.log('get catategory error')
-            console.log(error)
             return error
         }
     }

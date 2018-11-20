@@ -2,82 +2,140 @@
   /* border: 1px solid green; */
 }
 
-/* Fill Payment topic */
+/* Payment topic */
 
-.paymentWelcomeSentence {
+.paymentTopicContainer {
   font-size: 30px;
   font-weight: bold;
-  background-color: rgb(255, 255, 195);
-  padding: 20px 100px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  padding: 10px 0px;
 }
 
 @media screen and (max-width: 500px) {
-  .paymentWelcomeSentence {
+
+  .paymentTopicContainer {
     font-size: 23px;
   }
-}
 
-/* Shopping status */
-
-.shoppingDisplayStatusColumn {
-  background-color: rgb(255, 255, 195);
-  font-size: 20px;
-  text-align: center;
-  padding: 20px 100px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.shoppingDisplayStatusColumn .progress {
-  margin-top: 10px;
 }
 
 /* Payment selection part  */
 
-.paymentLogoSentence {
-  background-color: rgb(255, 255, 195);
+/* ----------Left part---------- */
+
+/* Choose payment method */
+.paymentLogo {
+  width: 50%;
 }
 
+/* Sentence */
+.paymentLogoSentence {
+  text-align: center;
+  font-size: 23px;
+}
+
+/* Each image logo */
 .paymentLogo img {
   height: 100px;
   width: 150px;
-  margin: 10px;
+  margin: 20px;
+  border: 1px solid black;
 }
 
+/* When focus on image logo */
 .paymentLogo img:hover {
-  border: 2px solid yellow;
+  border: 3px solid red;
 }
 
+/* Change the alignment of image logo */
+@media screen and (max-width: 1100px) {
+
+  .paymentLogoImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .paymentLogo img {
+    margin: 10px;
+  }
+
+}
+
+/* ----------Right part---------- */
+
+/* Payment */
 .paymentField {
-  margin-bottom: 10px;
+  width: 50%;
 }
 
 .paymentFieldInputSentence {
-  background-color: rgb(255, 255, 195);
+  text-align: center;
+  font-size: 23px;
 }
 
 .paymentFieldInput {
-  background-color: rgb(255, 255, 195);
+  display: flex;
+  justify-content: center;
 }
 
-.paymentFieldInput .input-group-prepend {
-  margin: 5px;
-  width: 45%;
+.input-group {
+  width: 70%;
+}
+
+.input-group-prepend {
+  padding: 5px;
+  width: 100%;
 }
 
 .paymentFieldUploadSentence {
-  background-color: rgb(255, 255, 195);
+  text-align: center;
+  font-size: 23px;
 }
 
 .paymentFieldUpload {
-  background-color: rgb(255, 255, 195);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 989px) {
+
+  .paymentLogo {
+    width: 100%;
+  }
+
+  .paymentField {
+    width: 100%;
+  }
+
+  .input-group {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 563px) {
+
+  .input-group {
+    width: 100%;
+  }
+
+}
+
+.paymentFileUpload input {
+
+}
+
+.paymentFileUpload button {
+
 }
 
 /* Button selection */
 
-#confirmButton {
+.buttonFinalSelection {
+  margin-bottom: 10px;
+}
+
+#confirmCartButton {
   font-size: 23px;
   margin: 0px 30px 0px 0px;
 }

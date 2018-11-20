@@ -2,24 +2,26 @@ extends layout
 
 block head
   link(rel='stylesheet', type='text/css', href='../CSS/homepage.css')
+  link(rel="stylesheet", href="../CSS/login.css")
   title Ninja Log IN
 
 block content
-  .container.temp2
+  .container.temp2.fadeTo
     div.temp.my-5
       span Login
         br
         form(id='loginForm' method='POST', action='/accounts/login')
           #form-group
             span Username: 
-            input.form-control(name='username', type='text')
+            input.form-control(id='username' name='username', type='text')
             br
           #form-group
             span Password: 
-            input.form-control(name='password', type='password')
+            input.form-control(id='password' name='password', type='password')
             br    
-            input.btn.btn-primary(type='submit', value='Submit')
+            input.btn.btn-primary.loadingClicked(type='submit', value='Submit')
   
+
 block foot
                 
   script(src='../script/login.js')
