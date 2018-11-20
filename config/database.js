@@ -15,5 +15,7 @@ module.exports = {
     getFeedbacks : URL + 'getFeedbackList',
     removeFeedback : URL + 'removeFeedback',
     getCategory : URL +'getCategory',
-    searchProductByName : URL +'searchProductByName'
+    searchProductByName : URL +'searchProductByName',
+    loginToAdmin: URL+'loginToAdmin',
+    updateCustomerInfo:URL+'updateCustomerInfo'
 }
