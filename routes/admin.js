@@ -31,7 +31,8 @@ router.post('/addFeedback', async(req, res) => {
 })
 
 router.post('/removeFeedback', async(req, res) => {
-        const result = await feedback.removeFeedback(req.body)
+        console.log(req.body.feedbackID)
+        const result = await feedback.removeFeedback(req.body.feedbackID)
         console.log(result)
         res.send('success')
 })
