@@ -1,57 +1,57 @@
 console.log('this is from status.js');
 $(() => {
 
-  let testStatus = [
-    {
-      orderNumber: 'hereton',
-      productName: 'beer',
-      productAmount: '2',
-      productCost: 7000,
-      productstatus: 'packing'
-    },
-    {
-      orderNumber: 'fame',
-      productName: 'beer',
-      productAmount: 2,
-      productCost: 7000,
-      productstatus: 'packing'
-    },
-    {
-      orderNumber: 'fame',
-      productName: 'wine',
-      productAmount: 1,
-      productCost: 10000,
-      productstatus: 'sending'
-    },
-    {
-      orderNumber: 'jamie',
-      productName: 'beer',
-      productAmount: 2,
-      productCost: 7000,
-      productstatus: 'packing'
-    },
-    {
-      orderNumber: 'varit',
-      productName: 'beer',
-      productAmount: 2,
-      productCost: 7000,
-      productstatus: 'complete'
-    },
-    {
-      orderNumber: 'hereton',
-      productName: 'wine',
-      productAmount: 2,
-      productCost: 10000,
-      productstatus: 'packing'
-    },
-    {
-      orderNumber: 'hereton',
-      productName: 'janny',
-      productAmount: 1,
-      productCost: 10,
-      productstatus: 'kidnapping'
-    }
-  ];
+  // let testStatus = [
+  //   {
+  //     orderNumber: 'hereton',
+  //     productName: 'beer',
+  //     productAmount: '2',
+  //     productCost: 7000,
+  //     productstatus: 'packing'
+  //   },
+  //   {
+  //     orderNumber: 'fame',
+  //     productName: 'beer',
+  //     productAmount: 2,
+  //     productCost: 7000,
+  //     productstatus: 'packing'
+  //   },
+  //   {
+  //     orderNumber: 'fame',
+  //     productName: 'wine',
+  //     productAmount: 1,
+  //     productCost: 10000,
+  //     productstatus: 'sending'
+  //   },
+  //   {
+  //     orderNumber: 'jamie',
+  //     productName: 'beer',
+  //     productAmount: 2,
+  //     productCost: 7000,
+  //     productstatus: 'packing'
+  //   },
+  //   {
+  //     orderNumber: 'varit',
+  //     productName: 'beer',
+  //     productAmount: 2,
+  //     productCost: 7000,
+  //     productstatus: 'complete'
+  //   },
+  //   {
+  //     orderNumber: 'hereton',
+  //     productName: 'wine',
+  //     productAmount: 2,
+  //     productCost: 10000,
+  //     productstatus: 'packing'
+  //   },
+  //   {
+  //     orderNumber: 'hereton',
+  //     productName: 'janny',
+  //     productAmount: 1,
+  //     productCost: 10,
+  //     productstatus: 'kidnapping'
+  //   }
+  // ];
 
   document.querySelector('.statusInputForm').addEventListener('keypress', function (e) {
       if (e.key === 'Enter') {
@@ -66,12 +66,11 @@ $(() => {
             if (data.return_code === '400') {
               console.log('error')
             } else {
-              console.log('summary.js responsed !!!!!!!!')
               location.reload()
             }
           },
           error: function (error) {
-            console.log('error check out')
+            console.log('error status')
           }
         })
         // let allOrder = 0;

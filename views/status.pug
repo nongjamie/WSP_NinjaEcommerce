@@ -5,12 +5,12 @@ block head
   title Ninja Status
 
 block content
-  
+  //ฝากทำต่อด้วยกุส่งorderมาถ้าอยากได้อะไรใช้ order. ได้เลยลองเปิดดูในdoc database
   div(class="container-fluid statusContent")
     
     //- First sentence
     div(class="container-fluid")
-      div(class="statusFirstSentence" value=order)
+      div(class="statusFirstSentence")
         | CHECK STATUS
               
     //- Input form
@@ -29,10 +29,8 @@ block content
     //- Progess bar
     div(class="container-fluid statusProgressbar")
       div(class="progress")
-        div(class="progress-bar progress-bar-striped progress-bar-animated bg-danger" id="statusProgessbarResult" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 10%")
-    
+        div(class="progress-bar progress-bar-striped progress-bar-animated bg-danger" id="statusProgessbarResult" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 10%") 
     //- Table result
-
     div(class="container-fluid statusTableResult")
       div.row
         div.numberColHead.width20Percent.headStyle No.
@@ -40,12 +38,40 @@ block content
         div.amountColHead.width20Percent.headStyle Amount
         div.costColHead.width20Percent.headStyle Cost
         div.statusColHead.width20Percent.headStyle Status
-      div.row
-        div.numberColBody.width20Percent
-        div.productColBody.width20Percent
-        div.amountColBody.width20Percent
-        div.costColBody.width20Percent
-        div.statusColBody.width20Percent
+        - var i=1
+        -if(order.products)
+           each product in order.products
+             div.cardMargin.container
+                span.mr-3 No. :  
+                span #{i++}
+                br
+                span.mr-3 Product : 
+                span #{product.productName}
+                br
+                span.mr-3 Amount : 
+                span #{product.quantity}
+                br
+                span.mr-3 Cost : 
+                span #{product.productPrice}
+                br
+                span.mr-3 Status : 
+                span #{order.orderStatus}
+        //- each promotion in order.promotions
+        //-   div.cardMargin.container
+        //-    span.mr-3 No. :  
+        //-    span #{i++}
+        //-    br
+        //-    span.mr-3 Product : 
+        //-    span #{promotion.promotionName}
+        //-    br
+        //-    span.mr-3 Amount : 
+        //-    span #{promotion.quantity}
+        //-    br
+        //-    span.mr-3 Cost : 
+        //-    span #{promotion.promotionPrice}
+        //-    br
+        //-    span.mr-3 Status : 
+        //-    span #{order.orderStatus}
     //- Remind sentence
     div(class="container-fluid statusRemindSentence")
       div(class="remindSentence")

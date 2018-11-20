@@ -12,6 +12,7 @@ router.post('/',async(req,res)=>{
 })
 
 router.get("/", async(req, res)=>{
+  if(data!=''){
     console.log(data)
     const result = await order.getOrderByOrderID(data)
     console.log(result.order)
@@ -19,6 +20,13 @@ router.get("/", async(req, res)=>{
       menu: 'status',
       order:result.order
     });
+  }else{
+    res.render("status", {
+      menu: 'status',
+      order: {}
+    });
+  }
+
   });
 
   module.exports = router
