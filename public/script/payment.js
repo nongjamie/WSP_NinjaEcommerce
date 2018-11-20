@@ -16,49 +16,52 @@ $( () => {
 
   function paymentFileUpload(num) {
     if(num == 0) {
+      $(".paymentFieldUploadSentence").html(`
+        <p>Step 3 : Verify your transaction.</p>
+        `);
       $(".paymentFieldUpload").html(`
-        <p>No need to upload.</p>
+        <p>No need to upload of fill anything.</p>
         `);
     }
     else {
+      $(".paymentFieldUploadSentence").html(`
+        <p>Step 3 : Verify your transaction.</p>
+        `);
       $(".paymentFieldUpload").html(`
         <input type="file" style="margin: 5px; border: 1px solid black;"/>
         <button type="button" class="btn btn-primary" style="margin: 5px;">Upload
         </button>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Name</span>
+          <input type="text" class="form-control" placeholder="Varit Assa" aria-label="Username" aria-describedby="basic-addon1" >
+        </div>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Date</span>
+          <input type="text" class="form-control" placeholder="11 November 2018" aria-label="Username" aria-describedby="basic-addon1" >
+        </div>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Time</span>
+          <input type="text" class="form-control" placeholder="22.53" aria-label="Username" aria-describedby="basic-addon1" >
+        </div>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Amount(฿)</span>
+          <input type="text" class="form-control" placeholder="5,000" aria-label="Username" aria-describedby="basic-addon1" >
+        </div>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Your acc. no.</span>
+          <input type="text" class="form-control" placeholder="123-4-56789-0" aria-label="Username" aria-describedby="basic-addon1" >
+        </div>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Transaction number</span>
+          <input type="text" class="form-control" placeholder="340255905521903810" aria-label="Username" aria-describedby="basic-addon1" >
+        </div>
         `);
     }
   };
 
-  $(".masterCardWay").click( () => {
-    $(".paymentFieldInputSentence").html(`
-      <p>Step 2 : Fill the details of your credit card.</p>
-      `);
-    $(".paymentFieldInput").html(`
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Card Holder's Name</span>
-          <input type="number" class="form-control" placeholder="Card Holder's Name" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Credit Card number</span>
-          <input type="text" class="form-control" placeholder="Credit Card number" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Expiration date</span>
-          <input type="text" class="form-control" placeholder="Expiration date" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Card security code</span>
-          <input type="text" class="form-control" placeholder="Card security code" aria-label="Username" aria-describedby="basic-addon1">
-        </div>
-      </div>
-      `);
-      paymentFileUpload(0);
-  });
-
   $(".scbWay").click( () => {
     $(".paymentFieldInputSentence").html(`
-      <p>Step 2 : Pay by the mobile banking.</p>
+      <p>Step 2 : Pay by the mobile banking to these info.</p>
       `);
     $(".paymentFieldInput").html(`
       <div class="input-group mb-3">
@@ -84,15 +87,12 @@ $( () => {
         </div>
       </div>
       `);
-      $(".paymentFieldUploadSentence").html(`
-        <p>Step 3 : Upload the slip here.</p>
-        `);
       paymentFileUpload(1);
   });
 
   $(".kbankWay").click( () => {
     $(".paymentFieldInputSentence").html(`
-      <p>Step 2 : Pay by the mobile banking.</p>
+      <p>Step 2 : Pay by the mobile banking to these info.</p>
       `);
     $(".paymentFieldInput").html(`
       <div class="input-group mb-3">
@@ -118,9 +118,6 @@ $( () => {
         </div>
       </div>
       `);
-      $(".paymentFieldUploadSentence").html(`
-        <p>Step 3 : Upload the slip here.</p>
-        `);
       paymentFileUpload(1)
   });
 
