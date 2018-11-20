@@ -115,7 +115,7 @@ function initialSetUp() {
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">${personal[i]}</span>
-        <input type="number" class="form-control" placeholder="${personal[i]}" aria-label="Username" aria-describedby="basic-addon1" disabled>
+        <input type="number" class="form-control" placeholder="${personal[i]} answer" aria-label="Username" aria-describedby="basic-addon1" disabled>
       </div>
     </div>
     `;
@@ -132,7 +132,7 @@ function initialSetUp() {
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">${address[i]}</span>
-        <input type="number" class="form-control" placeholder="${address[i]}" aria-label="Username" aria-describedby="basic-addon1" disabled>
+        <input type="number" class="form-control" placeholder="${address[i]} answer" aria-label="Username" aria-describedby="basic-addon1" disabled>
       </div>
     </div>
     `;
@@ -166,7 +166,7 @@ function initialSetUp() {
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">${payment[i].topic}</span>
-        <input type="number" class="form-control" placeholder="${payment[i].detailForm}" aria-label="Username" aria-describedby="basic-addon1" disabled>
+        <input type="number" class="form-control" placeholder="${payment[i].detailForm} answer" aria-label="Username" aria-describedby="basic-addon1" disabled>
       </div>
     </div>
     `;
