@@ -17,5 +17,7 @@ module.exports = {
     getCategory : URL +'getCategory',
     searchProductByName : URL +'searchProductByName',
     loginToAdmin: URL+'loginToAdmin',
-    updateCustomerInfo:URL+'updateCustomerInfo'
+    updateCustomerInfo:URL+'updateCustomerInfo',
+    getOrderByOrderID:URL+'getOrderByOrderID',
+    getOrderList:URL+'getOrderList'
 }
