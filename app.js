@@ -35,8 +35,6 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
-  console.log('sssssssssssssss')
-  console.log(req.user)
   res.locals.user = req.user || null;
   next();
 })
@@ -75,12 +73,6 @@ app.get("/confirmOrder", function(req, res) {
   });
 });
 
-// Status route
-app.get("/status", function(req, res) {
-  res.render("status", {
-    menu: 'status'
-  });
-});
 
 // Sign up route
 app.get("/signup", function(req, res) {
@@ -139,6 +131,8 @@ app.use('/search',require('./routes/search'))
 app.use('/profile',require('./routes/profile'))
 
 app.use('/admin',require('./routes/admin'))
+
+app.use('/status',require('./routes/status'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')
