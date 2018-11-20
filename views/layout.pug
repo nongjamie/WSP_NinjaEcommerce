@@ -32,7 +32,7 @@ html
                     button(class="btn btn-secondary" type="button" id='searchbutton') Search
           .col-sm-4
 
-    // Nav bar section
+    //- Nav bar section
     div.container-fluid.navBar
       nav(class="navbar navbar-expand-lg  navbar-light")
         a(class="nav-link loadingClicked" id="whiteLetter" href="/") HOME
@@ -66,24 +66,21 @@ html
               li(class="nav-item")
                 a(class='nav-link loadingClicked' id="whiteLetter" href="/loginAdmin") LOG IN Admin
 
-    // User nav bar section
-    div(class="container-fluid" id='userNavBar')
-      div.row.align-items-center
-        div.userNavBarSentenceSection
-          div(class='row justify-content-center')
-            span(id="userNavBarSentence")
-              if user
+    //- User nav bar section
+    if user
+      div(class="container-fluid" id='userNavBar')
+        div.row.align-items-center
+          div.userNavBarSentenceSection
+            div(class='row justify-content-center')
+              span(id="userNavBarSentence")
                 | Welcome #{user.username}
-        div.userNavBarStatusSection
-          div(class='row justify-content-center')
-
-            i(class="far fa-user fa-10x" id='userNavBarUserIcon')
-            if user
-              button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' value=user.username disabled) #{user.username}
-            else
-              button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' disabled) None
-            i(class="fas fa-shopping-cart loadingClicked" id='userNavBarCartIcon')
-            button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' disabled) 0
+          div.userNavBarStatusSection
+            div(class='row justify-content-center')
+              i(class="far fa-user fa-10x" id='userNavBarUserIcon')
+              if user
+                button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' value=user.username disabled) #{user.username}
+              i(class="fas fa-shopping-cart loadingClicked" id='userNavBarCartIcon')
+              button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' disabled) 0
 
     //- Body section
     link(rel='stylesheet', type='style/css', href='/CSS/style.css')
