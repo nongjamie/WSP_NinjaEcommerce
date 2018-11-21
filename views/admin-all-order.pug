@@ -1,0 +1,35 @@
+extends admin-layout
+
+block content
+  .myBody
+      .flex-container.allCard
+        each o in order
+          div.cardMargin
+            img(src="", alt="")
+            br
+            div.m-3
+            each product in o.products
+              a.myCard #{product.productName}
+              br
+              a.myCard #{product.quantity}
+              br
+              a.myCard #{product.productPrice}
+            div.m-3
+            each promotion in o.promotions
+              a.myCard #{promotion.promotionName}
+              br
+              a.myCard #{promotion.quantity}
+              br
+              a.myCard #{promotion.promotionPrice}
+            hr
+            div.m-3 
+              a.myCard #{o.orderStatus}
+            div.m-3 
+              a.myCard #{o.orderDate}
+            div.m-3 
+              a.myCard #{o.orderID}
+            div.m-3 
+              a.myCard #{o.username}
+            div.m-3 
+              button.mt-5.btn.btn-success Paid
+              button.mt-5.btn.btn-danger Delete

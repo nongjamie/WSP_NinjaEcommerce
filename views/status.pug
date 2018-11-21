@@ -56,22 +56,23 @@ block content
                 br
                 span.mr-3 Status : 
                 span #{order.orderStatus}
-        //- each promotion in order.promotions
-        //-   div.cardMargin.container
-        //-    span.mr-3 No. :  
-        //-    span #{i++}
-        //-    br
-        //-    span.mr-3 Product : 
-        //-    span #{promotion.promotionName}
-        //-    br
-        //-    span.mr-3 Amount : 
-        //-    span #{promotion.quantity}
-        //-    br
-        //-    span.mr-3 Cost : 
-        //-    span #{promotion.promotionPrice}
-        //-    br
-        //-    span.mr-3 Status : 
-        //-    span #{order.orderStatus}
+      -if(order.promotions)
+        each promotion in order.promotions
+          div.cardMargin.container
+           span.mr-3 No. :  
+           span #{i++}
+           br
+           span.mr-3 Product : 
+           span #{promotion.promotionName}
+           br
+           span.mr-3 Amount : 
+           span #{promotion.quantity}
+           br
+           span.mr-3 Cost : 
+           span #{promotion.promotionPrice}
+           br
+           span.mr-3 Status : 
+           span #{order.orderStatus}
     //- Remind sentence
     div(class="container-fluid statusRemindSentence")
       div(class="remindSentence")
