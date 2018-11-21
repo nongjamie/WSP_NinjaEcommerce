@@ -31,5 +31,7 @@ block content
             div.m-3 
               a.myCard #{o.username}
             div.m-3 
-              button.mt-5.btn.btn-success Paid
+              button.mt-5.btn.btn-success(value='Paid'+','+o.orderID) Paid
               button.mt-5.btn.btn-danger Delete
+
+  script(src='../script/updateOrderStatus.js')
