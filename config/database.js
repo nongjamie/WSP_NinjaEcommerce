@@ -20,5 +20,6 @@ module.exports = {
     updateCustomerInfo:URL+'updateCustomerInfo',
     getOrderByOrderID:URL+'getOrderByOrderID',
     getOrderList:URL+'getOrderList',
-    updateOrderStatus:URL+'updateOrderStatus'
+    updateOrderStatus:URL+'updateOrderStatus',
+    addProduct:URL+'addProduct'
 }
