@@ -41,21 +41,16 @@ block content
         - var i=1
         -if(order.products)
            each product in order.products
-             div.cardMargin.container
-                span.mr-3 No. :  
-                span #{i++}
-                br
-                span.mr-3 Product : 
-                span #{product.productName}
-                br
-                span.mr-3 Amount : 
-                span #{product.quantity}
-                br
-                span.mr-3 Cost : 
-                span #{product.productPrice}
-                br
-                span.mr-3 Status : 
-                span #{order.orderStatus}
+              div.width20Percent
+                div.bodyStyle #{i++}
+              div.width20Percent
+                div.bodyStyle #{product.productName}
+              div.width20Percent
+                div.bodyStyle #{product.quantity}
+              div.width20Percent
+                div.bodyStyle #{product.productPrice}
+              div.width20Percent
+                div.bodyStyle #{order.orderStatus}
       -if(order.promotions)
         each promotion in order.promotions
           div.cardMargin.container
