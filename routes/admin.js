@@ -44,6 +44,13 @@ router.post('/admin/addProduct',async(req,res)=>{
         console.log(result)
         res.send('success')
 })
+router.post('/admin/removeOrder',async(req,res)=>{
+        const data=req.body.orderID
+        console.log('ssssdsdsdsdsds')
+        console.log(data)
+        const result= await order.removeOrder(data)
+        res.send('success') 
+})
 router.post('/updateOrderStatus',async (req,res)=>{
         const data= req.body
         console.log('sssssssssssssssssssssssssssssssssssssss')

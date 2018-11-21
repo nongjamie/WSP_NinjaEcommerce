@@ -39,6 +39,6 @@ block content
                 option(name=i+1) Shipping
                 option(name=i+1) Delivered
               button.mt-5.btn.btn-success(value=o.orderID+','+(i+1)) Change
-              button.mt-5.btn.btn-danger Delete
+              button.mt-5.btn.btn-danger(value=o.orderID) Delete
 
   script(src='../script/updateOrderStatus.js')
