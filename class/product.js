@@ -43,5 +43,26 @@ class Product {
             return e.data
         }
     }
+    async addProduct(item) {
+        try {
+            console.log(item)
+            const response = await axios.post(URL.addProduct, {}, {
+                headers: {
+                    'name' : item.name,
+                    'price' : item.price,
+                    'detail' : item.detail,
+                    'categoryID' : item.categoryID,
+                    'country': item.country,
+                    'abv': item.abv,
+                    'distributor': item.distributor,
+                    'imgUrl': item.imgUrl,
+                    'vol': item.vol
+                }
+            })
+            return response.data
+        } catch (error) {
+            return error.data
+        }
+    }
 }
 module.exports = Product

@@ -38,6 +38,18 @@ class Order {
             return error.data
         }
     }
+    async removeOrder(orderID){
+        try {
+            const response = await axios.post(URL.removeOrder, {}, {
+                headers:{
+                    'orderID' : orderID
+                }
+            })
+            return response.data
+        } catch (error) {
+            return error.data
+        }
+    }
 }
 
 module.exports = Order
