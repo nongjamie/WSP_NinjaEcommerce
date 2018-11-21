@@ -3,13 +3,15 @@ console.log('this is from update.js');
 $( () => {
 $('.btn.btn-success').on('click',async(e)=>{
     const order =$(e.target).val()
-    const val = order.split(',')
-    console.log(val[0])
+    const val =order.split(',')
+    console.log(val)
+    const status= $(`option[name=${val[1]}]:selected`).val()
+    console.log(status)
     $.ajax({
         url: '/admin/updateOrderStatus',
         data:{
-            'orderStatus':val[0],
-            'orderID':val[1]
+            'orderStatus':status,
+            'orderID':val[0]
         },
         type: 'POST',
         success: function(data) {
