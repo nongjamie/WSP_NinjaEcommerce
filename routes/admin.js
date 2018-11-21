@@ -2,10 +2,12 @@ const express = require('express')
 const router = express.Router()
 const Account = require('../class/account')
 const Feedback = require('../class/feedback')
+const Order = require('../class/order')
 const passport = require('passport')
 
 const account = new Account()
 const feedback = new Feedback()
+const order = new Order()
 
         //TODO check user.isAdmin waiting for isAdmin feild
 router.get('/admin', async (req, res) => {
@@ -21,6 +23,13 @@ router.get('/admin/user/:username', async (req, res) => {
         console.log(result)
         res.render('admin-user-info',{
                 account : result.account
+        })
+})
+router.get('/admin/orders', async (req, res) => {
+        const result = await order.getOrderList()
+        console.log(result.orders)
+        res.render('admin-all-order',{
+                order:result.orders
         })
 })
 
