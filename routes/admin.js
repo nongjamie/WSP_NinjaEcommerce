@@ -27,10 +27,19 @@ router.get('/admin/user/:username', async (req, res) => {
 })
 router.get('/admin/orders', async (req, res) => {
         const result = await order.getOrderList()
-        console.log(result.orders)
         res.render('admin-all-order',{
                 order:result.orders
         })
+})
+
+router.post('/updateOrderStatus',async (req,res)=>{
+        const data= req.body
+        console.log('sssssssssssssssssssssssssssssssssssssss')
+        console.log(data)
+        const result = await order.updateOrderStatus(data)
+        console.log('sssssssssssssssssssssssssssssssssssssss')
+        console.log(result)
+        res.send('success')
 })
 
 router.post('/addFeedback', async(req, res) => {
