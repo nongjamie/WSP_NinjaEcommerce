@@ -64,5 +64,25 @@ class Product {
             return error.data
         }
     }
+    async removeProduct(productID){
+        try{
+            const response = await axios.post(URL.removeProduct,{},{
+                headers:{
+                    'productID': productID
+                }
+            })
+            return response.data
+        }catch(e){
+            return e.data
+        }
+    }
+    async getProductList(){
+        try{
+            const response = await axios.get(URL.getProductList)
+            return response.data
+        }catch(e){
+            return e.data
+        }
+    }    
 }
 module.exports = Product
