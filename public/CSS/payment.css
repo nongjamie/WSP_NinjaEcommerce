@@ -2,7 +2,7 @@
   /* border: 1px solid green; */
 }
 
-/* Payment topic */
+/* ---------- Payment topic --------- */
 
 .paymentTopicContainer {
   font-size: 30px;
@@ -18,9 +18,9 @@
 
 }
 
-/* Payment selection part  */
+/* ---------- Payment selection part ---------- */
 
-/* ----------Left part---------- */
+/* ----- Left part ----- */
 
 /* Choose payment method */
 .paymentLogo {
@@ -61,7 +61,7 @@
 
 }
 
-/* ----------Right part---------- */
+/* ----- Right part ----- */
 
 /* Payment */
 .paymentField {
@@ -93,6 +93,8 @@
 }
 
 .paymentFieldUpload {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -121,15 +123,7 @@
 
 }
 
-.paymentFileUpload input {
-
-}
-
-.paymentFileUpload button {
-
-}
-
-/* Button selection */
+/* ---------- Button selection ---------- */
 
 .buttonFinalSelection {
   margin-bottom: 10px;
