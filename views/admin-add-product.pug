@@ -1,0 +1,17 @@
+extends admin-layout
+
+block content
+  .myBody
+      .flex-container.allCard
+        input(type="text" class="form-control" id="name" placeholder="Enter product name"  aria-describedby="basic-addon2")
+        input(type="text" class="form-control" id="price" placeholder="Enter product price"  aria-describedby="basic-addon2")
+        input(type="text" class="form-control" id="detail" placeholder="Enter product detail"  aria-describedby="basic-addon2")
+        input(type="text" class="form-control" id="categoryid" placeholder="Enter categoryID"  aria-describedby="basic-addon2")
+        input(type="text" class="form-control" id="country" placeholder="Enter country"  aria-describedby="basic-addon2")
+        input(type="text" class="form-control" id="abv" placeholder="Enter abv"  aria-describedby="basic-addon2")
+        input(type="text" class="form-control" id="distributor" placeholder="Enter distributor"  aria-describedby="basic-addon2")
+        input(type="text" class="form-control" id="imgUrl" placeholder="Enter imgUrl"  aria-describedby="basic-addon2")
+        input(type="text" class="form-control" id="vol" placeholder="Enter vol"  aria-describedby="basic-addon2")
+        button.mt-5.btn.btn-danger Add
+
+  script(src='../script/addProductAdmin.js')

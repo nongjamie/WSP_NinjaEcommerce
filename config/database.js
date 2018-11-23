@@ -19,5 +19,8 @@ module.exports = {
     loginToAdmin: URL+'loginToAdmin',
     updateCustomerInfo:URL+'updateCustomerInfo',
     getOrderByOrderID:URL+'getOrderByOrderID',
-    getOrderList:URL+'getOrderList'
+    getOrderList:URL+'getOrderList',
+    updateOrderStatus:URL+'updateOrderStatus',
+    addProduct:URL+'addProduct',
+    removeOrder:URL+'removeOrder'
 }

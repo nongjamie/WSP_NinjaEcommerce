@@ -3,11 +3,13 @@ const router = express.Router()
 const Account = require('../class/account')
 const Feedback = require('../class/feedback')
 const Order = require('../class/order')
+const Product = require('../class/product')
 const passport = require('passport')
 
 const account = new Account()
 const feedback = new Feedback()
 const order = new Order()
+const product = new Product()
 
         //TODO check user.isAdmin waiting for isAdmin feild
 router.get('/admin', async (req, res) => {
@@ -27,10 +29,36 @@ router.get('/admin/user/:username', async (req, res) => {
 })
 router.get('/admin/orders', async (req, res) => {
         const result = await order.getOrderList()
-        console.log(result.orders)
         res.render('admin-all-order',{
                 order:result.orders
         })
+})
+router.get('/admin/addProduct',async(req,res)=>{
+        res.render('admin-add-product')
+})
+router.post('/admin/addProduct',async(req,res)=>{
+        const data=req.body
+        console.log(data)
+        const result= await product.addProduct(data)
+        console.log('ddddddddddddddddd')
+        console.log(result)
+        res.send('success')
+})
+router.post('/admin/removeOrder',async(req,res)=>{
+        const data=req.body.orderID
+        console.log('ssssdsdsdsdsds')
+        console.log(data)
+        const result= await order.removeOrder(data)
+        res.send('success') 
+})
+router.post('/updateOrderStatus',async (req,res)=>{
+        const data= req.body
+        console.log('sssssssssssssssssssssssssssssssssssssss')
+        console.log(data)
+        const result = await order.updateOrderStatus(data)
+        console.log('sssssssssssssssssssssssssssssssssssssss')
+        console.log(result)
+        res.send('success')
 })
 
 router.post('/addFeedback', async(req, res) => {

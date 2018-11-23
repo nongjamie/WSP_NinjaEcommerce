@@ -25,6 +25,31 @@ class Order {
             return error.data
         }
     }
+    async updateOrderStatus(data){
+        try {
+            const response = await axios.post(URL.updateOrderStatus, {}, {
+                headers:{
+                    'orderID' : data.orderID,
+                    'orderStatus': data.orderStatus   
+                }
+            })
+            return response.data
+        } catch (error) {
+            return error.data
+        }
+    }
+    async removeOrder(orderID){
+        try {
+            const response = await axios.post(URL.removeOrder, {}, {
+                headers:{
+                    'orderID' : orderID
+                }
+            })
+            return response.data
+        } catch (error) {
+            return error.data
+        }
+    }
 }
 
 module.exports = Order
