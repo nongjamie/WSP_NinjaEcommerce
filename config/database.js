@@ -14,5 +14,10 @@ module.exports = {
     addFeedback : URL + 'addFeedback',
     getFeedbacks : URL + 'getFeedbackList',
     removeFeedback : URL + 'removeFeedback',
-    getCategory : URL +'getCategory'
+    getCategory : URL +'getCategory',
+    searchProductByName : URL +'searchProductByName',
+    loginToAdmin: URL+'loginToAdmin',
+    updateCustomerInfo:URL+'updateCustomerInfo',
+    getOrderByOrderID:URL+'getOrderByOrderID',
+    getOrderList:URL+'getOrderList'
 }

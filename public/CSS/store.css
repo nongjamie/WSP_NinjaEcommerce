@@ -2,9 +2,12 @@
 
 #productContent {
   background-color: rgb(255, 255, 195);
+  background-color: black;
   text-align: center;
   font-weight: bold;
   padding: 10px 0px;
+  color: white;
+  border-radius: 10px!important;
 }
 
 #productContentTopic {
@@ -90,7 +93,8 @@ h3 {
   padding-left: 20px;
   padding-right: 20px;
   border-collapse: separate;
-  background-color:  rgb(255, 255, 195);
+  /*background-color:  rgb(255, 255, 195);*/
+  background-color: rgb(217, 217, 217);
   border-radius: 40px!important;
 }
 .center {
@@ -131,9 +135,10 @@ cursor: pointer;
 width: 100%;
 margin-bottom:10px;
 opacity: 0.8;
+
 }
 /* Add a red background color to the cancel button */
-.form-container .cancel {
+/*.form-container .cancel {
 background-color: red;
 }
 .form-container .number {
@@ -143,8 +148,99 @@ background-color: rgb(255, 255, 195);
 .form-container .favorite {
 color : black;
 background-color: rgb(239, 153, 245);
+}*/
+
+.form-container .cancel {
+background-color: black;
+}
+.form-container .number {
+color : black;
+background-color: rgb(252, 252, 252);
+}
+.form-container .favorite {
+color : black;
+background-color: rgb(239, 153, 245);
+}
+.form-container .add {
+color : black;
+background-color: rgb(217, 217, 217);
 }
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
 opacity: 1;
 }
+
+
+
+  /*.tile {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    overflow: hidden;
+  }
+
+  .photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform .5s ease-out;
+  }*/
+
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:700);
+
+    body {
+      background: #fff;
+      color: #000;
+      margin: 0;
+    }
+
+    .tiles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .tile {
+      position: relative;
+      float: left;
+      width: 33.333%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: transform .5s ease-out;
+    }
+
+    .txt {
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 10%;
+      left: 0;
+      font-family: 'Roboto Slab', serif;
+      font-size: 9px;
+      line-height: 12px;
+      text-align: center;
+      cursor: default;
+    }
+
+    .x {
+      font-size: 32px;
+      line-height: 32px;
+    }

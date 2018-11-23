@@ -1,13 +1,12 @@
 extends layout
 
 block head
-  
     script(src="https://www.paypalobjects.com/api/checkout.js")
-    link(rel='stylesheet', type='text/css', href='../CSS/completeTransaction.css')
+    link(rel='stylesheet', type='text/css', href='/CSS/completeTransaction.css')
     title Ninja Complete
 
 block content
-  
+
   //- Complete transaction topic
   div.completeTopic
     div.row.justify-content-center
@@ -18,7 +17,8 @@ block content
   div.completeBody.mb-1
     div.row.justify-content-center
       .orderNumberDisplay
-        | Order number => 5910545833
+        | Order number => 
+        span #{orderID}
     div.row.justify-content-center
       .orderNumberNotice
         span <mark id="beforeMark">&nbsp ** Before ** &nbsp</mark> you confirmed, you can change your transaction.
@@ -50,4 +50,4 @@ block content
 
 block foot
   
-  script(src='../script/completeTransaction.js')
+  script(src='/script/completeTransaction.js')

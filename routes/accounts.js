@@ -33,7 +33,7 @@ router.post('/removeAccount', async(req, res) => {
 })
 
 router.post('/login', 
-   passport.authenticate('local', {
+   passport.authenticate('user-local', {
        successRedirect:'/',
        failureRedirect:'/login',
        failureFlash:true,
