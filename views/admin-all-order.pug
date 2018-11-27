@@ -3,7 +3,7 @@ extends admin-layout
 block content
   .myBody
       .flex-container.allCard
-        each o in order
+        each o,i in order
           div.cardMargin
             img(src="", alt="")
             br
@@ -31,5 +31,14 @@ block content
             div.m-3 
               a.myCard #{o.username}
             div.m-3 
-              button.mt-5.btn.btn-success Paid
-              button.mt-5.btn.btn-danger Delete
+            div.form-group
+              label.sel1 Select list
+              select.form-control.sel1
+                option(name=i+1) Paid
+                option(name=i+1) Not paid
+                option(name=i+1) Shipping
+                option(name=i+1) Delivered
+              button.mt-5.btn.btn-success(value=o.orderID+','+(i+1)) Change
+              button.mt-5.btn.btn-danger(value=o.orderID) Delete
+
+  script(src='../script/updateOrderStatus.js')

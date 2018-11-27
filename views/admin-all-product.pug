@@ -1,0 +1,16 @@
+extends admin-layout
+
+block content
+  .myBody
+      .flex-container.allCard
+        each product in products
+          div.cardMargin.container  
+           span #{product.productName}
+           br
+           span #{product.productID}
+           br
+           span #{product.categoryID}
+           br
+           span #{product.productPrice}
+           button.mt-5.btn.btn-danger(value= product.productID) Delete
+  script(src='../script/removeProductAdmin.js')

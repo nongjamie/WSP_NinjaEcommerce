@@ -43,5 +43,46 @@ class Product {
             return e.data
         }
     }
+    async addProduct(item) {
+        try {
+            console.log(item)
+            const response = await axios.post(URL.addProduct, {}, {
+                headers: {
+                    'name' : item.name,
+                    'price' : item.price,
+                    'detail' : item.detail,
+                    'categoryID' : item.categoryID,
+                    'country': item.country,
+                    'abv': item.abv,
+                    'distributor': item.distributor,
+                    'imgUrl': item.imgUrl,
+                    'vol': item.vol
+                }
+            })
+            return response.data
+        } catch (error) {
+            return error.data
+        }
+    }
+    async removeProduct(productID){
+        try{
+            const response = await axios.post(URL.removeProduct,{},{
+                headers:{
+                    'productID': productID
+                }
+            })
+            return response.data
+        }catch(e){
+            return e.data
+        }
+    }
+    async getProductList(){
+        try{
+            const response = await axios.get(URL.getProductList)
+            return response.data
+        }catch(e){
+            return e.data
+        }
+    }    
 }
 module.exports = Product
