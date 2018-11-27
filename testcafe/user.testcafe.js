@@ -42,5 +42,3 @@ test('store', async t => {
         .click(Selector('#confirmCartButton'))
         .click(Selector('#yesButton'));
 });
-
-test('New Test');
