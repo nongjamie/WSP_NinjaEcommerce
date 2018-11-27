@@ -2525,10 +2525,6 @@
                             "type": "click"
                         }
                     ]
-                },
-                {
-                    "name": "New Test",
-                    "commands": []
                 }
             ]
         }
