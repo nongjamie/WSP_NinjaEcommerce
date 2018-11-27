@@ -33,6 +33,12 @@ router.get('/admin/orders', async (req, res) => {
                 order:result.orders
         })
 })
+router.get('/admin/products',async(req,res)=>{
+        const result = await product.getProductList()
+        res.render('admin-all-product',{
+                products:result.products
+        })
+})
 router.get('/admin/addProduct',async(req,res)=>{
         res.render('admin-add-product')
 })
@@ -50,6 +56,15 @@ router.post('/admin/removeOrder',async(req,res)=>{
         console.log(data)
         const result= await order.removeOrder(data)
         res.send('success') 
+})
+router.post('/admin/removeProduct',async(req,res)=>{
+        const data=req.body.productID
+        console.log('varitas')
+        console.log(data)
+        const result= await product.removeProduct(data)
+        console.log('sppspspspspspspspspspssp')
+        console.log(result)
+        res.send('success')
 })
 router.post('/updateOrderStatus',async (req,res)=>{
         const data= req.body
