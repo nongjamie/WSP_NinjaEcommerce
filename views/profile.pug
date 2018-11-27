@@ -2,94 +2,88 @@ extends layout
 
 block head
   link(rel='stylesheet', type='text/css', href='../CSS/profile.css')
-  title Ninja Sign Up
+  title Ninja Profile
 
 block content
   .container.p-5
-    form(method='POST', action='/accounts/addAccount' id='signUpForm')
       fieldset
-        legend='Account Infomation'
-        .input-group.mb-3
-        .input-group-prepend
-          span.input-group-text Username 
-        input.form-control(id='username' name='username' type='text' placeholder='username' required)
-        span(id='usernameError')
-        .input-group.mb-3
-        .input-group-prepend
-          span.input-group-text e-mail 
-        input.form-control(id='email' name='email' type='text' placeholder='e-mail', required)
-        span(id='emailError')
-        .input-group.mb-3
-        .input-group-prepend
-          span.input-group-text password 
-        input.form-control.password(name='password' type='password' placeholder='Password' required)
-        .input-group.mb-3
-        .input-group-prepend
-          span.input-group-text Confirm password 
-        input.form-control.confirmPassword(name='confirmPassword' type='password' placeholder='Confirm password' required )
-        label.mt-2(id="message")
         legend='Profile Information'
         .row
           .col-sm-6
             .input-group.mb-3
             .input-group-prepend
               span.input-group-text Name 
-            input.form-control(name='name' type='text' placeholder='Name' required)
+            input.form-control(id='name' type='text' placeholder='Name' value=customer.name required)  
           .col-sm-6
             .input-group.mb-3
             .input-group-prepend
-              span.input-group-text.mb-2 Gender
-            label.mx-2 #[input(type='radio' name='gender' value='male' checked)] Male
-            label.mx-2 #[input(type='radio' name='gender' value='female' )] Female
-            label.mx-2 #[input(type='radio' name='gender' value='other' )] Other
+              span.input-group-text.mb-2(id="gender-input") Gender
+                if customer.gender=='male'
+                  label.mx-2 #[input(id='gender' type='radio' name='gender' value='male' checked)] Male
+                  label.mx-2 #[input(id='gender' type='radio' name='gender' value='female' )] Female
+                  label.mx-2 #[input(id='gender' type='radio' name='gender' value='other' )] Other
+                else if customer.gender=='female'
+                  label.mx-2 #[input(id='gender' type='radio' name='gender' value='male')] Male
+                  label.mx-2 #[input(id='gender' type='radio' name='gender' value='female' checked)] Female
+                  label.mx-2 #[input(id='gender' type='radio' name='gender' value='other' )] Other 
+                else
+                  label.mx-2 #[input(id='gender' type='radio' name='gender' value='male')] Male
+                  label.mx-2 #[input(id='gender' type='radio' name='gender' value='female')] Female
+                  label.mx-2 #[input(id='gender' type='radio' name='gender' value='other' checked)] Other   
         .row.mt-2.mb-4
           .col-sm-6
             .input-group-prepend
               span.input-group-text Date of birth
-          .col-sm-6.mt-2   
-              - var days = 0;
+          .col-sm-6.mt-2 
+              - var days = 0  
+              - var bday = customer.bday
+              - var daysArr = bday.split("/")
               select.mx-1(name = 'day' )
                 while days < 31
+                  if days==daysArr[0]
+                    option(id=days value=days selected) #{days}
                   option(id=days++ value=days) #{days}
               span='/'
               - var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
               select.mx-1(name = 'month' )
                 each month in months
+                  if month==daysArr[1]
+                    option(id=days++ value=month selected) #{month}
                   option(value=month) #{month}
               span='/'
               - var years = 2018
               select.mx-1(name = 'year' ) 
                 while years > 1950
+                  if years==daysArr[2]
+                    option(id=days++ value=years selected) #{years}
                   option(id = years-- value = years) #{years}  
         legend='Address Information'
         .row.mt-3
           .col-sm-6
             .input-group-prepend
               span.input-group-text Address
-            input.form-control.mb-3(type='text' name='address' style={width:'100%'} required)
+            input.form-control.mb-3(id='address' type='text' name='address' style={width:'100%'} value=customer.address required)
             .input-group-prepend
               span.input-group-text Province
             div
-              input.form-control(type='text' name='province' style={width:'100%'} required)
+              input.form-control(id='province' type='text' name='province' value=customer.province style={width:'100%'} required)
           .col-sm-6
             .input-group-prepend
               span.input-group-text District
-            input.form-control.mb-3(type='text' name='district' style={width:'100%'} )
+            input.form-control.mb-3(id='distinct' type='text' name='district' value=customer.district style={width:'100%'} )
             .input-group-prepend
               span.input-group-text Zip code
-            input.form-control(type='text' name='zipCode' style={width:'100%'} required)
+            input.form-control(id='zip' type='text' name='zipCode' value=customer.zipCode style={width:'100%'} required)
         .row.mt-3
           .col-sm-6
             .input-group-prepend
               span.input-group-text Telephone
-            input.form-control(type='text' name='telephone' style={width:'100%'} required)
+            input.form-control(id='telephone' type='text' value=customer.phone name='telephone' style={width:'100%'} required)
     
-        input.mt-5.btn.btn-danger.test(type='submit', value='Submit')
-
+        button.mt-5.btn.btn-success(id='edit' type='submit', value=account.customerID) Edit
+        input.mt-5.btn.btn-danger(id='cancel' type='submit' value='Cancel')
 
   script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js")
   script(src="http://malsup.github.com/jquery.form.js")
-  script(src="index.js")
   block foot
   script(src='../script/profile.js')
-
