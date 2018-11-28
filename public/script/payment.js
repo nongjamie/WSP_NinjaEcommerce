@@ -2,9 +2,15 @@ $( () => {
 
   // Cofirm button clicked.
   $('#yesButton').click( () => {
-    console.log('Go to summary page.');
-    const username = $('#userNavBarUsername').text()
-    window.location = "http://localhost:3000/summary/"+username;
+    let control = checkInputField();
+    if( control == 0) {
+      alert('Please complete the fill in step3.');
+    }
+    else {
+      console.log('Go to summary page.');
+      const username = $('#userNavBarUsername').text()
+      window.location = "http://localhost:3000/summary/"+username;
+    }
   });
 
   // Cancel button clicked then go to whisky page.
@@ -85,6 +91,19 @@ $( () => {
 
 } );
 
+function checkInputField() {
+  let name = $('#inputName').val();
+  let date = $('#inputDate').val();
+  let time = $('#inputTime').val();
+  let amount = $('#inputAmount').val();
+  let accNo = $('#inputAccNo').val();
+  let transNo = $('#inputTransactionNo').val();
+  if( (name !== "") && (date !== "") && (time !== "") && (amount !== "") && (accNo !== "") && (transNo !== "") ) {
+    return 1;
+  }
+  return 0;
+}
+
 function textInStep2() {
   $(".paymentFieldInputSentence").html(`
     <p>Step 2 : Pay by the mobile banking to these info.</p>
@@ -92,6 +111,7 @@ function textInStep2() {
 }
 
 function paymentFileUpload(num) {
+  let verifyExampleID = ["inputName", "inputDate", "inputTime", "inputAmount", "inputAccNo", "inputTransactionNo"];
   let verifyExampleTopic = [ "Name", "Date", "Time", "Amount(฿)", "Acc. no.", "Transaction no." ];
   let verifyExamplePlaceHolder = [ "Varit Assavavisidchai", "11 November 2018", "22.53", "5,000", "123-4-56789-0", "340255905521903810" ];
   if(num == 0) {
@@ -113,7 +133,7 @@ function paymentFileUpload(num) {
       ans = ans + `
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon1">${verifyExampleTopic[i]}</span>
-          <input type="text" class="form-control" placeholder=\"${verifyExamplePlaceHolder[i]}\" aria-label="Username" aria-describedby="basic-addon1" >
+          <input id="${verifyExampleID[i]}" type="text" class="form-control" placeholder=\"${verifyExamplePlaceHolder[i]}\" aria-label="Username" aria-describedby="basic-addon1" >
         </div>
       `;
     }
