@@ -40,8 +40,8 @@ html
       div.test
         .sidenav
           a(href="/admin") Dashboard
+      if(user)
         block content
-
   .toggleNavBar.bg-light
     .container.text-center.mt-5
       div.my-2
@@ -55,7 +55,7 @@ html
       div.my-2
         a.btn.btn-warning.btn-block(href='/admin/addProduct') Add product
       div.my-2
-        a.btn.btn-warning.btn-block(href='/logout') Logout
+        a.btn.btn-warning.btn-block(href='/logout') Logout   
 
         
         
