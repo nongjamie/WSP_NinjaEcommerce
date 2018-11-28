@@ -5,31 +5,42 @@ $(function () {
             const data = val.split(',')
             const quantity = $(`.fixsize.onpage[name=${data[1]}]`).val()
             const username = $('#userNavBarUsername').text()
-            $(".fadeTo").fadeTo("fast", 0.5);
-                  $('.loading').css({
-                      'display': 'block',
-                      'z-index': '11',
-                  })
-            $.ajax({
-                url: '/wine',
-                data:{
-                    'username': username,
-                    'productID': data[2],
-                    'quantity': parseInt(quantity)
+            if(username !== "") {
+              $(".fadeTo").fadeTo("fast", 0.5);
+                    $('.loading').css({
+                        'display': 'block',
+                        'z-index': '11',
+                    })
+              $.ajax({
+                  url: '/wine',
+                  data:{
+                      'username': username,
+                      'productID': data[2],
+                      'quantity': parseInt(quantity)
 
-                },
-                type: 'POST',
-                success: function(data) {
-                    if(data.return_code === '400'){
-                       console.log('error')
-                    }else{
-                        console.log(data)
-                    }
-                },
-                error: function(error){
-                    console.log('add to cart error')
-                }
-            })
+                  },
+                  type: 'POST',
+                  success: function(data) {
+                      if(data.return_code === '400'){
+                         console.log('error')
+                      }else{
+                          $('.loading').css({
+                              'display': 'none',
+                              'z-index': '11',
+                          })
+                          console.log(data)
+                      }
+                  },
+                  error: function(error){
+                      console.log('add to cart error')
+                  }
+              })
+            }
+            else {
+              console.log("AddToCart without username, please log in.");
+              alert("Please login before shopping.");
+            }
+
         })
 
         $('.addToCartButton.center').on('click', function(e){
@@ -40,26 +51,32 @@ $(function () {
             console.log(username)
             console.log(quantity)
             console.log(data)
-            $.ajax({
-                url: '/wine',
-                data:{
-                    'username': username,
-                    'productID': data[2],
-                    'quantity': parseInt(quantity)
+            if(username !== "") {
+              $.ajax({
+                  url: '/wine',
+                  data:{
+                      'username': username,
+                      'productID': data[2],
+                      'quantity': parseInt(quantity)
 
-                },
-                type: 'POST',
-                success: function(data) {
-                    if(data.return_code === '400'){
-                       console.log('error')
-                    }else{
-                        console.log(data)
-                    }
-                },
-                error: function(error){
-                    console.log('add to cart error')
-                }
-            })
+                  },
+                  type: 'POST',
+                  success: function(data) {
+                      if(data.return_code === '400'){
+                         console.log('error')
+                      }else{
+                          console.log(data)
+                      }
+                  },
+                  error: function(error){
+                      console.log('add to cart error')
+                  }
+              })
+            }
+            else {
+              console.log("AddToCart without username, please log in.");
+              alert("Please login before shopping.");
+            }
         })
 
 

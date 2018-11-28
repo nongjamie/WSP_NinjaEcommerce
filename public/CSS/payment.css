@@ -2,7 +2,7 @@
   /* border: 1px solid green; */
 }
 
-/* Payment topic */
+/* ---------- Payment topic --------- */
 
 .paymentTopicContainer {
   font-size: 30px;
@@ -18,9 +18,9 @@
 
 }
 
-/* Payment selection part  */
+/* ---------- Payment selection part ---------- */
 
-/* ----------Left part---------- */
+/* ----- Left part ----- */
 
 /* Choose payment method */
 .paymentLogo {
@@ -35,8 +35,8 @@
 
 /* Each image logo */
 .paymentLogo img {
-  height: 100px;
-  width: 150px;
+  height: 120px;
+  width: 230px;
   margin: 20px;
   border: 1px solid black;
 }
@@ -61,7 +61,7 @@
 
 }
 
-/* ----------Right part---------- */
+/* ----- Right part ----- */
 
 /* Payment */
 .paymentField {
@@ -93,6 +93,8 @@
 }
 
 .paymentFieldUpload {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -121,15 +123,7 @@
 
 }
 
-.paymentFileUpload input {
-
-}
-
-.paymentFileUpload button {
-
-}
-
-/* Button selection */
+/* ---------- Button selection ---------- */
 
 .buttonFinalSelection {
   margin-bottom: 10px;

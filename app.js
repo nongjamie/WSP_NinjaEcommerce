@@ -35,7 +35,6 @@ app.set("view engine", "pug");
 
 //Use passport
 app.get('*', function(req,res,next){
-
   res.locals.user = req.user || null;
   next();
 })
@@ -74,12 +73,6 @@ app.get("/confirmOrder", function(req, res) {
   });
 });
 
-// Status route
-app.get("/status", function(req, res) {
-  res.render("status", {
-    menu: 'status'
-  });
-});
 
 // Sign up route
 app.get("/signup", function(req, res) {
@@ -93,6 +86,12 @@ app.get("/signup", function(req, res) {
 app.get("/login", function(req, res) {
   res.render("login", {
     menu: 'login'
+  })
+})
+//log in admin
+app.get("/loginAdmin", function(req, res) {
+  res.render("loginAdmin", {
+    menu: 'loginAdmin'
   })
 })
 
@@ -110,10 +109,6 @@ app.get("/aboutUs", function(req, res) {
   });
 });
 
-//profile
-app.get("/profile", function(req, res) {
-  res.render("profile");
-})
 
 app.use(require('./routes/products'))
 
@@ -132,6 +127,12 @@ app.use('/summary',require('./routes/summary'))
 app.use('/completeTransaction',require('./routes/completeTransaction'))
 
 app.use('/search',require('./routes/search'))
+
+app.use('/profile',require('./routes/profile'))
+
+app.use('/admin',require('./routes/admin'))
+
+app.use('/status',require('./routes/status'))
 
 app.use(function(req, res, next) {
   return res.status(404).render('404')

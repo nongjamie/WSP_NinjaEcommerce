@@ -52,6 +52,10 @@ $(function () {
             console.log('Redirecting to /login ...')
             swal("Good job!", "Complete sign up", "success")
             .then(e => {
+                $('.loading').css({
+                    'display': 'block',
+                    'z-index': '99',
+                })
                 window.location.pathname = '/login'
             })
         }else{
