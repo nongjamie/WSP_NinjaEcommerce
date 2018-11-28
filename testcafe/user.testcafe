@@ -1,0 +1,2532 @@
+{
+    "fixtures": [
+        {
+            "name": "user",
+            "pageUrl": "http://localhost:3000/",
+            "tests": [
+                {
+                    "name": "register",
+                    "commands": [
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('a').withText('SIGN UP')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('a').withText('SIGN UP')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#menuNavBar').find('a').withText('SIGN UP')"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('li').withText('SIGN UP').find('.nav-link.loadingClicked')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.nav-item').nth(4).find('a').withText('SIGN UP')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#menuNavBar').find('.nav-link.loadingClicked').nth(2)"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.nav-link.loadingClicked').nth(4)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#whiteLetter').nth(9)"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#menuNavBar').find('li').nth(2).find('a')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(8).find('nav').find('div').nth(3).find('div').find('li').nth(2).find('a')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 77,
+                                "offsetY": 22
+                            },
+                            "options": {},
+                            "type": "click",
+                            "callsite": "1"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#username')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#username')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('[name=\"username\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control[name=\"username\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.form-control[name=\"username\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('fieldset').withText('Account Infomation').find('.form-control[name=\"username\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.p-5').find('.form-control[name=\"username\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('fieldset').withText('Account Infomation').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 331,
+                                "offsetY": 28
+                            },
+                            "text": "mond12345",
+                            "options": {},
+                            "type": "type-text",
+                            "callsite": "3"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#email')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#email')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('[name=\"email\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control[name=\"email\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.form-control[name=\"email\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('fieldset').withText('Account Infomation').find('.form-control[name=\"email\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.p-5').find('.form-control[name=\"email\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('fieldset').withText('Account Infomation').find('input').nth(1)"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('input').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('input').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 244,
+                                "offsetY": 32
+                            },
+                            "text": "mond12345@hotmail.com",
+                            "options": {},
+                            "type": "type-text",
+                            "callsite": "4"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#signUpForm').find('[name=\"password\"]')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('[name=\"password\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control.password[name=\"password\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.form-control.password[name=\"password\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('fieldset').withText('Account Infomation').find('.form-control.password[name=\"password\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.p-5').find('.form-control.password[name=\"password\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('fieldset').withText('Account Infomation').find('input').nth(2)"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('input').nth(2)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.p-5').find('form').find('fieldset').find('input').nth(2)"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('input').nth(2)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 242,
+                                "offsetY": 31
+                            },
+                            "text": "mond",
+                            "options": {},
+                            "type": "type-text",
+                            "callsite": "7"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#signUpForm').find('[name=\"confirmPassword\"]')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('[name=\"confirmPassword\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control.confirmPassword[name=\"confirmPassword\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.form-control.confirmPassword[name=\"confirmPassword\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('fieldset').withText('Account Infomation').find('.form-control.confirmPassword[name=\"confirmPassword\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.p-5').find('.form-control.confirmPassword[name=\"confirmPassword\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('fieldset').withText('Account Infomation').find('input').nth(3)"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('input').nth(3)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.p-5').find('form').find('fieldset').find('input').nth(3)"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('input').nth(3)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 269,
+                                "offsetY": 33
+                            },
+                            "text": "mond",
+                            "options": {},
+                            "type": "type-text",
+                            "callsite": "8"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#signUpForm').find('[name=\"name\"]')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('[name=\"name\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.form-control[name=\"name\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').find('.form-control[name=\"name\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Name').nth(2).find('.form-control[name=\"name\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control[name=\"name\"]').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Name').nth(2).nth(2).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('div').nth(8).find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('div').nth(8).find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 249,
+                                "offsetY": 20
+                            },
+                            "text": "mond",
+                            "options": {},
+                            "type": "type-text",
+                            "callsite": "9"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#signUpForm').find('[name=\"address\"]')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('[name=\"address\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control.mb-3[name=\"address\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.form-control.mb-3[name=\"address\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Address').nth(2).find('.form-control.mb-3[name=\"address\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').nth(4).find('.form-control.mb-3[name=\"address\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Address').nth(2).nth(2).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').nth(4).nth(4).find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('div').nth(19).find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('div').nth(19).find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 262,
+                                "offsetY": 22
+                            },
+                            "text": "qwe",
+                            "options": {},
+                            "type": "type-text",
+                            "callsite": "10"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#signUpForm').find('[name=\"province\"]')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('[name=\"province\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control[name=\"province\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.form-control[name=\"province\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Address').nth(2).find('.form-control[name=\"province\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').nth(4).find('.form-control[name=\"province\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Address').nth(2).nth(2).find('div').nth(2).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').nth(4).nth(4).find('div').nth(2).find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('div').nth(19).find('div').find('div').nth(2).find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('div').nth(19).find('div').find('div').nth(2).find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 264,
+                                "offsetY": 19
+                            },
+                            "text": "qwe",
+                            "options": {},
+                            "type": "type-text",
+                            "callsite": "11"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#signUpForm').find('[name=\"telephone\"]')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('[name=\"telephone\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control[name=\"telephone\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.form-control[name=\"telephone\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Telephone').nth(2).find('.form-control[name=\"telephone\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').nth(6).find('.form-control[name=\"telephone\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Telephone').nth(2).nth(2).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').nth(6).nth(6).find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('div').nth(27).find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('div').nth(27).find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 262,
+                                "offsetY": 13
+                            },
+                            "text": "qwe",
+                            "options": {},
+                            "type": "type-text",
+                            "callsite": "12"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#signUpForm').find('[name=\"district\"]')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('[name=\"district\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control.mb-3[name=\"district\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.form-control.mb-3[name=\"district\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('District').nth(2).find('.form-control.mb-3[name=\"district\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').nth(5).find('.form-control.mb-3[name=\"district\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('District').nth(2).nth(2).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').nth(5).nth(5).find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('div').nth(19).find('div').nth(4).find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('div').nth(19).find('div').nth(4).find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 122,
+                                "offsetY": 34
+                            },
+                            "text": "qwe",
+                            "options": {},
+                            "type": "type-text",
+                            "callsite": "13"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#signUpForm').find('[name=\"zipCode\"]')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('[name=\"zipCode\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control[name=\"zipCode\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.form-control[name=\"zipCode\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('District').nth(2).find('.form-control[name=\"zipCode\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').nth(5).find('.form-control[name=\"zipCode\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('District').nth(2).nth(2).find('input').nth(1)"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.col-sm-6').nth(5).nth(5).find('input').nth(1)"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('div').nth(19).find('div').nth(4).find('input').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('div').nth(19).find('div').nth(4).find('input').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 145,
+                                "offsetY": 27
+                            },
+                            "text": "qwe",
+                            "options": {},
+                            "type": "type-text",
+                            "callsite": "14"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('.mt-5.btn.btn-danger.test')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.mt-5.btn.btn-danger.test')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('.mt-5.btn.btn-danger.test')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('fieldset').withText('Account Infomation').find('.mt-5.btn.btn-danger.test')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.p-5').find('.mt-5.btn.btn-danger.test')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('fieldset').withText('Account Infomation').find('input').nth(13)"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#signUpForm').find('fieldset').find('input').nth(13)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.p-5').find('form').find('fieldset').find('input').nth(13)"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('form').find('fieldset').find('input').nth(13)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 28,
+                                "offsetY": 1
+                            },
+                            "options": {},
+                            "type": "click",
+                            "callsite": "15"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('button').withText('OK')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('OK')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.swal-button.swal-button--confirm')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.swal-button-container').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.swal-button-container').find('.swal-button.swal-button--confirm')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('OK').nth(3).find('.swal-button.swal-button--confirm')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.swal-button-container').find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('OK').nth(3).nth(3).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(61).find('div').find('div').nth(5).find('div').find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 38,
+                                "offsetY": 20
+                            },
+                            "options": {},
+                            "type": "click",
+                            "callsite": "16"
+                        }
+                    ]
+                },
+                {
+                    "name": "store",
+                    "commands": [
+                        {
+                            "callsite": "1",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('li').withText('LOG IN').find('.nav-link.loadingClicked')"
+                            },
+                            "studio": {
+                                "offsetX": 56,
+                                "offsetY": 31,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('li').withText('LOG IN').find('.nav-link.loadingClicked')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.nav-item').nth(5).find('a').withText('LOG IN')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('a').withText('LOG IN').nth(0)"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#menuNavBar').find('a').withText('LOG IN').nth(0)"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#menuNavBar').find('.nav-link.loadingClicked').nth(3)"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.nav-link.loadingClicked').nth(5)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#whiteLetter').nth(10)"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#menuNavBar').find('li').nth(3).find('a')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(8).find('nav').find('div').nth(3).find('div').find('li').nth(3).find('a')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "2",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('li').withText('LOG IN').find('.nav-link.loadingClicked')"
+                            },
+                            "studio": {
+                                "offsetX": 56,
+                                "offsetY": 31,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('li').withText('LOG IN').find('.nav-link.loadingClicked')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.nav-item').nth(5).find('a').withText('LOG IN')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('a').withText('LOG IN').nth(0)"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#menuNavBar').find('a').withText('LOG IN').nth(0)"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#menuNavBar').find('.nav-link.loadingClicked').nth(3)"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.nav-link.loadingClicked').nth(5)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#whiteLetter').nth(10)"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#menuNavBar').find('li').nth(3).find('a')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(8).find('nav').find('div').nth(3).find('div').find('li').nth(3).find('a')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "3",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#username')"
+                            },
+                            "studio": {
+                                "offsetX": 581,
+                                "offsetY": 20,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#username')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#loginForm').find('[name=\"username\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control[name=\"username\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#form-group').find('.form-control[name=\"username\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.temp.my-5').find('.form-control[name=\"username\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Username').nth(2).find('.form-control[name=\"username\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#form-group').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Username').nth(2).nth(2).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('div').find('span').find('form').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "jamie",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "5",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#password')"
+                            },
+                            "studio": {
+                                "offsetX": 562,
+                                "offsetY": 14,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#password')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#loginForm').find('[name=\"password\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control[name=\"password\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.temp.my-5').find('.form-control[name=\"password\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#form-group').nth(1).find('.form-control[name=\"password\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Password').nth(2).find('.form-control[name=\"password\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#form-group').nth(1).nth(1).find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Password').nth(2).nth(2).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('div').find('span').find('form').find('div').nth(1).find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "1234",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "6",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('.btn.btn-primary.loadingClicked')"
+                            },
+                            "studio": {
+                                "offsetX": 70,
+                                "offsetY": 19,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-primary.loadingClicked')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.temp.my-5').find('.btn.btn-primary.loadingClicked')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#form-group').nth(1).find('.btn.btn-primary.loadingClicked')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Password').nth(2).find('.btn.btn-primary.loadingClicked')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#form-group').nth(1).nth(1).find('input').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Password').nth(2).nth(2).find('input').nth(1)"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.temp.my-5').find('span').find('form').find('div').nth(1).find('input').nth(1)"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('div').find('span').find('form').find('div').nth(1).find('input').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "7",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('a').withText('STORE')"
+                            },
+                            "studio": {
+                                "offsetX": 65,
+                                "offsetY": 26,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('a').withText('STORE')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.nav-link.dropdown-toggle[data-toggle=\"dropdown\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.nav-item.dropdown').find('a').withText('STORE')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.nav-item.dropdown').find('.nav-link.dropdown-toggle[data-toggle=\"dropdown\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('STORE').nth(1).find('.nav-link.dropdown-toggle[data-toggle=\"dropdown\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#whiteLetter').nth(2)"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.nav-item.dropdown').find('a')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('STORE').nth(1).nth(1).find('a')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(8).find('nav').find('div').nth(1).find('a')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "9",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('a').withText('Whisky')"
+                            },
+                            "studio": {
+                                "offsetX": 52,
+                                "offsetY": 22,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('a').withText('Whisky')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.dropdown-item.loadingClicked.whiskyChoice')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.dropdown-menu.show').find('a').withText('Whisky')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.dropdown-menu.show').find('.dropdown-item.loadingClicked.whiskyChoice')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Whisky').nth(2).find('.dropdown-item.loadingClicked.whiskyChoice')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#whiteLetter').nth(3)"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.dropdown-menu.show').find('a')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Whisky').nth(2).nth(2).find('a')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(8).find('nav').find('div').nth(1).find('div').find('a')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "10",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('.product-border').find('button').withText('Add To Cart')"
+                            },
+                            "studio": {
+                                "offsetX": 231,
+                                "offsetY": 19,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.product-border').find('button').withText('Add To Cart')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.product-border').find('.mb-2.fixsize.addToCartButton.onpage')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Add To Cart').nth(3).find('.mb-2.fixsize.addToCartButton.onpage')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.mb-2.fixsize.addToCartButton.onpage').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('Add To Cart').nth(0)"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Add To Cart').nth(3).nth(3).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.product-border').find('div').nth(1).find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(23).find('div').find('div').find('div').nth(1).find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "11",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#userNavBarCartIcon')"
+                            },
+                            "studio": {
+                                "offsetX": 20,
+                                "offsetY": 23,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#userNavBarCartIcon')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.fas.fa-shopping-cart.loadingClicked')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#userNavBar').find('.fas.fa-shopping-cart.loadingClicked')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('jamie').nth(5).find('.fas.fa-shopping-cart.loadingClicked')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(1).find('.fas.fa-shopping-cart.loadingClicked')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('jamie').nth(5).nth(5).find('i').nth(1)"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(1).nth(1).find('i').nth(1)"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#userNavBar').find('div').find('div').nth(2).find('div').find('i').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(14).find('div').find('div').nth(2).find('div').find('i').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "13",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#confirmCartButton')"
+                            },
+                            "studio": {
+                                "offsetX": 65,
+                                "offsetY": 30,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#confirmCartButton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('Confirm')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(3).find('button').withText('Confirm')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Confirm').nth(1).find('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(3).nth(3).find('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Confirm').nth(1).nth(1).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(3).nth(3).nth(3).find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(39).find('div').find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "14",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#yesButton')"
+                            },
+                            "studio": {
+                                "offsetX": 28,
+                                "offsetY": 17,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#yesButton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('OK')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('.btn.btn-primary')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.modal-footer').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('No').nth(5).find('.btn.btn-primary')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-primary').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('div').find('div').find('div').nth(2).find('button').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(39).find('div').find('div').find('div').find('div').find('div').nth(2).find('button').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "16",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#confirmCartButton')"
+                            },
+                            "studio": {
+                                "offsetX": 41,
+                                "offsetY": 37,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#confirmCartButton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('Confirm')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(3).find('button').withText('Confirm')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Confirm').nth(1).find('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(3).nth(3).find('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Confirm').nth(1).nth(1).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(3).nth(3).nth(3).find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(41).find('div').find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "17",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#yesButton')"
+                            },
+                            "studio": {
+                                "offsetX": 28,
+                                "offsetY": 14,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#yesButton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('OK')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('.btn.btn-primary')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.modal-footer').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('No').nth(8).find('.btn.btn-primary')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-primary').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('div').find('div').find('div').nth(2).find('button').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(41).find('div').find('div').find('div').find('div').find('div').nth(2).find('button').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "18",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#confirmCartButton')"
+                            },
+                            "studio": {
+                                "offsetX": 77,
+                                "offsetY": 7,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#confirmCartButton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('Confirm')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(4).find('button').withText('Confirm')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Confirm').nth(1).find('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(4).nth(4).find('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Confirm').nth(1).nth(1).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(4).nth(4).nth(4).find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(37).find('div').find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "19",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#yesButton')"
+                            },
+                            "studio": {
+                                "offsetX": 34,
+                                "offsetY": 26,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#yesButton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('OK')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('.btn.btn-primary')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.modal-footer').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('No').nth(5).find('.btn.btn-primary')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-primary').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('div').find('div').find('div').nth(2).find('button').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(37).find('div').find('div').find('div').find('div').find('div').nth(2).find('button').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "21",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#confirmCartButton')"
+                            },
+                            "studio": {
+                                "offsetX": 51,
+                                "offsetY": 17,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#confirmCartButton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('Confirm')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(2).find('button').withText('Confirm')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Confirm').nth(1).find('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(2).nth(2).find('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Confirm').nth(1).nth(1).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(2).nth(2).nth(2).find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(62).find('div').find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "22",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#yesButton')"
+                            },
+                            "studio": {
+                                "offsetX": 31,
+                                "offsetY": 13,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#yesButton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('OK')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('.btn.btn-primary')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.modal-footer').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('No').nth(5).find('.btn.btn-primary')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-primary').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('div').find('div').find('div').nth(2).find('button').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(62).find('div').find('div').find('div').find('div').find('div').nth(2).find('button').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "23",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#confirmCartButton')"
+                            },
+                            "studio": {
+                                "offsetX": 88,
+                                "offsetY": 22,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#confirmCartButton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('Confirm')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(5).find('button').withText('Confirm')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Confirm').nth(1).find('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(5).nth(5).find('.btn.btn-success[data-toggle=\"modal\"][data-target=\"#exampleModal\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Confirm').nth(1).nth(1).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.row.justify-content-center').nth(5).nth(5).nth(5).find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(27).find('div').find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "24",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#yesButton')"
+                            },
+                            "studio": {
+                                "offsetX": 23,
+                                "offsetY": 21,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#yesButton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('OK')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('.btn.btn-primary')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.modal-footer').find('button').withText('OK')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('No').nth(5).find('.btn.btn-primary')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-primary').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#exampleModal').find('div').find('div').find('div').nth(2).find('button').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(27).find('div').find('div').find('div').find('div').find('div').nth(2).find('button').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -17,7 +17,7 @@ block content
           .col-sm-6
             .input-group.mb-3
             .input-group-prepend
-              span.input-group-text.mb-2 Gender
+              span.input-group-text.mb-2(id="gender-input") Gender
                 if customer.gender=='male'
                   label.mx-2 #[input(id='gender' type='radio' name='gender' value='male' checked)] Male
                   label.mx-2 #[input(id='gender' type='radio' name='gender' value='female' )] Female
@@ -87,4 +87,3 @@ block content
   script(src="http://malsup.github.com/jquery.form.js")
   block foot
   script(src='../script/profile.js')
-
