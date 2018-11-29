@@ -1,6 +1,6 @@
 {
   "name": "ninjaecommerce",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Ninja Ecommerce",
   "main": "app.js",
   "scripts": {
