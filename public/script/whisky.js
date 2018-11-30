@@ -26,6 +26,7 @@ $(function () {
                          console.log('error')
                       }else{
                         $('.loading').css({ 'display': 'none', })
+                        location.reload()
                       }
                   },
                   error: function(error){
@@ -69,6 +70,7 @@ $(function () {
                         $('.loading').css({ 'display': 'none', })
 
                           console.log(data)
+                          location.reload()
                       }
                   },
                   error: function(error){

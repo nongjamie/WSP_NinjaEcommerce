@@ -7,7 +7,7 @@ const expressValidator =require('express-validator')
 const flash = require('connect-flash')
 var cors = require('cors')
 
-const port = process.env.PORT || 5833
+const port = process.env.PORT || 3000
 
 // Init app
 const app = express();

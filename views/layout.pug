@@ -78,7 +78,7 @@ html
               if user
                 button(type="button" class="btn btn-outline-dark" id='userNavBarUsername' value=user.username disabled) #{user.username}
               i(class="fas fa-shopping-cart loadingClicked" id='userNavBarCartIcon')
-              button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' disabled) 0
+              button(type="button" class="btn btn-outline-dark" id='userNavBarOrder' value=user.username disabled)
 
     //- Body section
     link(rel='stylesheet', type='style/css', href='/CSS/style.css')

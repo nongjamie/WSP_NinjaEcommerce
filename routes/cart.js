@@ -22,10 +22,39 @@ router.get("/:username", async (req, res) => {
     total: total
   })
 })
-router.post("/:username", async (req, res) => {
+router.post("/:das", async (req, res) => {
   const data = req.body
   const result = await cart.removeProductFromCart(data)
   res.send("send success")
+})
+
+router.post("/get/amount",async(req,res)=>{
+  // var updUser = new User(req.session.user ? req.session.user : {});
+  // updUser.profilePic = `/uploads/${req.file.filename}`;
+  // User.update({ _id: req.user.id }, updUser, function (err, done) {
+  //   if (err) {
+  //     return console.log("err");
+  //   } else {
+  //     req.session.user = updUser;
+  //     res.redirect('back');
+  //   }
+  // })
+  console.log('ssdkdakdkadksadkadkak')
+  const username = req.body.username
+  console.log(username)
+  const result = await cart.getUserCart(username)
+  console.log(result)
+  // let amount = result.cart.reduce(
+  //   (acc, cur) => parseInt(acc.quantity) + parseInt(cur.quantity)
+  // )
+  var sum = 0
+  let amount =result.cart.forEach(async(element)=>{
+      sum+=parseInt(element.quantity)
+  })
+  console.log('paul')
+  console.log(sum+"")
+  res.send(sum+"")
+
 })
 
 module.exports = router
