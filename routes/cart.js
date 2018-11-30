@@ -48,9 +48,11 @@ router.post("/get/amount",async(req,res)=>{
   //   (acc, cur) => parseInt(acc.quantity) + parseInt(cur.quantity)
   // )
   var sum = 0
+  if(typeof username !=='undefined'){
   let amount =result.cart.forEach(async(element)=>{
       sum+=parseInt(element.quantity)
   })
+}
   console.log('paul')
   console.log(sum+"")
   res.send(sum+"")
