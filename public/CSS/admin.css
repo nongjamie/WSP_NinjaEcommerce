@@ -58,6 +58,10 @@
   font-weight:bold;
   color: blue;
 }
+.paid-word{
+  font-weight:bold;
+  color:#44EAA6 ;
+}
 
 .onHoverNavComponent{
     display: inline-block;
