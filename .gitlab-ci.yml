@@ -3,6 +3,7 @@ image: node:8.9.0
 stages:
   - build
   - test
+  - deploy
 
 build_test:
   stage: build
@@ -18,5 +19,12 @@ test_jest:
   stage: test
   script:
     - npm test
+  tags:
+    - docker
+
+ninja_deploy:
+  stage: deploy
+  script:
+    - git push heroku master
   tags:
     - docker
