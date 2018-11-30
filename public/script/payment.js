@@ -121,9 +121,6 @@ function paymentFileUpload(num) {
   else {
     $(".paymentFieldUploadSentence").html(`
       <p>Step 3 : Verify your transaction.</p>
-      <input type="file" style="font-size: 18px; margin: 5px; border: 1px solid black;"/>
-      <button type="button" class="btn btn-primary" style="margin: 5px;">Upload
-      </button>
     `);
     let ans = ``;
     ans = ans + `

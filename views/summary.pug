@@ -15,17 +15,50 @@ block content
     div.summaryDetail
       div.summaryCart
         div.row
-          div.pictureColumn.width20
-          div.productNameColumn.width20
-          div.productQuantityColumn.width20
-          div.productUnitPriceColumn.width20
-          div.productTotalPriceColumn.width20
+          - var headArray = ['Product', 'Name', 'Quanlity', 'UnitPrice', 'TotalCost']
+          each i in headArray
+            div.headTableTopic.width20(style="height: 50px; text-align: center;")
+              p(style="font-weight:bold;")= i
+          each pro in products
+            div.pictureColumn.width20
+              div
+                img(src='../pictures/'+pro.productID+'_'+pro.productName+'.jpg' name='../pictures/'+pro.productID+'_'+pro.productName+'.jpg')
+            div.productNameColumn.width20
+              div
+                | #{pro.productName}
+            div.productQuantityColumn.width20
+              div
+                | #{pro.quantity}
+            div.productUnitPriceColumn.width20
+              div
+                | #{pro.productPrice}
+            div.productTotalPriceColumn.width20
+              div
+                - var quan = pro.quantity
+                - var price = pro.productPrice
+                - var totalPrice = quan * price
+                  | #{totalPrice}
       div.summary2
         div.row
-          div.summaryPersonal
-          div.summaryPayment
+          div.summaryAccount
+            p Account
+            - var accArray = ['orderHistory', 'email', 'username', 'point', 'customerID']
+            each acc, array in account, accArray
+              div(class="input-group mb-3")
+                div(class="input-group-prepend")
+                  span(class="input-group-text" id="basic-addon1")= array
+                  input(type="number" class="form-control" placeholder=acc aria-label="Username" aria-describedby="basic-addon1" disabled)
+          div.summaryCustomer
+            p Customer
+            - var cusArray = ['gender', 'zipCode', 'address', 'district', 'province', 'email', 'name', 'phone', 'bday']
+            each cus, array in customer, cusArray
+              div(class="input-group mb-3")
+                div(class="input-group-prepend")
+                  span(class="input-group-text" id="basic-addon1")= array
+                  input(type="number" class="form-control" placeholder=cus aria-label="Username" aria-describedby="basic-addon1" disabled)
         div.row
-          div.summaryAppointment
+          div.summaryPayment
+              
     
   //- Button selection
   div.buttonFinalSelection
