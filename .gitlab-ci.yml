@@ -1,18 +1,15 @@
 image: node:8.9.0
 
+before_script:
+  - npm install
+
+cache:
+  paths:
+    - node_modules/
+
 stages:
-  - build
   - test
   - deploy
-
-build_test:
-  stage: build
-  script:
-    - node -v
-    - npm -v
-    - npm install
-  tags:
-    - docker
 
 test_jest:
   stage: test
