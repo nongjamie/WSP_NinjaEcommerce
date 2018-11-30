@@ -1,44 +1,59 @@
 extends admin-layout
 
 block content
-  .myBody
-      .flex-container.allCard
-        each o,i in order
-          div.cardMargin
+  .row.color-container
+      each o, i in order
+        .container
+          div(class='product-border').word-inline
             img(src="", alt="")
             br
+            .container
+              each product in o.products
+                .row
+                  .col
+                    span.mr-2.username-word Product :
+                    span #{product.productName}
+                  .col
+                    span.mr-2.feedback-word Quantity :
+                    span #{product.quantity}
+                  .col
+                    span.mr-2.password-word Price :
+                    span #{product.productPrice}
+                each promotion in o.promotions
+                  div #{promotion.promotionName}
+                  div #{promotion.quantity}
+                  div #{promotion.promotionPrice}
+              hr
             div.m-3
-            each product in o.products
-              a.myCard #{product.productName}
-              br
-              a.myCard #{product.quantity}
-              br
-              a.myCard #{product.productPrice}
+              span Total Price :
+              - var totalPrice =0
+              each product in o.products
+                - totalPrice += product.productPrice
+              span #{totalPrice}
+            div.m-3  Status :
+              if o.orderStatus == "Paid"
+                span.paid-word #{o.orderStatus}
+              else if o.orderStatus == "Not paid"
+                span.password-word #{o.orderStatus}
+              else if o.orderStatus == "Shipping"
+                span.feedback-word #{o.orderStatus}
+              else if o.orderStatus == "Delivered"
+                span.username-word #{o.orderStatus}
             div.m-3
-            each promotion in o.promotions
-              a.myCard #{promotion.promotionName}
-              br
-              a.myCard #{promotion.quantity}
-              br
-              a.myCard #{promotion.promotionPrice}
-            hr
-            div.m-3 
-              a.myCard #{o.orderStatus}
-            div.m-3 
-              a.myCard #{o.orderDate}
-            div.m-3 
-              a.myCard #{o.orderID}
-            div.m-3 
-              a.myCard #{o.username}
-            div.m-3 
-            div.form-group
-              label.sel1 Select list
-              select.form-control.sel1
-                option(name=i+1) Paid
-                option(name=i+1) Not paid
-                option(name=i+1) Shipping
-                option(name=i+1) Delivered
-              button.mt-5.btn.btn-success(value=o.orderID+','+(i+1)) Change
-              button.mt-5.btn.btn-danger(value=o.orderID) Delete
+              a.myCard Date : #{o.orderDate}
+            div.m-3
+              a.myCard Order ID : #{o.orderID}
+            div.m-3
+              a.myCard Username : #{o.username}
+              hr
+              div.form-group
+                label.sel1 Select list
+                select.form-control.sel1
+                  option(name=i+1) Paid
+                  option(name=i+1) Not paid
+                  option(name=i+1) Shipping
+                  option(name=i+1) Delivered
+                button.mt-3.btn.btn-success(value=o.orderID+','+(i+1)) Change
+                button.mt-3.btn.btn-danger(value=o.orderID) Delete
 
   script(src='../script/updateOrderStatus.js')

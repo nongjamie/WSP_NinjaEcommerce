@@ -16,7 +16,7 @@ html
               img.img(src="/pictures/home.png", alt="")
           div
             .onHoverNavComponent
-              span.px-2.navComponent.mx-2 
+              span.px-2.navComponent.mx-2
                 a.navLink(href='/admin') Home
             .onHoverNavComponent
               span.px-2.navComponent.mx-2
@@ -30,16 +30,13 @@ html
             .onHoverNavComponent
               span.px-2.navComponent.mx-2
                 a.navLink(href="/admin/addProduct") Add product
-            .onHoverNavComponent 
-              span.px-2.navComponent.mx-2 
+            .onHoverNavComponent
+              span.px-2.navComponent.mx-2
                 a.navLink(href='/logout') Logout
           .navToggle
             div
               img.navMenuImg(src="/pictures/admin-menu.svg", alt="")
-              
-      div.test
-        .sidenav
-          a(href="/admin") Dashboard
+
       if(user)
         block content
   .toggleNavBar.bg-light
@@ -55,13 +52,4 @@ html
       div.my-2
         a.btn.btn-warning.btn-block(href='/admin/addProduct') Add product
       div.my-2
-        a.btn.btn-warning.btn-block(href='/logout') Logout   
-
-        
-        
-
-        
-    
-    
-
-  
+        a.btn.btn-warning.btn-block(href='/logout') Logout
