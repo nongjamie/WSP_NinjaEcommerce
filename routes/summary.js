@@ -16,7 +16,8 @@ router.get('/:username', async (req, res) => {
             products: cartResult.cart,
             account: accResult.account,
             customer: accResult.customer,
-        });
+        }
+      );
     }
 
 })

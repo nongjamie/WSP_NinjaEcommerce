@@ -15,17 +15,32 @@ block content
     div.summaryDetail
       div.summaryCart
         div.row
-          div.pictureColumn.width20
-          div.productNameColumn.width20
-          div.productQuantityColumn.width20
-          div.productUnitPriceColumn.width20
-          div.productTotalPriceColumn.width20
+          each pro in products
+            div.pictureColumn.width20
+              div
+                img(src='../pictures/'+pro.productID+'_'+pro.productName+'.jpg' name='../pictures/'+pro.productID+'_'+pro.productName+'.jpg')
+            div.productNameColumn.width20
+              div
+                | #{pro.productName}
+            div.productQuantityColumn.width20
+              div
+                | #{pro.quantity}
+            div.productUnitPriceColumn.width20
+              div
+                | #{pro.productPrice}
+            div.productTotalPriceColumn.width20
+              div
+                - var quan = pro.quantity
+                - var price = pro.productPrice
+                - var totalPrice = quan * price
+                  | #{totalPrice}
       div.summary2
         div.row
           div.summaryPersonal
           div.summaryPayment
         div.row
-          div.summaryAppointment
+          div.summaryAppointment           
+              
     
   //- Button selection
   div.buttonFinalSelection

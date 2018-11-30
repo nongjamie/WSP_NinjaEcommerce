@@ -125,20 +125,20 @@ function initialSetUp() {
 
   // Address initial setup
 
-  let address = ["Address", "Distrinct", "Province", "ZipCode", "Telephone"];
-  let addressCode = '<p>Address</p>';
-  for (let i = 0; i < address.length; i++) {
-    addressCode = addressCode + `
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">${address[i]}</span>
-        <input type="number" class="form-control" placeholder="${address[i]} answer" aria-label="Username" aria-describedby="basic-addon1" disabled>
-      </div>
-    </div>
-    `;
-  }
-  addressCode = addressCode + `</br>`;
-  $('.summaryAppointment').html(addressCode);
+  // let address = ["Address", "Distrinct", "Province", "ZipCode", "Telephone"];
+  // let addressCode = '<p>Address</p>';
+  // for (let i = 0; i < address.length; i++) {
+  //   addressCode = addressCode + `
+  //   <div class="input-group mb-3">
+  //     <div class="input-group-prepend">
+  //       <span class="input-group-text" id="basic-addon1">${address[i]}</span>
+  //       <input type="number" class="form-control" placeholder="${address[i]} answer" aria-label="Username" aria-describedby="basic-addon1" disabled>
+  //     </div>
+  //   </div>
+  //   `;
+  // }
+  // addressCode = addressCode + `</br>`;
+  // $('.summaryAppointment').html(addressCode);
 
   // Payment initial setup
 
