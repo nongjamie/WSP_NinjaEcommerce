@@ -39,8 +39,12 @@
     margin-bottom: 20px;
     border-radius:10px;
     background: white;
-    white-space: nowrap;
-    overflow: hidden;
+    /*white-space: nowrap;
+    overflow: hidden;*/
+}
+.word-inline{
+  white-space: nowrap;
+  overflow: hidden;
 }
 .username-word{
   font-weight:bold;
@@ -49,6 +53,10 @@
 .password-word{
   font-weight:bold;
   color: red;
+}
+.feedback-word{
+  font-weight:bold;
+  color: blue;
 }
 
 .onHoverNavComponent{

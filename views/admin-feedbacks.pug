@@ -1,14 +1,15 @@
 extends admin-layout
 
 block content
-  .myBody
-      .flex-container.allCard
-        each feedback in feedbacks
-          div.cardMargin.container
-           span.mr-3 Name :  
-           span #{feedback.username}
-           br
-           span.mr-3 Feedback : 
-           span #{feedback.feedback}
-           button.mt-5.btn.btn-danger(value= feedback.feedbackID) Delete
+  .row.color-container
+      each feedback, i in feedbacks
+        .container.product-border
+         br
+         span.mr-2.username-word Name :
+         span #{feedback.username}
+         br
+         span.mr-2.feedback-word Feedback :
+         span #{feedback.feedback}
+         br
+         button.mt-3.btn.btn-danger(value= feedback.feedbackID) Delete
   script(src='../script/removeFeedback.js')
