@@ -9,7 +9,7 @@ test_jest:
     - npm set registry https://registry.npmjs.org/
     - node -v
     - npm -v
-    - npm install
+    - npm i @types/node
   tags:
     - docker
   allow_failure: true
