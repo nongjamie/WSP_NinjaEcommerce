@@ -24,7 +24,10 @@ block content
     //- Order number displays
     div.container-fluid.statusOrderNumberDisplay
         div.orderNumberDisplay
-          | Please enter your order number.
+          if order.orderID
+            | Previous search => #{order.orderID}
+          else 
+            | Previous search => None
     
     //- Progess bar
     div(class="container-fluid statusProgressbar")
