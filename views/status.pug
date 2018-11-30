@@ -24,7 +24,7 @@ block content
     //- Order number displays
     div.container-fluid.statusOrderNumberDisplay
         div.orderNumberDisplay
-          if order
+          if order.orderID
             | Previous search => #{order.orderID}
           else 
             | Previous search => None
