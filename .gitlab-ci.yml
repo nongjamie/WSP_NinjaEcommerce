@@ -1,15 +1,22 @@
 image: node:8.9.0
 
 stages:
+  - build
   - test
 
-test_jest:
-  stage: test
+build_test:
+  stage: build
   script:
     - node -v
     - npm -v
     - npm install
+    - npm audit fix
+  tags:
+    - docker
+
+test_jest:
+  stage: test
+  script:
     - npm test
   tags:
     - docker
-  allow_failure: true
