@@ -8,6 +8,6 @@ test_jest:
   script:
     - npm set registry https://registry.npmjs.org/
     - npm install
-  tag:
+  tags:
     - docker
   allow_failure: true
