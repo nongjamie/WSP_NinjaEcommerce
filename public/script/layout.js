@@ -99,4 +99,27 @@ $(() => {
   }
 })
   })
+$(document).ready(function(){
+  const username = $('#userNavBarOrder').val()
+  $.ajax({
+  url: '/mycart/get/amount',
+  data:{
+      'username':username
+    },
+type: 'POST',
+success: function(data) {
+  if(data.return_code === '400'){
+     console.log('error')
+  }else{
+    console.log('varitttdsadasast')
+    console.log(data)
+    $('#userNavBarOrder').text(data+"")
+  }
+},
+error: function(error){
+  console.log(error)
+}
+})
+}) 
+  
 })

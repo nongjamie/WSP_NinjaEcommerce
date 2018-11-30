@@ -29,6 +29,7 @@ $(function () {
                               'z-index': '11',
                           })
                           console.log(data)
+                          location.reload()
                       }
                   },
                   error: function(error){
@@ -65,6 +66,7 @@ $(function () {
                          console.log('error')
                       }else{
                           console.log(data)
+                          location.reload()
                       }
                   },
                   error: function(error){
