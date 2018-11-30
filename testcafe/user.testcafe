@@ -2525,6 +2525,755 @@
                             "type": "click"
                         }
                     ]
+                },
+                {
+                    "name": "search",
+                    "commands": [
+                        {
+                            "callsite": "1",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#searchinput')"
+                            },
+                            "studio": {
+                                "offsetX": 226,
+                                "offsetY": 24,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#searchinput')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('.form-control')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.input-group.mb-3').find('.form-control')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Search').nth(4).find('.form-control')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.input-group.mb-3').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Search').nth(4).nth(4).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('div').nth(1).find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').find('div').nth(1).find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "123456789",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "3",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#searchbutton')"
+                            },
+                            "studio": {
+                                "offsetX": 29,
+                                "offsetY": 6,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#searchbutton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('Search')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('button').withText('Search')"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('.btn.btn-secondary')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.input-group-append').find('button').withText('Search')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Search').nth(5).find('.btn.btn-secondary')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-secondary').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('div').nth(1).find('div').find('div').find('button')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').find('div').nth(1).find('div').find('div').find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "4",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#searchinput')"
+                            },
+                            "studio": {
+                                "offsetX": 280,
+                                "offsetY": 15,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#searchinput')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('.form-control')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.input-group.mb-3').find('.form-control')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Search').nth(4).find('.form-control')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.input-group.mb-3').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Search').nth(4).nth(4).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('div').nth(1).find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').find('div').nth(1).find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "cola",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "6",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#searchbutton')"
+                            },
+                            "studio": {
+                                "offsetX": 34,
+                                "offsetY": 28,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#searchbutton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('Search')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('button').withText('Search')"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('.btn.btn-secondary')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.input-group-append').find('button').withText('Search')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Search').nth(5).find('.btn.btn-secondary')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-secondary').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('div').nth(1).find('div').find('div').find('button')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').find('div').nth(1).find('div').find('div').find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "7",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#searchinput')"
+                            },
+                            "studio": {
+                                "offsetX": 256,
+                                "offsetY": 24,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#searchinput')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('.form-control')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.input-group.mb-3').find('.form-control')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Search').nth(4).find('.form-control')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.input-group.mb-3').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Search').nth(4).nth(4).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('div').nth(1).find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').find('div').nth(1).find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "whisky",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "8",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#searchbutton')"
+                            },
+                            "studio": {
+                                "offsetX": 24,
+                                "offsetY": 30,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#searchbutton')"
+                                        },
+                                        "ruleType": "id"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('Search')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('button').withText('Search')"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('.btn.btn-secondary')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.input-group-append').find('button').withText('Search')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Search').nth(5).find('.btn.btn-secondary')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.btn.btn-secondary').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#most-header').find('div').nth(1).find('div').find('div').find('button')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').find('div').nth(1).find('div').find('div').find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        }
+                    ]
+                },
+                {
+                    "name": "feedback",
+                    "commands": [
+                        {
+                            "callsite": "1",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('div').withText('Feedback')"
+                            },
+                            "studio": {
+                                "offsetX": 46,
+                                "offsetY": 2,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Feedback')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.feedbackSign')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(51)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "2",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('#feedbackForm').find('[name=\"name\"]')"
+                            },
+                            "studio": {
+                                "offsetX": 167,
+                                "offsetY": 34,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#feedbackForm').find('[name=\"name\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.form-control[name=\"name\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#feedbackForm').find('.form-control[name=\"name\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.mt-4').find('.form-control[name=\"name\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Your name or username').nth(2).find('.form-control[name=\"name\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#feedbackForm').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.mt-4').find('div').find('form').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Your name or username').nth(2).nth(2).find('form').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(52).find('div').find('div').find('form').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "Sathira",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "3",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('.mb-2.form-control[name=\"feedback\"]')"
+                            },
+                            "studio": {
+                                "offsetX": 141,
+                                "offsetY": 37,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.mb-2.form-control[name=\"feedback\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#feedbackForm').find('.mb-2.form-control[name=\"feedback\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.mt-4').find('.mb-2.form-control[name=\"feedback\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Your name or username').nth(2).find('.mb-2.form-control[name=\"feedback\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#feedbackForm').find('textarea')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.container.mt-4').find('div').find('form').find('textarea')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Your name or username').nth(2).nth(2).find('form').find('textarea')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(52).find('div').find('div').find('form').find('textarea')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "I love this website. 10000000000000000 points for this web.",
+                            "type": "type-text"
+                        },
+                        {
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('[class^=\"btn btn-primary d-inline-block feedbackSummitButto\"]')"
+                            },
+                            "studio": {
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"btn btn-primary d-inline-block feedbackSummitButto\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#feedbackForm').find('[class^=\"btn btn-primary d-inline-block feedbackSummitButto\"]')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.ml-4.mt-4').find('[class^=\"btn btn-primary d-inline-block feedbackSummitButto\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Cancel').nth(3).find('[class^=\"btn btn-primary d-inline-block feedbackSummitButto\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.ml-4.mt-4').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#feedbackForm').find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Cancel').nth(3).nth(3).find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').nth(52).find('div').find('div').find('form').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false,
+                                "offsetX": 25,
+                                "offsetY": 30
+                            },
+                            "options": {},
+                            "type": "click",
+                            "callsite": "4"
+                        }
+                    ]
                 }
             ]
         }

@@ -4,7 +4,7 @@ fixture `user`
     .page `http://localhost:3000/`;
 
 test('register', async t => {
-    await t
+    await t.setNativeDialogHandler(() => true)
         .click(Selector('a').withText('SIGN UP'))
         .typeText(Selector('#username'), 'mond12345')
         .typeText(Selector('#email'), 'mond12345@hotmail.com')
@@ -41,4 +41,22 @@ test('store', async t => {
         .click(Selector('#yesButton'))
         .click(Selector('#confirmCartButton'))
         .click(Selector('#yesButton'));
+});
+
+test('search', async t => {
+    await t
+        .typeText(Selector('#searchinput'), '123456789')
+        .click(Selector('#searchbutton'))
+        .typeText(Selector('#searchinput'), 'cola')
+        .click(Selector('#searchbutton'))
+        .typeText(Selector('#searchinput'), 'whisky')
+        .click(Selector('#searchbutton'));
+});
+
+test('feedback', async t => {
+    await t.setNativeDialogHandler(() => true)
+        .click(Selector('div').withText('Feedback'))
+        .typeText(Selector('#feedbackForm').find('[name="name"]'), 'Sathira')
+        .typeText(Selector('.mb-2.form-control[name="feedback"]'), 'I love this website. 10000000000000000 points for this web.')
+        .click(Selector('[class^="btn btn-primary d-inline-block feedbackSummitButto"]'));
 });
