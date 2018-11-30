@@ -1,5 +1,3 @@
-image: node:8.12.0
-
 stages:
   - test
 
@@ -7,5 +5,4 @@ test_async:
   stage: test
   script:
     - npm install
-    - npm test
   allow_failure: true
