@@ -9,6 +9,7 @@ test_jest:
     - node -v
     - npm -v
     - npm i @types/node
+    - npm test
   tags:
     - docker
   allow_failure: true
