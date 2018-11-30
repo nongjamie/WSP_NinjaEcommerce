@@ -16,7 +16,18 @@ router.get('/:username', async (req, res) => {
             products: cartResult.cart,
             account: accResult.account,
             customer: accResult.customer,
-        });
+        }
+      )
+      console.log("-----products-----");
+      console.log(cartResult.cart);
+      console.log("----------");
+      console.log("-----account-----");
+      console.log(accResult.account);
+      console.log("----------");
+      console.log("-----customer-----");
+      console.log(accResult.customer);
+      console.log("----------");
+      ;
     }
 
 })
