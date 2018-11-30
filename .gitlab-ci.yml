@@ -19,9 +19,11 @@ test_jest:
   tags:
     - docker
 
-ninja_deploy:
+deploy_ninja:
   stage: deploy
   script:
+    - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/ninja-ecommerce.git
     - git push heroku master
+    - echo "Deployed to production server"
   tags:
     - docker
