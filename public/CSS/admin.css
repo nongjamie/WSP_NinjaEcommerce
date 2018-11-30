@@ -20,6 +20,36 @@
     transition: all 0.2s ease;
 }
 
+.color-container{
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border-collapse: separate;
+  /*background-color:  rgb(255, 255, 195);*/
+  background-color: rgb(217, 217, 217);
+
+}
+
+.product-border {
+    /*text-align: center;*/
+    margin: auto;
+    border: 3px solid #99999C;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-radius:10px;
+    background: white;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.username-word{
+  font-weight:bold;
+  color: green;
+}
+.password-word{
+  font-weight:bold;
+  color: red;
+}
 
 .onHoverNavComponent{
     display: inline-block;
@@ -71,7 +101,7 @@
     background-color: palegoldenrod;
     padding-bottom: 1em;
 }
-  
+
 .flex-container > div {
     background-color: whitesmoke;
     min-width: 100px;
@@ -83,7 +113,7 @@
 
 .allCard{
     border-radius: 4px;
-    
+
 }
 
 .myCard{
@@ -153,4 +183,3 @@
     height: 50px;
     cursor: pointer;
 }
-

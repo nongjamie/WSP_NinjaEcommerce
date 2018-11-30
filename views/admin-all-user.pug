@@ -1,19 +1,21 @@
 extends admin-layout
 
 block content
-  .myBody
-      .flex-container.allCard
-        each user in users
-          div.cardMargin
+  .row.color-container
+      each user, i in users
+        .container.col-6.col-md-4
+          div(class='product-border')
             img(src="", alt="")
             br
             div.m-3
+              h.username-word Username : &nbsp
               a.myCard(href="/admin/user/"+user.username) #{user.username}
             hr
-            div.m-3 
+            div.m-3
+              h.password-word Email : &nbsp
               a.myCard(href='/admin/user/'+user.username) #{user.email}
-            div.m-3 
-              button.mt-5.btn.btn-danger(value= user.username) Delete
+            div.m-3
+              button.mt-3.btn.btn-danger(value= user.username) Delete
 
 
   script(src='../script/removeUser.js')
