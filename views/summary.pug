@@ -15,6 +15,10 @@ block content
     div.summaryDetail
       div.summaryCart
         div.row
+          - var headArray = ['Product', 'Name', 'Quanlity', 'UnitPrice', 'TotalCost']
+          each i in headArray
+            div.headTableTopic.width20(style="height: 50px; text-align: center;")
+              p(style="font-weight:bold;")= i
           each pro in products
             div.pictureColumn.width20
               div
@@ -36,10 +40,24 @@ block content
                   | #{totalPrice}
       div.summary2
         div.row
-          div.summaryPersonal
-          div.summaryPayment
+          div.summaryAccount
+            p Account
+            - var accArray = ['orderHistory', 'email', 'username', 'point', 'customerID']
+            each acc, array in account, accArray
+              div(class="input-group mb-3")
+                div(class="input-group-prepend")
+                  span(class="input-group-text" id="basic-addon1")= array
+                  input(type="number" class="form-control" placeholder=acc aria-label="Username" aria-describedby="basic-addon1" disabled)
+          div.summaryCustomer
+            p Customer
+            - var cusArray = ['gender', 'zipCode', 'address', 'district', 'province', 'email', 'name', 'phone', 'bday']
+            each cus, array in customer, cusArray
+              div(class="input-group mb-3")
+                div(class="input-group-prepend")
+                  span(class="input-group-text" id="basic-addon1")= array
+                  input(type="number" class="form-control" placeholder=cus aria-label="Username" aria-describedby="basic-addon1" disabled)
         div.row
-          div.summaryAppointment           
+          div.summaryPayment
               
     
   //- Button selection
