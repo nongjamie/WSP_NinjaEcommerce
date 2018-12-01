@@ -25,3 +25,25 @@ test("(Class: Product) Search product by name", async () => {
   expect(result.orderID)
   expect(result.return_code).toMatch("200")
 }, 30000)
+
+test("(Class: Product) Add product Admin", async () => {
+  const data ={
+    'name' : 'varitas',
+    'price' : 12,
+    'detail' : 'ssssl',
+    'categoryID' : 'ssss',
+    'country': 'kalaland',
+    'abv': 'ss',
+    'distributor': 'ssss',
+    'imgUrl': 'ssss',
+    'vol': 'sss'
+  }
+  const result = await product.addProduct(data)
+  expect(result.return_code).toMatch("200")
+}, 30000)
+
+test("(Class: Product)Test get product list", async () => {
+  const result = await product.getProductList()
+  expect(result.return_code).toMatch("200")
+}, 30000)
+

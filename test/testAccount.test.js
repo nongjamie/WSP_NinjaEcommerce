@@ -47,3 +47,12 @@ test('(Class: Account)Test remove account', async () => {
   const result = await account.remove(username)
   expect(result.return_code).toMatch('200')
 }, 30000)
+
+test('(Class: Account)Test Admin login', async () => {
+  const data = {
+    username: 'admin@ninja@varitclub',
+    password: 'ninjavarit'
+  }
+  const result = await account.loginToAdmin(data)
+  expect(result.return_code).toMatch('200')
+}, 30000)
