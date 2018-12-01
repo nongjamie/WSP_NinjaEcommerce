@@ -1,16 +1,22 @@
 extends admin-layout
 
 block content
-  .myBody
-      .flex-container.allCard
-        each product in products
-          div.cardMargin.container  
-           span #{product.productName}
-           br
-           span #{product.productID}
-           br
-           span #{product.categoryID}
-           br
-           span #{product.productPrice}
-           button.mt-5.btn.btn-danger(value= product.productID) Delete
+  .row.color-container
+      each product, i in products
+        .container.col-6.col-md-4
+          .container.product-border.word-inline
+            br
+            div
+              span.username-word Name : &nbsp
+              span #{product.productName}
+            div
+              span.feedback-word Product Id : &nbsp
+              span #{product.productID}
+            div
+              span.purple-word Category Id : &nbsp
+              span #{product.categoryID}
+            div
+              span.password-word Price : &nbsp
+              span #{product.productPrice}
+            button.mt-3.btn.btn-danger(value= product.productID) Delete
   script(src='../script/removeProductAdmin.js')
