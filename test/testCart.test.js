@@ -38,7 +38,6 @@ test('(Class: Cart)Test check out', async () => {
     quantity: 1
   }
   const result = await cart.checkoutByUsername('hereton')
-  console.log(result)
   expect(result.orderID)
   expect(result.return_code).toMatch('200')
 }, 30000)

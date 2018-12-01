@@ -3,6 +3,8 @@ const URL = require('../config/database')
 
 class Order {
   async getOrderByOrderID(orderID) {
+    console.log('order IDDDddddddd')
+    console.log(orderID)
     try {
       const response = await axios.post(
         URL.getOrderByOrderID,
@@ -20,10 +22,7 @@ class Order {
   }
   async getOrderList() {
     try {
-      console.log('paul')
       const response = await axios.get(URL.getOrderList)
-      console.log('paul2')
-      console.log(response.data)
       return response.data
     } catch (error) {
       return error.data
