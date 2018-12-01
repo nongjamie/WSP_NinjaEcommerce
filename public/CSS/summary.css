@@ -111,13 +111,13 @@
 }
 
 .summaryCustomer .input-group-prepend {
-  width: 80%;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
 }
 
-/* ----- Summary appointment ----- */
+/* ----- Summary Payment ----- */
 
 .summaryPayment {
   width: 100%;
@@ -134,7 +134,7 @@
   width: 100%;
 }
 
-.summaryAppointment .input-group-prepend {
+.summaryPayment .input-group-prepend {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -152,7 +152,7 @@
     width: 100%;
   }
 
-  .summaryAppointment {
+  .summaryPayment {
     width: 100%;
   }
 
@@ -169,7 +169,7 @@
     width: 95%;
   }
 
-  .summaryAppointment .input-group-prepend {
+  .summaryPayment .input-group-prepend {
     width: 95%;
   }
 
