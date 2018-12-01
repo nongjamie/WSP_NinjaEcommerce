@@ -23,7 +23,7 @@ $(() => {
           console.log('error')
         } else {
           console.log('summary.js responsed !!!!!!!!')
-          window.location.href = '/completeTransaction/order/' + data
+          window.location.href = '/completeTransaction/' + username
         }
       },
       error: function (error) {
