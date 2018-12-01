@@ -17,9 +17,9 @@ test_jest:
   script:
     - npm test
   retry:
-  max: 3
-  when:
-    - runner_system_failure
+    max: 3
+    when:
+      - runner_system_failure
   tags:
     - docker
 
