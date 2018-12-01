@@ -1,17 +1,50 @@
 extends admin-layout
 
 block content
-  .myBody
-      .flex-container.allCard
-        input(type="text" class="form-control" id="name" placeholder="Enter product name"  aria-describedby="basic-addon2")
-        input(type="text" class="form-control" id="price" placeholder="Enter product price"  aria-describedby="basic-addon2")
-        input(type="text" class="form-control" id="detail" placeholder="Enter product detail"  aria-describedby="basic-addon2")
-        input(type="text" class="form-control" id="categoryid" placeholder="Enter categoryID"  aria-describedby="basic-addon2")
-        input(type="text" class="form-control" id="country" placeholder="Enter country"  aria-describedby="basic-addon2")
-        input(type="text" class="form-control" id="abv" placeholder="Enter abv"  aria-describedby="basic-addon2")
-        input(type="text" class="form-control" id="distributor" placeholder="Enter distributor"  aria-describedby="basic-addon2")
-        input(type="text" class="form-control" id="imgUrl" placeholder="Enter imgUrl"  aria-describedby="basic-addon2")
-        input(type="text" class="form-control" id="vol" placeholder="Enter vol"  aria-describedby="basic-addon2")
-        button.mt-5.btn.btn-danger Add
-
-  script(src='../script/addProductAdmin.js')
+  .row.color-container
+      .container
+        br
+        .container.product-border
+          div
+            br
+            .input-group.mb-3
+              .input-group-prepend
+                span#basic-addon3.input-group-text Name :
+              input(type='text', class="form-control" id="name" aria-describedby='basic-addon3')
+            .input-group.mb-3
+              .input-group-prepend
+                span#basic-addon3.input-group-text Price :
+              input(type='text', class="form-control" id="price" aria-describedby='basic-addon3')
+            .input-group.mb-3
+              .input-group-prepend
+                span#basic-addon3.input-group-text Detail :
+              input(type='text', class="form-control" id="detail" aria-describedby='basic-addon3')
+            .input-group.mb-3
+              .input-group-prepend
+                span#basic-addon3.input-group-text Category Id :
+              input(type='text', class="form-control" id="categoryid" aria-describedby='basic-addon3')
+            .input-group.mb-3
+              .input-group-prepend
+                span#basic-addon3.input-group-text Country :
+              input(type='text', class="form-control" id="country" aria-describedby='basic-addon3')
+            .input-group.mb-3
+              .input-group-prepend
+                span#basic-addon3.input-group-text ABV :
+              input(type='text', class="form-control" id="abv" aria-describedby='basic-addon3')
+            .input-group.mb-3
+              .input-group-prepend
+                span#basic-addon3.input-group-text Distributor :
+              input(type='text', class="form-control" id="distributor" aria-describedby='basic-addon3')
+            .input-group.mb-3
+              .input-group-prepend
+                span#basic-addon3.input-group-text Img URL :
+              input(type='text', class="form-control" id="imgUrl" aria-describedby='basic-addon3')
+            .input-group.mb-3
+              .input-group-prepend
+                span#basic-addon3.input-group-text VOL :
+              input(type='text', class="form-control" id="vol" aria-describedby='basic-addon3')
+            //- span VOL :
+            //- input(type="text" class="form-control" id="vol" placeholder="Enter vol"  aria-describedby="basic-addon2")
+            button.mt-3.btn.btn-danger Add
+        br
+      script(src='../script/addProductAdmin.js')
