@@ -17,6 +17,7 @@ class Cart {
     }
     async checkoutByUsername(username){
         try{
+            console.log('paul    '+username)
             const response = await axios.post(URL.checkoutByUsername,{},{
                 headers:{
                     'username': username,
