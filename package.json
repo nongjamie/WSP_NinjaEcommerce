@@ -1,6 +1,6 @@
 {
   "name": "ninjaecommerce",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Ninja Ecommerce",
   "main": "app.js",
   "scripts": {
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nongjamie/NinjaEcommerce.git"
+    "url": "git+https://github.com/NinjaVaritO/NinjaEcommerce.git"
   },
   "author": "Varit's Team",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nongjamie/NinjaEcommerce/issues"
+    "url": "https://github.com/NinjaVaritO/NinjaEcommerce/issues"
   },
-  "homepage": "https://github.com/nongjamie/NinjaEcommerce#readme",
+  "homepage": "https://github.com/NinjaVaritO/NinjaEcommerce#readme",
   "dependencies": {
     "acorn-globals": "^4.3.0",
     "axios": "^0.18.0",

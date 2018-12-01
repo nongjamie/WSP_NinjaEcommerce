@@ -1,8 +1,29 @@
+image: node:8.9.0
+
 before_script:
-  - apt-get update -qq && apt-get install -y -qq nodejs
-  - pwd
+  - git remote -v
   - npm install
 
-test:
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - test
+  - deploy
+
+test_jest:
+  stage: test
   script:
-    - npm run test
+    - npm test
+  tags:
+    - docker
+
+deploy_ninja:
+  stage: deploy
+  script:
+    - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/ninja-ecommerce.git
+    - git push heroku master
+    - echo "Deployed to production server"
+  tags:
+    - docker
