@@ -1,12 +1,20 @@
 import { Selector } from 'testcafe';
 
+// const someRole = Role('http://localhost:3000/', async t => {
+//     // do some actions
+// }, { preserveUrl: true });
+
 fixture `user`
+    // .disablePageReloads 
+    // .beforeEach(async t => {
+    //     await t.useRole(someRole);
+    // });
     .page `http://localhost:3000/`;
 
 test('register', async t => {
     await t.setNativeDialogHandler(() => true)
         .click(Selector('a').withText('SIGN UP'))
-        .typeText(Selector('#username'), 'mond12345')
+        .typeText(Selector('#username'), 'mond12346')
         .typeText(Selector('#email'), 'mond12345@hotmail.com')
         .typeText(Selector('#signUpForm').find('[name="password"]'), 'mond')
         .typeText(Selector('#signUpForm').find('[name="confirmPassword"]'), 'mond')
