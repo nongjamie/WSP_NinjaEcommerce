@@ -16,10 +16,6 @@ test_jest:
   stage: test
   script:
     - npm test
-  retry:
-    max: 2
-    when:
-      - runner_system_failure
   tags:
     - docker
 
