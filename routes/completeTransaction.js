@@ -11,10 +11,13 @@ router.get('/:username', async (req, res) => {
         console.log('============ transaction get')
         const result = await cart.checkoutByUsername(res.locals.user.username)
         console.log(result)
-        res.render('completeTransaction',{
-            orderID : result.orderID
-        })
+        res.send(result.orderID)
     }
+})
+router.get('/order/:id', async (req, res) => {
+    res.render('completeTransaction',{
+        orderID : req.params.id,
+    })
 })
 
 module.exports = router

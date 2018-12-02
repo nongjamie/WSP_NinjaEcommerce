@@ -39,11 +39,8 @@ router.post("/get/amount",async(req,res)=>{
   //     res.redirect('back');
   //   }
   // })
-  console.log('ssdkdakdkadksadkadkak')
   const username = req.body.username
-  console.log(username)
   const result = await cart.getUserCart(username)
-  console.log(result)
   // let amount = result.cart.reduce(
   //   (acc, cur) => parseInt(acc.quantity) + parseInt(cur.quantity)
   // )
