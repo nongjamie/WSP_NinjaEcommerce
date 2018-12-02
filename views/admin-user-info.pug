@@ -1,17 +1,25 @@
 extends admin-layout
 
 block content
-  .myBody
-    .row
-      .col-sm-6.mt-4.ml-3
-        p Username : #{account.username}
-        hr
-        p Email : #{account.email}
-        hr
-        p Point : #{account.point}
-        hr
-      .col-sm-6.mt-4.ml-3
-        img(src="", alt="")
-    .container
-      p History order
+  .row.color-container
+      .container.col-6.col-md-4
+        .container.product-border.word-inline
+          br
+          div
+            span.username-word Username : &nbsp
+            span #{account.username}
+          div
+            span.feedback-word Email :  &nbsp
+            span #{account.email}
+          div
+            span.purple-word Point :  &nbsp
+            span #{account.point}
+            hr
+          .col-sm-6.mt-4.ml-3
+            img(src="", alt="")
+        .container
+          p History order
+        br
+
+
       //- each order in account.orderHistory

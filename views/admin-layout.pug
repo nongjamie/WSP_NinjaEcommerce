@@ -12,7 +12,7 @@ html
     div.container-fluid.navBar.colorblack
       nav(class="navbar navbar-expand-lg  navbar-light")
         a(href="/admin")
-          img.fixsize(src='../pictures/admin.png' )
+          img.fixsize(src='../pictures/admin.png')
         a.whiteLetter(class="nav-link loadingClicked" id="whiteLetter" href="/admin") Home
         a.whiteLetter(class='nav-link loadingClicked' id="whiteLetter" href="/admin/feedbacks") Feedbacks
         a.whiteLetter(class='nav-link loadingClicked' id="whiteLetter" href="/admin/orders") Orders
@@ -23,17 +23,3 @@ html
 
       if(user)
         block content
-  .toggleNavBar.bg-light
-    .container.text-center.mt-5
-      div.my-2
-        a.btn.btn-warning.btn-block(href='/admin') Home
-      div.my-2
-        a.btn.btn-warning.btn-block(href='/admin/feedbacks') Feedbacks
-      div.my-2
-        a.btn.btn-warning.btn-block(href='/admin/orders') Orders
-      div.my-2
-        a.btn.btn-warning.btn-block(href='/admin/products') Products
-      div.my-2
-        a.btn.btn-warning.btn-block(href='/admin/addProduct') Add product
-      div.my-2
-        a.btn.btn-warning.btn-block(href='/logout') Logout
