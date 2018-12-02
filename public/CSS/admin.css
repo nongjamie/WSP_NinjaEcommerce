@@ -107,6 +107,10 @@
 .myBody{
     margin-left: 7.85em;
 }
+.fixsize {
+  height:60px;
+  width:80px;
+}
 
 .flex-container {
     overflow: auto;
@@ -127,75 +131,14 @@
     border-radius: 4px;
 }
 
-.allCard{
-    border-radius: 4px;
-
-}
-
 .myCard{
     color: black;
 }
 
-.navToggle{
-    display: none;
+.colorblack{
+  background-color: black;
 }
 
-
-.toggleNavBar{
-    display: none;
-    position: fixed;
-    z-index: 111;
-    bottom: 0;
-    width: 100%;
-    height: 50%;
-    margin-right: 4em !important;
-}
-
-@media (max-width: 1150px) {
-    .logo{
-        margin-left: 1em;
-    }
-    .onHoverNavComponent{
-        display: inline;
-    }
-
-    .myBody{
-        margin: 0;
-    }
-
-    .flex-container{
-       display: block;
-    }
-    .flex-container > div {
-        background-color: whitesmoke;
-        display: block;
-        flex-basis: 30%;
-        word-wrap:break-word;
-    }
-
-    .navComponent{
-        display: none;
-    }
-    .navToggle{
-        display:block;
-    }
-
-    .sidenav{
-        display: none;
-    }
-    .cardMargin{
-        margin-right: 1em;
-        margin-left: 1em;
-    }
-}
-
-
-.navLink {
-    color: black;
-}
-
-.navMenuImg{
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
+.whiteLetter {
+  color: white;
 }

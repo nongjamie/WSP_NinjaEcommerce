@@ -8,34 +8,18 @@ html
     script(src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous")
     script(src="/script/admin.js")
   body
-    .container-fluid
-      nav.myNavBar(class="navbar navbar-light sticky-top ")
-        .container
-          div.logo
-            a(href='/admin')
-              img.img(src="/pictures/home.png", alt="")
-          div
-            .onHoverNavComponent
-              span.px-2.navComponent.mx-2
-                a.navLink(href='/admin') Home
-            .onHoverNavComponent
-              span.px-2.navComponent.mx-2
-                a.navLink(href="/admin/feedbacks") Feedbacks
-            .onHoverNavComponent
-              span.px-2.navComponent.mx-2
-                a.navLink(href="/admin/orders") Orders
-            .onHoverNavComponent
-              span.px-2.navComponent.mx-2
-                a.navLink(href="/admin/products") Products
-            .onHoverNavComponent
-              span.px-2.navComponent.mx-2
-                a.navLink(href="/admin/addProduct") Add product
-            .onHoverNavComponent
-              span.px-2.navComponent.mx-2
-                a.navLink(href='/logout') Logout
-          .navToggle
-            div
-              img.navMenuImg(src="/pictures/admin-menu.svg", alt="")
+
+    div.container-fluid.navBar.colorblack
+      nav(class="navbar navbar-expand-lg  navbar-light")
+        a(href="/admin")
+          img.fixsize(src='../pictures/admin.png' )
+        a.whiteLetter(class="nav-link loadingClicked" id="whiteLetter" href="/admin") Home
+        a.whiteLetter(class='nav-link loadingClicked' id="whiteLetter" href="/admin/feedbacks") Feedbacks
+        a.whiteLetter(class='nav-link loadingClicked' id="whiteLetter" href="/admin/orders") Orders
+        a.whiteLetter(class='nav-link loadingClicked' id="whiteLetter" href="/admin/products") Products
+        a.whiteLetter(class='nav-link loadingClicked' id="whiteLetter" href="/admin/addProduct") Add product
+        a.whiteLetter(class='nav-link loadingClicked' id="whiteLetter" href="/logout") Logout
+
 
       if(user)
         block content
