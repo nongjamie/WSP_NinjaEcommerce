@@ -30,6 +30,8 @@ block content
         div.headDeleteCol
           |
     div.bodyTable
+      - var totalQuan = 0;
+      - var totalVar = 0;
       each product, i in products
         div.row
           div.bodyCol
@@ -40,11 +42,25 @@ block content
             span #{product.productPrice}
           div.bodyCol
             span #{product.quantity}
+            - totalQuan = totalQuan + product.quantity*1;
           div.bodyCol
             span.eachTotal= product.quantity * product.productPrice
+            - totalVar = totalVar + (product.quantity * product.productPrice);
           div.bodyDeleteCol
             input.mb-2.fixsize#inputNumberDelete(type='number' name='pro'+(i+1) step='1' min='1' max=product.quantity value='1')
             button.mb-2.fixsize.deletesButton(value= product.productName + ',pro' + (i+1) + ',' + product.productID) delete
+      div.row
+        div.bodyCol
+          //- Do nothing
+        div.bodyCol
+          //- Do nothing
+        div.bodyCol
+          | Total
+        div.bodyCol
+          | #{totalQuan}
+        div.bodyCol
+          | #{totalVar}
+        
 
   //- Button selection
   div.container.buttonFinalSelection

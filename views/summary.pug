@@ -15,10 +15,11 @@ block content
     div.summaryDetail
       div.summaryCart
         div.row
-          - var headArray = ['Product', 'Name', 'Quanlity', 'UnitPrice', 'TotalCost']
+          - var headArray = ['Product', 'Name', 'Quanlity', 'UnitPrice(฿)', 'TotalCost(฿)']
           each i in headArray
             div.headTableTopic.width20(style="height: 50px; text-align: center;")
               p(style="font-weight:bold;")= i
+          - var totalCost = 0;
           each pro in products
             div.pictureColumn.width20
               div
@@ -37,7 +38,20 @@ block content
                 - var quan = pro.quantity
                 - var price = pro.productPrice
                 - var totalPrice = quan * price
+                - totalCost = totalCost + totalPrice;
                   | #{totalPrice}
+          div.pictureColumn.width20
+            div
+          div.productNameColumn.width20
+            div
+          div.productQuantityColumn.width20
+            div
+          div.productUnitPriceColumn.width20
+            div
+              | Total
+          div.productTotalPriceColumn.width20
+            div
+              | #{totalCost}
       div.summary2
         div.row
           div.summaryAccount
