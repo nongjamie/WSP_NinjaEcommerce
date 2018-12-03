@@ -51,7 +51,7 @@ router.get("/promotion",async function(req, res) {
 
   // Wine route
   router.get("/wine",async function(req, res) {
-    const result = await product.getCategoryByName('wine')
+    const result = await product.getCategoryByName('Wine')
     console.log(result)
     res.render("wine", {
       menu: 'store',
