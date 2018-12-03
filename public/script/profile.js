@@ -11,7 +11,7 @@ $(() => {
     var old_month = $(`select[name='month']`).val()
     var old_year = $(`select[name='year']`).val()
     console.log(name);
-    
+
 
     $('#name').on({
         change: function(){
@@ -138,5 +138,5 @@ $(() => {
     document.querySelector('#cancel').addEventListener('click', function(e) {
         window.location="/"
     })
-    
+
 });
