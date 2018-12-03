@@ -1,7 +1,7 @@
 import { Selector } from 'testcafe';
 
 fixture `user`
-    .page `http://localhost:3000/`;
+    .page `https://ninja-ecommerce.herokuapp.com/`;
 
 test('register', async t => {
     await t
