@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon",
     "test": "jest",
-    "start": "node app.js"
+    "start": "node app.js",
+    "uitest": "testcafe \"chrome:headless\" testcafe/realtest.testcafe.js"
   },
   "repository": {
     "type": "git",
