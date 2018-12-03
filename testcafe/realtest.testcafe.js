@@ -20,29 +20,6 @@ test('register', async t => {
         .click(Selector('button').withText('OK'));
 });
 
-test('store', async t => {
-    await t
-        .click(Selector('li').withText('LOG IN').find('.nav-link.loadingClicked'))
-        .click(Selector('li').withText('LOG IN').find('.nav-link.loadingClicked'))
-        .typeText(Selector('#username'), 'jamie')
-        .typeText(Selector('#password'), '1234')
-        .click(Selector('.btn.btn-primary.loadingClicked'))
-        .click(Selector('a').withText('STORE'))
-        .click(Selector('a').withText('Whisky'))
-        .click(Selector('.product-border').find('button').withText('Add To Cart'))
-        .click(Selector('#userNavBarCartIcon'))
-        .click(Selector('#confirmCartButton'))
-        .click(Selector('#yesButton'))
-        .click(Selector('#confirmCartButton'))
-        .click(Selector('#yesButton'))
-        .click(Selector('#confirmCartButton'))
-        .click(Selector('#yesButton'))
-        .click(Selector('#confirmCartButton'))
-        .click(Selector('#yesButton'))
-        .click(Selector('#confirmCartButton'))
-        .click(Selector('#yesButton'));
-});
-
 test('search', async t => {
     await t
         .typeText(Selector('#searchinput'), '123456789')
