@@ -1,13 +1,13 @@
 import { Selector } from 'testcafe'
 
-fixture`user`.page`http://localhost:3000`
+fixture`user`.page`https://ninja-ecommerce.herokuapp.com/`
 
 test('register', async t => {
   await t
     .setNativeDialogHandler(() => true)
     .click(Selector('a').withText('SIGN UP'))
-    .typeText(Selector('#username'), 'mond12345')
-    .typeText(Selector('#email'), 'mond12345@hotmail.com')
+    .typeText(Selector('#username'), 'mond123451')
+    .typeText(Selector('#email'), 'mond123451@hotmail.com')
     .typeText(Selector('#signUpForm').find('[name="password"]'), 'mond')
     .typeText(Selector('#signUpForm').find('[name="confirmPassword"]'), 'mond')
     .typeText(Selector('#signUpForm').find('[name="name"]'), 'mond')
