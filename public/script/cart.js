@@ -7,13 +7,13 @@ $(() => {
       display: "block",
       "z-index": "11"
     })
-    window.location = "https://ninja-ecommerce.herokuapp.com/myappointment/" + username
+    window.location.href = "/myappointment/" + username
   })
 
   // Cancel button clicked then go to whisky page.
   $("#cancelButton").click(() => {
     console.log("Cancel the confirm order, go back to whisky page.")
-    window.location = "/whisky"
+    window.location.href = "/whisky"
   })
 
   // Delete button clicked.
