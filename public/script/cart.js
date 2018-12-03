@@ -7,13 +7,13 @@ $(() => {
       display: "block",
       "z-index": "11"
     })
-    window.location = "http://localhost:3000/myappointment/" + username
+    window.location = "/myappointment/" + username
   })
 
   // Cancel button clicked then go to whisky page.
   $("#cancelButton").click(() => {
     console.log("Cancel the confirm order, go back to whisky page.")
-    window.location = "http://localhost:3000/whisky"
+    window.location = "/whisky"
   })
 
   // Delete button clicked.

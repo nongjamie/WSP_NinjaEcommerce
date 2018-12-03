@@ -9,7 +9,7 @@ $( () => {
     else {
       console.log('Go to summary page.');
       const username = $('#userNavBarUsername').text()
-      window.location = "http://localhost:3000/summary/"+username;
+      window.location = "/summary/"+username;
     }
   });
 
@@ -17,7 +17,7 @@ $( () => {
   $('#cancelButton').click( () => {
     const username = $('#userNavBarUsername').text()
     console.log('Cancel the payment, go back to appointment page.');
-    window.location = "http://localhost:3000/myappointment/"+username;
+    window.location = "/myappointment/"+username;
   });
 
   // Pay with SCB
