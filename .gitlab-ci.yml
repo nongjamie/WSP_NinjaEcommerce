@@ -20,8 +20,10 @@ test_backend:
 
 test_fontend:
   stage: test
-  script: -npm run uitest
-  tags: -docker
+  script:
+    - npm run uitest
+  tags:
+    - docker
 
 deploy_ninja:
   stage: deploy
