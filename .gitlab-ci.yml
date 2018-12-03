@@ -21,6 +21,7 @@ test_backend:
 test_fontend:
   stage: test
   script:
+    - node app.js
     - npm run uitest
   tags:
     - docker

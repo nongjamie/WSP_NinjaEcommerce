@@ -7,7 +7,8 @@
     "dev": "nodemon",
     "test": "jest",
     "start": "node app.js",
-    "uitest": "testcafe \"chrome:headless\" testcafe/realtest.testcafe.js"
+    "uitest": "testcafe  \"chrome:headless\" testcafe/realtest.testcafe.js ",
+    "temp": "testcafe -h"
   },
   "repository": {
     "type": "git",
