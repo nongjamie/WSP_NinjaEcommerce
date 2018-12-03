@@ -13,7 +13,7 @@ $(() => {
   // Cancel button clicked then go to whisky page.
   $("#cancelButton").click(() => {
     console.log("Cancel the confirm order, go back to whisky page.")
-    window.location = "https://ninja-ecommerce.herokuapp.com/whisky"
+    window.location = "/whisky"
   })
 
   // Delete button clicked.
