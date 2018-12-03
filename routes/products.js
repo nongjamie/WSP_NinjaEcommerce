@@ -9,14 +9,14 @@ router.get("/promotion",async function(req, res) {
       menu: 'promotion'
     });
   });
-  
+
   // Promotion route
   router.get("/pro1",async function(req, res) {
     res.render("pro1", {
       menu: 'pro1'
     });
   });
-  
+
   // Store route
   router.get("/store",async function(req, res) {
     res.render("store", {
@@ -24,7 +24,7 @@ router.get("/promotion",async function(req, res) {
       typeDrink: 'null'
     });
   });
-  
+
   // Store route
   router.get("/whisky",async function(req, res) {
     console.log('dadasd')
@@ -36,22 +36,22 @@ router.get("/promotion",async function(req, res) {
       products: result.products
     });
   });
-  
+
   // Beer route
   router.get("/beer",async function(req, res) {
-    console.log('beer na ja')    
+    console.log('beer na ja')
     const result = await product.getCategoryByName('Beer')
-    console.log(result)            
+    console.log(result)
     res.render("beer", {
       menu: 'store',
       typeDrink: 'beer',
       products: result.products
     });
   });
-  
+
   // Wine route
   router.get("/wine",async function(req, res) {
-    const result = await product.getCategoryByName('Wine')
+    const result = await product.getCategoryByName('wine')
     console.log(result)
     res.render("wine", {
       menu: 'store',
@@ -59,7 +59,7 @@ router.get("/promotion",async function(req, res) {
       products: result.products
     });
   });
-  
+
   // Mixer route
   router.get("/mixer",async function(req, res) {
     const result = await product.getCategoryByName('Mixer')
@@ -72,7 +72,7 @@ router.get("/promotion",async function(req, res) {
   });
 
 
-  // POST 
+  // POST
   router.post('/whisky',async function(req, res){
     const data = req.body
     const result = await product.addProductToCart(data)
@@ -104,7 +104,7 @@ router.get("/promotion",async function(req, res) {
     res.send('send success')
   })
 
-  
+
 
 
 module.exports = router
