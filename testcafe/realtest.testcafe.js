@@ -4,7 +4,7 @@ fixture `user`
     .page `https://ninja-ecommerce.herokuapp.com/`;
 
 test('register', async t => {
-    await t
+    await t.setNativeDialogHandler(() => true)
         .click(Selector('a').withText('SIGN UP'))
         .typeText(Selector('#username'), 'mond12345')
         .typeText(Selector('#email'), 'mond12345@hotmail.com')
@@ -71,6 +71,8 @@ test('check out', async t => {
         .click(Selector('a').withText('Whisky'))
         // .click(Selector('a').withText('Whisky'))
         .click(Selector('.product-border').nth(1).find('button').withText('Add To Cart'))
+        .click(Selector('#userNavBarCartIcon'))
+        .click(Selector('#userNavBarCartIcon'))
         .click(Selector('#userNavBarCartIcon'))
         .click(Selector('#confirmCartButton'))
         .click(Selector('#yesButton'))
