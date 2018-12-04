@@ -1,6 +1,6 @@
 # NinjaEcommerce
 
-# Deployed website
+## Deployed website
 
 [ClickedMe!](https://ninja-ecommerce.herokuapp.com/)
 
