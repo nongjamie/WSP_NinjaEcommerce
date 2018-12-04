@@ -1,5 +1,11 @@
 # NinjaEcommerce
 
+## Technologies
+
+Frontend : HTML CSS jQuery pugjs
+
+Backend : Javascript nodejs Firebase 
+
 ## Deployed website
 
 [ninja-ecommerce.herokuapp.com](https://ninja-ecommerce.herokuapp.com/)
