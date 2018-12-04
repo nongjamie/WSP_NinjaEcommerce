@@ -2,7 +2,7 @@
 
 ## Deployed website
 
-[Link](https://ninja-ecommerce.herokuapp.com/)
+[ninja-ecommerce.herokuapp.com](https://ninja-ecommerce.herokuapp.com/)
 
 ## Members
 
