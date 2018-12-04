@@ -2,7 +2,7 @@
 
 ## Deployed website
 
-[ClickedMe!](https://ninja-ecommerce.herokuapp.com/)
+[Clicked Me!](https://ninja-ecommerce.herokuapp.com/)
 
 ## Members
 
